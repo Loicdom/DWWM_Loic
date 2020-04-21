@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2vw;
+}
+
+body.light {
+    background-color: bisque;
+}
+
+body.dark {
+    background-color: rgb(10, 6, 34);
+}
+
+h1 {
+    padding: 2vw;
+}
+
+.titre1.light {
+    color: darkslateblue;
+}
+
+.titre1.dark {
+    color: floralwhite;
+}
+
+.txt {
+    width: 80%;
+}
+
+.txt.light {
+    color: darkblue;
+}
+
+.txt.dark {
+    color: aquamarine;
+}

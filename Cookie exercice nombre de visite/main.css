@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vw;
+    background-color: bisque;
+}
+
+h1 {
+    padding: 2vw;
+}
+
+.titre1 {
+    color: darkslateblue;
+}
+
+.txt {
+    width: 80%;
+    color: darkblue;
+}
+
+.initVisite {
+    padding: 1.5vw;
+}
+
