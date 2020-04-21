@@ -1,0 +1,128 @@
+body{
+    background-color: #406e42;
+}
+
+#carre {
+    position: absolute;
+    height: 8vh;
+    width: 8vw;
+    /* background-color: rgb(190, 71, 107); */
+    background-image: url(renard.jpg);
+    background-size: cover;
+    background-position: center;
+    left: 45vw;
+    top: 43vh;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.obstacle{
+    position: absolute;
+    background-color: #063b09;
+    border-radius: 20px;
+}
+.largeurH{
+    height: 3vh;
+}
+.largeurV{
+    width: 3vw;
+}
+/* Exterieur************* */
+#obstacle1 {
+    width: 88vw;
+    left: 5vw;
+    top: 5vh;
+}
+
+#obstacle2 {
+    height: 88vh;
+    left: 5vw;
+    top: 5vh;
+}
+#obstacle3 {
+    width: 88vw;
+    left: 5vw;
+    top: 90vh;
+}
+
+#obstacle4 {
+    height: 40vh;
+    left: 90vw;
+    top: 5vh;
+}
+#obstacle5 {
+    height: 33vh;
+    left: 90vw;
+    top: 60vh;
+}
+/* Interieur************* */
+/*Grand carré intérieur*/
+#obstacle6 {
+    height: 56vh;
+    left: 19vw;
+    top: 19vh;
+}
+#obstacle7 {
+    height: 58vh;
+    left: 75vw;
+    top: 19vh;
+}
+#obstacle8 {
+    width: 45vw;
+    left: 19vw;
+    top: 19vh;
+}
+#obstacle9 {
+    width: 28vw;
+    left: 50vw;
+    top: 74vh;
+}
+/*Petit carré intérieur*/
+#obstacle10 {
+    height: 14vh;
+    left: 33vw;
+    top: 33vh;
+}
+#obstacle11 {
+    height: 30vh;
+    left: 61vw;
+    top: 33vh;
+}
+#obstacle12 {
+    width: 31vw;
+    left: 33vw;
+    top: 33vh;
+}
+#obstacle13 {
+    width: 31vw;
+    left: 33vw;
+    top: 60vh;
+}
+/*Autres obstacles*/
+#obstacle14 {
+    height: 16vh;
+    left: 47vw;
+    top: 19vh;
+}
+#obstacle15 {
+    height: 31vh;
+    left: 33vw;
+    top: 60vh;
+}
+#obstacle16 {
+    width: 14vw;
+    left: 77vw;
+    top: 33vh;
+}
+/* Final************* */
+#final {
+    position: absolute;
+    height: 15vh;
+    left: 90vw;
+    top: 45vh;
+    background-color: rgba(255, 253, 219, 0.1);
+    line-height: 18px;
+    font-weight: 700;
+    font-family: 'Baloo Da 2', cursive;
+    text-align: center;
+    border-radius: 20px;
+}

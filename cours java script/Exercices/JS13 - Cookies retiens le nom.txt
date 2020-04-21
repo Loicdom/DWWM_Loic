@@ -1,0 +1,4 @@
+GESTION DES COOKIES
+Réalisez une page web qui demande à l’internaute son nom et son prénom lors de sa première
+connexion. Ces données seront enregistrées dans un cookie, et sero nt exploitées lors d’une
+connexion ultérieure (on affichera bonjour M.xxx).

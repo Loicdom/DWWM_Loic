@@ -1,0 +1,328 @@
+#carre {
+    position: absolute;
+    height: 2vw;
+    width: 2vw;
+    background-color: #CCCCC0;
+    left: 2vw;
+    top: 3vh;
+}
+
+body{
+    background-color: #406e42;
+}
+
+.largeurH{
+    height: 2vh;
+}
+.largeurV{
+    width: 2vw;
+}
+
+.obstacle {
+    border-radius: 20px;
+    position: absolute;
+    background-color: #000000;
+}
+
+#obstacle {
+    height: 2vh;
+    width: 97.8vw;
+    left: 1vw;
+    top: 1vh;
+}
+
+#obstacle1 {
+    height: 42vw;
+    width: 2vh;
+    left: 1vw;
+    top: 1vh;
+}
+
+#obstacle2 {
+    height: 2vh;
+    width: 97.8vw;
+    left: 1vw;
+    top: 42vw;
+}
+
+#obstacle3 {
+    height: 42vw;
+    width: 2vh;
+    left: 98vw;
+    top: 1vh;
+}
+
+/* intérieur :*/
+
+#obstacle4 {
+    height: 2vh;
+    width: 15vh;
+    left: 1vw;
+    top: 8vh;
+}
+
+#obstacle5 {
+    height: 2vh;
+    width: 15vh;
+    left: 1vw;
+    top: 40vh;
+}
+
+#obstacle6 {
+    height: 34vh;
+    width: 2vh;
+    left: 16vh;
+    top: 8vh;
+}
+
+#obstacle7 {
+    height: 2vh;
+    width: 15vh;
+    left: 1vw;
+    top: 48vh;
+}
+
+#obstacle8 {
+    height: 34vh;
+    width: 2vh;
+    left: 16vh;
+    top: 48vh;
+}
+
+#obstacle9 {
+    height: 2vh;
+    width: 15vh;
+    left: 8vw;
+    top: 80vh;
+}
+
+#obstacle10 {
+    height: 5vw;
+    width: 2vh;
+    left: 14.2vw;
+    top: 80vh;
+}
+
+#obstacle11 {
+    height: 5vw;
+    width: 2vh;
+    left: 18vw;
+    top: 80vh;
+}
+
+#obstacle12 {
+    height: 2vh;
+    width: 20vh;
+    left: 12vw;
+    top: 8vh;
+}
+
+#obstacle13 {
+    height: 2vh;
+    width: 83vh;
+    left: 12vw;
+    top: 20vh;
+}
+
+#obstacle14 {
+    height: 6.5vw;
+    width: 2vh;
+    left: 12vw;
+    top: 8vh;
+}
+
+#obstacle15 {
+    height: 2vh;
+    width: 20vh;
+    left: 12vw;
+    top: 28vh;
+}
+
+#obstacle16 {
+    height: 13vw;
+    width: 2vh;
+    left: 12vw;
+    top: 28vh;
+}
+
+#obstacle17 {
+    height: 2vh;
+    width: 20vh;
+    left: 12vw;
+    top: 54vh;
+}
+
+#obstacle18 {
+    height: 2vh;
+    width: 80vh;
+    left: 12vw;
+    top: 62vh;
+}
+
+#obstacle19 {
+    height: 17vw;
+    width: 2vh;
+    left: 20.8vw;
+    top: 28vh;
+}
+
+#obstacle20 {
+    height: 2vh;
+    width: 67vh;
+    left: 18vw;
+    top: 80vh;
+}
+
+#obstacle21 {
+    height: 5vw;
+    width: 2vh;
+    left: 12vw;
+    top: 62vh;
+}
+
+#obstacle22 {
+    height: 2vh;
+    width: 35vh;
+    left: 12vw;
+    top: 71vh;
+}
+
+#obstacle23 {
+    height: 10vh;
+    width: 2vh;
+    left: 27.8vw;
+    top: 63vh;
+} 
+
+#obstacle24 {
+    height: 10vh;
+    width: 2vh;
+    left: 32vw;
+    top: 63vh;
+} 
+
+#obstacle25 {
+    height: 2vh;
+    width: 37vh;
+    left: 32vw;
+    top: 71vh;
+} 
+
+#obstacle25 {
+    height: 2vh;
+    width: 45vh;
+    left: 25vw;
+    top: 28vh;
+} 
+
+#obstacle26 {
+    height: 28vh;
+    width: 2vh;
+    left: 25vw;
+    top: 28vh;
+} 
+
+#obstacle27 {
+    height: 2vh;
+    width: 20vh;
+    left: 25vw;
+    top: 54vh;
+} 
+
+#obstacle28 {
+    height: 20vh;
+    width: 2vh;
+    left: 33.8vw;
+    top: 36vh;
+} 
+
+#obstacle29 {
+    height: 13vh;
+    width: 2vh;
+    left: 20.5vw;
+    top: 8vh;
+} 
+
+#obstacle30 {
+    height: 13vh;
+    width: 2vh;
+    left: 24vw;
+    top: 8vh;
+} 
+
+#obstacle31 {
+    height: 2vh;
+    width: 35vh;
+    left: 24vw;
+    top: 8vh;
+} 
+
+#obstacle32 {
+    height: 8vh;
+    width: 2vh;
+    left: 39.6vw;
+    top: 2vh;
+} 
+
+#obstacle33 {
+    height: 2vh;
+    width: 38vh;
+    left: 32vw;
+    top: 71vh;
+} 
+
+#obstacle34 {
+    height: 28vh;
+    width: 2vh;
+    left: 49vw;
+    top: 62vh;
+} 
+
+#obstacle35 {
+    height: 12vh;
+    width: 2vh;
+    left: 38vw;
+    top: 44vh;
+} 
+
+#obstacle36 {
+    height: 2vh;
+    width: 28vh;
+    left: 38vw;
+    top: 44vh;
+} 
+
+#obstacle37 {
+    height: 2vh;
+    width: 26vh;
+    left: 34vw;
+    top: 36vh;
+} 
+
+#obstacle38 {
+    height: 26vh;
+    width: 2vh;
+    left: 50.4vw;
+    top: 20vh;
+} 
+
+#obstacle39 {
+    height: 46vh;
+    width: 2vh;
+    left: 55.2vw;
+    top: 10vh;
+} 
+
+#obstacle40 {
+    height: 10vh;
+    width: 2vh;
+    left: 45.5vw;
+    top: 28vh;
+} 
+
+#obstacle41 {
+    height: 2vh;
+    width: 28vh;
+    left: 43vw;
+    top: 54vh;
+} 

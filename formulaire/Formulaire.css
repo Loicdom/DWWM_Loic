@@ -1,0 +1,58 @@
+body {
+    background: url(Images/paysage.jpg);
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: 3px;
+    text-shadow: #000000 0.1em 0.1em 0.2em;
+    color: aliceblue;
+    text-align: center;
+}
+ 
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #e4ecec;
+    padding: 3vh;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    width: 30vw;
+}
+
+input {
+    border: solid 1px #05054f;
+    margin: 0.4vw;
+    flex: 2;
+}
+
+.coordonee {
+    display: flex;
+    align-items: center;
+}
+
+.interrogation {
+    flex: 1;
+}
+
+.boutonVert {
+    visibility: hidden;
+    flex: 1;
+}
+
+.boutonRouge {
+    visibility: hidden;
+    flex: 1;
+}
+
+.valide {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+

@@ -1,0 +1,11 @@
+#carre{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: red;
+    border: 2px;
+}
+
+.btn{
+    text-align: center;
+}

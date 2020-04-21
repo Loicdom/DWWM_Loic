@@ -1,0 +1,13 @@
+LE CHRONO
+
+Réalisez un petit chrono qui affiche un champ texte (<span>) et 3 boutons Start, Pause et Stop.
+L’appui sur le bouton Start démarre le chrono.
+L’appui sur le bouton Pause arrête puis redémarre le chrono.
+L’appui sur le bouton Stop arrête et remet à zéro le chrono.
+
+LE POST-IT
+Créez une page Html valide contenant :
+•	un élément <div> identifié « postIt » placé en absolu et invisible au démarrage (CSS) correspondant à la zone de texte sur fond jaune.
+•	un bouton « Affiche » permet de rendre visible la div « postIt » et d’y insérer le texte suivant :
+« Vous avez cliqué sur le bouton 'Affiche' ! »
+•	un bouton « Cache » permet de cacher la div « postIt ».

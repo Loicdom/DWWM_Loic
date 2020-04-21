@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="Formulaire.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <form action=" " method="post">
+        <h1>Formulaire</h1>
+        <div class="coordonee">
+            <label for="nom">Nom : </label>
+            <input type="text" name="nom" id="nom"  required autofocus pattern="^[A-ZÀ-Ý' ’-]{2,}$">
+            <div class="interrogation" title="Veuillez saisir votre nom (MAJUSCULE)"><img src="Images/interrogation.png" alt="infos"></div>
+            <div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
+            <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
+            <span class="message"></span>
+        </div>
+        <div class="coordonee">
+            <label for="prenom">Prénom : </label>
+            <input type="text" name="prenom" id="prenom"  required autofocus pattern="^[A-ZÀ-Ý]{1}[a-zà-ý '-]*([ |-][A-ZÀ-Ý]{1}[a-zà-ý '-]*)?$">
+            <div class="interrogation" title="Veuillez saisir votre prénom (1ere lettre en MAJUSCULE, le reste en minuscule)"><img src="Images/interrogation.png" alt="infos"></div>
+            <div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
+            <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
+            <span class="message"></span>
+        </div>
+        <div class="coordonee">
+            <label for="mail">E-mail : </label>
+            <input type="email" name="mail" id="mail"  required autofocus pattern="^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$">
+            <div class="interrogation" title="Veuillez saisir votre e-mail"><img src="Images/interrogation.png" alt="infos"></div>
+            <div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
+            <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
+            <span class="message"></span>
+        </div>
+        <div class="coordonee">
+            <label for="CP">Code Postal : </label>
+            <input type="text" name="CP" id="CP" maxlength="5" required autofocus pattern="^\d{5}$">
+            <div class="interrogation" title="Veuillez saisir votre code postal"><img src="Images/interrogation.png" alt="infos"></div>
+            <div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
+            <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
+            <span class="message"></span>
+        </div>
+        <div class="coordonee">
+            <label for="tel">Téléphone : </label>
+            <input type="text" name="tel" id="tel" required autofocus pattern="^(0|\+33) ?[1-9]([-.\/ ]?[\d]{2}){4}$">
+            <div class="interrogation" title="Veuillez saisir votre numéro de téléphone"><img src="Images/interrogation.png" alt="infos"></div>
+            <div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
+            <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
+            <span class="message"></span>
+        </div>
+        <div class="coordonee">
+            <label for="mdp">Mot de passe : </label>
+            <input type="password" name="mdp" id="mdp" required autofocus pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#\$%\^&\*+])[a-zA-Z\d!@#\$%\^&\*+]{8,}$">
+            <div class="interrogation" title="Veuillez saisir votre mot de passe"><img src="Images/interrogation.png" alt="infos"></div>
+            <div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
+            <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
+            <span class="message"></span>
+        </div>
+        <div class="coordonee">
+            <label for="confirm">confirmation : </label>
+            <input type="password" name="confirm" id="confirm" required autofocus pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d])(?=.*[!@#\$%\^&\*+])[a-zA-Z\d!@#\$%\^&\*+]{8,}$">
+            <div class="interrogation" title="Veuillez saisir votre mot de passe"><img src="Images/interrogation.png" alt="infos"></div>
+            <div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
+            <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
+            <span class="message"></span>
+        </div>
+        <input class="valide" type="submit" name="valider">
+        <input class="valide" type="submit" name="annuler" value="Annuler">
+    </form>
+    <script src="Formulaire.js"></script>
+</body>
+
+</html>

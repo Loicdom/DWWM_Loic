@@ -1,0 +1,8 @@
+Exercices sur les formulaires
+	1. Créer un formulaire avec un champ unique et 2 boutons (valider, annuler)
+	2. Ecrire le code javascript pour faire le controle regex sur le champ
+	3. Transformer le message alert en image cohe verte ou croix rouge
+	4. Transformer le code pour utiliser la regex du HTML et utilisation du checkValidity
+	5. Compléter le formulaire avec d'autres champ
+	6. Soigner le CSS pour que l'apparence du formulaire soit aboutie
+	

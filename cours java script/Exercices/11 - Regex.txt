@@ -1,0 +1,10 @@
+Exercices sur les Regex
+	1. Créer une regex pour les noms de famille (tout en majuscule + "-" + " ")
+	2. Créer une regex pour les prénoms (1ere lettre en majuscule + reste en minuscule)
+	3. Améliorer la version précédente avec les prénoms composés
+	4. Créer une regex pour les codes postaux
+	5. Créer une regex pour les numéros de téléphone français à 10 chiffres
+	6. Ameliorer la version précédente pour accepter le +33
+	7. Créer une regex pour les adresses mails
+	8. Créer une regex pour les mots de passe
+	

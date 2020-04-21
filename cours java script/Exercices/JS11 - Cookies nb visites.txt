@@ -1,0 +1,5 @@
+COOKIES - Gestion des visites
+Exercices
+Créer une page Html qui affiche le nombre de fois qu’elle a été visitée par le même utilisateur.
+Utiliser pour se faire un cookie qui conservera cette information.
+Ajouter également un bouton qui permet de réinitialiser le nombre de visites à 1.
