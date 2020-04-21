@@ -37,22 +37,22 @@ function eraseCookie(name) {
 }
 
 /********************** Cookie pour RGB *************************/
-
-var changeCouleur = document.getElementById("couleur");
-changeCouleur.addEventListener("click", function () {
-    CookieCouleur();
-})
-function CookieCouleur() {
-var red = document.getElementById("rouge").value;
-var green = document.getElementById("vert").value;
-var blue = document.getElementById("bleu").value;
-if (readCookie("rouge")==null) {
-    createCookie("rouge",red,5);
-} else if (readCookie("vert")==null) {
-    createCookie("vert",green,5);
-} else if (readCookie("bleu")==null) {
-    createCookie("bleu",green,5);
-} else {
-    document.body.style.backgroundColor='rgb(' + red + ', ' + green + ', ' + blue + ')'
-}
-}
+// ne fonctionne pas 
+// var changeCouleur = document.getElementById("couleur");
+// changeCouleur.addEventListener("click", function () {
+//     CookieCouleur();
+// })
+// function CookieCouleur() {
+// var red = document.getElementById("rouge").value;
+// var green = document.getElementById("vert").value;
+// var blue = document.getElementById("bleu").value;
+// if (readCookie("rouge")==null) {
+//     createCookie("rouge",red,5);
+// } else if (readCookie("vert")==null) {
+//     createCookie("vert",green,5);
+// } else if (readCookie("bleu")==null) {
+//     createCookie("bleu",green,5);
+// } else {
+//     document.body.style.backgroundColor='rgb(' + red + ', ' + green + ', ' + blue + ')'
+// }
+// }
