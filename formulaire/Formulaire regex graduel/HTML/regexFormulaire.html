@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>REGEX</title>
+    <link rel="stylesheet" href="../CSS/regexFormulaire.css" />
+</head>
+
+<body>
+    <div id="header">
+        <h1>Formulaire d'inscription</h1>
+    </div>
+    <form action="" method="POST">
+        <div class="ligne">
+            <label for="nom">Nom : </label>
+            <input type="text" class="input" id="nom" name="nom" required autofocus
+                pattern="[A-Za-zâäàéèùêëîïôöçñ]{2,}">
+        </div>
+        <div class="ligne">
+            <label for="postal">Code postal : </label>
+            <input type="text" class="input" id="postal" 
+            name="postal" required pattern="^[0-9]{5,5}$">
+        </div>
+        <div class="bouton ">
+            <button id="submit" type="submit" >Valider</button>
+            <button type="submit">Annuler</button>
+        </div>
+    </form>
+    <script src="../JS/regexFormulaire.js "></script>
+</body>
+
+</html>
