@@ -1,0 +1,207 @@
+{
+    "nhits": 249,
+    "parameters": {
+        "dataset": "vlille-realtime",
+        "timezone": "UTC",
+        "rows": 30,
+        "format": "json",
+        "facet": [
+            "libelle",
+            "nom",
+            "commune",
+            "etat",
+            "type",
+            "etatconnexion"
+        ]
+    },
+    "records": [(too many elements to preview)
+    ],
+    "facet_groups": [
+        {
+            "facets": [
+                {
+                    "count": 218,
+                    "path": "EN SERVICE",
+                    "state": "displayed",
+                    "name": "EN SERVICE"
+                },
+                {
+                    "count": 26,
+                    "path": "HORS SERVICE",
+                    "state": "displayed",
+                    "name": "HORS SERVICE"
+                },
+                {
+                    "count": 3,
+                    "path": "OUT_OF_SERVICE",
+                    "state": "displayed",
+                    "name": "OUT_OF_SERVICE"
+                },
+                {
+                    "count": 2,
+                    "path": "EN MAINTENANCE",
+                    "state": "displayed",
+                    "name": "EN MAINTENANCE"
+                }
+            ],
+            "name": "etat"
+        },
+        {
+            "facets": [(too many elements to preview)
+            ],
+            "name": "nom"
+        },
+        {
+            "facets": [
+                {
+                    "count": 109,
+                    "path": "LILLE",
+                    "state": "displayed",
+                    "name": "LILLE"
+                },
+                {
+                    "count": 36,
+                    "path": "ROUBAIX",
+                    "state": "displayed",
+                    "name": "ROUBAIX"
+                },
+                {
+                    "count": 25,
+                    "path": "TOURCOING",
+                    "state": "displayed",
+                    "name": "TOURCOING"
+                },
+                {
+                    "count": 21,
+                    "path": "VILLENEUVE D'ASCQ",
+                    "state": "displayed",
+                    "name": "VILLENEUVE D'ASCQ"
+                },
+                {
+                    "count": 11,
+                    "path": "MONS EN BAROEUL",
+                    "state": "displayed",
+                    "name": "MONS EN BAROEUL"
+                },
+                {
+                    "count": 10,
+                    "path": "LA MADELEINE",
+                    "state": "displayed",
+                    "name": "LA MADELEINE"
+                },
+                {
+                    "count": 6,
+                    "path": "LAMBERSART",
+                    "state": "displayed",
+                    "name": "LAMBERSART"
+                },
+                {
+                    "count": 6,
+                    "path": "LILLE HELLEMMES",
+                    "state": "displayed",
+                    "name": "LILLE HELLEMMES"
+                },
+                {
+                    "count": 4,
+                    "path": "MARCQ EN BAROEUL",
+                    "state": "displayed",
+                    "name": "MARCQ EN BAROEUL"
+                },
+                {
+                    "count": 3,
+                    "path": "CROIX",
+                    "state": "displayed",
+                    "name": "CROIX"
+                },
+                {
+                    "count": 3,
+                    "path": "LOOS",
+                    "state": "displayed",
+                    "name": "LOOS"
+                },
+                {
+                    "count": 3,
+                    "path": "RONCHIN",
+                    "state": "displayed",
+                    "name": "RONCHIN"
+                },
+                {
+                    "count": 3,
+                    "path": "SAINT ANDRE LEZ LILLE",
+                    "state": "displayed",
+                    "name": "SAINT ANDRE LEZ LILLE"
+                },
+                {
+                    "count": 3,
+                    "path": "WATTRELOS",
+                    "state": "displayed",
+                    "name": "WATTRELOS"
+                },
+                {
+                    "count": 2,
+                    "path": "HELLEMMES",
+                    "state": "displayed",
+                    "name": "HELLEMMES"
+                },
+                {
+                    "count": 2,
+                    "path": "LOMME",
+                    "state": "displayed",
+                    "name": "LOMME"
+                },
+                {
+                    "count": 1,
+                    "path": "FACHES-THUMESNIL",
+                    "state": "displayed",
+                    "name": "FACHES-THUMESNIL"
+                },
+                {
+                    "count": 1,
+                    "path": "LAMBERSAT",
+                    "state": "displayed",
+                    "name": "LAMBERSAT"
+                }
+            ],
+            "name": "commune"
+        },
+        {
+            "facets": [
+                {
+                    "count": 223,
+                    "path": "CONNECTED",
+                    "state": "displayed",
+                    "name": "CONNECTED"
+                },
+                {
+                    "count": 26,
+                    "path": "DISCONNECTED",
+                    "state": "displayed",
+                    "name": "DISCONNECTED"
+                }
+            ],
+            "name": "etatconnexion"
+        },
+        {
+            "facets": [(too many elements to preview)
+            ],
+            "name": "libelle"
+        },
+        {
+            "facets": [
+                {
+                    "count": 191,
+                    "path": "AVEC TPE",
+                    "state": "displayed",
+                    "name": "AVEC TPE"
+                },
+                {
+                    "count": 58,
+                    "path": "SANS TPE",
+                    "state": "displayed",
+                    "name": "SANS TPE"
+                }
+            ],
+            "name": "type"
+        }
+    ]
+}
