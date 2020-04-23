@@ -5,10 +5,10 @@
 </div>
 <div id="divContenu">
 	<div class="ligne titreLigne">
-		<div class="ville">Commune</div>
-		<div class="libelle">Nombre de vélo dispo</div>
-		<div class="libelle">Nombre de place dispo</div>
-		<div class="dispo">Etat</div>
+		<div class="commune">Commune</div>
+		<div class="nbvelosdispo">Nombre de vélo dispo</div>
+		<div class="nbplacesdispo">Nombre de place dispo</div>
+		<div class="etat">Etat</div>
 	</div>
 	<div class="espaceHorizon"></div>
 </div>
