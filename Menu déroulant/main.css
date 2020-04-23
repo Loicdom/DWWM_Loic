@@ -1,31 +1,38 @@
-body {
+body{
+    margin: 0vw;
+    padding: 0vw;
+    font-family: verdana, calibri, sans-serif;
+    background-color: rgb(160, 145, 194);
+    text-align: center;
+}
+
+div{
     display: flex;
-    justify-content: center;
-    margin-top: 5vw;
-    background-color: bisque;
+    flex:1;
+    flex-direction: column;
 }
 
-#menuP {
-    text-decoration:none;
-    border: solid black 2px;
-    color: darkred;
-    padding: 1.2vw;
-    flex: 1;
+nav{
+    width: 100%;
 }
 
-#menuP2 {
-    text-decoration:none;
-    border: solid black 2px;
-    color: darkred;
-    padding: 1.2vw;
-    flex: 1;
+.ligne{
+    flex-direction: row;
 }
 
 .sousMenu {
-    text-decoration: none;
-    border: black 2px solid;
-    visibility: hidden;
+    display: none;
 }
 
+a{
+    text-decoration: none;
+    padding: 2vw 3vw;
+    color: rgb(191, 191, 207);
+    background-color: rgb(11, 16, 73);
+}
 
-
+.sousMenu a{
+    padding: 1vw ;
+    border-bottom: 1px solid white;  
+    /* background-color: orange; */
+}
