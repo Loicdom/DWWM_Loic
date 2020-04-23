@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1vw;
+    padding: 0vw;
+    background-color: burlywood;
+}
+
+.contenu {
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+    border: black solid 2px;
+    width: 80%;
+}
+
+.contenant {
+    padding: 1.5vw;
+}
+
+.message {
+    color: red;
+}
+
+input {
+    margin-left: 15vw;
+    padding-left: 14vw;
+    padding-right: 14vw;
+    text-align: left;
+}
+
+#taux {
+    margin-left: 13vw;
+}
+
+#calculer {
+    margin-right: 10vw;
+}
+
+#newCalcul {
+    margin-left: 10vw;
+}
+
+#mensualite {
+    margin-left: 18vw; 
+}
+
+#cout {
+    margin-left: 18vw; 
+}
+
+
+
+
+

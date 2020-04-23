@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet" type="text/css" media="screen">
+    <title>Eval JS</title>
+</head>
+
+<body>
+    <h1>Calcul du taux d'intérêt</h1>
+
+    <div class="contenu">
+        <div class="contenant">
+            <label for="capital">Capital Emprunté : </label>
+            <input type="text" name="capital" id="capital" required autofocus pattern="[0-9]{1,}$">
+            <span> € </span>
+            <span class="message"></span>
+        </div>
+        <div class="contenant">
+            <label for="taux">Taux Nominal Annuel : </label>
+            <input type="text" name="taux" id="taux" required autofocus pattern="[0-9]{1,3}$">
+            <span> % </span>
+            <span class="message"></span>
+        </div>
+        <div class="contenant">
+            <label for="duree">Durée d'emprunt : </label>
+            <input type="text" name="duree" id="duree" required autofocus pattern="[0-9]{1,}">
+            <span> Ans </span>
+            <span class="message"></span>
+        </div>
+    </div>
+
+    <div class="contenu">
+        <div class="contenant">
+            <label for="mensualite">Mensualité : </label>
+            <input type="text" name="mensualite" id="mensualite">
+            <span> € </span>
+        </div>
+        <div class="contenant">
+            <label for="duree">Coût Total : </label>
+            <input type="text" name="cout" id="cout">
+            <span> € </span>
+        </div>
+    </div>
+
+    <div class="contenant">
+        <button type="submit" id="calculer">Calculer</button>
+        <button type="submit" id="newCalcul">Nouveau calcul</button>
+    </div>
+
+    <script LANGUAGE="javascript" src="script.js"></script>
+
+</body>
+
+</html>
