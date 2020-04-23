@@ -4,7 +4,7 @@
 		<div id="entete">
 			<div id="titre">
 				<div id="logo">
-			 	<img src="Images/logo2.png" />
+			 	<img src="Images/logo.png" />
 				</div>
 
 				<div id="titrePage">

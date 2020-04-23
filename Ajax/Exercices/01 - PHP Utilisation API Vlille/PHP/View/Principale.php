@@ -1,7 +1,7 @@
 ﻿<!-- Cette page est le contenu de la page principale du site; Elle présente la liste des V'Lille. -->
 
 <div id="divSousTitre">
-	<h3>Cliquer sur une commune pour le détail</h3>
+	<h3>V'Lille - Disponibilité en temps réel</h3>
 </div>
 <div id="divContenu">
 	<div class="ligne titreLigne">

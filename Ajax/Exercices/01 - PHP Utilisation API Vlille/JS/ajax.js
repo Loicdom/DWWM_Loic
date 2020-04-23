@@ -10,14 +10,14 @@ req.onreadystatechange = function (event) {
             // la requete a abouti et a fournit une reponse
             //on décode la réponse, pour obtenir un objet
             reponse = JSON.parse(this.responseText);
-            console.log(this.responseText);
-            console.log(reponse);
+            console.log(this.responseText); // Pour voir le fichier text
+            console.log(reponse); // pour voir les réponses sous forme de tableau 
             enregs = reponse.records;
             for (let i = 0; i < enregs.length; i++) {
                 // on crée la ligne et les div internes
-                ligne = document.createElement("div");
-                ligne.setAttribute("class", "ligne");
-                ligne.id = i;
+                ligne = document.createElement("div"); // Création d'une div
+                ligne.setAttribute("class", "ligne"); //Ajout d'une class
+                ligne.id = i; // on affecte un id aux lignes
                 commune = document.createElement("div");
                 commune.setAttribute("class", "commune");
                 ligne.appendChild(commune);
@@ -35,7 +35,7 @@ req.onreadystatechange = function (event) {
                 espace.setAttribute("class","espaceHorizon");
                 contenu.appendChild(espace);
                 //on met à jour le contenu
-                commune.innerHTML = enregs[i].fields.commune;
+                commune.innerHTML = enregs[i].fields.commune; // on intégre les réponses dans l'html 
                 nbvelosdispo.innerHTML = enregs[i].fields.nbvelosdispo;
                 nbplacesdispo.innerHTML = enregs[i].fields.nbplacesdispo;
                 etat.innerHTML = enregs[i].fields.etat;
@@ -77,5 +77,5 @@ function afficheDetail(e) {
 
 //on envoi la requête
 req.open('GET', 'https://opendata.lillemetropole.fr/api/records/1.0/search/?dataset=vlille-realtime&rows=30&facet=libelle&facet=nom&facet=commune&facet=etat&facet=type&facet=etatconnexion', true);
-req.send(null);
+req.send(null); 
 
