@@ -7,7 +7,7 @@
 			 	<img src="Images/logo2.png" />
 				</div>
 
-				<div id="titre_page">
+				<div id="titrePage">
                   V'Lille
                 </div>
             </div>

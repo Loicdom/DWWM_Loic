@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <?php
+//Si le titre est indiqué, on l'affiche entre les balises <title>
+echo (!empty($titre)) ? '<title>' . $titre . '</title>' : '<title>  </title>';
+?>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+    <div id="page">
+        <div id="entete">
+            <div id="titre">
+                <div id="logo">
+                    <img src="Images/logo2.png" />
+                </div>
+
+                <div id="titrePage">
+                    V'Lille
+                </div>
+            </div>
+        </div>
+        <div id="contenu">
+
+            <div id="divSousTitre">
+                <h3>Cliquer sur une commune pour le détail</h3>
+            </div>
+            <div id="divContenu">
+                <div class="ligne titreLigne">
+                    <div class="commune">Commune</div>
+                    <div class="nbvelosdispo">Nombre de vélo dispo</div>
+                    <div class="nbplacesdispo">Nombre de place dispo</div>
+                    <div class="etat">Etat</div>
+                </div>
+                <div class="espaceHorizon"></div>
+            </div>
+
+        </div>
+        <div class="piedDePage">
+            <div class="espaceHorizon"></div>
+            <div class="espaceHorizon"></div>
+            <div class="espaceHorizon"></div>
+            <br>
+
+        </div>
+    </div>
+    <script src="JS/ajax.js"></script>
+</body>
+
+</html>

@@ -41,7 +41,7 @@ req.onreadystatechange = function (event) {
                 etat.innerHTML = enregs[i].fields.etat;
 
                 // on ajoute un evenement sur ligne pour afficher le detail
-                // ligne.addEventListener("click", afficheDetail);
+                ligne.addEventListener("click", afficheDetail);
             }
             console.log("Réponse reçue: %s", this.responseText);
         } else {
@@ -51,23 +51,27 @@ req.onreadystatechange = function (event) {
 };
 
 function afficheDetail(e) {
-    parkingClique = (e.target).parentNode;
-    parkingClique.removeEventListener("click", afficheDetail);
+    VLilleClique = (e.target).parentNode;
+    VLilleClique.removeEventListener("click", afficheDetail);
     detail = document.createElement("div");
     detail.setAttribute("class", "detail");
     adresse = document.createElement("div");
     adresse.setAttribute("class", "adresse");
     detail.appendChild(adresse);
-    dispo = document.createElement("div");
-    dispo.setAttribute("class", "dispo");
-    detail.appendChild(dispo);
-    nbMax = document.createElement("div");
-    nbMax.setAttribute("class", "nbMax");
-    detail.appendChild(nbMax);
-    adresse.innerHTML = enregs[parkingClique.id].fields.adresse;
-    dispo.innerHTML = enregs[parkingClique.id].fields.dispo;
-    nbMax.innerHTML= "  nb places max " + enregs[parkingClique.id].fields.max;
-    contenu.insertBefore(detail, parkingClique.nextSibling);
+    nom = document.createElement("div");
+    nom.setAttribute("class", "nom");
+    detail.appendChild(nom);
+    etatconnexion = document.createElement("div");
+    etatconnexion.setAttribute("class", "etatconnexion");
+    detail.appendChild(etatconnexion);
+    localisation = document.createElement("div");
+    localisation.setAttribute("class", "localisation");
+    detail.appendChild(localisation);
+    adresse.innerHTML = enregs[VLilleClique.id].fields.adresse;
+    nom.innerHTML = enregs[VLilleClique.id].fields.nom;
+    etatconnexion.innerHTML= "  Etat de connexion " + enregs[VLilleClique.id].fields.etatconnexion;
+    localisation.innerHTML= "  Localisation " + enregs[VLilleClique.id].fields.localisation;
+    contenu.insertBefore(detail, VLilleClique.nextSibling);
 
 }
 

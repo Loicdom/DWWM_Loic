@@ -1,6 +1,6 @@
 ﻿/*-----------------------------------GLOBAL-----------------------------------------*/
 body {
-	background-color: black;
+	background-color: rgb(187, 177, 177);
 }
 
 img {
@@ -12,16 +12,15 @@ img {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-color: wheat;
-	padding-left: 2%;
-	padding-right: 2%;
+	background-color: rgb(187, 177, 177);
+	padding-left: 2%; 
+	padding-right: 2%; 
 }
 
 #contenu {
 	display: flex;
 	flex-direction: column;
 	width: 80%;
-	background-color: wheat;
 	justify-content: center;
 }
 .ligne{
@@ -36,7 +35,7 @@ img {
 	flex: 0.5;
 }
 #entete {
-	background-color: #543ecf;
+	background-color: #cf3e3e;
 	display: flex;
 	width: 100%;
 	flex-direction: column;
@@ -54,11 +53,14 @@ img {
 	padding-left: 1%;
 }
 
-#titre_page {
+#titrePage {
 	display: flex;
 	flex: 5;
+	margin-right: 20vw;
 	justify-content: center;
 	align-items: center;
+	color: beige;
+	font-size: 2em;
 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 #divSousTitre{
@@ -67,7 +69,7 @@ img {
 .commune , .nbvelosdispo, .nbplacesdispo ,.etat  {
 	flex: 1;
 }
-.dispo, .adresse, .nbMax{
+.nom, .adresse, .localisation, .etatconnexion{
 	flex: 1;
 	padding-left: 2vw;
 }
