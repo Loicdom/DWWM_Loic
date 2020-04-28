@@ -87,3 +87,8 @@ textarea
     width:35%;
     font-family: 'Roboto', sans-serif;
 }
+
+input {
+    max-width: 120px;
+    height: 2vh;
+}

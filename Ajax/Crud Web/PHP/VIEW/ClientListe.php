@@ -7,7 +7,7 @@ $clients = ClientManager::getList();
     <div class="bloc titre">Prenom</div>
     <div class="bloc titre">Adresse</div>
     <div class="bloc titre">Ville</div>
-    <div class="bloc titre"> </div>
+    <div class="bloc titre">Libelle</div>
     <div class="bloc titre"> </div>
 </div>
 <?php
@@ -18,6 +18,9 @@ foreach ($clients as $elt) {
         <div class="bloc contenu"><?php echo $elt->getPrenomClient() ?></div>
         <div class="bloc contenu"><?php echo $elt->getAdresseClient() ?></div>
         <div class="bloc contenu"><?php echo $elt->getVilleClient() ?></div>
+        <div class="libelle">
+                <input type="text">
+            </div>
         <a href="index.php?action=ClientForm&m=modif&id=<?php echo $elt->getIdClient() ?>">
             <div class="bouton">Modifier</div>
         </a>

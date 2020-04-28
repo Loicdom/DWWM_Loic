@@ -5,24 +5,26 @@ class ClientManager
     {
         var_dump($obj);
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO clients (idClient,nomClient,prenomClient,adresseClient,villeClient) VALUES (:idClient,:nomClient,:prenomClient,:adresseClient,:villeClient)");
+        $q = $db->prepare("INSERT INTO clients (idClient,nomClient,prenomClient,adresseClient,villeClient,libelle) VALUES (:idClient,:nomClient,:prenomClient,:adresseClient,:villeClient,:libelle)");
         $q->bindValue(":idClient", $obj->getIdClient());
         $q->bindValue(":nomClient", $obj->getNomClient());
         $q->bindValue(":prenomClient", $obj->getPrenomClient());
         $q->bindValue(":adresseClient", $obj->getAdresseClient());
         $q->bindValue(":villeClient", $obj->getVilleClient());
+        $q->bindValue(":libelle", $obj->getLibelle());
         $q->execute();
     }
 
     public static function update(Client $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE clients SET  nomClient=:nomClient, prenomClient=:prenomClient, adresseClient=:adresseClient, villeClient=:villeClient WHERE idclient=:idClient");
+        $q = $db->prepare("UPDATE clients SET  nomClient=:nomClient, prenomClient=:prenomClient, adresseClient=:adresseClient, villeClient=:villeClient, libelle=:libelle WHERE idclient=:idClient");
         $q->bindValue(":idClient", $obj->getIdClient());
         $q->bindValue(":nomClient", $obj->getNomClient());
         $q->bindValue(":prenomClient", $obj->getPrenomClient());
         $q->bindValue(":adresseClient", $obj->getAdresseClient());
         $q->bindValue(":villeClient", $obj->getVilleClient());
+        $q->bindValue(":libelle", $obj->getLibelle());
         $q->execute();
     }
 

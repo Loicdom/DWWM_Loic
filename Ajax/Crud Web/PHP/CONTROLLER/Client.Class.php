@@ -7,6 +7,7 @@ private $_nomClient;
 private $_prenomClient;
 private $_adresseClient;
 private $_villeClient;
+private $_libelle;
 
 /******************************Accesseurs*******************************/
 public function getIdClient()
@@ -48,6 +49,14 @@ public function getVilleClient()
 public function setVilleClient($_villeClient)
 {
  return $this->_villeClient = $_villeClient;
+}
+public function getLibelle()
+{
+ return $this->_libelle;
+}
+public function setLibelle($_libelle)
+{
+ return $this->_libelle = $_libelle;
 }
 
 /*******************************Construct*******************************/
