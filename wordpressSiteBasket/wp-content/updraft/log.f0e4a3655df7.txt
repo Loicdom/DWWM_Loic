@@ -1,0 +1,39 @@
+0000.002 (0) Opened log file at time: Tue, 05 May 2020 10:05:26 +0000 on http://phpweb/DWWM_Lo%C3%AFc/wordpressSiteBasket
+0000.010 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.23 WP: 5.4.1 PHP: 7.2.14 (apache2handler, Windows NT LAPTOP-SLLAPOJU 10.0 build 18362 (Windows 10) AMD64) MySQL: 5.7.24 WPLANG: fr_FR Server: Apache/2.4.37 (Win64) PHP/7.2.14 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 18.5M | 4M) multisite: N openssl: OpenSSL 1.1.1a  20 Nov 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.016 (0) Free space on disk containing Updraft's temporary directory: 361974.6 MB
+0000.030 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.038 (0) Semaphore (fd, wp_options) being initialised
+0000.049 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.057 (0) Set semaphore last lock (fd) time to 2020-05-05 10:05:26
+0000.064 (0) Semaphore lock (fd) complete
+0000.082 (0) Backup run: resumption=0, nonce=f0e4a3655df7, file_nonce=f0e4a3655df7 begun at=1588673126 (0s ago), job type=backup
+0000.090 (0) Scheduling a resumption (1) after 300 seconds (1588673426) in case this run gets aborted
+0000.143 (0) Checking if we have a zip executable available
+0000.152 (0) Creation of backups of directories: beginning
+0000.174 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0005.127 (0) Total entities for the zip file: 420 directories, 2545 files (0 skipped as non-modified), 42.5 MB
+0005.143 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0005.441 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 100 files added (on-disk size: 73 KB)
+0005.682 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 200 files added (on-disk size: 73 KB)
+0005.948 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 300 files added (on-disk size: 73 KB)
+0006.198 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 400 files added (on-disk size: 73 KB)
+0006.460 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 500 files added (on-disk size: 73 KB)
+0006.470 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.6 MB, 2545 files batched, 501 (502) added so far); re-opening (prior size: 73 KB)
+0008.090 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 600 files added (on-disk size: 3390 KB)
+0008.307 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 700 files added (on-disk size: 3390 KB)
+0008.524 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 800 files added (on-disk size: 3390 KB)
+0008.748 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 900 files added (on-disk size: 3390 KB)
+0008.995 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 1000 files added (on-disk size: 3390 KB)
+0009.008 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (19.3 MB, 2545 files batched, 501 (1003) added so far); re-opening (prior size: 3390 KB)
+0012.743 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 1100 files added (on-disk size: 8843.6 KB)
+0012.989 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 1200 files added (on-disk size: 8843.6 KB)
+0013.244 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 1300 files added (on-disk size: 8843.6 KB)
+0013.475 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 1400 files added (on-disk size: 8843.6 KB)
+0013.722 (0) Zip: backup_2020-05-05-1205_Le_Basketball_f0e4a3655df7-plugins.zip.tmp: 1500 files added (on-disk size: 8843.6 KB)
+0013.734 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.8 MB, 2545 files batched, 501 (1504) added so far); re-opening (prior size: 8843.6 KB)
+0014.665 (0) User request for abort: backup job will be immediately halted
+0014.671 (0) Decremented the semaphore (fd) by 1
+0014.675 (0) Semaphore (fd) unlocked
+0014.677 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0014.687 (0) No email will/can be sent - the user has not configured an email address.
+0014.690 (0) La sauvegarde a été annulée par l'utilisateur

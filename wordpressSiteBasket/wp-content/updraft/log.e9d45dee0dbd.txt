@@ -1,0 +1,335 @@
+0000.002 (0) Opened log file at time: Tue, 05 May 2020 10:07:39 +0000 on http://phpweb/DWWM_Lo%C3%AFc/wordpressSiteBasket
+0000.006 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.23 WP: 5.4.1 PHP: 7.2.14 (apache2handler, Windows NT LAPTOP-SLLAPOJU 10.0 build 18362 (Windows 10) AMD64) MySQL: 5.7.24 WPLANG: fr_FR Server: Apache/2.4.37 (Win64) PHP/7.2.14 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 18.5M | 2M) multisite: N openssl: OpenSSL 1.1.1a  20 Nov 2018 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.011 (0) Free space on disk containing Updraft's temporary directory: 361939.6 MB
+0000.021 (0) Tasks: Backup files: 1 (schedule: manual) Backup DB: 1 (schedule: manual)
+0000.034 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.043 (0) Set semaphore last lock (fd) time to 2020-05-05 10:07:39
+0000.046 (0) Semaphore lock (fd) complete
+0000.063 (0) Backup run: resumption=0, nonce=e9d45dee0dbd, file_nonce=e9d45dee0dbd begun at=1588673259 (0s ago), job type=backup
+0000.072 (0) Scheduling a resumption (1) after 300 seconds (1588673559) in case this run gets aborted
+0000.091 (0) Checking if we have a zip executable available
+0000.104 (0) Creation of backups of directories: beginning
+0000.130 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0005.030 (0) Total entities for the zip file: 420 directories, 2545 files (0 skipped as non-modified), 42.5 MB
+0005.042 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0005.337 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 100 files added (on-disk size: 73 KB)
+0005.556 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 200 files added (on-disk size: 73 KB)
+0005.770 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 300 files added (on-disk size: 73 KB)
+0006.018 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 400 files added (on-disk size: 73 KB)
+0006.250 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 500 files added (on-disk size: 73 KB)
+0006.257 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (7.6 MB, 2545 files batched, 501 (502) added so far); re-opening (prior size: 73 KB)
+0007.991 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 600 files added (on-disk size: 3390 KB)
+0008.236 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 700 files added (on-disk size: 3390 KB)
+0008.472 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 800 files added (on-disk size: 3390 KB)
+0008.706 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 900 files added (on-disk size: 3390 KB)
+0008.941 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1000 files added (on-disk size: 3390 KB)
+0008.953 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (19.3 MB, 2545 files batched, 501 (1003) added so far); re-opening (prior size: 3390 KB)
+0012.449 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1100 files added (on-disk size: 8843.6 KB)
+0012.690 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1200 files added (on-disk size: 8843.6 KB)
+0012.902 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1300 files added (on-disk size: 8843.6 KB)
+0013.135 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1400 files added (on-disk size: 8843.6 KB)
+0013.349 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1500 files added (on-disk size: 8843.6 KB)
+0013.362 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.8 MB, 2545 files batched, 501 (1504) added so far); re-opening (prior size: 8843.6 KB)
+0014.447 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1600 files added (on-disk size: 9546.5 KB)
+0014.724 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1700 files added (on-disk size: 9546.5 KB)
+0014.998 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1800 files added (on-disk size: 9546.5 KB)
+0015.212 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 1900 files added (on-disk size: 9546.5 KB)
+0015.436 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 2000 files added (on-disk size: 9546.5 KB)
+0015.450 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3.2 MB, 2545 files batched, 501 (2005) added so far); re-opening (prior size: 9546.5 KB)
+0017.079 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 2100 files added (on-disk size: 10486.9 KB)
+0017.341 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 2200 files added (on-disk size: 10486.9 KB)
+0017.608 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 2300 files added (on-disk size: 10486.9 KB)
+0017.860 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 2400 files added (on-disk size: 10486.9 KB)
+0018.098 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip.tmp: 2500 files added (on-disk size: 10486.9 KB)
+0018.114 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (10.4 MB, 2545 files batched, 501 (2506) added so far); re-opening (prior size: 10486.9 KB)
+0025.223 (0) Created plugins zip (0) - 14759.9 KB in 25.1 s (588.6 KB/s) (sha1: 43a32f94a4682fe41873d6a965fdb870a611ecf8, sha256: 670e89659a6518d5db3b799015c88f561d2d26408b85e28e3f4df91c9232ee74)
+0025.238 (0) Beginning creation of dump of themes (split every: 400 MB)
+0026.453 (0) Total entities for the zip file: 122 directories, 594 files (0 skipped as non-modified), 11.7 MB
+0026.696 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0026.941 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0027.164 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0027.389 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0027.619 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0027.624 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (9.6 MB, 594 files batched, 501 (501) added so far); re-opening (prior size: 0 KB)
+0030.239 (0) Created themes zip (0) - 6676.4 KB in 5 s (1338.9 KB/s) (sha1: c4a98130670956b44ebff2a125953f13f0adad8d, sha256: 0bb6f31f9eb8ef9caca661c7b9bc99ea55c854438c791f8fdb2e6ec80935dbd3)
+0030.258 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0030.261 (0) Looking for candidates to backup in: C:\Users\loicd\Documents\phpweb\DWWM_Loïc\wordpressSiteBasket/wp-content/uploads
+0030.266 (0) finding files: 2020: adding to list (1)
+0030.270 (0) finding files: ao_ccss: adding to list (2)
+0030.274 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0030.573 (0) Total entities for the zip file: 4 directories, 155 files (0 skipped as non-modified), 8.2 MB
+0030.845 (0) Zip: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-uploads.zip.tmp: 100 files added (on-disk size: 0 KB)
+0031.499 (0) Created uploads zip (0) - 8388.2 KB in 1.2 s (6938.9 KB/s) (sha1: 310f4b3ec3819e63cce87768d1a562a75413cb8d, sha256: 6a98d8ab62134517fb380db83b7341e410638eaaf32d93a6b801f72a29dc1635)
+0031.517 (0) Beginning backup of other directories found in the content directory (index: 0)
+0031.520 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0031.523 (0) Looking for candidates to backup in: C:\Users\loicd\Documents\phpweb\DWWM_Loïc\wordpressSiteBasket/wp-content
+0031.528 (0) finding files: cache: skipping: excluded by options
+0031.530 (0) finding files: index.php: adding to list (1)
+0031.533 (0) finding files: languages: adding to list (2)
+0031.535 (0) finding files: plugins: skipping: this is the plugins directory
+0031.538 (0) finding files: themes: skipping: this is the themes directory
+0031.542 (0) finding files: updraft: skipping: this is the updraft directory
+0031.545 (0) finding files: upgrade: skipping: excluded by options
+0031.548 (0) finding files: uploads: skipping: this is the uploads directory
+0031.552 (0) finding files: wflogs: adding to list (3)
+0031.685 (0) Total entities for the zip file: 4 directories, 60 files (0 skipped as non-modified), 8.7 MB
+0037.140 (0) Created others zip (0) - 3406.3 KB in 5.6 s (611.3 KB/s) (sha1: 2d7a679d4fcb9c94df5a00d8f931190a20a26e24, sha256: 439ad4d19d4e91e3b1b5f08da6bf91c1a4601ac4bb3e7ad68921b23516b9f729)
+0037.160 (0) Saving backup status to database (elements: 8)
+0037.169 (0) Beginning creation of database dump (WordPress DB)
+0037.242 (0) Table wp_options: Total expected rows (approximate): 255
+0037.294 (0) Table wp_options: Total rows added: 251 in 0.05 seconds
+0037.299 (0) Table wp_options: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_options.table.gz - 67.6 KB)
+0037.317 (0) Table wp_users: Total expected rows (approximate): 1
+0037.324 (0) Table wp_users: Total rows added: 1 in 0.00 seconds
+0037.328 (0) Table wp_users: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_users.table.gz - 0.6 KB)
+0037.346 (0) Table wp_usermeta: Total expected rows (approximate): 40
+0037.356 (0) Table wp_usermeta: Total rows added: 40 in 0.01 seconds
+0037.360 (0) Table wp_usermeta: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_usermeta.table.gz - 1.4 KB)
+0037.381 (0) Table wp_commentmeta: Total expected rows (approximate): 3
+0037.388 (0) Table wp_commentmeta: Total rows added: 3 in 0.00 seconds
+0037.392 (0) Table wp_commentmeta: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_commentmeta.table.gz - 0.5 KB)
+0037.410 (0) Table wp_comments: Total expected rows (approximate): 1
+0037.417 (0) Table wp_comments: Total rows added: 1 in 0.00 seconds
+0037.421 (0) Table wp_comments: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_comments.table.gz - 0.8 KB)
+0037.442 (0) Table wp_links: Total expected rows (approximate): 0
+0037.449 (0) Table wp_links: Total rows added: 0 in 0.00 seconds
+0037.453 (0) Table wp_links: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_links.table.gz - 0.4 KB)
+0037.471 (0) Table wp_postmeta: Total expected rows (approximate): 314
+0037.505 (0) Table wp_postmeta: Total rows added: 314 in 0.03 seconds
+0037.511 (0) Table wp_postmeta: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_postmeta.table.gz - 9.1 KB)
+0037.531 (0) Table wp_posts: Total expected rows (approximate): 162
+0037.639 (0) Table wp_posts: Total rows added: 162 in 0.11 seconds
+0037.644 (0) Table wp_posts: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_posts.table.gz - 90.4 KB)
+0037.662 (0) Table wp_term_relationships: Total expected rows (approximate): 13
+0037.670 (0) Table wp_term_relationships: Total rows added: 13 in 0.01 seconds
+0037.674 (0) Table wp_term_relationships: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_term_relationships.table.gz - 0.4 KB)
+0037.694 (0) Table wp_term_taxonomy: Total expected rows (approximate): 2
+0037.701 (0) Table wp_term_taxonomy: Total rows added: 2 in 0.00 seconds
+0037.705 (0) Table wp_term_taxonomy: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_term_taxonomy.table.gz - 0.4 KB)
+0037.725 (0) Table wp_termmeta: Total expected rows (approximate): 0
+0037.731 (0) Table wp_termmeta: Total rows added: 0 in 0.00 seconds
+0037.736 (0) Table wp_termmeta: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_termmeta.table.gz - 0.4 KB)
+0037.755 (0) Table wp_terms: Total expected rows (approximate): 2
+0037.764 (0) Table wp_terms: Total rows added: 2 in 0.01 seconds
+0037.769 (0) Table wp_terms: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_terms.table.gz - 0.4 KB)
+0037.789 (0) Table wp_duplicator_packages: Total expected rows (approximate): 0
+0037.795 (0) Table wp_duplicator_packages: Total rows added: 0 in 0.00 seconds
+0037.800 (0) Table wp_duplicator_packages: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_duplicator_packages.table.gz - 0.4 KB)
+0037.820 (0) Table wp_wfblockediplog: Total expected rows (approximate): 0
+0037.827 (0) Table wp_wfblockediplog: Total rows added: 0 in 0.00 seconds
+0037.831 (0) Table wp_wfblockediplog: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfblockediplog.table.gz - 0.3 KB)
+0037.850 (0) Table wp_wfblocks7: Total expected rows (approximate): 0
+0037.857 (0) Table wp_wfblocks7: Total rows added: 0 in 0.00 seconds
+0037.862 (0) Table wp_wfblocks7: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfblocks7.table.gz - 0.4 KB)
+0037.883 (0) Table wp_wfconfig: Total expected rows (approximate): 247
+0037.967 (0) Table wp_wfconfig: Total rows added: 247 in 0.08 seconds
+0037.971 (0) Table wp_wfconfig: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfconfig.table.gz - 361.6 KB)
+0037.992 (0) Table wp_wfcrawlers: Total expected rows (approximate): 0
+0037.999 (0) Table wp_wfcrawlers: Total rows added: 0 in 0.00 seconds
+0038.003 (0) Table wp_wfcrawlers: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfcrawlers.table.gz - 0.3 KB)
+0038.026 (0) Table wp_wffilechanges: Total expected rows (approximate): 0
+0038.034 (0) Table wp_wffilechanges: Total rows added: 0 in 0.00 seconds
+0038.038 (0) Table wp_wffilechanges: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wffilechanges.table.gz - 0.3 KB)
+0038.060 (0) Table wp_wffilemods: Total expected rows (approximate): 3120
+0038.630 (0) Table wp_wffilemods: Total rows added: 3120 in 0.57 seconds
+0038.635 (0) Table wp_wffilemods: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wffilemods.table.gz - 247.9 KB)
+0038.655 (0) Table wp_wfhits: Total expected rows (approximate): 2
+0038.664 (0) Table wp_wfhits: Total rows added: 2 in 0.01 seconds
+0038.669 (0) Table wp_wfhits: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfhits.table.gz - 0.7 KB)
+0038.691 (0) Table wp_wfhoover: Total expected rows (approximate): 0
+0038.699 (0) Table wp_wfhoover: Total rows added: 0 in 0.01 seconds
+0038.704 (0) Table wp_wfhoover: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfhoover.table.gz - 0.3 KB)
+0038.724 (0) Table wp_wfissues: Total expected rows (approximate): 0
+0038.731 (0) Table wp_wfissues: Total rows added: 0 in 0.00 seconds
+0038.736 (0) Table wp_wfissues: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfissues.table.gz - 0.4 KB)
+0038.767 (0) Table wp_wfknownfilelist: Total expected rows (approximate): 3120
+0039.019 (0) Table wp_wfknownfilelist: Total rows added: 3120 in 0.25 seconds
+0039.024 (0) Table wp_wfknownfilelist: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfknownfilelist.table.gz - 29.4 KB)
+0039.045 (0) Table wp_wflivetraffichuman: Total expected rows (approximate): 0
+0039.052 (0) Table wp_wflivetraffichuman: Total rows added: 0 in 0.00 seconds
+0039.056 (0) Table wp_wflivetraffichuman: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wflivetraffichuman.table.gz - 0.3 KB)
+0039.076 (0) Table wp_wflocs: Total expected rows (approximate): 1
+0039.085 (0) Table wp_wflocs: Total rows added: 1 in 0.01 seconds
+0039.089 (0) Table wp_wflocs: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wflocs.table.gz - 0.4 KB)
+0039.109 (0) Table wp_wflogins: Total expected rows (approximate): 2
+0039.118 (0) Table wp_wflogins: Total rows added: 2 in 0.01 seconds
+0039.122 (0) Table wp_wflogins: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wflogins.table.gz - 0.5 KB)
+0039.145 (0) Table wp_wfls_2fa_secrets: Total expected rows (approximate): 0
+0039.152 (0) Table wp_wfls_2fa_secrets: Total rows added: 0 in 0.00 seconds
+0039.155 (0) Table wp_wfls_2fa_secrets: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfls_2fa_secrets.table.gz - 0.4 KB)
+0039.173 (0) Table wp_wfls_settings: Total expected rows (approximate): 17
+0039.182 (0) Table wp_wfls_settings: Total rows added: 19 in 0.01 seconds
+0039.186 (0) Table wp_wfls_settings: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfls_settings.table.gz - 0.7 KB)
+0039.204 (0) Table wp_wfnotifications: Total expected rows (approximate): 2
+0039.211 (0) Table wp_wfnotifications: Total rows added: 2 in 0.00 seconds
+0039.215 (0) Table wp_wfnotifications: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfnotifications.table.gz - 0.5 KB)
+0039.238 (0) Table wp_wfpendingissues: Total expected rows (approximate): 0
+0039.245 (0) Table wp_wfpendingissues: Total rows added: 0 in 0.00 seconds
+0039.249 (0) Table wp_wfpendingissues: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfpendingissues.table.gz - 0.4 KB)
+0039.270 (0) Table wp_wfreversecache: Total expected rows (approximate): 1
+0039.279 (0) Table wp_wfreversecache: Total rows added: 1 in 0.00 seconds
+0039.284 (0) Table wp_wfreversecache: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfreversecache.table.gz - 0.4 KB)
+0039.306 (0) Table wp_wfsnipcache: Total expected rows (approximate): 0
+0039.312 (0) Table wp_wfsnipcache: Total rows added: 0 in 0.00 seconds
+0039.317 (0) Table wp_wfsnipcache: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfsnipcache.table.gz - 0.4 KB)
+0039.338 (0) Table wp_wfstatus: Total expected rows (approximate): 628
+0039.403 (0) Table wp_wfstatus: Total rows added: 628 in 0.06 seconds
+0039.409 (0) Table wp_wfstatus: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfstatus.table.gz - 11.1 KB)
+0039.430 (0) Table wp_wftrafficrates: Total expected rows (approximate): 0
+0039.437 (0) Table wp_wftrafficrates: Total rows added: 0 in 0.00 seconds
+0039.442 (0) Table wp_wftrafficrates: finishing file (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wftrafficrates.table.gz - 0.3 KB)
+0039.459 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_options.table.gz (1/34): adding to final database dump
+0039.496 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_users.table.gz (2/34): adding to final database dump
+0039.502 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_usermeta.table.gz (3/34): adding to final database dump
+0039.509 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_commentmeta.table.gz (4/34): adding to final database dump
+0039.516 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_comments.table.gz (5/34): adding to final database dump
+0039.523 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_links.table.gz (6/34): adding to final database dump
+0039.527 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_postmeta.table.gz (7/34): adding to final database dump
+0039.541 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_posts.table.gz (8/34): adding to final database dump
+0039.592 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_term_relationships.table.gz (9/34): adding to final database dump
+0039.596 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_term_taxonomy.table.gz (10/34): adding to final database dump
+0039.601 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_termmeta.table.gz (11/34): adding to final database dump
+0039.608 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_terms.table.gz (12/34): adding to final database dump
+0039.612 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_duplicator_packages.table.gz (13/34): adding to final database dump
+0039.617 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfblockediplog.table.gz (14/34): adding to final database dump
+0039.624 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfblocks7.table.gz (15/34): adding to final database dump
+0039.628 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfconfig.table.gz (16/34): adding to final database dump
+0039.680 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfcrawlers.table.gz (17/34): adding to final database dump
+0039.687 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wffilechanges.table.gz (18/34): adding to final database dump
+0039.692 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wffilemods.table.gz (19/34): adding to final database dump
+0039.774 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfhits.table.gz (20/34): adding to final database dump
+0039.780 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfhoover.table.gz (21/34): adding to final database dump
+0039.786 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfissues.table.gz (22/34): adding to final database dump
+0039.791 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfknownfilelist.table.gz (23/34): adding to final database dump
+0039.846 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wflivetraffichuman.table.gz (24/34): adding to final database dump
+0039.852 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wflocs.table.gz (25/34): adding to final database dump
+0039.858 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wflogins.table.gz (26/34): adding to final database dump
+0039.862 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfls_2fa_secrets.table.gz (27/34): adding to final database dump
+0039.867 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfls_settings.table.gz (28/34): adding to final database dump
+0039.872 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfnotifications.table.gz (29/34): adding to final database dump
+0039.878 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfpendingissues.table.gz (30/34): adding to final database dump
+0039.883 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfreversecache.table.gz (31/34): adding to final database dump
+0039.889 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfsnipcache.table.gz (32/34): adding to final database dump
+0039.893 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wfstatus.table.gz (33/34): adding to final database dump
+0039.907 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db-table-wp_wftrafficrates.table.gz (34/34): adding to final database dump
+0039.920 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db.gz: finished writing out complete database file (792 KB)
+0039.985 (0) Total database tables backed up: 34 (backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db.gz, size: 843700, sha1: 664787f620a6a88b9170f4a1f304afd7d6288183, sha256: f24458edaaf05eb230b29ad84dc967dd79f43e44a7cee075f1a6aed0740491f0)
+0040.007 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0040.011 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0040.015 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0040.020 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-others.zip: others: This file has not yet been successfully uploaded: will queue
+0040.024 (0) backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db.gz: db: This file has not yet been successfully uploaded: will queue
+0040.028 (0) Saving backup history. Total backup size: 33.3 MB
+0040.038 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0040.050 (0) Cloud backup selection (1/1): googledrive with instance (1/1) (last)
+0040.058 (0) Beginning dispatch of backup to remote (googledrive) (instance identifier s-9b9b4211541bb143fc70af161274f584)
+0043.046 (0) Google Drive: creating path: /UpdraftPlus
+0047.921 (0) Google Drive: quota usage: used=0 MB, total=15360 MB, available=15360 MB
+0047.924 (0) Google Drive: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip: Attempting to upload to Google Drive (into folder id: 1J0hNeNY9FkGl9iUGetp567pRGSXbTxOx)
+0069.433 (0) Googledrive chunked upload: 6.9 % uploaded (1048576)
+0094.905 (0) Googledrive chunked upload: 13.9 % uploaded (2097152)
+0113.050 (0) Googledrive chunked upload: 20.8 % uploaded (3145728)
+0130.632 (0) Googledrive chunked upload: 27.8 % uploaded (4194304)
+0149.826 (0) Googledrive chunked upload: 34.7 % uploaded (5242880)
+0168.821 (0) Googledrive chunked upload: 41.6 % uploaded (6291456)
+0186.247 (0) Googledrive chunked upload: 48.6 % uploaded (7340032)
+0208.854 (0) Googledrive chunked upload: 55.5 % uploaded (8388608)
+0226.875 (0) Googledrive chunked upload: 62.4 % uploaded (9437184)
+0251.702 (0) Googledrive chunked upload: 69.4 % uploaded (10485760)
+0270.988 (0) The time we have been running (271) is approaching the resumption interval (300) - increasing resumption interval to 301
+0270.994 (0) The scheduled resumption is within 45 seconds - will reschedule
+0270.999 (0) Rescheduling resumption 1: moving to 346 seconds from now (1588673876)
+0271.007 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 301 + 45 = 346
+0271.010 (0) Googledrive chunked upload: 76.3 % uploaded (11534336)
+0295.725 (0) Googledrive chunked upload: 83.3 % uploaded (12582912)
+0316.957 (0) The time we have been running (316.9) is approaching the resumption interval (346) - increasing resumption interval to 347
+0316.965 (0) Googledrive chunked upload: 90.2 % uploaded (13631488)
+0344.067 (0) The time we have been running (344.1) is approaching the resumption interval (347) - increasing resumption interval to 375
+0344.074 (0) Googledrive chunked upload: 97.1 % uploaded (14680064)
+0356.226 (0) The time we have been running (356.2) is approaching the resumption interval (375) - increasing resumption interval to 387
+0356.232 (0) Googledrive chunked upload: 100 % uploaded (14680064)
+0356.242 (0) Google Drive: OK: Archive backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip uploaded in 308.31 seconds
+0356.244 (0) Recording as successfully uploaded: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip
+0356.256 (0) Deleting local file: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-plugins.zip: OK
+0357.724 (0) Google Drive: quota usage: used=14.4 MB, total=15360 MB, available=15345.6 MB
+0357.727 (0) Google Drive: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip: Attempting to upload to Google Drive (into folder id: 1J0hNeNY9FkGl9iUGetp567pRGSXbTxOx)
+0374.818 (0) The time we have been running (374.8) is approaching the resumption interval (387) - increasing resumption interval to 405
+0374.826 (0) Googledrive chunked upload: 15.3 % uploaded (1048576)
+0393.506 (0) The time we have been running (393.5) is approaching the resumption interval (405) - increasing resumption interval to 424
+0393.512 (0) Googledrive chunked upload: 30.7 % uploaded (2097152)
+0419.751 (0) The time we have been running (419.7) is approaching the resumption interval (424) - increasing resumption interval to 450
+0419.758 (0) Googledrive chunked upload: 46 % uploaded (3145728)
+0441.906 (0) The time we have been running (441.9) is approaching the resumption interval (450) - increasing resumption interval to 472
+0441.912 (0) Googledrive chunked upload: 61.4 % uploaded (4194304)
+0463.542 (0) The time we have been running (463.5) is approaching the resumption interval (472) - increasing resumption interval to 494
+0463.549 (0) Googledrive chunked upload: 76.7 % uploaded (5242880)
+0489.752 (0) The time we have been running (489.7) is approaching the resumption interval (494) - increasing resumption interval to 520
+0489.759 (0) Googledrive chunked upload: 92 % uploaded (6291456)
+0501.258 (0) The time we have been running (501.2) is approaching the resumption interval (520) - increasing resumption interval to 532
+0501.265 (0) Googledrive chunked upload: 100 % uploaded (6291456)
+0501.275 (0) Google Drive: OK: Archive backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip uploaded in 143.54 seconds
+0501.278 (0) Recording as successfully uploaded: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip
+0501.288 (0) Deleting local file: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-themes.zip: OK
+0502.648 (0) Google Drive: quota usage: used=20.9 MB, total=15360 MB, available=15339.1 MB
+0502.651 (0) Google Drive: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-uploads.zip: Attempting to upload to Google Drive (into folder id: 1J0hNeNY9FkGl9iUGetp567pRGSXbTxOx)
+0525.568 (0) The time we have been running (525.6) is approaching the resumption interval (532) - increasing resumption interval to 556
+0525.574 (0) Googledrive chunked upload: 12.2 % uploaded (1048576)
+0549.714 (0) The time we have been running (549.7) is approaching the resumption interval (556) - increasing resumption interval to 580
+0549.720 (0) Googledrive chunked upload: 24.4 % uploaded (2097152)
+0580.227 (0) The time we have been running (580.2) is approaching the resumption interval (580) - increasing resumption interval to 611
+0580.232 (0) The scheduled resumption is within 45 seconds - will reschedule
+0580.238 (0) Rescheduling resumption 1: moving to 656 seconds from now (1588674495)
+0580.247 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 611 + 45 = 656
+0580.249 (0) Googledrive chunked upload: 36.6 % uploaded (3145728)
+0601.541 (0) Googledrive chunked upload: 48.8 % uploaded (4194304)
+0620.561 (0) Googledrive chunked upload: 61 % uploaded (5242880)
+0647.789 (0) The time we have been running (647.8) is approaching the resumption interval (656) - increasing resumption interval to 678
+0647.795 (0) Googledrive chunked upload: 73.2 % uploaded (6291456)
+0668.023 (0) The time we have been running (668) is approaching the resumption interval (678) - increasing resumption interval to 699
+0668.029 (0) Googledrive chunked upload: 85.5 % uploaded (7340032)
+0685.936 (0) The time we have been running (685.9) is approaching the resumption interval (699) - increasing resumption interval to 716
+0685.943 (0) Googledrive chunked upload: 97.7 % uploaded (8388608)
+0692.967 (0) The time we have been running (693) is approaching the resumption interval (716) - increasing resumption interval to 723
+0692.973 (0) Googledrive chunked upload: 100 % uploaded (8388608)
+0692.984 (0) Google Drive: OK: Archive backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-uploads.zip uploaded in 190.33 seconds
+0692.987 (0) Recording as successfully uploaded: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-uploads.zip
+0692.997 (0) Deleting local file: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-uploads.zip: OK
+0694.335 (0) Google Drive: quota usage: used=29.1 MB, total=15360 MB, available=15330.9 MB
+0694.338 (0) Google Drive: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-others.zip: Attempting to upload to Google Drive (into folder id: 1J0hNeNY9FkGl9iUGetp567pRGSXbTxOx)
+0712.640 (0) The time we have been running (712.6) is approaching the resumption interval (723) - increasing resumption interval to 743
+0712.647 (0) Googledrive chunked upload: 30.1 % uploaded (1048576)
+0731.028 (0) The time we have been running (731) is approaching the resumption interval (743) - increasing resumption interval to 762
+0731.036 (0) Googledrive chunked upload: 60.1 % uploaded (2097152)
+0750.187 (0) The time we have been running (750.2) is approaching the resumption interval (762) - increasing resumption interval to 781
+0750.194 (0) Googledrive chunked upload: 90.2 % uploaded (3145728)
+0759.920 (0) The time we have been running (759.9) is approaching the resumption interval (781) - increasing resumption interval to 790
+0759.927 (0) Googledrive chunked upload: 100 % uploaded (3145728)
+0759.937 (0) Google Drive: OK: Archive backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-others.zip uploaded in 65.59 seconds
+0759.940 (0) Recording as successfully uploaded: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-others.zip
+0759.949 (0) Deleting local file: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-others.zip: OK
+0761.337 (0) Google Drive: quota usage: used=32.5 MB, total=15360 MB, available=15327.5 MB
+0761.340 (0) Google Drive: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db.gz: Attempting to upload to Google Drive (into folder id: 1J0hNeNY9FkGl9iUGetp567pRGSXbTxOx)
+0784.501 (0) The time we have been running (784.5) is approaching the resumption interval (790) - increasing resumption interval to 815
+0784.508 (0) Googledrive chunked upload: 100 % uploaded
+0784.519 (0) Google Drive: OK: Archive backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db.gz uploaded in 23.17 seconds
+0784.522 (0) Recording as successfully uploaded: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db.gz
+0784.531 (0) Deleting local file: backup_2020-05-05-1207_Le_Basketball_e9d45dee0dbd-db.gz: OK
+0784.541 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0784.545 (0) Number of backup sets in history: 1; groups (db): 1
+0784.548 (0) Examining (for databases) backup set with group_id=0, nonce=e9d45dee0dbd, datestamp=1588673259 (May 05 2020 10:07:39)
+0784.550 (0) This backup set is the backup set just made, so will not be deleted.
+0784.550 (0) Number of backup sets in history: 1; groups (files): 1
+0784.554 (0) Examining (for files) backup set with nonce=e9d45dee0dbd, datestamp=1588673259 (May 05 2020 10:07:39)
+0784.554 (0) This backup set is the backup set just made, so will not be deleted.
+0784.557 (0) This backup set is the backup set just made, so will not be deleted.
+0784.558 (0) This backup set is the backup set just made, so will not be deleted.
+0784.559 (0) This backup set is the backup set just made, so will not be deleted.
+0784.559 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0784.562 (0) Retain: saving new backup history (sets now: 1) and finishing retain operation
+0784.570 (0) Resume backup (e9d45dee0dbd, 0): finish run
+0784.577 (0) Decremented the semaphore (fd) by 1
+0784.581 (0) Semaphore (fd) unlocked
+0784.585 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0784.595 (0) The backup apparently succeeded and is now complete
+0784.598 (0) No email will/can be sent - the user has not configured an email address.
+0784.600 (0) La sauvegarde a réussie. Elle est maintenant terminée.
