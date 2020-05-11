@@ -1,0 +1,16 @@
+h2 {
+    color: wheat;
+    background-color: blue;
+    text-align: center;
+}
+
+label {
+    color: red;
+    font-weight: bold; 
+}
+
+input {
+    padding: 0.5vw;
+}
+
+

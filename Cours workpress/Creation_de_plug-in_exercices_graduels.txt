@@ -1,0 +1,22 @@
+Création de Widget / plugin
+1. Lire le document
+2. Recopier le plugin Hello Dolly, le modifier pour afficher un texte simple
+3. Valider la création d'un plug-in simple en 1 seul fichier
+4. Recopier le code du widget Hello World
+	Attention, il y a des indications sur où placer le code. il ne suffit pas de faire des copier coller
+5. Modifier les noms des fichiers, des variables, ... et voir les impacts
+	But : comprendre parfaitement la syntaxe et les implications
+6. Créer un plugin perso avec utilisations des class et séparation des class
+7. Recopier la partie de code concernant la création de la table dans la base de données
+8. Modifier le code pour changer le nom de la table, des colonnes, ....
+9. Recopier le code pour la sauvegarde du commentaire dans la table
+10. Modifier le code pour ajouter par exemple le nom de la personne avant le commentaire
+11. Modifier le code pour enregistrer le nom dans la meme table
+12. Modifier le code pour enregistrer le nom dans une autre table de la base
+13. Recopier le code pour ajouter une page de paramètre
+14. Recopier le code pour ajouter un formulaire dans cette page
+15. Recopier le code pour ajouter les options dans la base de données
+16. Recopier le code pour utiliser les options dans le widget
+17. Modifier les parties du code pour ajouter une autre option et interagir avec l'interface
+18. Créer un plug-in inspirer du precedent avec des noms différents et des options différentes
+19. Créer un plug-in personnel complet
