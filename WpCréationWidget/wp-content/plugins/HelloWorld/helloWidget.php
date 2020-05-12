@@ -20,7 +20,7 @@ class hellowidget extends WP_Widget
             <label for="helloworld_comm">Votre commentaire :</label>
             <input id="helloworld_comm" name="helloworld_comm" type="texte"/>
         </p>
-        <input type="submit" class="btn"/>
+        <input type="submit"/>
     </form>
     <?php     
     echo $args['after_widget'];  
