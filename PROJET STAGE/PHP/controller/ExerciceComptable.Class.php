@@ -1,35 +1,26 @@
 <?php
-class Niveau
+class ExerciceComptable
 {
 /*******************************Attributs*******************************/
-private $_idNiveau;
-private $_nomNiveau;
-private $_pointDeVie;
+private $_idExerciceComptable;
+private $_libelleExerciceComptable;
 
 /******************************Accesseurs*******************************/
-public function getIdNiveau()
+public function getIdExerciceComptable()
 {
- return $this->_idNiveau;
+ return $this->_idExerciceComptable;
 }
-public function setIdNiveau($_idNiveau)
+public function setIdExerciceComptable($_idExerciceComptable)
 {
- return $this->_idNiveau = $_idNiveau;
+ return $this->_idExerciceComptable = $_idExerciceComptable;
 }
-public function getNomNiveau()
+public function getLibelleExerciceComptable()
 {
- return $this->_nomNiveau;
+ return $this->_libelleExerciceComptable;
 }
-public function setNomNiveau($_nomNiveau)
+public function setLibelleExerciceComptable($_libelleExerciceComptable)
 {
- return $this->_nomNiveau = $_nomNiveau;
-}
-public function getPointDeVie()
-{
- return $this->_pointDeVie;
-}
-public function setPointDeVie($_pointDeVie)
-{
- return $this->_pointDeVie = $_pointDeVie;
+ return $this->_libelleExerciceComptable = $_libelleExerciceComptable;
 }
 
 /*******************************Construct*******************************/
@@ -55,7 +46,7 @@ public function __construct(array $options = [])
 /****************************Autres méthodes****************************/
 public function toString() 
 { 
- return $this->getIdNiveau() . $this->getNomNiveau() . $this->getPointDeVie() ;
+ return $this->getIdExerciceComptable() ."\n". $this->getLibelleExerciceComptable();
 }
 
 }

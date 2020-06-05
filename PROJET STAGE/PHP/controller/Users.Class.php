@@ -1,12 +1,11 @@
 <?php
-class User
+class Users
 {
 /*******************************Attributs*******************************/
 private $_idUser;
 private $_pseudo;
 private $_motDePasse;
-private $_idPersonnage;
-private $_personnage;
+private $_role;
 
 /******************************Accesseurs*******************************/
 public function getIdUser()
@@ -33,23 +32,13 @@ public function setMotDePasse($_motDePasse)
 {
  return $this->_motDePasse = $_motDePasse;
 }
-public function getPersonnage()
+public function getRole()
 {
-return $this->_personnage;
+return $this->_role;
 }
-
-public function setPersonnage($_personnage)
+public function setRole($_role)
 {
-$this->_personnage = $_personnage;
-}
-public function getIdPersonnage()
-{
- return $this->_idPersonnage;
-}
-public function setIdPersonnage($_idPersonnage)
-{
- return $this->_idPersonnage = $_idPersonnage;
- $this->setPersonnage(PersonnageManager::getById($_idPersonnage));
+$this->_role = $_role;
 }
 
 /*******************************Construct*******************************/
@@ -75,9 +64,7 @@ public function __construct(array $options = [])
 /****************************Autres méthodes****************************/
 public function toString() 
 { 
- return $this->getPseudo() ."\n". $this->getMotDePasse() . $this->getPersonnage()->getNomPersonnage();
+ return $this->getPseudo() ."\n". $this->getMotDePasse() ."\n".  $this->getRole();
 }
-
-
 
 }
