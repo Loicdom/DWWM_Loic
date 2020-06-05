@@ -1,23 +1,23 @@
 <?php
-class UserManager
+class UsersManager
 {
-    public static function add(User $obj)
+    public static function add(Users $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO users (pseudo,motDePasse,idPersonnage) VALUES (:pseudo,:motDePasse,:idPersonnage)");
+        $q = $db->prepare("INSERT INTO Users (pseudo,motDePasse,role) VALUES (:pseudo,:motDePasse,:role)");
         $q->bindValue(":pseudo", $obj->getPseudo());
         $q->bindValue(":motDePasse", $obj->getMotDePasse());
-        $q->bindValue(":idPersonnage", $obj->getIdPersonnage());
+        $q->bindValue(":role", $obj->getRole());
         $q->execute();
     }
 
-    public static function update(User $obj)
+    public static function update(Users $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE users SET pseudo=:pseudo, motDePasse=:motDePasse, idPersonnage=:idPersonnage WHERE idUser=:idUser");
+        $q = $db->prepare("UPDATE Users SET pseudo=:pseudo, motDePasse=:motDePasse, role=:role WHERE idUser=:idUser");
         $q->bindValue(":pseudo", $obj->getPseudo());
         $q->bindValue(":motDePasse", $obj->getMotDePasse());
-        $q->bindValue(":idPersonnage", $obj->getIdPersonnage());
+        $q->bindValue(":role", $obj->getRole());
         $q->bindValue(":idUser", $obj->getIdUser());
         $q->execute();
     }
@@ -25,34 +25,35 @@ class UserManager
     public static function delete($id)
     {
         $db = DbConnect::getDb();
-        $db->exec("DELETE FROM users WHERE idUser=$id");
+        $db->exec("DELETE FROM Users WHERE idUser=$id");
     }
 
     public static function getById($id)
     {
         $db = DbConnect::getDb();
         $id = (int) $id;
-        $q = $db->query("SELECT * FROM users WHERE idUser=$id");
+        $q = $db->query("SELECT * FROM Users WHERE idUser=$id");
         $results = $q->fetch(PDO::FETCH_ASSOC);
         if ($results != false) {
-            return new User($results);
+            return new Users($results);
         } else {
             return false;
         }
     }
     static public function getByPseudo($pseudo) {
-		$db = DbConnect::getDb (); 
-		$q = $db->prepare ( 'SELECT pseudo, motDePasse, idUser, idPersonnage FROM users WHERE pseudo = :pseudo' );
+		$db = DbConnect::getDb (); // Instance de PDO.
+		// Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Personne
+		$q = $db->prepare ( 'SELECT pseudo, motDePasse, idUser, role FROM Users WHERE pseudo = :pseudo' );
 		
-		
+		// Assignation des valeurs .
 		$q->bindValue ( ':pseudo', $pseudo );
 		$q->execute ();
 		$donnees = $q->fetch ( PDO::FETCH_ASSOC );
 		$q->CloseCursor ();
-		if ($donnees == false) { 
-			return new User ();
+		if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
+			return new Users ();
 		} else {
-			return new User ( $donnees );
+			return new Users ( $donnees );
 		}
 	}
 
@@ -60,10 +61,10 @@ class UserManager
     {
         $db = DbConnect::getDb();
         $users = [];
-        $q = $db->query("SELECT * FROM users");
+        $q = $db->query("SELECT * FROM Users");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
-                $users[] = new User($donnees);
+                $users[] = new Users($donnees);
             }
         }
         return $users;
