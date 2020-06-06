@@ -1,0 +1,160 @@
+:root {
+    --color-bleu1: rgb(170, 213, 240);
+    --color-blue2: rgb(65, 99, 211);
+    --color-turquoise: #17C3B2;
+}
+
+html,body {
+    margin: 0vw;
+    padding: 0vw;
+    background-color: var(--color-bleu1);
+    font-family: 'Apple Chancery', cursive;
+}
+
+.header-co {
+    display: flex;
+    height: 18vh;
+    background: linear-gradient(rgb(109, 199, 235),rgb(224, 241, 242));
+    text-align: center;
+    color: rgb(4, 13, 54);
+    text-shadow: 2px 2px white;
+    align-items: center;
+}
+
+.logo {
+    flex: 0.5;
+    margin-top: 0.5vw;
+}
+
+#title {
+    flex: 2;
+    font-size: 2em;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh 0 15vh 0;
+
+}
+
+.connect-form {
+    background-color: ivory;
+    width: 43vw;
+    margin: 10vh 30vw;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(19, 76, 141, 0.514);
+    align-items: center;
+    text-align: center;
+}
+
+.head-connexion {
+    height: 7vh;
+    font-size: 2em;
+    text-shadow: 2px 2px rgb(17, 12, 94);
+    color: rgb(255, 255, 180);
+    background-color: var(--color-blue2);
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 2vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenu {
+    width: 22vw;
+    position: relative;
+
+}
+
+.input-co {
+    width: 80%;
+    height: 3.2vh;
+    position: relative;
+    margin-bottom: 2vh;
+    text-indent: 4vw;
+}
+
+.fa-eye {
+    right: 23px;
+    top: 0px;
+
+}
+
+
+.fa-user-circle-o {
+    top: 0px;
+    border-right: solid 2px var(--color-blue2);
+}
+
+i {
+    position: absolute;
+    color: var(--color-blue2);
+    font-size: 1em;
+    padding: 0.4vw 1vw;
+    z-index: 10;
+    ;
+}
+
+.fa-unlock-alt {
+    top: 0px;
+    border-right: solid 2px var(--color-blue2);
+    padding: 0.4vw 1.08vw;
+}
+
+
+
+/* #message {
+    display: none;
+    position:absolute;
+    right: -165px;
+    top:-5px;
+    color: red;
+    text-align: justify;
+    line-height: 2px;
+    font-family: 'Roboto',sans-serif;
+   font-size: 0.9em;
+   }
+
+.valid {
+    color:#5cbc63;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -8px;
+    content: "✔";
+  }
+  
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -8px;
+    content: "✖";
+  } */
+
+.bouton {
+    padding: 1.5vh;
+    margin: 1vh 1vw 1.5vh 1vw;
+    border-radius: 12px;
+    border: 1px solid rgb(65, 99, 211);
+    font-family: 'Apple Chancery',  cursive;;
+    ;
+
+}
+
+.bouton:hover {
+    background-color: rgb(65, 99, 211);
+    color: rgb(224, 238, 237);
+    text-shadow: 2px 2px rgb(17, 12, 94);
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+

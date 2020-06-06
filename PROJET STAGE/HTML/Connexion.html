@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
+    <title>Connexion</title>
+</head>
+
+<body class="body-co">
+
+    <header class="header-co">
+        <div class="logo">
+            <img src="../Images/logo.jpg" alt="Logo"></div>
+        <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
+    </header>
+
+    <div class="content">
+        <form class="connect-form" action="" method="post">
+
+            <div class="head-connexion">Connexion</div>
+            <div class="container">
+                <div class="contenu">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <input class="input-co" type="text" name="pseudo" id="pseudo" maxlength="50"
+                        placeholder="Pseudo" pattern="[a-zA-Z0-9]){3,20}" required autofocus>
+
+                </div>
+
+                <div class="contenu">
+                    <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                    <input class="input-co" type="password" name="motDePasse" id="motDePasse" maxlength="30"
+                        placeholder="Mot de passe"
+                        pattern="" required>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </div>
+            </div>
+
+
+            
+                <input class="bouton" type="submit" value="Valider" />
+            
+
+        </form>
+    </div>
+
+</body>
+
+</html>
