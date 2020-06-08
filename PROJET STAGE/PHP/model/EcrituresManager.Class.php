@@ -70,9 +70,9 @@ class EcrituresManager
         $donnees = $q->fetch(PDO::FETCH_ASSOC);
         $q->CloseCursor();
         if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Users();
+            return new Ecritures();
         } else {
-            return new Users($donnees);
+            return new Ecritures($donnees);
         }
     }
 
@@ -88,9 +88,9 @@ class EcrituresManager
         $donnees = $q->fetch(PDO::FETCH_ASSOC);
         $q->CloseCursor();
         if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Users();
+            return new Ecritures();
         } else {
-            return new Users($donnees);
+            return new Ecritures($donnees);
         }
     }
 
@@ -106,9 +106,9 @@ class EcrituresManager
         $donnees = $q->fetch(PDO::FETCH_ASSOC);
         $q->CloseCursor();
         if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Users();
+            return new Ecritures();
         } else {
-            return new Users($donnees);
+            return new Ecritures($donnees);
         }
     }
 
@@ -124,9 +124,9 @@ class EcrituresManager
         $donnees = $q->fetch(PDO::FETCH_ASSOC);
         $q->CloseCursor();
         if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Users();
+            return new Ecritures();
         } else {
-            return new Users($donnees);
+            return new Ecritures($donnees);
         }
     }
 
@@ -142,9 +142,9 @@ class EcrituresManager
         $donnees = $q->fetch(PDO::FETCH_ASSOC);
         $q->CloseCursor();
         if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Users();
+            return new Ecritures();
         } else {
-            return new Users($donnees);
+            return new Ecritures($donnees);
         }
     }
 }
