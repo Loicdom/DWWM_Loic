@@ -40,6 +40,7 @@ CREATE TABLE Ecritures(
         dateEcriture        Date NOT NULL ,
         libelleEcriture     Varchar (100) NOT NULL ,
         lettrage            Varchar (100) NOT NULL ,
+        solde               Decimal (6,2) NOT NULL ,
         idFacture           Int ,
         idExerciceComptable Int NOT NULL
 
@@ -135,8 +136,10 @@ CREATE TABLE Personnes(
 
 CREATE TABLE LigneEcriture(
         idLigneEcriture Int NOT NULL PRIMARY KEY ,
-        montant    Varchar (100) NOT NULL ,
-        sens       Varchar (100) NOT NULL
+        montant    Decimal (6,2) NOT NULL ,
+        sens       Varchar (100) NOT NULL ,
+        idEcriture Int NOT NULL ,
+        idPCGA     Int NOT NULL 
 
 )ENGINE=InnoDB;
 
