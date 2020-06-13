@@ -143,6 +143,31 @@ CREATE TABLE LigneEcriture(
 
 )ENGINE=InnoDB;
 
+#------------------------------------------------------------
+# Table: Budgets
+#------------------------------------------------------------
+
+CREATE TABLE Budgets(
+        idBudget                 Int  Auto_increment  NOT NULL PRIMARY KEY ,
+        fournitureAtelierCreatif Decimal (6,2) NOT NULL ,
+        atelierCuisineGouter     Decimal (6,2) NOT NULL ,
+        petitMateriel            Decimal (6,2) NOT NULL ,
+        salaireEmploye           Decimal (6,2) NOT NULL ,
+        assurance                Decimal (6,2) NOT NULL ,
+        fraisPostauxTel          Decimal (6,2) NOT NULL ,
+        entretienMaterielJadin   Decimal (6,2) NOT NULL ,
+        produitEntretien         Decimal (6,2) NOT NULL ,
+        fraisBancaires           Decimal (6,2) NOT NULL ,
+        ursaff                   Decimal (6,2) NOT NULL ,
+        subvMunicipale           Decimal (6,2) NOT NULL ,
+        participationFamille     Decimal (6,2) NOT NULL ,
+        produitManif             Decimal (6,2) NOT NULL ,
+        anniversaire             Decimal (6,2) NOT NULL ,
+        adhesion                 Decimal (6,2) NOT NULL ,
+        participationIME         Decimal (6,2) NOT NULL 
+)ENGINE=InnoDB;
+
+
 
 
 ALTER TABLE LigneEcriture ADD CONSTRAINT ligneEcriture_Ecritures_FK FOREIGN KEY (idEcriture) REFERENCES Ecritures(idEcriture);
