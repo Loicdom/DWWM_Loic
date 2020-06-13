@@ -113,20 +113,25 @@ CREATE TABLE Fournisseurs(
 #------------------------------------------------------------
 
 CREATE TABLE Personnes(
-        idPersonne          Int  Auto_increment  NOT NULL PRIMARY KEY ,
-        nomPersonne         Varchar (50) NOT NULL ,
-        prenomPersonne      Varchar (50) NOT NULL ,
-        dateNaissPersonne   Date NOT NULL ,
-        adressePersonne     Varchar (100) NOT NULL ,
-        cpPersonne          Int NOT NULL ,
-        villePersonne       Varchar (50) NOT NULL ,
-        emailPersonne       Varchar (50) NOT NULL ,
-        telPersonne         Varchar (50) NOT NULL ,
-        infosParent         Varchar (100) NOT NULL ,
-        bafaAquisBenevole   Varchar (10) NOT NULL ,
-        commentairePersonne Varchar (100) NOT NULL ,
-        contratEmploye      Mediumblob NOT NULL ,
-        typePersonne        Varchar (50) NOT NULL
+        idPersonne              Int  Auto_increment  NOT NULL PRIMARY KEY ,
+        nomPersonne             Varchar (50) NOT NULL ,
+        prenomPersonne          Varchar (50) NOT NULL ,
+        dateNaissPersonne       Date NOT NULL ,
+        lieuNaissPersonne       Varchar (50) NOT NULL ,
+        adressePersonne         Varchar (100) NOT NULL ,
+        cpPersonne              Int NOT NULL ,
+        villePersonne           Varchar (50) NOT NULL ,
+        emailPersonne           Varchar (50) NOT NULL ,
+        telPersonne             Varchar (50) NOT NULL ,
+        autorisationPhotos      Varchar (10) NOT NULL ,
+        bafaAquisBenevole       Varchar (10) NOT NULL ,
+        casierJudiciaire        Mediumblob NOT NULL ,
+        paiementInscription     Varchar (50) NOT NULL ,
+        nomRepresentantLegal    Varchar (50) NOT NULL ,
+        prenomRepresentantLegal Varchar (50) NOT NULL ,
+        remarquePersonne        Varchar (100) NOT NULL ,
+        contratEmploye          Mediumblob NOT NULL ,
+        typePersonne            Varchar (20) NOT NULL
 )ENGINE=InnoDB;
 
 

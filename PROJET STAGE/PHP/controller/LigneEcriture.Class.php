@@ -1,36 +1,45 @@
 <?php
-class Fournisseurs
+class LigneEcriture
 {
     /*******************************Attributs*******************************/
-    private $_idFournisseur;
-    private $_codeFournisseur;
-    private $_libelleFournisseur;
+    private $_idLigneEcriture;
+    private $_montant;
+    private $_sens;
+    private $_idEcriture;
     private $_idPCGA;
 
     /******************************Accesseurs*******************************/
-    public function getIdFournisseur()
+    public function getIdLigneEcriture()
     {
-        return $this->_idFournisseur;
+        return $this->_idLigneEcriture;
     }
-    public function setIdFournisseur($_idFournisseur)
+    public function setIdLigneEcriture($_idLigneEcriture)
     {
-        return $this->_idFournisseur = $_idFournisseur;
+        return $this->_idLigneEcriture = $_idLigneEcriture;
     }
-    public function getCodeFournisseur()
+    public function getMontant()
     {
-        return $this->_codeFournisseur;
+        return $this->_montant;
     }
-    public function setCodeFournisseur($_codeFournisseur)
+    public function setMontant($_montant)
     {
-        return $this->_codeFournisseur = $_codeFournisseur;
+        return $this->_montant = $_montant;
     }
-    public function getLibelleFournisseur()
+    public function getSens()
     {
-        return $this->_libelleFournisseur;
+        return $this->_sens;
     }
-    public function setLibelleFournisseur($_libelleFournisseur)
+    public function setSens($_sens)
     {
-        return $this->_libelleFournisseur = $_libelleFournisseur;
+        return $this->_sens = $_sens;
+    }
+    public function getIdEcriture()
+    {
+        return $this->_idEcriture;
+    }
+    public function setIdEcriture($_idEcriture)
+    {
+        return $this->_idEcriture = $_idEcriture;
     }
     public function getIdPCGA()
     {
@@ -62,6 +71,6 @@ class Fournisseurs
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdFournisseur() . "\n" . $this->getCodeFournisseur() . "\n" . $this->getLibelleFournisseur() . "\n" . $this->getIdPCGA();
+        return $this->getIdLigneEcriture() . "\n" . $this->getMontant() . "\n" . $this->getSens() . "\n" . $this->getIdEcriture() . "\n" . $this->getIdPCGA();
     }
 }

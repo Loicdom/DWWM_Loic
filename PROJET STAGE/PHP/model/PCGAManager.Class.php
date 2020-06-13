@@ -4,20 +4,22 @@ class PCGAManager
 public static function add(PCGA $obj)
 {
 $db = DbConnect::getDb();
-$q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan) VALUES (:numCompte,:libelleCompte,:dansBilan)");
+$q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan,idClasseComptable) VALUES (:numCompte,:libelleCompte,:dansBilan,:idClasseComptable)");
 $q->bindValue(":numCompte", $obj->getNumCompte());
 $q->bindValue(":libelleCompte", $obj->getLibelleCompte());
 $q->bindValue(":dansBilan", $obj->getDansBilan());
+$q->bindValue(":idClasseComptable", $obj->getIdClasseComptable());
  $q->execute();
 }
 
 public static function update(PCGA $obj)
 {
 $db = DbConnect::getDb();
-$q = $db->prepare("UPDATE PCGA SET numCompte=:numCompte, libelleCompte=:libelleCompte, dansBilan=:dansBilan WHERE idPCGA=:idPCGA");
+$q = $db->prepare("UPDATE PCGA SET numCompte=:numCompte, libelleCompte=:libelleCompte, dansBilan=:dansBilan, idClasseComptable=:idClasseComptable WHERE idPCGA=:idPCGA");
 $q->bindValue(":numCompte", $obj->getNumCompte());
 $q->bindValue(":libelleCompte", $obj->getLibelleCompte());
 $q->bindValue(":dansBilan", $obj->getDansBilan());
+$q->bindValue(":idClasseComptable", $obj->getIdClasseComptable());
 $q->bindValue(":idPCGA", $obj->getIdPCGA());
  $q->execute();
 }

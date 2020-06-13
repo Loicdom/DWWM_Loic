@@ -31,7 +31,7 @@ class Documents
     {
         return $this->_enregDocument = $_enregDocument;
     }
-   
+
     /*******************************Construct*******************************/
     public function __construct(array $options = [])
     {
@@ -53,7 +53,6 @@ class Documents
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdDocument() ."\n". $this->getLibelleDocument() ."\n". $this->getEnregDocument();
+        return $this->getIdDocument() . "\n" . $this->getLibelleDocument() . "\n" . $this->getEnregDocument();
     }
-
 }

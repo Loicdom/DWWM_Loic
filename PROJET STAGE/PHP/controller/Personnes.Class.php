@@ -6,14 +6,19 @@ class Personnes
     private $_nomPersonne;
     private $_prenomPersonne;
     private $_dateNaissPersonne;
+    private $_lieuNaissPersonne;
     private $_adressePersonne;
     private $_cpPersonne;
     private $_villePersonne;
     private $_emailPersonne;
     private $_telPersonne;
-    private $_infosParent;
+    private $_autorisationPhotos;
     private $_bafaAquisBenevole;
-    private $_commentairePersonne;
+    private $_casierJudiciaire;
+    private $_paiementInscription;
+    private $_nomRepresentantLegal;
+    private $_prenomRepresentantLegal;
+    private $_remarquePersonne;
     private $_contratEmploye;
     private $_typePersonne;
 
@@ -49,6 +54,14 @@ class Personnes
     public function setDateNaissPersonne($_dateNaissPersonne)
     {
         return $this->_dateNaissPersonne = $_dateNaissPersonne;
+    }
+    public function getLieuNaissPersonne()
+    {
+        return $this->_lieuNaissPersonne;
+    }
+    public function setLieuNaissPersonne($_lieuNaissPersonne)
+    {
+        return $this->_lieuNaissPersonne = $_lieuNaissPersonne;
     }
     public function getAdressePersonne()
     {
@@ -90,13 +103,13 @@ class Personnes
     {
         return $this->_telPersonne = $_telPersonne;
     }
-    public function getInfosParent()
+    public function getAutorisationPhotos()
     {
-        return $this->_infosParent;
+        return $this->_autorisationPhotos;
     }
-    public function setInfosParent($_infosParent)
+    public function setAutorisationPhotos($_autorisationPhotos)
     {
-        return $this->_infosParent = $_infosParent;
+        return $this->_autorisationPhotos = $_autorisationPhotos;
     }
     public function getBafaAquisBenevole()
     {
@@ -106,13 +119,45 @@ class Personnes
     {
         return $this->_bafaAquisBenevole = $_bafaAquisBenevole;
     }
-    public function getCommentairePersonne()
+    public function getCasierJudiciaire()
     {
-        return $this->_commentairePersonne;
+        return $this->_casierJudiciaire;
     }
-    public function setCommentairePersonne($_commentairePersonne)
+    public function setCasierJudiciaire($_casierJudiciaire)
     {
-        return $this->_commentairePersonne = $_commentairePersonne;
+        return $this->_casierJudiciaire = $_casierJudiciaire;
+    }
+    public function getPaiementInscription()
+    {
+        return $this->_paiementInscription;
+    }
+    public function setPaiementInscription($_paiementInscription)
+    {
+        return $this->_paiementInscription = $_paiementInscription;
+    }
+    public function getNomRepresentantLegal()
+    {
+        return $this->_nomRepresentantLegal;
+    }
+    public function setNomRepresentantLegal($_nomRepresentantLegal)
+    {
+        return $this->_nomRepresentantLegal = $_nomRepresentantLegal;
+    }
+    public function getPrenomRepresentantLegal()
+    {
+        return $this->_prenomRepresentantLegal;
+    }
+    public function setPrenomRepresentantLegal($_prenomRepresentantLegal)
+    {
+        return $this->_prenomRepresentantLegal = $_prenomRepresentantLegal;
+    }
+    public function getRemarquePersonne()
+    {
+        return $this->_remarquePersonne;
+    }
+    public function setRemarquePersonne($_remarquePersonne)
+    {
+        return $this->_remarquePersonne = $_remarquePersonne;
     }
     public function getContratEmploye()
     {
@@ -130,7 +175,7 @@ class Personnes
     {
         return $this->_typePersonne = $_typePersonne;
     }
-   
+
     /*******************************Construct*******************************/
     public function __construct(array $options = [])
     {
@@ -152,7 +197,6 @@ class Personnes
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdPersonne() ."\n". $this->getNomPersonne() ."\n". $this->getPrenomPersonne()."\n". $this->getDateNaissPersonne()."\n". $this->getAdressePersonne()."\n". $this->getCpPersonne()."\n". $this->getVillePersonne()."\n". $this->getEmailPersonne()."\n". $this->getTelPersonne()."\n". $this->getInfosParent()."\n". $this->getBafaAquisBenevole()."\n". $this->getCommentairePersonne()."\n". $this->getContratEmploye()."\n". $this->getTypePersonne();
+        return $this->getIdPersonne() . "\n" . $this->getNomPersonne() . "\n" . $this->getPrenomPersonne() . "\n" . $this->getDateNaissPersonne() . "\n" . $this->getLieuNaissPersonne() . "\n" . $this->getAdressePersonne() . "\n" . $this->getCpPersonne() . "\n" . $this->getVillePersonne() . "\n" . $this->getEmailPersonne() . "\n" . $this->getTelPersonne() . "\n" . $this->getAutorisationPhotos() . "\n" . $this->getBafaAquisBenevole() . "\n" . $this->getCasierJudiciaire() . "\n" . $this->getPaiementInscription() . "\n" . $this->getNomRepresentantLegal() . "\n" . $this->getPrenomRepresentantLegal() . "\n" . $this->getRemarquePersonne() . "\n" . $this->getContratEmploye() . "\n" . $this->getTypePersonne();
     }
-
 }

@@ -31,7 +31,7 @@ class Factures
     {
         return $this->_enregFact = $_enregFact;
     }
-   
+
     /*******************************Construct*******************************/
     public function __construct(array $options = [])
     {
@@ -53,7 +53,6 @@ class Factures
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdFacture() ."\n". $this->getLibelleFact() ."\n". $this->getEnregFact();
+        return $this->getIdFacture() . "\n" . $this->getLibelleFact() . "\n" . $this->getEnregFact();
     }
-
 }

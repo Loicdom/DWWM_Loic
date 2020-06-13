@@ -31,7 +31,7 @@ class ClasseComptable
     {
         return $this->_libelleClasseComptable = $_libelleClasseComptable;
     }
-   
+
     /*******************************Construct*******************************/
     public function __construct(array $options = [])
     {
@@ -53,7 +53,6 @@ class ClasseComptable
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdClasseComptable() ."\n". $this->getNumeroClasseComptable() ."\n". $this->getLibelleClasseComptable();
+        return $this->getIdClasseComptable() . "\n" . $this->getNumeroClasseComptable() . "\n" . $this->getLibelleClasseComptable();
     }
-
 }

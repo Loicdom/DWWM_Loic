@@ -5,9 +5,10 @@ class Ecritures
     private $_idEcriture;
     private $_dateEcriture;
     private $_libelleEcriture;
-    private $_montant;
-    private $_sens;
     private $_lettrage;
+    private $_solde;
+    private $_idFacture;
+    private $_idExerciceComptable;
 
     /******************************Accesseurs*******************************/
     public function getIdEcriture()
@@ -34,22 +35,6 @@ class Ecritures
     {
         return $this->_libelleEcriture = $_libelleEcriture;
     }
-    public function getMontant()
-    {
-        return $this->_montant;
-    }
-    public function setMontant($_montant)
-    {
-        return $this->_montant = $_montant;
-    }
-    public function getSens()
-    {
-        return $this->_sens;
-    }
-    public function setSens($_sens)
-    {
-        return $this->_sens = $_sens;
-    }
     public function getLettrage()
     {
         return $this->_lettrage;
@@ -58,7 +43,31 @@ class Ecritures
     {
         return $this->_lettrage = $_lettrage;
     }
-   
+    public function getSolde()
+    {
+        return $this->_solde;
+    }
+    public function setSolde($_solde)
+    {
+        return $this->_solde = $_solde;
+    }
+    public function getIdFacture()
+    {
+        return $this->_idFacture;
+    }
+    public function setIdFacture($_idFacture)
+    {
+        return $this->_idFacture = $_idFacture;
+    }
+    public function getIdExerciceComptable()
+    {
+        return $this->_idExerciceComptable;
+    }
+    public function setIdExerciceComptable($_idExerciceComptable)
+    {
+        return $this->_idExerciceComptable = $_idExerciceComptable;
+    }
+
     /*******************************Construct*******************************/
     public function __construct(array $options = [])
     {
@@ -80,7 +89,6 @@ class Ecritures
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdEcriture() ."\n". $this->getDateEcriture() ."\n". $this->getLibelleEcriture()."\n". $this->getMontant()."\n". $this->getSens()."\n". $this->getLettrage();
+        return $this->getIdEcriture() . "\n" . $this->getDateEcriture() . "\n" . $this->getLibelleEcriture() . "\n" . $this->getLettrage() . "\n" . $this->getSolde() . "\n" . $this->getIdFacture() . "\n" . $this->getIdExerciceComptable();
     }
-
 }

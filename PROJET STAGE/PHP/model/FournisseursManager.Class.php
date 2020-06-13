@@ -4,18 +4,20 @@ class FournisseursManager
 public static function add(Fournisseurs $obj)
 {
 $db = DbConnect::getDb();
-$q = $db->prepare("INSERT INTO Fournisseurs (codeFournisseur,libelleFournisseur) VALUES (:codeFournisseur,:libelleFournisseur)");
+$q = $db->prepare("INSERT INTO Fournisseurs (codeFournisseur,libelleFournisseur,idPCGA) VALUES (:codeFournisseur,:libelleFournisseur,:idPCGA)");
 $q->bindValue(":codeFournisseur", $obj->getCodeFournisseur());
 $q->bindValue(":libelleFournisseur", $obj->getLibelleFournisseur());
+$q->bindValue(":idPCGA", $obj->getIdPCGA());
  $q->execute();
 }
 
 public static function update(Fournisseurs $obj)
 {
 $db = DbConnect::getDb();
-$q = $db->prepare("UPDATE Fournisseurs SET codeFournisseur=:codeFournisseur, libelleFournisseur=:libelleFournisseur WHERE idFournisseur=:idFournisseur");
+$q = $db->prepare("UPDATE Fournisseurs SET codeFournisseur=:codeFournisseur, libelleFournisseur=:libelleFournisseur, idPCGA=:idPCGA WHERE idFournisseur=:idFournisseur");
 $q->bindValue(":codeFournisseur", $obj->getCodeFournisseur());
 $q->bindValue(":libelleFournisseur", $obj->getLibelleFournisseur());
+$q->bindValue(":idPCGA", $obj->getIdPCGA());
 $q->bindValue(":idFournisseur", $obj->getIdFournisseur());
  $q->execute();
 }

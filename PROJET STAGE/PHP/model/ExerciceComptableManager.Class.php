@@ -4,16 +4,16 @@ class ExerciceComptableManager
 public static function add(ExerciceComptable $obj)
 {
 $db = DbConnect::getDb();
-$q = $db->prepare("INSERT INTO ExerciceComptable (libelleExerciceComptable) VALUES (:libelleExerciceComptable)");
-$q->bindValue(":libelleExerciceComptable", $obj->getLibelleExerciceComptable());
+$q = $db->prepare("INSERT INTO ExerciceComptable (libelleExercice) VALUES (:libelleExercice)");
+$q->bindValue(":libelleExercice", $obj->getLibelleExercice());
  $q->execute();
 }
 
 public static function update(ExerciceComptable $obj)
 {
 $db = DbConnect::getDb();
-$q = $db->prepare("UPDATE ExerciceComptable SET libelleExerciceComptable=:libelleExerciceComptable WHERE idExerciceComptable=:idExerciceComptable");
-$q->bindValue(":libelleExerciceComptable", $obj->getLibelleExerciceComptable());
+$q = $db->prepare("UPDATE ExerciceComptable SET libelleExercice=:libelleExercice WHERE idExerciceComptable=:idExerciceComptable");
+$q->bindValue(":libelleExercice", $obj->getLibelleExercice());
 $q->bindValue(":idExerciceComptable", $obj->getIdExerciceComptable());
  $q->execute();
 }
