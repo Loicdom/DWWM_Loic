@@ -19,89 +19,265 @@ DbConnect::init();
 
 //*********************************UserManager**************************** *//
 
-// ADD userManager :
-// $u= new User(["pseudo"=>"Dupont", "motDePasse"=>1234,"idPersonnage"=>1]);
+// // ADD usersManager :
+// $u= new Users(["pseudo"=>"KB24", "motDePasse"=>3035,"role"=>1]);
 // var_dump($u);
-// UserManager::add($u);
+// UsersManager::add($u);
 
-// // Update userManager :
-// $m = UserManager::getById(4);
-// $m->setPseudo("prio");
+// // Update usersManager :
+// $m = UsersManager::getById(1);
+// $m->setMotDePasse("4321");
 // var_dump($m);
-// UserManager::update($m);
-
+// UsersManager::update($m);
 
 // // Delete userManager :
-// UserManager::delete(4);
+// UsersManager::delete(1);
 
-// // Get List userManager : a revoir 
-// $tableau = UserManager::getList();
+// // Get List userManager
+// $tableau = UsersManager::getList();
 // foreach ($tableau as $info)
 // {
 //     echo $info->toString();
 // }
 
 
-//*********************************Personnage**************************** *//
+//*********************************Personne**************************** *//
 
-// ADD PersonnageManager :
-// $m = new Personnage(["nomPersonnage"=>"tutu","descriptionPersonnage"=>"petit mais robuste","avatar"=>"tete.jpg"]);
+// // ADD PersonnesManager :
+// $m = new Personnes(["nomPersonne"=>"Dom","prenomPersonne"=>"Fab","dateNaissPersonne"=>"1967-07-15","lieuNaissPersonne"=>"saint pol","adressePersonne"=>"11 res du cp","cpPersonne"=>59000,"villePersonne"=>"Lille","emailPersonne"=>"emaildePersonne@gmail.fr","telPersonne"=>"06-05-10-08-09","autorisationPhotos"=>"oui","bafaAquisBenevole"=>"oui","typePersonne"=>"bénévole"]);
 // var_dump($m);
-// PersonnageManager::add($m);
+// PersonnesManager::add($m);
 
-// Update PersonnageManager :
-// $m = PersonnageManager::getById(2);
-// $m->setNomPersonnage("toto");
+// // Update PersonnageManager :
+// $m = PersonnesManager::getById(2);
+// $m->setLieuNaissPersonne("Dunkerque");
 // var_dump($m);
-// PersonnageManager::update($m);
+// PersonnesManager::update($m);
 
 
-// Delete PersonnageManager :
-// PersonnageManager::delete(2);
+// // Delete PersonnageManager :
+// PersonnesManager::delete(2);
 
-// GetList PersonnageManager :
-// $tableau = PersonnageManager::getList();
+// // GetList PersonnageManager :
+// $tableau = PersonnesManager::getList();
 // foreach ($tableau as $info)
 // {
 //     echo $info->toString();
 // }
 
-//*********************************Score**************************** *//
+//*********************************PCGA**************************** *//
 
-// ADD ScoreManager :
-// $m = new Score(["nbDePieceRecolte"=>10,"Bonus"=>100,"time"=>"10:20:00","scoreObtenu"=>1000,"idUser"=>5,"idNiveau"=>1]);
+// // ADD PCGAManager :
+// $m = new PCGA(["numCompte"=>707,"libelleCompte"=>"Ventes de marchandises","dansBilan"=>"oui","idClasseComptable"=>3]);
 // var_dump($m);
-// ScoreManager::add($m);
+// PCGAManager::add($m);
 
-// Update ScoreManager :
-// $m = ScoreManager::getById(1);
-// $m->setBonus("200");
+// // Update PCGAManager :
+// $m = PCGAManager::getById(4);
+// $m->setNumCompte(607);
+// $m->setLibelleCompte("Achats de marchandises");
+// $m->setIdClasseComptable(1);
 // var_dump($m);
-// ScoreManager::update($m);
+// PCGAManager::update($m);
 
 
-// Delete ScoreManager :
-// ScoreManager::delete(1);
+// // Delete PCGAManager :
+// PCGAManager::delete(2);
 
-//*********************************Niveaux**************************** *//
+// // GetList PCGAManager :
+// $tableau = PCGAManager::getList();
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString();
+// }
 
-// ADD NiveauManager :
-// $m = new Niveau(["nomNiveau"=>"galaxie","pointDeVie"=>200]);
+//*********************************ClasseComptable**************************** *//
+
+// // ADD ClasseComptableManager :
+// $m = new ClasseComptable(["numeroClasseComptable"=>6,"libelleClasseComptable"=>"Charges"]);
 // var_dump($m);
-// NiveauManager::add($m);
+// ClasseComptableManager::add($m);
 
-// Update NiveauManager :
-// $m = NiveauManager::getById(1);
-// $m->setPointDeVie("300");
+// // Update ClasseComptableManager :
+// $m = ClasseComptableManager::getById(3);
+// $m->setLibelleClasseComptable("Recettes");
+// $m->setNumeroClasseComptable(7);
 // var_dump($m);
-// NiveauManager::update($m);
+// ClasseComptableManager::update($m);
 
 
-// Delete ScoreManager :
-// NiveauManager::delete(1);
+// // Delete ClasseComptableManager :
+// ClasseComptableManager::delete(2);
 
-// GetList NiveauManager :
-// $tableau = NiveauManager::getList();
+// // GetList ClasseComptableManager :
+// $tableau = ClasseComptableManager::getList();
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString();
+// }
+
+//*********************************LigneEcriture**************************** *//
+// ADD LigneEcritureManager :
+// $m = new LigneEcriture(["montant"=>1246.23,"sens"=>"Debit","idEcriture"=>1,"idPCGA"=>4]);
+// var_dump($m);
+// LigneEcritureManager::add($m);
+
+// // Update LigneEcritureManager :
+// $m = LigneEcritureManager::getById(3);
+// $m->setSens("Credit");
+// var_dump($m);
+// LigneEcritureManager::update($m);
+
+
+// // Delete LigneEcritureManager :
+// LigneEcritureManager::delete(2);
+
+// // GetList LigneEcritureManager :
+// $tableau = LigneEcritureManager::getList();
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString();
+// }
+
+//*********************************Factures**************************** *//
+
+// // ADD FacturesManager :
+// $m = new Factures(["libelleFact"=>"factureachat"]);
+// var_dump($m);
+// FacturesManager::add($m);
+
+// // Update FacturesManager :
+// $m = FacturesManager::getById(2);
+// $m->setLibelleFact("Facture Ventes");
+// var_dump($m);
+// FacturesManager::update($m);
+
+
+// // Delete FacturesManager :
+// FacturesManager::delete(3);
+
+// // GetList FacturesManager :
+// $tableau = FacturesManager::getList();
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString();
+// }
+
+//*********************************Ecritures**************************** *//
+
+// // ADD EcrituresManager :
+// $m = new Ecritures(["dateEcriture"=>"2020-10-07","libelleEcriture"=>"Facture achats cb","solde"=>203.02,"idFacture"=>1,"idExerciceComptable"=>1]);
+// var_dump($m);
+// EcrituresManager::add($m);
+
+// // Update EcrituresManager :
+// $m = EcrituresManager::getById(2);
+// $m->setLibelleEcriture("yjsxfck");
+// var_dump($m);
+// EcrituresManager::update($m);
+
+
+// // Delete EcrituresManager :
+// EcrituresManager::delete(2);
+
+// // GetList EcrituresManager :
+// $tableau = EcrituresManager::getList();
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString();
+// }
+
+//*********************************ExerciceComptable**************************** *//
+
+// // ADD ExerciceComptableManager :
+// $m = new ExerciceComptable(["libelleExercice"=>"2021-2022"]);
+// var_dump($m);
+// ExerciceComptableManager::add($m);
+
+// // Update ExerciceComptableManager :
+// $m = ExerciceComptableManager::getById(2);
+// $m->setLibelleExercice("2020-2021");
+// var_dump($m);
+// ExerciceComptableManager::update($m);
+
+
+// // Delete ExerciceComptableManager :
+// ExerciceComptableManager::delete(3);
+
+// // GetList ExerciceComptableManager :
+// $tableau = ExerciceComptableManager::getList();
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString();
+// }
+
+//*********************************Fournisseurs**************************** *//
+
+// // ADD FournisseursManager :
+// $m = new Fournisseurs(["codeFournisseur"=>"CAR","libelleFournisseur"=>"Carrefour","idPCGA"=>3]);
+// var_dump($m);
+// FournisseursManager::add($m);
+
+// // Update FournisseursManager :
+// $m = FournisseursManager::getById(2);
+// $m->setLibelleFournisseur("carre");
+// var_dump($m);
+// FournisseursManager::update($m);
+
+
+// // Delete FournisseursManager :
+// FournisseursManager::delete(2);
+
+// // GetList FournisseursManager :
+// $tableau = FournisseursManager::getList();
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString();
+// }
+
+//*********************************Documents**************************** *//
+
+// // ADD DocumentsManager :
+// $m = new Documents(["libelleDocument"=>"Dom"]);
+// var_dump($m);
+// DocumentsManager::add($m);
+
+// // Update DocumentsManager :
+// $m = DocumentsManager::getById(2);
+// $m->setLibelleDocument("Dunkerque");
+// var_dump($m);
+// DocumentsManager::update($m);
+
+
+// // Delete DocumentsManager :
+// DocumentsManager::delete(3);
+
+// // GetList DocumentsManager :
+// $tableau = DocumentsManager::getList();
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString();
+// }
+
+//*********************************Budgets**************************** *//
+
+// // ADD BudgetsManager :
+// $m = new Budgets(["fournitureAtelierCreatif"=>1340,"atelierCuisineGouter"=>1100,"petitMateriel"=>123,"salaireEmploye"=>1400,"assurance"=>652,"fraisPostauxTel"=>5900,"entretienMaterielJadin"=>12,"produitEntretien"=>123,"fraisBancaires"=>42,"ursaff"=>126,"subvMunicipale"=>17000,"participationFamille"=>240,"produitManif"=>1800,"anniversaire"=>2480,"adhesion"=>170,"participationIME"=>240]);
+// var_dump($m);
+// BudgetsManager::add($m);
+
+// // Update BudgetsManager :
+// $m = BudgetsManager::getById(2);
+// $m->setAtelierCuisineGouter(1234);
+// var_dump($m);
+// BudgetsManager::update($m);
+
+
+// // Delete BudgetsManager :
+// BudgetsManager::delete(2);
+
+// // GetList BudgetsManager :
+// $tableau = BudgetsManager::getList();
 // foreach ($tableau as $info)
 // {
 //     echo $info->toString();

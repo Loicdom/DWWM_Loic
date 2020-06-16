@@ -6,9 +6,9 @@ public static function add(LigneEcriture $obj)
 $db = DbConnect::getDb();
 $q = $db->prepare("INSERT INTO LigneEcriture (montant,sens,idEcriture,idPCGA) VALUES (:montant,:sens,:idEcriture,:idPCGA)");
 $q->bindValue(":montant", $obj->getMontant());
-$q->bindValue(":sens", $obj->getsens());
-$q->bindValue(":idEcriture", $obj->getidEcriture());
-$q->bindValue(":idPCGA", $obj->getidPCGA());
+$q->bindValue(":sens", $obj->getSens());
+$q->bindValue(":idEcriture", $obj->getIdEcriture());
+$q->bindValue(":idPCGA", $obj->getIdPCGA());
  $q->execute();
 }
 

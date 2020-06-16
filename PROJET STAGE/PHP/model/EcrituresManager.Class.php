@@ -60,93 +60,9 @@ class EcrituresManager
         return $ecritures;
     }
 
-    static public function getBySens($sens)
+    public static function getByCritere()
     {
-        $db = DbConnect::getDb(); // Instance de PDO.
-        // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Personne
-        $q = $db->prepare('SELECT dateEcriture, libelleEcriture, montant, sens, lettrage FROM Ecritures WHERE sens = :sens');
-
-        // Assignation des valeurs .
-        $q->bindValue(':sens', $sens);
-        $q->execute();
-        $donnees = $q->fetch(PDO::FETCH_ASSOC);
-        $q->CloseCursor();
-        if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Ecritures();
-        } else {
-            return new Ecritures($donnees);
-        }
     }
 
-    static public function getByLettrage($lettrage)
-    {
-        $db = DbConnect::getDb(); // Instance de PDO.
-        // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Personne
-        $q = $db->prepare('SELECT dateEcriture, libelleEcriture, montant, sens, lettrage FROM Ecritures WHERE lettrage = :lettrage');
-
-        // Assignation des valeurs .
-        $q->bindValue(':lettrage', $lettrage);
-        $q->execute();
-        $donnees = $q->fetch(PDO::FETCH_ASSOC);
-        $q->CloseCursor();
-        if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Ecritures();
-        } else {
-            return new Ecritures($donnees);
-        }
-    }
-
-    static public function getByMontant($montant)
-    {
-        $db = DbConnect::getDb(); // Instance de PDO.
-        // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Personne
-        $q = $db->prepare('SELECT dateEcriture, libelleEcriture, montant, sens, lettrage FROM Ecritures WHERE montant = :montant');
-
-        // Assignation des valeurs .
-        $q->bindValue(':montant', $montant);
-        $q->execute();
-        $donnees = $q->fetch(PDO::FETCH_ASSOC);
-        $q->CloseCursor();
-        if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Ecritures();
-        } else {
-            return new Ecritures($donnees);
-        }
-    }
-
-    static public function getByDateEcriture($dateEcriture)
-    {
-        $db = DbConnect::getDb(); // Instance de PDO.
-        // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Personne
-        $q = $db->prepare('SELECT dateEcriture, libelleEcriture, montant, sens, lettrage FROM Ecritures WHERE dateEcriture = :dateEcriture');
-
-        // Assignation des valeurs .
-        $q->bindValue(':dateEcriture', $dateEcriture);
-        $q->execute();
-        $donnees = $q->fetch(PDO::FETCH_ASSOC);
-        $q->CloseCursor();
-        if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Ecritures();
-        } else {
-            return new Ecritures($donnees);
-        }
-    }
-
-    static public function getByLibelleEcriture($libelleEcriture)
-    {
-        $db = DbConnect::getDb(); // Instance de PDO.
-        // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Personne
-        $q = $db->prepare('SELECT dateEcriture, libelleEcriture, montant, sens, lettrage FROM Ecritures WHERE libelleEcriture = :libelleEcriture');
-
-        // Assignation des valeurs .
-        $q->bindValue(':libelleEcriture', $libelleEcriture);
-        $q->execute();
-        $donnees = $q->fetch(PDO::FETCH_ASSOC);
-        $q->CloseCursor();
-        if ($donnees == false) { // Si l'utilisateur n'existe pas, on renvoi un objet vide
-            return new Ecritures();
-        } else {
-            return new Ecritures($donnees);
-        }
-    }
+    
 }
