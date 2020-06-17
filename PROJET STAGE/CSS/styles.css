@@ -149,6 +149,8 @@ i {
     font-family: 'Apple Chancery',  cursive;
     background-color:rgb(230, 239, 243);
     text-align: center;
+    color: blue;
+    font-weight: bold;
 }
 
 .bouton:hover {
@@ -209,9 +211,21 @@ a {
 
 .bureau {
     padding: 0.3vw;
+    color: blue;
+    font-weight: bold;
+}
+
+.bureau1 {
+    padding: 0.7vw;
+    text-shadow: 2px 2px white;
+    font-size: 1.2em;
+    text-decoration: underline;
 }
 
 .image {
     width: 30%;
     height: 30%;
 }
+
+/*********************************** Fournisseur formulaire ***************************************************/
+

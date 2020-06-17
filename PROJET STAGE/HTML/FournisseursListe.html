@@ -19,7 +19,7 @@
         <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
     </header>
 
-    <a href="index.php?action=UsersForm&m=ajout">
+    <a href="index.php?action=FournisseursForm&m=ajout">
         <div class="bouton ajout-liste"> Ajouter un fournisseur</div>
     </a>
 
@@ -34,10 +34,10 @@
         <div class="ligne">
             <div class="bloc contenuListe">CAR</div>
             <div class="bloc contenuListe">Fournisseur Carefour</div>
-            <a href="index.php?action=UsersForm&m=modif&id=<?php echo $elt->getIdClient() ?>" class="bloc">
+            <a href="index.php?action=FournisseursForm&m=modif&id=<?php echo $elt->getIdFournisseur() ?>" class="bloc">
                 <div class="bouton">Modifier</div>
             </a>
-            <a href="index.php?action=UsersForm&m=supp&id=<?php echo $elt->getIdUser() ?>" class="bloc">
+            <a href="index.php?action=FournisseursForm&m=supp&id=<?php echo $elt->getIdFournisseur() ?>" class="bloc">
                 <div class="bouton">Supprimer</div>
             </a>
         </div>
@@ -45,13 +45,16 @@
         <div class="ligne">
             <div class="bloc contenuListe">LID</div>
             <div class="bloc contenuListe">Fournisseur Lidl</div>
-            <a href="index.php?action=UsersForm&m=modif&id=<?php echo $elt->getIdUser() ?>" class="bloc">
+            <a href="index.php?action=FournisseursForm&m=modif&id=<?php echo $elt->getIdFournisseur() ?>" class="bloc">
                 <div class="bouton">Modifier</div>
             </a>
-            <a href="index.php?action=UsersForm&m=supp&id=<?php echo $elt->getIdUser() ?>" class="bloc">
+            <a href="index.php?action=FournisseursForm&m=supp&id=<?php echo $elt->getIdFournisseur() ?>" class="bloc">
                 <div class="bouton">Supprimer</div>
             </a>
-        </div>
+        </div> 
+        <a href="index.php?action=FournisseursListe">
+            <div class="bouton ajout-liste">Retour</div>
+        </a>
 </body>
 
 </html>
