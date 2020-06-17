@@ -141,13 +141,14 @@ i {
   } */
 
 .bouton {
-    padding: 1.5vh;
-    margin: 1vh 1vw 1.5vh 1vw;
+    padding: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
     border-radius: 12px;
     border: 1px solid rgb(65, 99, 211);
-    font-family: 'Apple Chancery',  cursive;;
-    ;
-
+    font-family: 'Apple Chancery',  cursive;
+    background-color:rgb(230, 239, 243);
+    text-align: center;
 }
 
 .bouton:hover {
@@ -158,3 +159,59 @@ i {
     transition: 0.5s;
 }
 
+/************************************* Liste **********************************************/
+
+.ligne{
+    width: 100%;
+    border: 1px solid rgb(6, 27, 95);
+    display: flex;
+    justify-content: flex-end;
+}
+.bloc{
+    flex: 1;
+    align-self: center;
+    text-align: center;
+}
+
+.titre{
+    background-color:rgb(65, 99, 211);
+    color: wheat;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+a {
+    text-decoration: none;
+    align-self: center;
+}
+
+.ajout-liste {
+    margin-left: 40vw;
+    margin-right: 40vw;
+}
+
+.contenu-liste {
+    width: 250%;
+}
+
+/************************************* Bureau **********************************************/
+
+.bureauasso {
+    display: flex;
+    flex-direction: column;
+    border: rgb(65, 99, 211) solid 2px;
+    padding: 2vw;
+    margin: 2vw;
+    align-items: center;
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+
+.bureau {
+    padding: 0.3vw;
+}
+
+.image {
+    width: 30%;
+    height: 30%;
+}

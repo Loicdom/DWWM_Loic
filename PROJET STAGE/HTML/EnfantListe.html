@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
+    <title>Enfant</title>
+</head>
+
+<body class="body-enfant">
+
+    <header class="header-co">
+        <div class="logo">
+            <img src="../Images/logo.jpg" alt="Logo"></div>
+        <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
+    </header>
+
+    <a href="index.php?action=UsersForm&m=ajout">
+        <div class="bouton ajout-liste"> Ajouter un enfant</div>
+    </a>
+
+    <div class="contenu-liste">
+        <div class="ligne">
+            <div class="bloc titre">Nom</div>
+            <div class="bloc titre">Prénom</div>
+            <div class="bloc titre">Date de naissance</div>
+            <div class="bloc titre">lieu de naissance</div>
+            <div class="bloc titre">adresse</div>
+            <div class="bloc titre">Code postal</div>
+            <div class="bloc titre">Ville</div>
+            <div class="bloc titre">Email</div>
+            <div class="bloc titre">Téléphone</div>
+            <div class="bloc titre">Autorisation photos</div>
+            <div class="bloc titre">Nom représentant légal</div>
+            <div class="bloc titre">Prénom représentant légal</div>
+            <div class="bloc titre">Paiement insription</div>
+            <div class="bloc titre">Remarque</div>
+            <div class="bloc titre">Modifier</div>
+            <div class="bloc titre">Supprimer</div>
+        </div>
+
+        <div class="ligne">
+            <div class="bloc contenuListe">Dom</div>
+            <div class="bloc contenuListe">Noam</div>
+            <div class="bloc contenuListe">13-11-1995</div>
+            <div class="bloc contenuListe">Saint pol</div>
+            <div class="bloc contenuListe">30 rue de la rue</div>
+            <div class="bloc contenuListe">59000</div>
+            <div class="bloc contenuListe">Lille</div>
+            <div class="bloc contenuListe">adresseMail@gmail.com</div>
+            <div class="bloc contenuListe">06-07-08-09-06</div>
+            <div class="bloc contenuListe">Oui</div>
+            <div class="bloc contenuListe">Dom</div>
+            <div class="bloc contenuListe">Gilles</div>
+            <div class="bloc contenuListe">Cheque</div>
+            <div class="bloc contenuListe">RAS</div>
+            <a href="index.php?action=UsersForm&m=modif&id=<?php echo $elt->getIdClient() ?>" class="bloc">
+                <div class="bouton">Modifier</div>
+            </a>
+            <a href="index.php?action=UsersForm&m=supp&id=<?php echo $elt->getIdUser() ?>" class="bloc">
+                <div class="bouton">Supprimer</div>
+            </a>
+        </div>
+
+        <div class="ligne">
+            <div class="bloc contenuListe">Dom</div>
+            <div class="bloc contenuListe">Noam</div>
+            <div class="bloc contenuListe">13-11-1995</div>
+            <div class="bloc contenuListe">Saint pol</div>
+            <div class="bloc contenuListe">30 rue de la rue</div>
+            <div class="bloc contenuListe">59000</div>
+            <div class="bloc contenuListe">Lille</div>
+            <div class="bloc contenuListe">adresseMail@gmail.com</div>
+            <div class="bloc contenuListe">06-07-08-09-06</div>
+            <div class="bloc contenuListe">Oui</div>
+            <div class="bloc contenuListe">Dom</div>
+            <div class="bloc contenuListe">Gilles</div>
+            <div class="bloc contenuListe">Cheque</div>
+            <div class="bloc contenuListe">RAS</div>
+            <a href="index.php?action=UsersForm&m=modif&id=<?php echo $elt->getIdClient() ?>" class="bloc">
+                <div class="bouton">Modifier</div>
+            </a>
+            <a href="index.php?action=UsersForm&m=supp&id=<?php echo $elt->getIdUser() ?>" class="bloc">
+                <div class="bouton">Supprimer</div>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
+    <title>Utilisateurs</title>
+</head>
+
+<body class="body-co">
+
+    <header class="header-co">
+        <div class="logo">
+            <img src="../Images/logo.jpg" alt="Logo"></div>
+        <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
+    </header>
+
+    <a href="index.php?action=UsersForm&m=ajout">
+        <div class="bouton ajout-liste"> Ajouter un utilisateur</div>
+    </a>
+
+    
+        <div class="ligne">
+            <div class="bloc titre">Pseudo</div>
+            <div class="bloc titre">Mot de passe</div>
+            <div class="bloc titre">Rôle</div>
+            <div class="bloc titre">Modifier</div>
+            <div class="bloc titre">Supprimer</div>
+        </div>
+
+        <div class="ligne">
+            <div class="bloc contenuListe">KDfjygdk35</div>
+            <div class="bloc contenuListe">12345678</div>
+            <div class="bloc contenuListe">1</div>
+            <a href="index.php?action=UsersForm&m=modif&id=<?php echo $elt->getIdClient() ?>" class="bloc">
+                <div class="bouton">Modifier</div>
+            </a>
+            <a href="index.php?action=UsersForm&m=supp&id=<?php echo $elt->getIdUser() ?>" class="bloc">
+                <div class="bouton">Supprimer</div>
+            </a>
+        </div>
+
+        <div class="ligne">
+            <div class="bloc contenuListe">FABIENNE</div>
+            <div class="bloc contenuListe">4321</div>
+            <div class="bloc contenuListe">2</div>
+            <a href="index.php?action=UsersForm&m=modif&id=<?php echo $elt->getIdUser() ?>" class="bloc">
+                <div class="bouton">Modifier</div>
+            </a>
+            <a href="index.php?action=UsersForm&m=supp&id=<?php echo $elt->getIdUser() ?>" class="bloc">
+                <div class="bouton">Supprimer</div>
+            </a>
+        </div>
+</body>
+
+</html>
