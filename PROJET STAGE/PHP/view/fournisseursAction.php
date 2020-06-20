@@ -1,7 +1,9 @@
 <?php
 $mode = $_GET["m"];
+if ($mode != "ajout") {
+    $id = $_POST["idFournisseur"];
+}    
 $p = new Fournisseurs($_POST);
-$id = $_POST["idFournisseur"];
 switch ($mode) {
     case "ajout":
         FournisseursManager::add($p);
