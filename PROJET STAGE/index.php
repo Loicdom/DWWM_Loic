@@ -44,35 +44,35 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'connect': {
-            afficherPageSansFooter('PHP/view/', 'formConnexion', "Connexion");
+                afficherPageSansFooter('PHP/view/', 'formConnexion', "Connexion");
                 break;
             }
         case 'deconnect': {
                 afficherPage('PHP/view/', 'formDeconnexion ', "Déconnexion");
                 break;
             }
-        case 'menuListe': {
-                afficherPage('PHP/view/', 'menuListe', "Menu du jeu");
+        case 'fournisseursListe': {
+                afficherPage('PHP/view/', 'fournisseursListe', "Liste des fournisseurs");
                 break;
             }
-        case 'scoreListe': {
-                afficherPage('PHP/view/', 'scoreListe', "Liste des 10 meilleurs scores");
+        case 'fournisseursForm': {
+                afficherPage('PHP/view/', 'fournisseursForm', "Fournisseur");
                 break;
             }
-        case 'map1': {
-                afficherPageSansFooter('PHP/view/', 'map1', "map n°1");
+        case 'fournisseursAction': {
+                afficherPage('PHP/view/', 'fournisseursAction', "");
                 break;
             }
         case 'map2': {
-                afficherPageSansFooter('PHP/view/', 'map2', "map n°2");
+                afficherPage('PHP/view/', 'map2', "map n°2");
                 break;
             }
         case 'gameover': {
-                afficherPageSansFooter('PHP/view/', 'gameover', "");
+                afficherPage('PHP/view/', 'gameover', "");
                 break;
             }
         case 'bravo': {
-                afficherPageSansFooter('PHP/view/', 'bravo', "");
+                afficherPage('PHP/view/', 'bravo', "");
                 break;
             }
     }

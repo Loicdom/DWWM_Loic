@@ -1,7 +1,8 @@
 :root {
     --color-bleu1: rgb(170, 213, 240);
     --color-blue2: rgb(65, 99, 211);
-    --color-turquoise: #17C3B2;
+    --color-orange: #d46e4c;
+    --color-jaune: rgb(255, 255, 50);
 }
 
 html,body {
@@ -11,18 +12,24 @@ html,body {
     font-family: 'Apple Chancery', cursive;
 }
 
-.header-co {
+.header {
     display: flex;
     height: 18vh;
     background: linear-gradient(rgb(109, 199, 235),rgb(224, 241, 242));
     text-align: center;
-    color: rgb(4, 13, 54);
+    color: var( --color-orange);
+    font-weight: bold;
     text-shadow: 2px 2px white;
     align-items: center;
 }
 
+.esp {
+    margin-right: 1vw;
+    color: rgb(7, 21, 48);
+}
+
 .logo {
-    flex: 0.5;
+    flex: 0.4;
     margin-top: 0.5vw;
 }
 
@@ -145,7 +152,7 @@ i {
     margin-top: 1vw;
     margin-bottom: 1vw;
     border-radius: 12px;
-    border: 1px solid rgb(65, 99, 211);
+    border: 1px solid var(--color-blue2);
     font-family: 'Apple Chancery',  cursive;
     background-color:rgb(230, 239, 243);
     text-align: center;
@@ -154,7 +161,7 @@ i {
 }
 
 .bouton:hover {
-    background-color: rgb(65, 99, 211);
+    background-color: var(--color-blue2);
     color: rgb(224, 238, 237);
     text-shadow: 2px 2px rgb(17, 12, 94);
     transform: scale(1.2);
@@ -165,7 +172,7 @@ i {
 
 .ligne{
     width: 100%;
-    border: 1px solid rgb(6, 27, 95);
+    border: 1px solid var(--color-blue2);
     display: flex;
     justify-content: flex-end;
 }
@@ -176,8 +183,8 @@ i {
 }
 
 .titre{
-    background-color:rgb(65, 99, 211);
-    color: wheat;
+    background-color:var(--color-blue2);
+    color: var( --color-jaune);
     padding-top: 4vh;
     padding-bottom: 4vh;
 }
@@ -201,7 +208,7 @@ a {
 .bureauasso {
     display: flex;
     flex-direction: column;
-    border: rgb(65, 99, 211) solid 2px;
+    border: var(--color-blue2) solid 2px;
     padding: 2vw;
     margin: 2vw;
     align-items: center;
@@ -219,7 +226,7 @@ a {
     padding: 0.7vw;
     text-decoration: underline;
     font-size: 1.2em;
-    color: #e27854;
+    color: var( --color-orange);
 }
 
 .image {
@@ -232,10 +239,11 @@ a {
 .formulaire {
     display: flex;
     text-align: center;
+    justify-content: center;
     margin-top: 10vh;
     margin-left: 30vw;
     margin-right: 30vw;
-    border: rgb(43, 157, 209) solid 2px;
+    border: var(--color-blue2) solid 2px;
     border-radius: 15px;
     padding: 3vw;
 }
@@ -249,15 +257,14 @@ a {
 
 .form {
     font-size: 1.2em;
-    color: #e27854;
+    color: var( --color-orange);
     font-weight: bold;
-    text-decoration: underline;
 }
 
 /********************************* footer ******************************/
 
 footer {
-    color: blue;
+    color: var( --color-orange);
     position: relative;
     bottom: 0;    
     left: 38%;
@@ -275,7 +282,7 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: center;
-    border: rgb(65, 99, 211) solid 2px;
+    border: var(--color-blue2) solid 2px;
     padding: 2vw;
     margin-top: 8vh;
     margin-left: 30vw;
@@ -294,12 +301,13 @@ footer {
 .bienvenue {
     color: blue;
     font-size: 2em;
+    font-weight: bold;
 }
 
 .titreReultat {
     padding: 1vw;
     font-size: 1.1em;
-    color: #e27854;
+    color: var( --color-orange);
     font-weight: bold;
     text-decoration: underline; 
 }
@@ -307,7 +315,7 @@ footer {
 .resultatSomme {
     padding: 1vw;
     font-size: 1.5em;
-    border: rgb(65, 99, 211) solid 2px;
+    border: var(--color-blue2) solid 2px;
 }
 
 /***************************************** Menu ****************************************/
@@ -318,6 +326,7 @@ nav div{
 }
 nav{
     width: 100%;
+    margin-bottom: 8vh;
 }
 
 .ligneMenu{
@@ -330,7 +339,7 @@ nav{
 
 .menu {
     flex: 1;
-    background-color: #6254e2;
+    background-color: var(--color-blue2);;
     padding: 1vw 2vw;
     text-align: center;
     font-size: 1.2em;
@@ -338,7 +347,7 @@ nav{
 
 .menu a {
     text-decoration: none;
-    color: rgb(255, 255, 50);
+    color: var( --color-jaune);
     display: inline-block;
 }
 
