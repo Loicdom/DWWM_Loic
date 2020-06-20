@@ -187,7 +187,7 @@ a {
     align-self: center;
 }
 
-.ajout-liste {
+.btn {
     margin-left: 40vw;
     margin-right: 40vw;
 }
@@ -217,9 +217,9 @@ a {
 
 .bureau1 {
     padding: 0.7vw;
-    text-shadow: 2px 2px white;
-    font-size: 1.2em;
     text-decoration: underline;
+    font-size: 1.2em;
+    color: #e27854;
 }
 
 .image {
@@ -249,7 +249,101 @@ a {
 
 .form {
     font-size: 1.2em;
-    color: blue;
+    color: #e27854;
     font-weight: bold;
     text-decoration: underline;
+}
+
+/********************************* footer ******************************/
+
+footer {
+    color: blue;
+    position: relative;
+    bottom: 0;    
+    left: 38%;
+    margin-right: 70vw;
+    padding: 1vw;
+}
+
+.dessusFooter {
+	margin-bottom: 5vh;
+}
+
+/******************************* Tableau de bord ****************************************/
+
+.tableauBord {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: rgb(65, 99, 211) solid 2px;
+    padding: 2vw;
+    margin-top: 8vh;
+    margin-left: 30vw;
+    margin-right: 30vw;
+}
+
+.conteneurResultat {
+    display: flex;
+    justify-content: center;
+}
+
+.resultat {
+    padding: 2vw;
+}
+
+.bienvenue {
+    color: blue;
+    font-size: 2em;
+}
+
+.titreReultat {
+    padding: 1vw;
+    font-size: 1.1em;
+    color: #e27854;
+    font-weight: bold;
+    text-decoration: underline; 
+}
+
+.resultatSomme {
+    padding: 1vw;
+    font-size: 1.5em;
+    border: rgb(65, 99, 211) solid 2px;
+}
+
+/***************************************** Menu ****************************************/
+nav div{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+}
+nav{
+    width: 100%;
+}
+
+.ligneMenu{
+    flex-direction: row;
+}
+
+.sousMenu {
+    display: none;
+}
+
+.menu {
+    flex: 1;
+    background-color: #6254e2;
+    padding: 1vw 2vw;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.menu a {
+    text-decoration: none;
+    color: rgb(255, 255, 50);
+    display: inline-block;
+}
+
+.sousMenu a{ 
+    text-decoration: none;
+    margin-top: 2vh;
+    border-bottom: 1px solid white; 
 }
