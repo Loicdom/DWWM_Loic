@@ -44,22 +44,23 @@ DbConnect::init();
 //*********************************Personne**************************** *//
 
 // // ADD PersonnesManager :
-// $m = new Personnes(["nomPersonne"=>"Dom","prenomPersonne"=>"Fab","dateNaissPersonne"=>"1967-07-15","lieuNaissPersonne"=>"saint pol","adressePersonne"=>"11 res du cp","cpPersonne"=>59000,"villePersonne"=>"Lille","emailPersonne"=>"emaildePersonne@gmail.fr","telPersonne"=>"06-05-10-08-09","autorisationPhotos"=>"oui","bafaAquisBenevole"=>"oui","typePersonne"=>"bénévole"]);
+// $m = new Personnes(["nomPersonne"=>"Doma","prenomPersonne"=>"Fab","dateNaissPersonne"=>"1967-07-15","lieuNaissPersonne"=>"saint pol","adressePersonne"=>"11 res du cp","cpPersonne"=>59000,"villePersonne"=>"Lille","emailPersonne"=>"emaildePersonne@gmail.fr","telPersonne"=>"06-05-10-08-09","autorisationPhotos"=>"oui","bafaAquisBenevole"=>"oui"]);
+// // $m = PersonnesManager::getById(3);
 // var_dump($m);
-// PersonnesManager::add($m);
+// PersonnesManager::addBenevole($m);
 
 // // Update PersonnageManager :
-// $m = PersonnesManager::getById(2);
+// $m = PersonnesManager::getById(9);
 // $m->setLieuNaissPersonne("Dunkerque");
 // var_dump($m);
-// PersonnesManager::update($m);
+// PersonnesManager::updateBenevole($m);
 
 
 // // Delete PersonnageManager :
 // PersonnesManager::delete(2);
 
 // // GetList PersonnageManager :
-// $tableau = PersonnesManager::getList();
+// $tableau = PersonnesManager::getListByEmploye();
 // foreach ($tableau as $info)
 // {
 //     echo $info->toString();

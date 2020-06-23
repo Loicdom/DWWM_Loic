@@ -8,7 +8,7 @@ echo '<div class="formulaire">
         <form action="index.php?action=fournisseursAction&m=' . $mode . '" method="POST">
             <div>
                 <label class="form" for="codeFournisseur">Code du fournisseur : </label><br>
-                <input class="inputForm" type="text" id="codeFournisseur" name="codeFournisseur" placeholder="Code du fournisseur" required autofocus ';
+                <input class="inputForm" type="text" id="codeFournisseur" name="codeFournisseur" placeholder="Code en MAJUSCULE" pattern="^[A-Z]{3,}$" required autofocus ';
 if ($mode != "ajout") {
     echo 'value ="' . $fournisseurs->getCodeFournisseur() . '"';
 }

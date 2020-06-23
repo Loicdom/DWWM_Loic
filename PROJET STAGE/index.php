@@ -39,7 +39,7 @@ if (isset($_GET['action'])) {
 
     switch ($_GET['action']) {
 
-        case 'tableaubord': {
+        case 'tableauBord': {
                 afficherPage('PHP/view/', 'tableauBord', "Tableau de bord");
                 break;
             }
@@ -63,16 +63,20 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'fournisseursAction', "");
                 break;
             }
-        case 'map2': {
-                afficherPage('PHP/view/', 'map2', "map n°2");
+        case 'bureau': {
+                afficherPage('PHP/view/', 'bureau', "Bureau de l'association");
                 break;
             }
-        case 'gameover': {
-                afficherPage('PHP/view/', 'gameover', "");
+        case 'benevoleListe': {
+                afficherPage('PHP/view/', 'benevoleListe', "Liste des bénévoles");
                 break;
             }
-        case 'bravo': {
-                afficherPage('PHP/view/', 'bravo', "");
+        case 'benevoleForm': {
+                afficherPage('PHP/view/', 'benevoleForm', "Bénévole");
+                break;
+            }
+        case 'benevoleAction': {
+                afficherPage('PHP/view/', 'benevoleAction', "");
                 break;
             }
     }

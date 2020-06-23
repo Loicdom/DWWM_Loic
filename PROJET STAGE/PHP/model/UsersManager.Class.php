@@ -4,11 +4,15 @@ class UsersManager
     public static function add(Users $obj)
     {
         $db = DbConnect::getDb();
+        // Préparation de la requête d'insertion.
         $q = $db->prepare("INSERT INTO Users (pseudo,motDePasse,role) VALUES (:pseudo,:motDePasse,:role)");
+        // Assignation des valeurs .
         $q->bindValue(":pseudo", $obj->getPseudo());
         $q->bindValue(":motDePasse", $obj->getMotDePasse());
         $q->bindValue(":role", $obj->getRole());
-        $q->execute();
+        // Exécution de la requête.
+		$q->execute ();
+		$q->CloseCursor ();
     }
 
     public static function update(Users $obj)
@@ -32,6 +36,7 @@ class UsersManager
     {
         $db = DbConnect::getDb();
         $id = (int) $id;
+        // Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet USERS
         $q = $db->query("SELECT * FROM Users WHERE idUser=$id");
         $results = $q->fetch(PDO::FETCH_ASSOC);
         if ($results != false) {

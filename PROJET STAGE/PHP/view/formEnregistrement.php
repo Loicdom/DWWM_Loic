@@ -44,7 +44,7 @@ else //On est dans le cas traitement
     {
     	$nouvelUtilisateur = new User(['pseudo'=>$_POST['pseudo'],'motDePasse'=>md5($_POST['motDePasse'])]);
         UserManager::add($nouvelUtilisateur); // On crée l'utilisateur dans la base
-        $nouvelUtilisateur = UserManager::getByPseudo($_POST['pseudo']); //pour récupérer l'ID
+        $nouvelUtilisateur = UsersManager::getByPseudo($_POST['pseudo']); //pour récupérer l'ID
         echo'<h1>Inscription terminée</h1>';
         echo'<p>Bienvenue '.stripslashes(htmlspecialchars($_POST['pseudo'])).' vous êtes maintenant inscrit</p>';
         
