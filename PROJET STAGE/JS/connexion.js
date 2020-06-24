@@ -14,7 +14,6 @@ function showPassword(){
         document.getElementById("motDePasse").type='text';
     }  
 }
-
 // affichage et validiter du mdp 
 var monInput = document.getElementById("motDePasse");
 var lettre = document.getElementById("lettre");

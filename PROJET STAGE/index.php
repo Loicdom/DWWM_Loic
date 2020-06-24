@@ -79,6 +79,22 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'benevoleAction', "");
                 break;
             }
+        case 'usersListe': {
+                afficherPage('PHP/view/', 'usersListe', "Liste des utilisateurs");
+                break;
+            }
+        case 'usersForm': {
+                afficherPage('PHP/view/', 'usersForm', "utilisateur");
+                break;
+            }
+        case 'usersAction': {
+                afficherPage('PHP/view/', 'usersAction', "");
+                break;
+            }
+        case 'formEnregistrement': {
+                afficherPage('PHP/view/', 'formEnregistrement', "utilisateur");
+                break;
+            }
     }
 } else { // Sinon, on affiche la page principale du site
     afficherPageSansFooter('PHP/view/', 'formConnexion', "Connexion");

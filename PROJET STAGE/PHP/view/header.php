@@ -22,7 +22,7 @@ $pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : '';
                     <div><a href="index.php?action=fournisseursListe">Liste fournisseurs</a></div>
                     <div><a href="index.php?action=benevoleListe">Liste bénévoles</a></div>
                     <div><a href="#">Liste enfants</a></div>
-                    <div><a href="#">Liste utilisateurs</a></div>
+                    <div><a href="index.php?action=usersListe">Liste utilisateurs</a></div>
                     <div><a href="index.php?action=bureau">Bureau</a></div>
                 </div>
             </div>

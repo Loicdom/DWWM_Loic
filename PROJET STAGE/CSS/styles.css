@@ -93,7 +93,7 @@ html,body {
 }
 
 
-.fa-user-circle-o {
+.fa-user-circle {
     top: 0px;
     border-right: solid 2px var(--color-blue2);
 }
@@ -115,7 +115,7 @@ i {
 
 
 
-/* #message {
+#message {
     display: none;
     position:absolute;
     right: -165px;
@@ -145,7 +145,7 @@ i {
     position: relative;
     left: -8px;
     content: "✖";
-  } */
+  }
 
 .bouton {
     padding: 1vw;
@@ -195,14 +195,22 @@ a {
 }
 
 .btn {
-    width: 22vw;
-    margin-left: 35vw;
+    width: 25vw;
+    margin-left: 37vw;
 }
 
 .contenu-liste {
     width: 250%;
 }
 
+.role {
+    display: flex;
+    margin-left: 2vw;
+}
+
+.inputFormRole {
+    margin-left: 2vw;
+}
 /************************************* Bureau **********************************************/
 
 .bureauasso {
@@ -268,7 +276,7 @@ footer {
     position: relative;
     bottom: 0;    
     padding: 1vw;
-    margin-left: 35vw;
+    margin-left: 39vw;
 }
 
 .dessusFooter {

@@ -4,7 +4,7 @@
             <div class="head-connexion">Connexion</div>
             <div class="container">
                 <div class="contenu">
-                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    <i class="far fa-user-circle" aria-hidden="true"></i>
                     <input class="input-co" type="text" name="pseudo" id="pseudo" maxlength="50"
                         placeholder="Pseudo" pattern="[a-zA-Z0-9]){3,20}" required autofocus>
 
