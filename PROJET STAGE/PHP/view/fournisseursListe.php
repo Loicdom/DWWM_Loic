@@ -27,3 +27,6 @@ foreach ($fournisseurs as $elt) {
         </a>
     </div>
 <?php } ?>
+<a href="index.php?action=tableauBord">
+    <div class="bouton btn">Retour</div>
+</a>
