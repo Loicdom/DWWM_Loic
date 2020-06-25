@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
+    <title>Budget prévisionnel</title>
+</head>
+
+<body class="body-co">
+
+    <header class="header-co">
+        <div class="logo">
+            <img src="../Images/logo.jpg" alt="Logo"></div>
+        <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
+    </header>
+
+    <a href="index.php?action=EnfantsForm&m=ajout">
+        <div class="bouton btn"> Ajouter le budget prévisionnel</div>
+    </a>
+
+    <div class="budgetPrev">
+        <div class="colonne">
+            <div class="debitCredit">Débit :</div>
+            <div class="blocColonneTitre">Année</div>
+            <div class="blocColonneTitre">Goûters, ateliers cuisine et frais de réception</div>
+            <div class="blocColonneTitre">Fournitures ateliers créatifs</div>
+            <div class="blocColonneTitre">Salaire Sylvie</div>
+            <div class="blocColonneTitre">Assurances</div>
+            <div class="blocColonneTitre">Entretien jardin et matériels jardin</div>
+            <div class="blocColonneTitre">Cotisation URSSAF</div>
+            <div class="blocColonneTitre">Frais postaux et téléphone</div>
+            <div class="blocColonneTitre">Achats petits matériels</div>
+            <div class="blocColonneTitre">Frais bancaires</div>
+            <div class="blocColonneTitre">Produits d'entretiens</div>
+            <div class="debitCredit">Crédit :</div>
+            <div class="blocColonneTitre">Subvention Municipale</div>
+            <div class="blocColonneTitre">Produit de manifestation</div>
+            <div class="blocColonneTitre">Anniversaire</div>
+            <div class="blocColonneTitre">Participation des familles</div>
+            <div class="blocColonneTitre">Adhésion Ferme</div>
+            <div class="blocColonneTitre">Participation IME</div>
+            <div class="blocColonneTitre">Modifier</div>
+        </div>
+
+        <div class="colonne">
+            <div class="blocColonne">Prévisions (Charges)</div>
+            <div class="blocColonne">2018-2019</div>
+            <div class="blocColonne">1236</div>
+            <div class="blocColonne">1486</div>
+            <div class="blocColonne">865</div>
+            <div class="blocColonne">345</div>
+            <div class="blocColonne">132</div>
+            <div class="blocColonne">258</div>
+            <div class="blocColonne">87</div>
+            <div class="blocColonne">198</div>
+            <div class="blocColonne">64</div>
+            <div class="blocColonne">121</div>
+            <div class="blocColonne">Prévisions (Recettes)</div>
+            <div class="blocColonne">3800</div>
+            <div class="blocColonne">1756</div>
+            <div class="blocColonne">630</div>
+            <div class="blocColonne">752</div>
+            <div class="blocColonne">640</div>
+            <div class="blocColonne">46</div>
+            <a href="index.php?action=EnfantsForm&m=modif&id=<?php echo $elt->getIdEnfant() ?>" class="bloc">
+                <div class="bouton">Modifier</div>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>

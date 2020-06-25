@@ -211,6 +211,13 @@ a {
 .inputFormRole {
     margin-left: 2vw;
 }
+
+.listeUtil {
+    color: rgb(255, 42, 42);
+    padding: 10vw;
+    text-align: center;
+    text-shadow: aliceblue 1px 2px;
+}
 /************************************* Bureau **********************************************/
 
 .bureauasso {
@@ -362,4 +369,42 @@ nav{
     text-decoration: none;
     margin-top: 2vh;
     border-bottom: 1px solid white; 
+}
+
+/**************************************** Budget Prévisionnelle **************************************************/
+
+.budgetPrev {
+    display: flex;
+    justify-content: center;
+    padding: 2vw;
+}
+
+.colonne {
+    text-align: center;
+    border: 2px solid var(--color-orange);
+}
+
+.blocColonneTitre {
+    padding: 2vw;
+    background-color:var(--color-blue2);
+    color: var( --color-jaune);
+    border-bottom: 2px solid var(--color-orange);
+}
+
+.debitCredit {
+    padding: 2vw;
+    background-color:var(--color-blue2);
+    color: var( --color-jaune);
+    border-bottom: 2px solid var(--color-orange);
+    text-decoration: underline;
+}
+
+.blocColonne {
+    padding: 2vw;
+    color: blue;
+    border-bottom: 2px solid var(--color-orange);
+}
+
+.enColonne {
+    margin-top: 1.6vw;
 }

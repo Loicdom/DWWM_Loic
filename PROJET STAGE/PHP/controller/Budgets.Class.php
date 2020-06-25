@@ -3,6 +3,7 @@ class Budgets
 {
     /*******************************Attributs*******************************/
     private $_idBudget;
+    private $_annee;
     private $_fournitureAtelierCreatif;
     private $_atelierCuisineGouter;
     private $_petitMateriel;
@@ -28,6 +29,14 @@ class Budgets
     public function setIdBudget($_idBudget)
     {
         return $this->_idBudget = $_idBudget;
+    }
+    public function getAnnee()
+    {
+        return $this->_annee;
+    }
+    public function setAnnee($_annee)
+    {
+        return $this->_annee = $_annee;
     }
     public function getFournitureAtelierCreatif()
     {
@@ -179,6 +188,6 @@ class Budgets
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdBudget() . "\n" . $this->getFournitureAtelierCreatif() . "\n" . $this->getAtelierCuisineGouter() . "\n" . $this->getPetitMateriel() . "\n" . $this->getSalaireEmploye() . "\n" . $this->getAssurance() . "\n" . $this->getFraisPostauxTel() . "\n" . $this->getEntretienMaterielJadin() . "\n" . $this->getProduitEntretien() . "\n" . $this->getFraisBancaires() . "\n" . $this->getUrsaff() . "\n" . $this->getSubvMunicipale() . "\n" . $this->getParticipationFamille() . "\n" . $this->getProduitManif() . "\n" . $this->getAnniversaire() . "\n" . $this->getAdhesion() . "\n" . $this->getParticipationIME();
+        return $this->getIdBudget() . "\n" . $this->getAnnee() . "\n" . $this->getFournitureAtelierCreatif() . "\n" . $this->getAtelierCuisineGouter() . "\n" . $this->getPetitMateriel() . "\n" . $this->getSalaireEmploye() . "\n" . $this->getAssurance() . "\n" . $this->getFraisPostauxTel() . "\n" . $this->getEntretienMaterielJadin() . "\n" . $this->getProduitEntretien() . "\n" . $this->getFraisBancaires() . "\n" . $this->getUrsaff() . "\n" . $this->getSubvMunicipale() . "\n" . $this->getParticipationFamille() . "\n" . $this->getProduitManif() . "\n" . $this->getAnniversaire() . "\n" . $this->getAdhesion() . "\n" . $this->getParticipationIME();
     }
 }

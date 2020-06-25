@@ -95,6 +95,18 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'formEnregistrement', "utilisateur");
                 break;
             }
+        case 'budgetPrevisionnel': {
+                afficherPage('PHP/view/', 'budgetPrevisionnel', "Budget Prévisionnel");
+                break;
+            }
+        case 'budgetPrevisionnelForm': {
+                afficherPage('PHP/view/', 'budgetPrevisionnelForm', "Budget Prévisionnel");
+                break;
+            }
+            case 'budgetPrevisionnelAction': {
+                afficherPage('PHP/view/', 'budgetPrevisionnelAction', "");
+                break;
+            }
     }
 } else { // Sinon, on affiche la page principale du site
     afficherPageSansFooter('PHP/view/', 'formConnexion', "Connexion");

@@ -4,7 +4,8 @@ class BudgetsManager
 public static function add(Budgets $obj)
 {
 $db = DbConnect::getDb();
-$q = $db->prepare("INSERT INTO Budgets (fournitureAtelierCreatif,atelierCuisineGouter,petitMateriel,salaireEmploye,assurance,fraisPostauxTel,entretienMaterielJadin,produitEntretien,fraisBancaires,ursaff,subvMunicipale,participationFamille,produitManif,anniversaire,adhesion,participationIME) VALUES (:fournitureAtelierCreatif,:atelierCuisineGouter,:petitMateriel,:salaireEmploye,:assurance,:fraisPostauxTel,:entretienMaterielJadin,:produitEntretien,:fraisBancaires,:ursaff,:subvMunicipale,:participationFamille,:produitManif,:anniversaire,:adhesion,:participationIME)");
+$q = $db->prepare("INSERT INTO Budgets (annee,fournitureAtelierCreatif,atelierCuisineGouter,petitMateriel,salaireEmploye,assurance,fraisPostauxTel,entretienMaterielJadin,produitEntretien,fraisBancaires,ursaff,subvMunicipale,participationFamille,produitManif,anniversaire,adhesion,participationIME) VALUES (:annee,:fournitureAtelierCreatif,:atelierCuisineGouter,:petitMateriel,:salaireEmploye,:assurance,:fraisPostauxTel,:entretienMaterielJadin,:produitEntretien,:fraisBancaires,:ursaff,:subvMunicipale,:participationFamille,:produitManif,:anniversaire,:adhesion,:participationIME)");
+$q->bindValue(":annee", $obj->getAnnee());
 $q->bindValue(":fournitureAtelierCreatif", $obj->getFournitureAtelierCreatif());
 $q->bindValue(":atelierCuisineGouter", $obj->getAtelierCuisineGouter());
 $q->bindValue(":petitMateriel", $obj->getPetitMateriel());
@@ -27,7 +28,8 @@ $q->bindValue(":participationIME", $obj->getParticipationIME());
 public static function update(Budgets $obj)
 {
 $db = DbConnect::getDb();
-$q = $db->prepare("UPDATE Budgets SET fournitureAtelierCreatif=:fournitureAtelierCreatif, atelierCuisineGouter=:atelierCuisineGouter, petitMateriel=:petitMateriel, salaireEmploye=:salaireEmploye, assurance=:assurance, fraisPostauxTel=:fraisPostauxTel, entretienMaterielJadin=:entretienMaterielJadin, produitEntretien=:produitEntretien, fraisBancaires=:fraisBancaires, ursaff=:ursaff, subvMunicipale=:subvMunicipale, participationFamille=:participationFamille, produitManif=:produitManif, anniversaire=:anniversaire, adhesion=:adhesion, participationIME=:participationIME WHERE idBudget=:idBudget");
+$q = $db->prepare("UPDATE Budgets SET annee=:annee,fournitureAtelierCreatif=:fournitureAtelierCreatif, atelierCuisineGouter=:atelierCuisineGouter, petitMateriel=:petitMateriel, salaireEmploye=:salaireEmploye, assurance=:assurance, fraisPostauxTel=:fraisPostauxTel, entretienMaterielJadin=:entretienMaterielJadin, produitEntretien=:produitEntretien, fraisBancaires=:fraisBancaires, ursaff=:ursaff, subvMunicipale=:subvMunicipale, participationFamille=:participationFamille, produitManif=:produitManif, anniversaire=:anniversaire, adhesion=:adhesion, participationIME=:participationIME WHERE idBudget=:idBudget");
+$q->bindValue(":annee", $obj->getAnnee());
 $q->bindValue(":fournitureAtelierCreatif", $obj->getFournitureAtelierCreatif());
 $q->bindValue(":atelierCuisineGouter", $obj->getAtelierCuisineGouter());
 $q->bindValue(":petitMateriel", $obj->getPetitMateriel());

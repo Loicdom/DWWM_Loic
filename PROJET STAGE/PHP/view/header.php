@@ -1,6 +1,7 @@
 <?php
 //Attribution des variables de session
 $pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : '';
+$role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
 ?>
 
 <body>
@@ -45,7 +46,7 @@ $pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : '';
             <div class="menu"><a href="#">Budget</a>
                 <div class="sousMenu">
                     <div><a href="#">Budget actuel</a></div>
-                    <div><a href="#">Budget prévisionnel</a></div>
+                    <div><a href="index.php?action=budgetPrevisionnel">Budget prévisionnel</a></div>
                     <div><a href="#">Employés</a></div>
                 </div>
             </div>
