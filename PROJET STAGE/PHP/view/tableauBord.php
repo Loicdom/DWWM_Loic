@@ -1,5 +1,5 @@
 <div class="tableauBord">
-        <div class="bienvenue">Bienvenue !!!</div>
+        <div class="bienvenue">Bienvenue sur l'application web de comptabilité de la ferme d'animations éducatives des rives de l'Aa !</div>
         <div class="conteneurResultat">
             <div class="resultat">
                 <div class="titreReultat">Résultat en caisse :</div>

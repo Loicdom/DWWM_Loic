@@ -50,7 +50,7 @@ else //On est dans le cas traitement
         {
     	    $nouvelUtilisateur = new Users(['role'=>$_POST['role'],'motDePasse'=>md5($_POST['motDePasse']),'pseudo'=>$_POST['pseudo']]);
             UsersManager::add($nouvelUtilisateur);
-            echo "<div class='listeUtil'>Utilisateurs ajouter</div>";
+            echo "<div class='listeUtil'>Utilisateur ajouté</div>";
             header("refresh:2,url=index.php?action=usersListe");
         }
         else // on affiche les erreurs
@@ -65,7 +65,7 @@ else //On est dans le cas traitement
         }
     } else {
         UsersManager::delete($id);
-        echo "<div class='listeUtil'>Utilisateurs supprimer</div>";
+        echo "<div class='listeUtil'>Utilisateur supprimé</div>";
         header("refresh:2,url=index.php?action=usersListe");
     }
 }

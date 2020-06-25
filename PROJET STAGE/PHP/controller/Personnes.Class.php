@@ -19,7 +19,6 @@ class Personnes
     private $_nomRepresentantLegal;
     private $_prenomRepresentantLegal;
     private $_remarquePersonne;
-    private $_contratEmploye;
     private $_typePersonne;
 
     /******************************Accesseurs*******************************/
@@ -159,14 +158,6 @@ class Personnes
     {
         return $this->_remarquePersonne = $_remarquePersonne;
     }
-    public function getContratEmploye()
-    {
-        return $this->_contratEmploye;
-    }
-    public function setContratEmploye($_contratEmploye)
-    {
-        return $this->_contratEmploye = $_contratEmploye;
-    }
     public function getTypePersonne()
     {
         return $this->_typePersonne;
@@ -197,6 +188,6 @@ class Personnes
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdPersonne() . "\n" . $this->getNomPersonne() . "\n" . $this->getPrenomPersonne() . "\n" . $this->getDateNaissPersonne() . "\n" . $this->getLieuNaissPersonne() . "\n" . $this->getAdressePersonne() . "\n" . $this->getCpPersonne() . "\n" . $this->getVillePersonne() . "\n" . $this->getEmailPersonne() . "\n" . $this->getTelPersonne() . "\n" . $this->getAutorisationPhotos() . "\n" . $this->getBafaAquisBenevole() . "\n" . $this->getCasierJudiciaire() . "\n" . $this->getPaiementInscription() . "\n" . $this->getNomRepresentantLegal() . "\n" . $this->getPrenomRepresentantLegal() . "\n" . $this->getRemarquePersonne() . "\n" . $this->getContratEmploye() . "\n" . $this->getTypePersonne();
+        return $this->getIdPersonne() . "\n" . $this->getNomPersonne() . "\n" . $this->getPrenomPersonne() . "\n" . $this->getDateNaissPersonne() . "\n" . $this->getLieuNaissPersonne() . "\n" . $this->getAdressePersonne() . "\n" . $this->getCpPersonne() . "\n" . $this->getVillePersonne() . "\n" . $this->getEmailPersonne() . "\n" . $this->getTelPersonne() . "\n" . $this->getAutorisationPhotos() . "\n" . $this->getBafaAquisBenevole() . "\n" . $this->getCasierJudiciaire() . "\n" . $this->getPaiementInscription() . "\n" . $this->getNomRepresentantLegal() . "\n" . $this->getPrenomRepresentantLegal() . "\n" . $this->getRemarquePersonne() . "\n" .  $this->getTypePersonne();
     }
 }

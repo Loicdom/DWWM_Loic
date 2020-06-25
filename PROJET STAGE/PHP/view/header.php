@@ -47,7 +47,6 @@ $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
                 <div class="sousMenu">
                     <div><a href="#">Budget actuel</a></div>
                     <div><a href="index.php?action=budgetPrevisionnel">Budget prévisionnel</a></div>
-                    <div><a href="#">Employés</a></div>
                 </div>
             </div>
             <div class="menu"><a href="#">Impressions</a>
