@@ -87,10 +87,6 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'usersForm', "utilisateur");
                 break;
             }
-        case 'usersAction': {
-                afficherPage('PHP/view/', 'usersAction', "");
-                break;
-            }
         case 'formEnregistrement': {
                 afficherPage('PHP/view/', 'formEnregistrement', "utilisateur");
                 break;
@@ -103,8 +99,32 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'budgetPrevisionnelForm', "Budget Prévisionnel");
                 break;
             }
-            case 'budgetPrevisionnelAction': {
+        case 'budgetPrevisionnelAction': {
                 afficherPage('PHP/view/', 'budgetPrevisionnelAction', "");
+                break;
+            }
+        case 'planComptableListe': {
+                afficherPage('PHP/view/', 'planComptableListe', "Plan comptable");
+                break;
+            }
+        case 'planComptableForm': {
+                afficherPage('PHP/view/', 'planComptableForm', "Plan comptable");
+                break;
+            }
+        case 'planComptableAction': {
+                afficherPage('PHP/view/', 'planComptableAction', "");
+                break;
+            }
+        case 'enfantListe': {
+                afficherPage('PHP/view/', 'enfantListe', "Liste Enfants");
+                break;
+            }
+        case 'enfantForm': {
+                afficherPage('PHP/view/', 'enfantForm', "Enfant");
+                break;
+            }
+        case 'enfantAction': {
+                afficherPage('PHP/view/', 'enfantAction', "");
                 break;
             }
     }
