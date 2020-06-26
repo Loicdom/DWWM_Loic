@@ -47,13 +47,23 @@ class PCGA
     }
     public function setIdClasseComptable($_idClasseComptable)
     {
-        return $this->_idClasseComptable = $_idClasseComptable;
+        $this->_idClasseComptable = $_idClasseComptable;
+        $m=ClasseComptableManager::getById($_idClasseComptable);
+        $this->setClasseComptable($m);
+    }
+    public function getClasseComptable()
+    {
+        return $this->_classeComptable;
     }
 
+    public function setClasseComptable($_classeComptable)
+    {
+        $this->_classeComptable = $_classeComptable;
+    }
     /*******************************Construct*******************************/
     public function __construct(array $options = [])
     {
-        if (!empty($options)) {
+        if (!empty($options)) { // empty : renvoi vrai si le tableau est vide
             $this->hydrate($options);
         }
     }
@@ -61,8 +71,9 @@ class PCGA
     public function hydrate($data)
     {
         foreach ($data as $key => $value) {
-            $methode = "set" . ucfirst($key);
-            if (is_callable(([$this, $methode]))) {
+            $methode = "set" . ucfirst($key); //ucfirst met la 1ere lettre en majuscule
+            if (is_callable(([$this, $methode]))) // is_callable verifie que la methode existe
+            {
                 $this->$methode($value);
             }
         }
@@ -71,6 +82,6 @@ class PCGA
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdPCGA() . "\n" . $this->getNumCompte() . "\n" . $this->getLibelleCompte() . "\n" . $this->getDansBilan() . "\n" . $this->getIdClasseComptable();
+        return $this->getIdPCGA() . "\n" . $this->getNumCompte() . "\n" . $this->getLibelleCompte() . "\n" . $this->getDansBilan() . "\n" . $this->getIdClasseComptable(). "\n" . $this->getClasseComptable()->toString();
     }
 }

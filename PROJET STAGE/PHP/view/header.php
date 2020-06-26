@@ -22,7 +22,7 @@ $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
                 <div class="sousMenu">
                     <div><a href="index.php?action=fournisseursListe">Liste fournisseurs</a></div>
                     <div><a href="index.php?action=benevoleListe">Liste bénévoles</a></div>
-                    <div><a href="#">Liste enfants</a></div>
+                    <div><a href="index.php?action=enfantListe">Liste enfants</a></div>
                     <div><a href="index.php?action=usersListe">Liste utilisateurs</a></div>
                     <div><a href="index.php?action=bureau">Bureau</a></div>
                 </div>
@@ -38,7 +38,7 @@ $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
             <div class="menu"><a href="#">Comptes</a>
                 <div class="sousMenu">
                     <div><a href="#">Visuel par comptes</a></div>
-                    <div><a href="#">Plan comptable</a></div>
+                    <div><a href="index.php?action=planComptableListe">Plan comptable</a></div>
                     <div><a href="#">Lettrage</a></div>
                     <div><a href="https://www.creditmutuel.fr/fr/authentification.html" target="_blank">Crédit Mutuel</a></div>
                 </div>

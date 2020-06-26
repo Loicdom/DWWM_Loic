@@ -270,6 +270,14 @@ a {
    margin-bottom: 3vh;
 }
 
+.inputFormPCGA {
+    padding: 0.6vw;
+    font-size: 1.2em;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 25vw;
+ }
+
 .form {
     font-size: 1.2em;
     color: var( --color-orange);

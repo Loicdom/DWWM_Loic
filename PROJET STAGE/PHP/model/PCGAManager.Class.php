@@ -47,7 +47,7 @@ public static function getList()
 {
 $db = DbConnect::getDb();
 $planComptable = [];
-$q = $db->query("SELECT * FROM PCGA");
+$q = $db->query("SELECT * FROM PCGA ORDER BY numCompte ASC");
 while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
 if ($donnees != false) {
 $planComptable[] = new PCGA($donnees);
