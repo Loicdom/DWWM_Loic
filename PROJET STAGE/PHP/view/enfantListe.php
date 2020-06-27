@@ -3,7 +3,7 @@
 $bénévoles = PersonnesManager::getListByEnfant();
 ?>
 <a href="index.php?action=enfantForm&m=ajout">
-    <div class="bouton btn"> Ajouter un bénévole</div>
+    <div class="bouton btn"> Ajouter un enfant</div>
 </a>
 
 

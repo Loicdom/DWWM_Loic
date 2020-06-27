@@ -11,9 +11,6 @@ echo '<div class="formulaire">
                 <input class="inputForm" type="text" id="nomPersonne" name="nomPersonne" placeholder="Nom enfant" '; ?> pattern="^[A-ZÀ-Ý' ’-]{2,}$" <?php ' required autofocus ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getNomPersonne() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
                 <i class="far fa-question-circle" title="NOM : MAJUSCULE"></i>
@@ -27,9 +24,6 @@ echo '      <div>
                 <input class="inputForm" type="text" id="prenomPersonne" name="prenomPersonne" placeholder="Prénom enfant" '; ?> pattern="^[A-ZÀ-Ý]{1}[a-zà-ý '-]*([ |-][A-ZÀ-Ý]{1}[a-zà-ý '-]*)?$" <?php ' required ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getPrenomPersonne() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
 <i class="far fa-question-circle" title="Prénom : première lettre en MAJUSCULE, le reste en minuscule"></i>
@@ -47,9 +41,6 @@ echo '      <div>
                 <input class="inputForm" type="text" id="lieuNaissPersonne" name="lieuNaissPersonne" placeholder="Lieu de naissance enfant" '; ?> pattern="^[A-ZÀ-Ý]{1}[a-zà-ý '-]*([ |-][A-ZÀ-Ý]{1}[a-zà-ý '-]*)?$" <?php ' required ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getLieuNaissPersonne() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
 <i class="far fa-question-circle" title="Lieu Naissance : première lettre en MAJUSCULE, le reste en minuscule"></i>
@@ -68,9 +59,6 @@ echo '      <div>
                 <input class="inputForm" type="text" id="cpPersonne" name="cpPersonne" placeholder="CP enfant" '; ?> pattern="^\d{5}$" <?php ' required ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getCpPersonne() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
 <i class="far fa-question-circle" title="Code Postal : 5 chiffres"></i>
@@ -80,9 +68,6 @@ echo '      <div>
                 <input class="inputForm" type="text" id="villePersonne" name="villePersonne" placeholder="Ville enfant" '; ?> pattern="^[A-ZÀ-Ý]{1}[a-zà-ý '-]*([ |-][A-ZÀ-Ý]{1}[a-zà-ý '-]*)?$" <?php ' required ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getVillePersonne() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
 <i class="far fa-question-circle" title="Ville : première lettre en MAJUSCULE, le reste en minuscule"></i>
@@ -92,9 +77,6 @@ echo '      <div>
                 <input class="inputForm" type="text" id="emailPersonne" name="emailPersonne" placeholder="Email parent" '; ?> pattern="^[a-zA-Z0-9-._]{2,}@[a-zA-Z0-9-]{2,}\.[a-z]{2,}(.[a-z]{2,})?$" <?php ' required ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getEmailPersonne() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
 <i class="far fa-question-circle" title="Email : exemple: monEmail@gmail.com"></i>
@@ -104,9 +86,6 @@ echo '      <div>
                 <input class="inputForm" type="text" id="telPersonne" name="telPersonne" placeholder="Téléphone parent" '; ?> pattern="^0[1-9]([-. ]?[\d]{2}){4}$" <?php ' required ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getTelPersonne() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
 <i class="far fa-question-circle" title="Téléphone : exemple: 06-12-13-14-15"></i>
@@ -134,9 +113,6 @@ echo '      <div>
                 <input class="inputForm" type="text" id="nomRepresentantLegal" name="nomRepresentantLegal" placeholder="Nom représentant légal" '; ?> pattern="^[A-ZÀ-Ý' ’-]{2,}$" <?php ' required ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getNomRepresentantLegal() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
 <i class="far fa-question-circle" title="NOM REPRESENTANT LEGAL : MAJUSCULE"></i>
@@ -146,9 +122,6 @@ echo '      <div>
                 <input class="inputForm" type="text" id="prenomRepresentantLegal" name="prenomRepresentantLegal" placeholder="Prénom représentant légal" '; ?> pattern="^[A-ZÀ-Ý]{1}[a-zà-ý '-]*([ |-][A-ZÀ-Ý]{1}[a-zà-ý '-]*)?$" <?php ' required ';
 if ($mode != "ajout") {
     echo 'value ="' . $enfant->getPrenomRepresentantLegal() . '"';
-    echo '<div class="boutonVert"><img src="Images/V.png" alt="valide"></div>
-    <div class="boutonRouge"><img src="Images/X.png" alt="non valide"></div>
-    <span class="message"></span>';
 }
 echo '          >
 <i class="far fa-question-circle" title="Prénom représentant légal : première lettre en MAJUSCULE, le reste en minuscule"></i>

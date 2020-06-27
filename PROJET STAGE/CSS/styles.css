@@ -423,24 +423,3 @@ nav{
 .enColonne {
     margin-top: 1.6vw;
 }
-
-/***************************************** ENfant verif ************************************************/
-
-.boutonVert {
-    visibility: hidden;
-    flex: 1;
-}
-
-.boutonRouge {
-    visibility: hidden;
-    flex: 1;
-}
-
-.valide {
-    padding-left: 3vh;
-    padding-right: 3vh;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
-}
