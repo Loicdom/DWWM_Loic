@@ -21,7 +21,7 @@ class PersonnesManager
         $q->bindValue(":nomRepresentantLegal", $obj->getNomRepresentantLegal());
         $q->bindValue(":prenomRepresentantLegal", $obj->getPrenomRepresentantLegal());
         $q->bindValue(":remarquePersonne", $obj->getRemarquePersonne());
-        $q->bindValue(":typePersonne", "Bénévole");
+        $q->bindValue(":typePersonne", $obj->getTypePersonne());
         $q->execute();
     }
 
@@ -45,7 +45,7 @@ class PersonnesManager
         $q->bindValue(":nomRepresentantLegal", $obj->getNomRepresentantLegal());
         $q->bindValue(":prenomRepresentantLegal", $obj->getPrenomRepresentantLegal());
         $q->bindValue(":remarquePersonne", $obj->getRemarquePersonne());
-        $q->bindValue(":typePersonne", "Enfant");
+        $q->bindValue(":typePersonne", $obj->getTypePersonne());
         $q->execute();
     }
 
@@ -69,7 +69,7 @@ class PersonnesManager
         $q->bindValue(":nomRepresentantLegal", $obj->getNomRepresentantLegal());
         $q->bindValue(":prenomRepresentantLegal", $obj->getPrenomRepresentantLegal());
         $q->bindValue(":remarquePersonne", $obj->getRemarquePersonne());
-        $q->bindValue(":typePersonne", "Bénévole");
+        $q->bindValue(":typePersonne", $obj->getTypePersonne());
         $q->bindValue(":idPersonne", $obj->getIdPersonne());
         $q->execute();
     }
@@ -94,7 +94,7 @@ class PersonnesManager
         $q->bindValue(":nomRepresentantLegal", $obj->getNomRepresentantLegal());
         $q->bindValue(":prenomRepresentantLegal", $obj->getPrenomRepresentantLegal());
         $q->bindValue(":remarquePersonne", $obj->getRemarquePersonne());
-        $q->bindValue(":typePersonne","Enfant");
+        $q->bindValue(":typePersonne", $obj->getTypePersonne());
         $q->bindValue(":idPersonne", $obj->getIdPersonne());
         $q->execute();
     }

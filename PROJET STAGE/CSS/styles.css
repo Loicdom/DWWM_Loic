@@ -98,6 +98,13 @@ html,body {
     border-right: solid 2px var(--color-blue2);
 }
 
+.fa-question-circle {
+    font-size: 1.3em;
+    padding: 0.6vw;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
 i {
     position: absolute;
     color: var(--color-blue2);
@@ -415,4 +422,25 @@ nav{
 
 .enColonne {
     margin-top: 1.6vw;
+}
+
+/***************************************** ENfant verif ************************************************/
+
+.boutonVert {
+    visibility: hidden;
+    flex: 1;
+}
+
+.boutonRouge {
+    visibility: hidden;
+    flex: 1;
+}
+
+.valide {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
