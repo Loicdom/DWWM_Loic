@@ -6,8 +6,8 @@ $bénévoles = PersonnesManager::getListByEnfant();
     <div class="bouton btn"> Ajouter un enfant</div>
 </a>
 
-
-<div class="contenu-liste">
+<!-- on commence par créer une liste qui correspond à la première ligne de titre pour les informations des bénévoles -->
+<div class="contenu-liste">  
         <div class="ligne">
             <div class="bloc titre">Nom</div>
             <div class="bloc titre">Prénom</div>
@@ -27,7 +27,7 @@ $bénévoles = PersonnesManager::getListByEnfant();
             <div class="bloc titre">Supprimer</div>
         </div>
 <?php
-foreach ($bénévoles as $elt) {
+foreach ($bénévoles as $elt) {  // boucle qui permet de sortir les informations de chaques bénévoles par rapport au titre si dessus.
 ?>
     <div class="ligne">
         <div class="bloc contenuListe"><?php echo $elt->getNomPersonne() ?></div>
@@ -51,7 +51,8 @@ foreach ($bénévoles as $elt) {
             <div class="bouton">Supprimer</div>
         </a>
     </div>
-<?php } ?>
+<?php } // pour modifier ou supprimer, il faut récupèrer l'IdPersonne pour le formulaire pour savoir lequel est à modifier ou supprimer ?>  
 <a href="index.php?action=tableauBord">
         <div class="bouton btn">Retour</div>
     </a>
+<!-- le bouton retour permet de retourner au tableau de bord -->

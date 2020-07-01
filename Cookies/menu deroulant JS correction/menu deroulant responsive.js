@@ -1,18 +1,18 @@
 var lesMenus = document.getElementsByClassName("menu");
 for (i=0;i<lesMenus.length;i++)
     lesMenus[i].childNodes[0].addEventListener("click",MontrersousMenu);
-document.getElementsByTagName("header")[0].addEventListener("click",CacherLesSousMenus);
+document.getElementsByTagName("section")[0].addEventListener("click",CacherLesSousMenus);
 
 function MontrersousMenu(e){
     CacherLesSousMenus();
     menu = e.target.parentNode;
-    menu.style.borderTop="solid 2px blue"
-    submenu= menu.getElementsByClassName("sousMenu")[0];
+    menu.style.borderTop="solid 2px orange"
+    submenu= menu.getElementsByClassName("submenu")[0];
     submenu.style.display="flex";
 
 }
 function CacherLesSousMenus(){
-    lesSousMenus = document.getElementsByClassName("sousMenu");
+    lesSousMenus = document.getElementsByClassName("submenu");
     for(i=0;i<lesMenus.length;i++)
     {
         lesSousMenus[i].style.display="none";
@@ -20,5 +20,3 @@ function CacherLesSousMenus(){
     for(i=0;i<lesMenus.length;i++)
     lesMenus[i].style.border="none";
 }
-
-
