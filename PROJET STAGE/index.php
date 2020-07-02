@@ -84,7 +84,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'usersForm': {
-                afficherPage('PHP/view/', 'usersForm', "utilisateur");
+            afficherPageSansFooter('PHP/view/', 'usersForm', "utilisateur");
                 break;
             }
         case 'formEnregistrement': {

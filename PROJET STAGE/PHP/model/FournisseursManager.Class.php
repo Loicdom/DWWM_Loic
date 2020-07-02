@@ -54,15 +54,19 @@ class FournisseursManager
         return $fournisseurs;
     }
 
-    // static public function codeFournisseur()
-	// {
-	// 	$db = DbConnect::getDb(); // Instance de PDO.
-	// 	// Retourne la liste de tous les personnes.
-		
-	// 	$q = $db->query('SELECT codeFournisseur as cf FROM Fournisseurs');
-		
-	// 	$donnees = $q->fetch(PDO::FETCH_ASSOC);
-		
-	// 	return $donnees;
-	// }
+    static public function codeFournisseur()
+	{
+		$db = DbConnect::getDb(); // Instance de PDO.
+		$q = $db->query('SELECT codeFournisseur  FROM Fournisseurs');
+        
+        if($donnees = $q->fetch(PDO::FETCH_OBJ)) {
+            do {
+                $codeFournisseur[]=$donnees;
+            }
+            while ($donnees = $q->fetch(PDO::FETCH_OBJ));
+        
+            echo json_encode($codeFournisseur);
+        
+        }
+	}
 }
