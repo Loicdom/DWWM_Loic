@@ -73,6 +73,12 @@ DbConnect::init();
 // var_dump($m);
 // PCGAManager::add($m);
 
+// // ADD PCGAManager :
+// $c = "LID";
+// $l = "LIDL";
+// var_dump($c);
+// PCGAManager::addCompteFournisseur($c,$l);
+
 // // Update PCGAManager :
 // $m = PCGAManager::getById(4);
 // $m->setNumCompte(607);

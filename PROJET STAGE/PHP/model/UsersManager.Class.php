@@ -1,7 +1,7 @@
 <?php
 class UsersManager
 {
-    public static function add(Users $obj)
+    public static function add(Users $obj) //Pour ajouter un utilisateur
     {
         $db = DbConnect::getDb();
         // Préparation de la requête d'insertion.
@@ -15,7 +15,7 @@ class UsersManager
 		$q->CloseCursor ();
     }
 
-    public static function update(Users $obj)
+    public static function update(Users $obj) // Pour modifier un utilisateur
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("UPDATE Users SET pseudo=:pseudo, motDePasse=:motDePasse, role=:role WHERE idUser=:idUser");
@@ -26,13 +26,13 @@ class UsersManager
         $q->execute();
     }
 
-    public static function delete($id)
+    public static function delete($id) //Pour supprimer un utilisateur 
     {
         $db = DbConnect::getDb();
         $db->exec("DELETE FROM Users WHERE idUser=$id");
     }
 
-    public static function getById($id)
+    public static function getById($id) // Ramène un utilisateur en particulier (Avec l'Id)
     {
         $db = DbConnect::getDb();
         $id = (int) $id;
@@ -45,7 +45,7 @@ class UsersManager
             return false;
         }
     }
-    static public function getByPseudo($pseudo) {
+    static public function getByPseudo($pseudo) { // Ramène les informations en fonction du pseudo
 		$db = DbConnect::getDb (); // Instance de PDO.
 		// Exécute une requête de type SELECT avec une clause WHERE, et retourne un objet Personne
 		$q = $db->prepare ( 'SELECT pseudo, motDePasse, idUser, role FROM Users WHERE pseudo = :pseudo' );
@@ -62,7 +62,7 @@ class UsersManager
 		}
 	}
 
-    public static function getList()
+    public static function getList() // Ramène la liste des utilisateurs
     {
         $db = DbConnect::getDb();
         $users = [];

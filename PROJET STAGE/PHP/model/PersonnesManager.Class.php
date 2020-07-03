@@ -1,7 +1,7 @@
 <?php
 class PersonnesManager
 {
-    public static function addBenevole(Personnes $obj)
+    public static function addBenevole(Personnes $obj) // Pour l'ajout d'un bénévole
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO Personnes (nomPersonne,prenomPersonne,dateNaissPersonne,lieuNaissPersonne,adressePersonne,cpPersonne,villePersonne,emailPersonne,telPersonne,autorisationPhotos,bafaAquisBenevole,casierJudiciaire,paiementInscription,nomRepresentantLegal,prenomRepresentantLegal,remarquePersonne,typePersonne) VALUES (:nomPersonne,:prenomPersonne,:dateNaissPersonne,:lieuNaissPersonne,:adressePersonne,:cpPersonne,:villePersonne,:emailPersonne,:telPersonne,:autorisationPhotos,:bafaAquisBenevole,:casierJudiciaire,:paiementInscription,:nomRepresentantLegal,:prenomRepresentantLegal,:remarquePersonne,:typePersonne)");
@@ -25,7 +25,7 @@ class PersonnesManager
         $q->execute();
     }
 
-    public static function addEnfant(Personnes $obj)
+    public static function addEnfant(Personnes $obj) // Pour l'ajout d'un enfant
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO Personnes (nomPersonne,prenomPersonne,dateNaissPersonne,lieuNaissPersonne,adressePersonne,cpPersonne,villePersonne,emailPersonne,telPersonne,autorisationPhotos,bafaAquisBenevole,casierJudiciaire,paiementInscription,nomRepresentantLegal,prenomRepresentantLegal,remarquePersonne,typePersonne) VALUES (:nomPersonne,:prenomPersonne,:dateNaissPersonne,:lieuNaissPersonne,:adressePersonne,:cpPersonne,:villePersonne,:emailPersonne,:telPersonne,:autorisationPhotos,:bafaAquisBenevole,:casierJudiciaire,:paiementInscription,:nomRepresentantLegal,:prenomRepresentantLegal,:remarquePersonne,:typePersonne)");
@@ -49,7 +49,7 @@ class PersonnesManager
         $q->execute();
     }
 
-    public static function updateBenevole(Personnes $obj)
+    public static function updateBenevole(Personnes $obj) // Pour modifier les informations d'un bénévole
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("UPDATE Personnes SET nomPersonne=:nomPersonne, prenomPersonne=:prenomPersonne, dateNaissPersonne=:dateNaissPersonne, lieuNaissPersonne=:lieuNaissPersonne, adressePersonne=:adressePersonne, cpPersonne=:cpPersonne, villePersonne=:villePersonne, emailPersonne=:emailPersonne, telPersonne=:telPersonne, autorisationPhotos=:autorisationPhotos, bafaAquisBenevole=:bafaAquisBenevole, casierJudiciaire=:casierJudiciaire, paiementInscription=:paiementInscription, nomRepresentantLegal=:nomRepresentantLegal, prenomRepresentantLegal=:prenomRepresentantLegal, remarquePersonne=:remarquePersonne, typePersonne=:typePersonne WHERE idPersonne=:idPersonne");
@@ -74,7 +74,7 @@ class PersonnesManager
         $q->execute();
     }
 
-    public static function updateEnfant(Personnes $obj)
+    public static function updateEnfant(Personnes $obj) // Pour modifier les informations d'un enfant
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("UPDATE Personnes SET nomPersonne=:nomPersonne, prenomPersonne=:prenomPersonne, dateNaissPersonne=:dateNaissPersonne, lieuNaissPersonne=:lieuNaissPersonne, adressePersonne=:adressePersonne, cpPersonne=:cpPersonne, villePersonne=:villePersonne, emailPersonne=:emailPersonne, telPersonne=:telPersonne, autorisationPhotos=:autorisationPhotos, bafaAquisBenevole=:bafaAquisBenevole, casierJudiciaire=:casierJudiciaire, paiementInscription=:paiementInscription, nomRepresentantLegal=:nomRepresentantLegal, prenomRepresentantLegal=:prenomRepresentantLegal, remarquePersonne=:remarquePersonne, typePersonne=:typePersonne WHERE idPersonne=:idPersonne");
@@ -99,13 +99,13 @@ class PersonnesManager
         $q->execute();
     }
 
-    public static function delete($id)
+    public static function delete($id) // Pour supprimer une personne de la bdd
     {
         $db = DbConnect::getDb();
         $db->exec("DELETE FROM Personnes WHERE idPersonne=$id");
     }
 
-    public static function getById($id)
+    public static function getById($id) // Ramène une personne en particulier (avec l'Id)
     {
         $db = DbConnect::getDb();
         $id = (int) $id;
@@ -118,7 +118,7 @@ class PersonnesManager
         }
     }
 
-    public static function getList()
+    public static function getList() // ramène la liste de toute les personnes
     {
         $db = DbConnect::getDb();
         $personnes = [];
@@ -131,7 +131,7 @@ class PersonnesManager
         return $personnes;
     }
 
-    public static function getListByBenevole()
+    public static function getListByBenevole() // Ramène la liste des bénévoles
     {
         $db = DbConnect::getDb();
         $personnes = [];
@@ -144,7 +144,7 @@ class PersonnesManager
         return $personnes;
     }
 
-    public static function getListByEnfant()
+    public static function getListByEnfant() //Ramène la liste des enfants
     {
         $db = DbConnect::getDb();
         $personnes = [];

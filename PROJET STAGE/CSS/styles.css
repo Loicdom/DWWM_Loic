@@ -1,3 +1,4 @@
+/* variable de couleur, car utilisation fréquente */
 :root {
     --color-bleu1: rgb(170, 213, 240);
     --color-blue2: rgb(65, 99, 211);

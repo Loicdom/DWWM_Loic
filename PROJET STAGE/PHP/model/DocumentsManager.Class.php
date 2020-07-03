@@ -1,7 +1,7 @@
 <?php
 class DocumentsManager
 {
-public static function add(Documents $obj)
+public static function add(Documents $obj) //Pour ajouter un document
 {
 $db = DbConnect::getDb();
 $q = $db->prepare("INSERT INTO Documents (libelleDocument,enregDocument) VALUES (:libelleDocument,:enregDocument)");
@@ -10,7 +10,7 @@ $q->bindValue(":enregDocument", $obj->getEnregDocument());
  $q->execute();
 }
 
-public static function update(Documents $obj)
+public static function update(Documents $obj) // Pour modifier un document
 {
 $db = DbConnect::getDb();
 $q = $db->prepare("UPDATE Documents SET libelleDocument=:libelleDocument, enregDocument=:enregDocument WHERE idDocument=:idDocument");
@@ -20,13 +20,13 @@ $q->bindValue(":idDocument", $obj->getIdDocument());
  $q->execute();
 }
 
-public static function delete($id)
+public static function delete($id) // Pour supprimer un document
 {
 $db = DbConnect::getDb();
 $db->exec("DELETE FROM Documents WHERE idDocument= $id");
 }
 
-public static function getById($id)
+public static function getById($id) // Ramène un document en particulier (avec l'Id)
 {
 $db = DbConnect::getDb();
 $id = (int) $id;
@@ -39,7 +39,7 @@ return false;
 }
 }
 
-public static function getList()
+public static function getList() // Ramène la liste des documents
 {
 $db = DbConnect::getDb();
 $Documents = [];

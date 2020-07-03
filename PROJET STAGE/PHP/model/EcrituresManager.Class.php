@@ -1,7 +1,7 @@
 <?php
 class EcrituresManager
 {
-    public static function add(Ecritures $obj)
+    public static function add(Ecritures $obj) // ajoute une écriture
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO Ecritures (dateEcriture,libelleEcriture,lettrage,solde,idFacture,idExerciceComptable) VALUES (:dateEcriture,:libelleEcriture,:lettrage,:solde,:idFacture,:idExerciceComptable)");
@@ -14,7 +14,7 @@ class EcrituresManager
         $q->execute();
     }
 
-    public static function update(Ecritures $obj)
+    public static function update(Ecritures $obj) // modifie une écriture
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("UPDATE Ecritures SET dateEcriture=:dateEcriture, libelleEcriture=:libelleEcriture, lettrage=:lettrage, solde=:solde, idFacture=:idFacture, idExerciceComptable=:idExerciceComptable WHERE idEcriture=:idEcriture");
@@ -28,13 +28,13 @@ class EcrituresManager
         $q->execute();
     }
 
-    public static function delete($id)
+    public static function delete($id) //Pour supprimer une écriture
     {
         $db = DbConnect::getDb();
         $db->exec("DELETE FROM Ecritures WHERE idEcriture= $id");
     }
 
-    public static function getById($id)
+    public static function getById($id) // Pour trouver une écriture en particulier (avec l'Id)
     {
         $db = DbConnect::getDb();
         $id = (int) $id;
@@ -47,7 +47,7 @@ class EcrituresManager
         }
     }
 
-    public static function getList()
+    public static function getList() // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();
         $ecritures = [];
@@ -60,8 +60,9 @@ class EcrituresManager
         return $ecritures;
     }
 
-    public static function getByCritere()
+    public static function getByCritere()  // pour faire une recherche multicritere
     {
+        
     }
 
     

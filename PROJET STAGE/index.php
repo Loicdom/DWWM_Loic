@@ -11,7 +11,7 @@ function ChargerClasse($classe)
     }
 }
 
-function afficherPageSansFooter($chemin, $page, $titre)
+function afficherPageFooter1($chemin, $page, $titre)
 {
     require  'PHP/view/head.php';
     require  'PHP/view/header1.php';
@@ -44,7 +44,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'connect': {
-                afficherPageSansFooter('PHP/view/', 'formConnexion', "Connexion");
+                afficherPageFooter1('PHP/view/', 'formConnexion', "Connexion");
                 break;
             }
         case 'deconnect': {
@@ -84,7 +84,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'usersForm': {
-            afficherPageSansFooter('PHP/view/', 'usersForm', "utilisateur");
+                afficherPageFooter1('PHP/view/', 'usersForm', "utilisateur");
                 break;
             }
         case 'formEnregistrement': {
@@ -129,5 +129,5 @@ if (isset($_GET['action'])) {
             }
     }
 } else { // Sinon, on affiche la page principale du site
-    afficherPageSansFooter('PHP/view/', 'formConnexion', "Connexion");
+    afficherPageFooter1('PHP/view/', 'formConnexion', "Connexion");
 }

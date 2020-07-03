@@ -1,7 +1,7 @@
 <?php
 class ClasseComptableManager
 {
-public static function add(ClasseComptable $obj)
+public static function add(ClasseComptable $obj) // Pour ajouter une classe comptable
 {
 $db = DbConnect::getDb();
 $q = $db->prepare("INSERT INTO ClasseComptable (numeroClasseComptable,libelleClasseComptable) VALUES (:numeroClasseComptable,:libelleClasseComptable)");
@@ -10,7 +10,7 @@ $q->bindValue(":libelleClasseComptable", $obj->getLibelleClasseComptable());
  $q->execute();
 }
 
-public static function update(ClasseComptable $obj)
+public static function update(ClasseComptable $obj) // Pour modifier une classe comptable
 {
 $db = DbConnect::getDb();
 $q = $db->prepare("UPDATE ClasseComptable SET numeroClasseComptable=:numeroClasseComptable, libelleClasseComptable=:libelleClasseComptable WHERE idClasseComptable=:idClasseComptable");
@@ -20,13 +20,13 @@ $q->bindValue(":idClasseComptable", $obj->getIdClasseComptable());
  $q->execute();
 }
 
-public static function delete($id)
+public static function delete($id) // Pour supprimer une classe comptable 
 {
 $db = DbConnect::getDb();
 $db->exec("DELETE FROM ClasseComptable WHERE idClasseComptable=$id");
 }
 
-public static function getById($id)
+public static function getById($id) // Ramène une classe comptable en particulier (avec l'Id)
 {
 $db = DbConnect::getDb();
 $id = (int) $id;
@@ -39,7 +39,7 @@ return false;
 }
 }
 
-public static function getList()
+public static function getList() // Ramène la liste des classes comptables
 {
 $db = DbConnect::getDb();
 $classeComptable = [];

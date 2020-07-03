@@ -1,7 +1,7 @@
 <?php
 class BudgetsManager
 {
-public static function add(Budgets $obj)
+public static function add(Budgets $obj) // Permet d'ajouter un budget (pour le budgetPrévisionnel)
 {
 $db = DbConnect::getDb();
 $q = $db->prepare("INSERT INTO Budgets (annee,fournitureAtelierCreatif,atelierCuisineGouter,petitMateriel,salaireEmploye,assurance,fraisPostauxTel,entretienMaterielJadin,produitEntretien,fraisBancaires,ursaff,subvMunicipale,participationFamille,produitManif,anniversaire,adhesion,participationIME) VALUES (:annee,:fournitureAtelierCreatif,:atelierCuisineGouter,:petitMateriel,:salaireEmploye,:assurance,:fraisPostauxTel,:entretienMaterielJadin,:produitEntretien,:fraisBancaires,:ursaff,:subvMunicipale,:participationFamille,:produitManif,:anniversaire,:adhesion,:participationIME)");
@@ -25,7 +25,7 @@ $q->bindValue(":participationIME", $obj->getParticipationIME());
  $q->execute();
 }
 
-public static function update(Budgets $obj)
+public static function update(Budgets $obj) // Permet de modifier un budget (pour le budgetPrévisionnel)
 {
 $db = DbConnect::getDb();
 $q = $db->prepare("UPDATE Budgets SET annee=:annee,fournitureAtelierCreatif=:fournitureAtelierCreatif, atelierCuisineGouter=:atelierCuisineGouter, petitMateriel=:petitMateriel, salaireEmploye=:salaireEmploye, assurance=:assurance, fraisPostauxTel=:fraisPostauxTel, entretienMaterielJadin=:entretienMaterielJadin, produitEntretien=:produitEntretien, fraisBancaires=:fraisBancaires, ursaff=:ursaff, subvMunicipale=:subvMunicipale, participationFamille=:participationFamille, produitManif=:produitManif, anniversaire=:anniversaire, adhesion=:adhesion, participationIME=:participationIME WHERE idBudget=:idBudget");
@@ -50,7 +50,7 @@ $q->bindValue(":idBudget", $obj->getIdBudget());
  $q->execute();
 }
 
-public static function delete($id)
+public static function delete($id) // Permet de supprimer un budget (pour le budgetPrévisionnel)
 {
 $db = DbConnect::getDb();
 $db->exec("DELETE FROM Budgets WHERE idBudget=$id");
