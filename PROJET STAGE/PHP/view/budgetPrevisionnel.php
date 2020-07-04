@@ -1,6 +1,6 @@
 <?php
 
-$budgetsPrev = BudgetsManager::getList();
+$budgetsPrev = BudgetsManager::getList();  // Ramène la liste des budgets
 ?>
 
 <a href="index.php?action=budgetPrevisionnelForm&m=ajout">
@@ -32,7 +32,7 @@ $budgetsPrev = BudgetsManager::getList();
         <div class="blocColonneTitre">Supprimer</div>
     </div>
     <?php
-    foreach ($budgetsPrev as $elt) {
+    foreach ($budgetsPrev as $elt) { // on boucle pour ramèner tout les budgets
     ?>
         <div class="colonne">
             <div class="blocColonne">Prévisions (Charges)</div>

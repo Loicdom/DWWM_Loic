@@ -1,4 +1,4 @@
-
+<!-- on appelle les script et affichage footer -->
 <div class="dessusFooter"></div>
 <script src="JS/script.js"></script>
 <script src="JS/scriptAjax.js"></script>

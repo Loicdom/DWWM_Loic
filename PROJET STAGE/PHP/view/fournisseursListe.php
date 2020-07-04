@@ -1,6 +1,6 @@
 <?php
 
-$fournisseurs = FournisseursManager::getList();
+$fournisseurs = FournisseursManager::getList(); //Ramène les informations (la liste) des fournisseurs pour pouvoir les afficher
 ?>
 <a href="index.php?action=fournisseursForm&m=ajout">
     <div class="bouton btn"> Ajouter un fournisseur</div>
@@ -14,7 +14,7 @@ $fournisseurs = FournisseursManager::getList();
     <div class="bloc titre">Supprimer</div>
 </div>
 <?php
-foreach ($fournisseurs as $elt) {
+foreach ($fournisseurs as $elt) { // On fait une boucle pour afficher tout les fournisseurs
 ?>
     <div class="ligne">
         <div class="bloc contenuListe"><?php echo $elt->getCodeFournisseur() ?></div>

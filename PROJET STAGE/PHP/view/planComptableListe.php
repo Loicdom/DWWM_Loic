@@ -1,6 +1,6 @@
 <?php
 
-$comptes = PCGAManager::getList();
+$comptes = PCGAManager::getList(); // on récupere le plan comptable (la liste des comptes)
 ?>
 <a href="index.php?action=planComptableForm&m=ajout">
     <div class="bouton btn"> Ajouter un fournisseur</div>
@@ -15,7 +15,7 @@ $comptes = PCGAManager::getList();
     <div class="bloc titre">Supprimer</div>
 </div>
 <?php
-foreach ($comptes as $elt) {
+foreach ($comptes as $elt) { // on fait une boucle pour afficher tout les comptes
 ?>
     <div class="ligne">
         <div class="bloc contenuListe"><?php echo $elt->getNumCompte() ?></div>

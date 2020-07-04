@@ -1,8 +1,8 @@
 <?php
-$mode = $_GET["m"];
+$mode = $_GET["m"]; // on recupere le mode et si différents d'ajout on récupere aussi l'id 
 if ($mode != "ajout") {
     $id = $_GET["id"];
-    $comptes = PCGAManager::getById($id);
+    $comptes = PCGAManager::getById($id); // si différent d'ajout on recupere les infos du compte (avec l'id) pour l'affichage des infos dans les inputs
 }
 echo '<div class="formulaire">
         <form action="index.php?action=planComptableAction&m=' . $mode . '" method="POST">
@@ -37,7 +37,7 @@ echo '          <div class="centrer">
                 <button class="bouton" id="submit" type="submit">';
 switch ($mode) {
     case "ajout":
-        echo 'Ajouter';
+        echo 'Ajouter'; // on change le bouton en fonction du mode
         break;
     case "modif":
         echo 'Modifier';

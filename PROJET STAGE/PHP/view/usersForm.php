@@ -1,6 +1,6 @@
 <?php
 $mode = $_GET["m"];
-if ($mode != "ajout") {
+if ($mode != "ajout") { // récupere le mode et si différent de ajout on recupere l'id pour récuperer toutes les infos d'un utilisateur
     $id = $_GET["id"];
     $utilisateurs = UsersManager::getById($id);
 }

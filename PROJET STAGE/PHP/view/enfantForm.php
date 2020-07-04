@@ -1,8 +1,8 @@
 <?php
 $mode = $_GET["m"];
-if ($mode != "ajout") {
+if ($mode != "ajout") {  // On recupère le mode et si il est différent d'ajout on récuperer l'id 
     $id = $_GET["id"];
-    $enfant = PersonnesManager::getById($id);
+    $enfant = PersonnesManager::getById($id); // on récupere les infos par rapport a l'id
 }
 echo '<div class="formulaire">
         <form action="index.php?action=enfantAction&m=' . $mode . '" method="POST">
@@ -140,7 +140,7 @@ echo '          <div class="centrer">
                 <button class="bouton" id="submit" type="submit">';
 switch ($mode) {
     case "ajout":
-        echo 'Ajouter';
+        echo 'Ajouter'; // On change le bouton en fonction du mode
         break;
     case "modif":
         echo 'Modifier';

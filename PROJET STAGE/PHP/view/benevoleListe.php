@@ -1,6 +1,6 @@
 <?php
 
-$bénévoles = PersonnesManager::getListByBenevole();
+$bénévoles = PersonnesManager::getListByBenevole(); // ramène la liste des bénévoles
 ?>
 <a href="index.php?action=benevoleForm&m=ajout">
     <div class="bouton btn"> Ajouter un bénévole</div>
@@ -26,7 +26,7 @@ $bénévoles = PersonnesManager::getListByBenevole();
             <div class="bloc titre">Supprimer</div>
         </div>
 <?php
-foreach ($bénévoles as $elt) {
+foreach ($bénévoles as $elt) { // On fait une boucle pour ramèner tout les bénévoles
 ?>
     <div class="ligne">
         <div class="bloc contenuListe"><?php echo $elt->getNomPersonne() ?></div>

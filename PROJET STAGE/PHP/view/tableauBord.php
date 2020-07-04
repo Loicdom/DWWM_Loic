@@ -1,3 +1,4 @@
+<!-- tableau de bord : a rajouter le résultat en caisse et banque quand code partie compta fini -->
 <div class="tableauBord">
         <div class="bienvenue">Bienvenue sur l'application web de comptabilité de la ferme d'animations éducatives des rives de l'Aa !</div>
         <div class="conteneurResultat">

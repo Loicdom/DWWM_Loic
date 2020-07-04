@@ -1,9 +1,9 @@
 var lesMenus = document.getElementsByClassName("menu");
 for (i=0;i<lesMenus.length;i++)
-    lesMenus[i].childNodes[0].addEventListener("click",MontrersousMenu);
-document.getElementsByTagName("header")[0].addEventListener("click",CacherLesSousMenus);
+    lesMenus[i].childNodes[0].addEventListener("click",MontrersousMenu); // Pour montrer les sous menu quand on clique sur un des liens
+document.getElementsByTagName("header")[0].addEventListener("click",CacherLesSousMenus); // pour cacher les sous menu
 
-function MontrersousMenu(e){
+function MontrersousMenu(e){ // pour les montrer on fait un display flex pour les voir
     CacherLesSousMenus();
     menu = e.target.parentNode;
     menu.style.borderTop="solid 2px blue"
@@ -11,7 +11,7 @@ function MontrersousMenu(e){
     submenu.style.display="flex";
 
 }
-function CacherLesSousMenus(){
+function CacherLesSousMenus(){ // pour les cacher : un display none pour les faire disparaitre
     lesSousMenus = document.getElementsByClassName("sousMenu");
     for(i=0;i<lesMenus.length;i++)
     {

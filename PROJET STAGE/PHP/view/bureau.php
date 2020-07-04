@@ -1,3 +1,4 @@
+    <!-- page fixe, seulement html et css -->
     <div class="contenu-bureau">
         <div class="bureauasso">
             <div class="bureau1">Président :</div>

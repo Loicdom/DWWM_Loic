@@ -62,8 +62,49 @@ class EcrituresManager
 
     public static function getByCritere()  // pour faire une recherche multicritere
     {
-        
-    }
+        // on récupère les critères sélectionnés
+        extract($_POST);
 
-    
+        $i = 0;
+
+        // si la variable est présente, on lui affecte une place dans le tableau 'choix[]', qui nous servira ensuite à construire le WHERE de la requête.
+        if (!empty($dateEcriture)) {
+            $choix[$i++] = "dateEcriture = '$dateEcriture'";
+        }
+        if (!empty($libelleEcriture)) {
+            $choix[$i++] = "libelleEcriture = '$libelleEcriture'";
+        }
+        if (!empty($lettrage)) {
+            $choix[$i++] = "lettrage = '$lettrage'";
+        }
+        if (!empty($solde)) {
+            $choix[$i++] = "solde = '$solde'";
+        }
+        if (!empty($idFacture)) {
+            $choix[$i++] = "idFacture = '$idFacture'";
+        }
+        if (!empty($idExerciceComptable)) {
+            $choix[$i++] = "idExerciceComptable = '$idExerciceComptable'";
+        }
+        if (!empty($idEcriture)) {
+            $choix[$i++] = "idEcriture = '$idEcriture'";
+        }
+
+        // on insère les éléments remplis dans une variable $critere, en commençant par la première occurrence, puis on boucles
+        $critere = $choix[0] . " ";
+
+        for ($j = 1; $j < $i; $j++) {
+            $critere .= " AND " . $choix[$j] . " ";
+        }
+
+        // La requête si $i >0, ça veut dire qu'il y a des critères.
+        if ($i > 0) {
+            // requete.
+            $q = $db->query("SELECT * FROM Ecritures WHERE $critere");
+        }
+        // si $i = 0, alors l'utilisateur n'a pas saisi de critère.
+        else {
+            $q = $db->query("SELECT * FROM Ecritures");
+        }
+    }
 }

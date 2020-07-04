@@ -1,6 +1,6 @@
 <?php
 //Attribution des variables de session
-$pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : '';
+$pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : ''; // on mets le pseudo et le rôle dans une variable session pour pouvoir les utiliser sur l'application
 $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
 ?>
 
@@ -12,10 +12,11 @@ $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
         <div class="esp">
             <?php if ($pseudo != "") {
                 echo '<div class="esp">' . $pseudo . '</div> ';
-            }
+            } // pour afficher le pseudo
             ?> </div>
 
     </header>
+    <!-- menu avec des liens vers chaque page (en passant par l'index) -->
     <nav>
         <div class="ligneMenu">
             <div class="menu"><a href="#">Gestion</a>

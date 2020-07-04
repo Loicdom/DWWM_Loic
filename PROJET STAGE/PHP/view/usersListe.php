@@ -1,6 +1,6 @@
 <?php
 
-$utilisateurs = UsersManager::getList();
+$utilisateurs = UsersManager::getList(); //on recupere la liste de tout les utilisateurs
 ?>
 <a href="index.php?action=usersForm&m=ajout">
     <div class="bouton btn"> Ajouter un utilisateur</div>
@@ -18,7 +18,7 @@ foreach ($utilisateurs as $elt) {
 ?>
     <div class="ligne">
         <div class="bloc contenuListe"><?php echo $elt->getPseudo() ?></div>
-        <div class="bloc contenuListe"><?php echo "****************" ?></div>
+        <div class="bloc contenuListe">****************</div>
         <div class="bloc contenuListe"><?php echo $elt->getRole() ?></div>
         <a href="index.php?action=usersForm&m=suppr&id=<?php echo $elt->getIdUser() ?>" class="bloc">
             <div class="bouton">Supprimer</div>

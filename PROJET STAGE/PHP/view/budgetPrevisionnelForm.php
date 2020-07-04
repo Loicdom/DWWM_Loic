@@ -2,7 +2,7 @@
 $mode = $_GET["m"];
 if ($mode != "ajout") {
     $id = $_GET["id"];
-    $BudgetPrev = BudgetsManager::getById($id);
+    $BudgetPrev = BudgetsManager::getById($id); // si le mode est différent de l'ajout on récupère l'id du budget et on utilise la fonction qui ramène les information d'un budget en particulier pour pouvoir afficher ses informations
 }
 echo '<div class="formulaire">
         <form action="index.php?action=budgetPrevisionnelAction&m=' . $mode . '" method="POST">
