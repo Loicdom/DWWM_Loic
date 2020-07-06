@@ -1,5 +1,6 @@
 <?php
 $mode = $_GET["m"]; // on recupere le mode et si différents d'ajout on récupere aussi l'id 
+$classeComptable = ClasseComptableManager::getList();
 if ($mode != "ajout") {
     $id = $_GET["id"];
     $comptes = PCGAManager::getById($id); // si différent d'ajout on recupere les infos du compte (avec l'id) pour l'affichage des infos dans les inputs
@@ -25,14 +26,17 @@ if ($mode != "ajout") {
 }
 echo '          >
         </div> ';
-echo '      <div>  
-        <label class="form" for="idClasseComptable">Id classe comptable : </label><br>
-        <input class="inputFormPCGA" type="text" id="idClasseComptable" name="idClasseComptable" placeholder="Id classe comptable" required ';
+echo '      <div> '; 
+echo'   <label class="form" for="idClasseComptable">Classe comptable : </label><br>
+        <select name="idClasseComptable" id="idClasseComptable"> ';  
+        foreach ($classeComptable as $elt) {
+echo'   "<option value="'.$elt->getIdClasseComptable().'">'.$elt->getLibelleClasseComptable().'</option>';
+        }  
+echo    '</select>';  
 if ($mode != "ajout") {
-    echo 'value ="' . $comptes->getIdClasseComptable() . '"';
+      'value ="' . $comptes->getIdClasseComptable() . '"';
 }
-echo '          >
-</div> ';
+echo '          </div> ';
 echo '          <div class="centrer">
                 <button class="bouton" id="submit" type="submit">';
 switch ($mode) {

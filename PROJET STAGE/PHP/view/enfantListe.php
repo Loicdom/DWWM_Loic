@@ -6,8 +6,12 @@ $bénévoles = PersonnesManager::getListByEnfant();
     <div class="bouton btn"> Ajouter un enfant</div>
 </a>
 
-<!-- on commence par créer une liste qui correspond à la première ligne de titre pour les informations des bénévoles -->
-<div class="contenu-liste">  
+<?php
+if (!empty($bénévoles)) { //Si rien dans comptes on affiche pas se qu'il y a en dessous
+?>
+
+    <!-- on commence par créer une liste qui correspond à la première ligne de titre pour les informations des bénévoles -->
+    <div class="contenu-liste">
         <div class="ligne">
             <div class="bloc titre">Nom</div>
             <div class="bloc titre">Prénom</div>
@@ -26,33 +30,35 @@ $bénévoles = PersonnesManager::getListByEnfant();
             <div class="bloc titre">Modifier</div>
             <div class="bloc titre">Supprimer</div>
         </div>
-<?php
-foreach ($bénévoles as $elt) {  // boucle qui permet de sortir les informations de chaques bénévoles par rapport au titre si dessus.
-?>
-    <div class="ligne">
-        <div class="bloc contenuListe"><?php echo $elt->getNomPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getPrenomPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getDateNaissPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getLieuNaissPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getAdressePersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getCpPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getVillePersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getEmailPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getTelPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getAutorisationPhotos() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getPaiementInscription() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getNomRepresentantLegal() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getPrenomRepresentantLegal() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getRemarquePersonne() ?></div>
-        <a href="index.php?action=enfantForm&m=modif&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
-            <div class="bouton">Modifier</div>
-        </a>
-        <a href="index.php?action=enfantForm&m=suppr&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
-            <div class="bouton">Supprimer</div>
-        </a>
-    </div>
-<?php } // pour modifier ou supprimer, il faut récupèrer l'IdPersonne pour le formulaire pour savoir lequel est à modifier ou supprimer ?>  
-<a href="index.php?action=tableauBord">
+        <?php
+        foreach ($bénévoles as $elt) {  // boucle qui permet de sortir les informations de chaques bénévoles par rapport au titre si dessus.
+        ?>
+            <div class="ligne">
+                <div class="bloc contenuListe"><?php echo $elt->getNomPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getPrenomPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getDateNaissPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getLieuNaissPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getAdressePersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getCpPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getVillePersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getEmailPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getTelPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getAutorisationPhotos() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getPaiementInscription() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getNomRepresentantLegal() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getPrenomRepresentantLegal() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getRemarquePersonne() ?></div>
+                <a href="index.php?action=enfantForm&m=modif&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
+                    <div class="bouton">Modifier</div>
+                </a>
+                <a href="index.php?action=enfantForm&m=suppr&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
+                    <div class="bouton">Supprimer</div>
+                </a>
+            </div>
+        <?php } // pour modifier ou supprimer, il faut récupèrer l'IdPersonne pour le formulaire pour savoir lequel est à modifier ou supprimer 
+        ?>
+<?php } ?>
+    <a href="index.php?action=tableauBord">
         <div class="bouton btn">Retour</div>
     </a>
-<!-- le bouton retour permet de retourner au tableau de bord -->
+    <!-- le bouton retour permet de retourner au tableau de bord -->

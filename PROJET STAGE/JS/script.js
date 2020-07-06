@@ -22,3 +22,9 @@ function CacherLesSousMenus(){ // pour les cacher : un display none pour les fai
 }
 
 
+var fornisseurCodeMaj = document.getElementById("codeFournisseur");
+fornisseurCodeMaj.addEventListener("input", function () { CodeMAJ(); });
+// fonction pour forcer les majuscules pour le code fournisseur
+function CodeMAJ() {
+    fornisseurCodeMaj.value=fornisseurCodeMaj.value.toUpperCase();
+}

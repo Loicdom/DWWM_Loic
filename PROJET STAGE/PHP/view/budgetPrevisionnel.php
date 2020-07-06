@@ -7,6 +7,10 @@ $budgetsPrev = BudgetsManager::getList();  // Ramène la liste des budgets
     <div class="bouton btn"> Ajouter le budget prévisionnel</div>
 </a>
 
+<?php
+if (!empty($budgetsPrev)) { //Si rien dans fournisseurs on affiche pas se qu'il y a en dessous
+?>
+
 <div class="budgetPrev">
     <div class="colonne">
         <div class="debitCredit">Débit :</div>
@@ -63,7 +67,7 @@ $budgetsPrev = BudgetsManager::getList();  // Ramène la liste des budgets
         </div>
         <?php } ?>
 </div>
-
+<?php } ?>
 <a href="index.php?action=tableauBord">
     <div class="bouton btn">Retour</div>
 </a>

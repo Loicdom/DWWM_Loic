@@ -17,7 +17,7 @@ USE `COMPTAFERME`;
 CREATE TABLE Factures(
         idFacture   Int  Auto_increment  NOT NULL PRIMARY KEY ,
         libelleFact Varchar (100) NOT NULL ,
-        enregFact   Mediumblob DEFAULT NULL
+        enregFact   Varchar (100) DEFAULT NULL
 )ENGINE=InnoDB;
 
 
@@ -37,6 +37,7 @@ CREATE TABLE ExerciceComptable(
 
 CREATE TABLE Ecritures(
         idEcriture          Int  Auto_increment  NOT NULL PRIMARY KEY ,
+		typeEcriture		Varchar (10) NOT NULL ,
         dateEcriture        Date NOT NULL ,
         libelleEcriture     Varchar (100) NOT NULL ,
         lettrage            Varchar (100) DEFAULT NULL ,
@@ -66,7 +67,7 @@ CREATE TABLE Users(
 CREATE TABLE Documents(
         idDocument      Int  Auto_increment  NOT NULL PRIMARY KEY ,
         libelleDocument Varchar (100) NOT NULL ,
-        enregDocument   Mediumblob DEFAULT NULL
+        enregDocument   Varchar (100) DEFAULT NULL
 )ENGINE=InnoDB;
 
 
@@ -87,7 +88,7 @@ CREATE TABLE ClasseComptable(
 
 CREATE TABLE PCGA(
         idPCGA            Int  Auto_increment  NOT NULL PRIMARY KEY ,
-        numCompte         Int NOT NULL ,
+        numCompte         Varchar (10) NOT NULL ,
         libelleCompte     Varchar (100) NOT NULL ,
         dansBilan         Varchar (50) DEFAULT NULL ,
         idClasseComptable Int NOT NULL
@@ -125,12 +126,11 @@ CREATE TABLE Personnes(
         telPersonne             Varchar (50) NOT NULL ,
         autorisationPhotos      Varchar (10) NOT NULL ,
         bafaAquisBenevole       Varchar (10) DEFAULT NULL ,
-        casierJudiciaire        Mediumblob DEFAULT NULL ,
+        casierJudiciaire        Varchar (100) DEFAULT NULL ,
         paiementInscription     Varchar (50) DEFAULT NULL ,
         nomRepresentantLegal    Varchar (50) DEFAULT NULL ,
         prenomRepresentantLegal Varchar (50) DEFAULT NULL ,
         remarquePersonne        Varchar (100) DEFAULT NULL ,
-        contratEmploye          Mediumblob DEFAULT NULL ,
         typePersonne            Varchar (20) NOT NULL
 )ENGINE=InnoDB;
 
