@@ -424,3 +424,27 @@ nav{
 .enColonne {
     margin-top: 1.6vw;
 }
+
+/************************************************ Ecriture Comptable ********************************************************/
+
+.contenu-ecriture {
+    display: flex;
+    flex-direction: column;
+}
+
+.divTitre {
+    flex: 1;
+    text-align: center;
+    background-color:var(--color-blue2);
+    color: var( --color-jaune);
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    flex: 1;
+    align-self: center;
+}
+
+.ecritureComptable {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+}
