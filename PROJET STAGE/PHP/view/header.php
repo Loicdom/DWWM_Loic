@@ -53,8 +53,8 @@ $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
             <div class="menu"><a href="#">Impressions</a>
                 <div class="sousMenu">
                     <div><a href="#">Journaux</a></div>
-                    <div><a href="#">Liste bénévoles</a></div>
-                    <div><a href="#">Liste enfants</a></div>
+                    <div><a href="index.php?action=impressionBenevole">Liste bénévoles</a></div>
+                    <div><a href="index.php?action=impressionEnfant">Liste enfants</a></div>
                     <div><a href="#">Bilan</a></div>
                     <div><a href="#">Factures</a></div>
                 </div>

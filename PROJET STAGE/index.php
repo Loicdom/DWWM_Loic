@@ -19,6 +19,13 @@ function afficherPageFooter1($chemin, $page, $titre)
     require 'PHP/view/footer1.php';
 }
 
+function afficherPageImpression($chemin, $page, $titre)
+{
+    require  'PHP/view/head1.php';
+    require $chemin . $page . '.php';
+    require 'PHP/view/footer.php';
+}
+
 spl_autoload_register("ChargerClasse");
 function afficherPage($chemin, $page, $titre)
 {
@@ -125,6 +132,14 @@ if (isset($_GET['action'])) {
             }
         case 'enfantAction': {
                 afficherPage('PHP/view/', 'enfantAction', "");
+                break;
+            }
+        case 'impressionEnfant': {
+                afficherPageImpression('PHP/view/', 'impressionEnfant', "");
+                break;
+            }
+        case 'impressionBenevole': {
+                afficherPageImpression('PHP/view/', 'impressionBenevole', "");
                 break;
             }
     }

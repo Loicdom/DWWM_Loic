@@ -1,0 +1,36 @@
+/**************************************Impression ******************************************/
+
+.contenu-liste-impression {
+    width: 99%;
+}
+
+.titre1{
+    color: var( --color-jaune);
+    padding-top: 1.2vw;
+    padding-bottom: 1.2vw;
+    font-size: 0.7em;
+}
+
+.ligneTitre{
+    width: 100%;
+    border: 1.2px solid var(--color-orange);
+    display: flex;
+    justify-content: flex-end;
+    background-color:var(--color-blue2);
+}
+
+#ligneFooter {
+    display: none;
+}
+
+.contenuListe1 {
+    font-size: 0.8em;
+    flex: 1;
+}
+
+.ligneImpression{
+    width: 100%;
+    border: 1.2px solid var(--color-orange);
+    display: flex;
+    justify-content: flex-end;
+}

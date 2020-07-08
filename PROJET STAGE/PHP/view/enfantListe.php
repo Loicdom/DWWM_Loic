@@ -1,16 +1,16 @@
 <?php
 
-$bénévoles = PersonnesManager::getListByEnfant();
+$enfants = PersonnesManager::getListByEnfant();
 ?>
 <a href="index.php?action=enfantForm&m=ajout">
     <div class="bouton btn"> Ajouter un enfant</div>
 </a>
 
 <?php
-if (!empty($bénévoles)) { //Si rien dans comptes on affiche pas se qu'il y a en dessous
+if (!empty($enfants)) { //Si rien dans comptes on affiche pas se qu'il y a en dessous
 ?>
 
-    <!-- on commence par créer une liste qui correspond à la première ligne de titre pour les informations des bénévoles -->
+    <!-- on commence par créer une liste qui correspond à la première ligne de titre pour les informations des enfants -->
     <div class="contenu-liste">
         <div class="ligne">
             <div class="bloc titre">Nom</div>
@@ -31,7 +31,7 @@ if (!empty($bénévoles)) { //Si rien dans comptes on affiche pas se qu'il y a e
             <div class="bloc titre">Supprimer</div>
         </div>
         <?php
-        foreach ($bénévoles as $elt) {  // boucle qui permet de sortir les informations de chaques bénévoles par rapport au titre si dessus.
+        foreach ($enfants as $elt) {  // boucle qui permet de sortir les informations de chaques enfants par rapport au titre si dessus.
         ?>
             <div class="ligne">
                 <div class="bloc contenuListe"><?php echo $elt->getNomPersonne() ?></div>

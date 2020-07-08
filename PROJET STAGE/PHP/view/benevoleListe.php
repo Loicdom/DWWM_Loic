@@ -6,8 +6,10 @@ $bénévoles = PersonnesManager::getListByBenevole(); // ramène la liste des b�
     <div class="bouton btn"> Ajouter un bénévole</div>
 </a>
 
-
-<div class="contenu-liste">
+<?php
+if (!empty($bénévoles)) { //Si rien dans comptes on imprime pas se qu'il y a en dessous
+?>
+    <div class="contenu-liste">
         <div class="ligne">
             <div class="bloc titre">Nom</div>
             <div class="bloc titre">Prénom</div>
@@ -25,31 +27,32 @@ $bénévoles = PersonnesManager::getListByBenevole(); // ramène la liste des b�
             <div class="bloc titre">Modifier</div>
             <div class="bloc titre">Supprimer</div>
         </div>
-<?php
-foreach ($bénévoles as $elt) { // On fait une boucle pour ramèner tout les bénévoles
-?>
-    <div class="ligne">
-        <div class="bloc contenuListe"><?php echo $elt->getNomPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getPrenomPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getDateNaissPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getLieuNaissPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getAdressePersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getCpPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getVille()->getLibelleVille() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getEmailPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getTelPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getAutorisationPhotos() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getBafaAquisBenevole() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getCasierJudiciaire() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getRemarquePersonne() ?></div>
-        <a href="index.php?action=benevoleForm&m=modif&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
-            <div class="bouton">Modifier</div>
-        </a>
-        <a href="index.php?action=benevoleForm&m=suppr&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
-            <div class="bouton">Supprimer</div>
-        </a>
-    </div>
+        <?php
+        foreach ($bénévoles as $elt) { // On fait une boucle pour ramèner tout les bénévoles
+        ?>
+            <div class="ligne">
+                <div class="bloc contenuListe"><?php echo $elt->getNomPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getPrenomPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getDateNaissPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getLieuNaissPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getAdressePersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getCpPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getVille()->getLibelleVille() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getEmailPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getTelPersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getAutorisationPhotos() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getBafaAquisBenevole() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getCasierJudiciaire() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getRemarquePersonne() ?></div>
+                <a href="index.php?action=benevoleForm&m=modif&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
+                    <div class="bouton">Modifier</div>
+                </a>
+                <a href="index.php?action=benevoleForm&m=suppr&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
+                    <div class="bouton">Supprimer</div>
+                </a>
+            </div>
+        <?php } ?>
 <?php } ?>
-<a href="index.php?action=tableauBord">
+    <a href="index.php?action=tableauBord">
         <div class="bouton btn">Retour</div>
     </a>
