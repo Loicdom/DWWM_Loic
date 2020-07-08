@@ -4,14 +4,13 @@ class PersonnesManager
     public static function addBenevole(Personnes $obj) // Pour l'ajout d'un bénévole
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO Personnes (nomPersonne,prenomPersonne,dateNaissPersonne,lieuNaissPersonne,adressePersonne,cpPersonne,villePersonne,emailPersonne,telPersonne,autorisationPhotos,bafaAquisBenevole,casierJudiciaire,paiementInscription,nomRepresentantLegal,prenomRepresentantLegal,remarquePersonne,typePersonne) VALUES (:nomPersonne,:prenomPersonne,:dateNaissPersonne,:lieuNaissPersonne,:adressePersonne,:cpPersonne,:villePersonne,:emailPersonne,:telPersonne,:autorisationPhotos,:bafaAquisBenevole,:casierJudiciaire,:paiementInscription,:nomRepresentantLegal,:prenomRepresentantLegal,:remarquePersonne,:typePersonne)");
+        $q = $db->prepare("INSERT INTO Personnes (nomPersonne,prenomPersonne,dateNaissPersonne,lieuNaissPersonne,adressePersonne,cpPersonne,emailPersonne,telPersonne,autorisationPhotos,bafaAquisBenevole,casierJudiciaire,paiementInscription,nomRepresentantLegal,prenomRepresentantLegal,remarquePersonne,typePersonne,idVille) VALUES (:nomPersonne,:prenomPersonne,:dateNaissPersonne,:lieuNaissPersonne,:adressePersonne,:cpPersonne,:emailPersonne,:telPersonne,:autorisationPhotos,:bafaAquisBenevole,:casierJudiciaire,:paiementInscription,:nomRepresentantLegal,:prenomRepresentantLegal,:remarquePersonne,:typePersonne,:idVille)");
         $q->bindValue(":nomPersonne", $obj->getNomPersonne());
         $q->bindValue(":prenomPersonne", $obj->getPrenomPersonne());
         $q->bindValue(":dateNaissPersonne", $obj->getDateNaissPersonne());
         $q->bindValue(":lieuNaissPersonne", $obj->getLieuNaissPersonne());
         $q->bindValue(":adressePersonne", $obj->getAdressePersonne());
         $q->bindValue(":cpPersonne", $obj->getCpPersonne());
-        $q->bindValue(":villePersonne", $obj->getVillePersonne());
         $q->bindValue(":emailPersonne", $obj->getEmailPersonne());
         $q->bindValue(":telPersonne", $obj->getTelPersonne());
         $q->bindValue(":autorisationPhotos", $obj->getAutorisationPhotos());
@@ -22,20 +21,20 @@ class PersonnesManager
         $q->bindValue(":prenomRepresentantLegal", $obj->getPrenomRepresentantLegal());
         $q->bindValue(":remarquePersonne", $obj->getRemarquePersonne());
         $q->bindValue(":typePersonne", $obj->getTypePersonne());
+        $q->bindValue(":idVille", $obj->getIdVille());
         $q->execute();
     }
 
     public static function addEnfant(Personnes $obj) // Pour l'ajout d'un enfant
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO Personnes (nomPersonne,prenomPersonne,dateNaissPersonne,lieuNaissPersonne,adressePersonne,cpPersonne,villePersonne,emailPersonne,telPersonne,autorisationPhotos,bafaAquisBenevole,casierJudiciaire,paiementInscription,nomRepresentantLegal,prenomRepresentantLegal,remarquePersonne,typePersonne) VALUES (:nomPersonne,:prenomPersonne,:dateNaissPersonne,:lieuNaissPersonne,:adressePersonne,:cpPersonne,:villePersonne,:emailPersonne,:telPersonne,:autorisationPhotos,:bafaAquisBenevole,:casierJudiciaire,:paiementInscription,:nomRepresentantLegal,:prenomRepresentantLegal,:remarquePersonne,:typePersonne)");
+        $q = $db->prepare("INSERT INTO Personnes (nomPersonne,prenomPersonne,dateNaissPersonne,lieuNaissPersonne,adressePersonne,cpPersonne,emailPersonne,telPersonne,autorisationPhotos,bafaAquisBenevole,casierJudiciaire,paiementInscription,nomRepresentantLegal,prenomRepresentantLegal,remarquePersonne,typePersonne,idVille) VALUES (:nomPersonne,:prenomPersonne,:dateNaissPersonne,:lieuNaissPersonne,:adressePersonne,:cpPersonne,:emailPersonne,:telPersonne,:autorisationPhotos,:bafaAquisBenevole,:casierJudiciaire,:paiementInscription,:nomRepresentantLegal,:prenomRepresentantLegal,:remarquePersonne,:typePersonne,:idVille)");
         $q->bindValue(":nomPersonne", $obj->getNomPersonne());
         $q->bindValue(":prenomPersonne", $obj->getPrenomPersonne());
         $q->bindValue(":dateNaissPersonne", $obj->getDateNaissPersonne());
         $q->bindValue(":lieuNaissPersonne", $obj->getLieuNaissPersonne());
         $q->bindValue(":adressePersonne", $obj->getAdressePersonne());
         $q->bindValue(":cpPersonne", $obj->getCpPersonne());
-        $q->bindValue(":villePersonne", $obj->getVillePersonne());
         $q->bindValue(":emailPersonne", $obj->getEmailPersonne());
         $q->bindValue(":telPersonne", $obj->getTelPersonne());
         $q->bindValue(":autorisationPhotos", $obj->getAutorisationPhotos());
@@ -46,20 +45,20 @@ class PersonnesManager
         $q->bindValue(":prenomRepresentantLegal", $obj->getPrenomRepresentantLegal());
         $q->bindValue(":remarquePersonne", $obj->getRemarquePersonne());
         $q->bindValue(":typePersonne", $obj->getTypePersonne());
+        $q->bindValue(":idVille", $obj->getIdVille());
         $q->execute();
     }
 
     public static function updateBenevole(Personnes $obj) // Pour modifier les informations d'un bénévole
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE Personnes SET nomPersonne=:nomPersonne, prenomPersonne=:prenomPersonne, dateNaissPersonne=:dateNaissPersonne, lieuNaissPersonne=:lieuNaissPersonne, adressePersonne=:adressePersonne, cpPersonne=:cpPersonne, villePersonne=:villePersonne, emailPersonne=:emailPersonne, telPersonne=:telPersonne, autorisationPhotos=:autorisationPhotos, bafaAquisBenevole=:bafaAquisBenevole, casierJudiciaire=:casierJudiciaire, paiementInscription=:paiementInscription, nomRepresentantLegal=:nomRepresentantLegal, prenomRepresentantLegal=:prenomRepresentantLegal, remarquePersonne=:remarquePersonne, typePersonne=:typePersonne WHERE idPersonne=:idPersonne");
+        $q = $db->prepare("UPDATE Personnes SET nomPersonne=:nomPersonne, prenomPersonne=:prenomPersonne, dateNaissPersonne=:dateNaissPersonne, lieuNaissPersonne=:lieuNaissPersonne, adressePersonne=:adressePersonne, cpPersonne=:cpPersonne, emailPersonne=:emailPersonne, telPersonne=:telPersonne, autorisationPhotos=:autorisationPhotos, bafaAquisBenevole=:bafaAquisBenevole, casierJudiciaire=:casierJudiciaire, paiementInscription=:paiementInscription, nomRepresentantLegal=:nomRepresentantLegal, prenomRepresentantLegal=:prenomRepresentantLegal, remarquePersonne=:remarquePersonne, typePersonne=:typePersonne, idVille=:idVille WHERE idPersonne=:idPersonne");
         $q->bindValue(":nomPersonne", $obj->getNomPersonne());
         $q->bindValue(":prenomPersonne", $obj->getPrenomPersonne());
         $q->bindValue(":dateNaissPersonne", $obj->getDateNaissPersonne());
         $q->bindValue(":lieuNaissPersonne", $obj->getLieuNaissPersonne());
         $q->bindValue(":adressePersonne", $obj->getAdressePersonne());
         $q->bindValue(":cpPersonne", $obj->getCpPersonne());
-        $q->bindValue(":villePersonne", $obj->getVillePersonne());
         $q->bindValue(":emailPersonne", $obj->getEmailPersonne());
         $q->bindValue(":telPersonne", $obj->getTelPersonne());
         $q->bindValue(":autorisationPhotos", $obj->getAutorisationPhotos());
@@ -70,6 +69,7 @@ class PersonnesManager
         $q->bindValue(":prenomRepresentantLegal", $obj->getPrenomRepresentantLegal());
         $q->bindValue(":remarquePersonne", $obj->getRemarquePersonne());
         $q->bindValue(":typePersonne", $obj->getTypePersonne());
+        $q->bindValue(":idVille", $obj->getIdVille());
         $q->bindValue(":idPersonne", $obj->getIdPersonne());
         $q->execute();
     }
@@ -77,14 +77,13 @@ class PersonnesManager
     public static function updateEnfant(Personnes $obj) // Pour modifier les informations d'un enfant
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE Personnes SET nomPersonne=:nomPersonne, prenomPersonne=:prenomPersonne, dateNaissPersonne=:dateNaissPersonne, lieuNaissPersonne=:lieuNaissPersonne, adressePersonne=:adressePersonne, cpPersonne=:cpPersonne, villePersonne=:villePersonne, emailPersonne=:emailPersonne, telPersonne=:telPersonne, autorisationPhotos=:autorisationPhotos, bafaAquisBenevole=:bafaAquisBenevole, casierJudiciaire=:casierJudiciaire, paiementInscription=:paiementInscription, nomRepresentantLegal=:nomRepresentantLegal, prenomRepresentantLegal=:prenomRepresentantLegal, remarquePersonne=:remarquePersonne, typePersonne=:typePersonne WHERE idPersonne=:idPersonne");
+        $q = $db->prepare("UPDATE Personnes SET nomPersonne=:nomPersonne, prenomPersonne=:prenomPersonne, dateNaissPersonne=:dateNaissPersonne, lieuNaissPersonne=:lieuNaissPersonne, adressePersonne=:adressePersonne, cpPersonne=:cpPersonne, emailPersonne=:emailPersonne, telPersonne=:telPersonne, autorisationPhotos=:autorisationPhotos, bafaAquisBenevole=:bafaAquisBenevole, casierJudiciaire=:casierJudiciaire, paiementInscription=:paiementInscription, nomRepresentantLegal=:nomRepresentantLegal, prenomRepresentantLegal=:prenomRepresentantLegal, remarquePersonne=:remarquePersonne, typePersonne=:typePersonne, idVille=:idVille WHERE idPersonne=:idPersonne");
         $q->bindValue(":nomPersonne", $obj->getNomPersonne());
         $q->bindValue(":prenomPersonne", $obj->getPrenomPersonne());
         $q->bindValue(":dateNaissPersonne", $obj->getDateNaissPersonne());
         $q->bindValue(":lieuNaissPersonne", $obj->getLieuNaissPersonne());
         $q->bindValue(":adressePersonne", $obj->getAdressePersonne());
         $q->bindValue(":cpPersonne", $obj->getCpPersonne());
-        $q->bindValue(":villePersonne", $obj->getVillePersonne());
         $q->bindValue(":emailPersonne", $obj->getEmailPersonne());
         $q->bindValue(":telPersonne", $obj->getTelPersonne());
         $q->bindValue(":autorisationPhotos", $obj->getAutorisationPhotos());
@@ -95,6 +94,7 @@ class PersonnesManager
         $q->bindValue(":prenomRepresentantLegal", $obj->getPrenomRepresentantLegal());
         $q->bindValue(":remarquePersonne", $obj->getRemarquePersonne());
         $q->bindValue(":typePersonne", $obj->getTypePersonne());
+        $q->bindValue(":idVille", $obj->getIdVille());
         $q->bindValue(":idPersonne", $obj->getIdPersonne());
         $q->execute();
     }

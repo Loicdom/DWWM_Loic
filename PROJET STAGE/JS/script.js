@@ -24,12 +24,3 @@ function CacherLesSousMenus(){ // pour les cacher : un display none pour les fai
 var classeComptableSeletec = document.getElementById("idClasseComptableSelected").value; // on récupère l'idClasseComptable dans la value de l'input
 document.getElementById("idClasseComptable").selectedIndex = classeComptableSeletec-1; // -1 car index commence à 0
 // On recupère le select et ses options et on selectionne la bonne classe en fonction de l'idclasseComptable
-
-//********************************************************** Fournisseur formulaire *****************************************************************************
-var fornisseurCodeMaj = document.getElementById("codeFournisseur"); // on récupère l'input du code fournisseur
-fornisseurCodeMaj.addEventListener("input", function () { CodeMAJ(); });
-// fonction pour forcer les majuscules pour le code fournisseur
-function CodeMAJ() {
-    fornisseurCodeMaj.value=fornisseurCodeMaj.value.toUpperCase();
-}
-

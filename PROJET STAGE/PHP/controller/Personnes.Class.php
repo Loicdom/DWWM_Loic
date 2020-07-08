@@ -9,7 +9,6 @@ class Personnes
     private $_lieuNaissPersonne;
     private $_adressePersonne;
     private $_cpPersonne;
-    private $_villePersonne;
     private $_emailPersonne;
     private $_telPersonne;
     private $_autorisationPhotos;
@@ -20,6 +19,8 @@ class Personnes
     private $_prenomRepresentantLegal;
     private $_remarquePersonne;
     private $_typePersonne;
+    private $_idVille;
+    private $_Ville;
 
     /******************************Accesseurs*******************************/
     public function getIdPersonne()
@@ -77,14 +78,6 @@ class Personnes
     public function setCpPersonne($_cpPersonne)
     {
         return $this->_cpPersonne = $_cpPersonne;
-    }
-    public function getVillePersonne()
-    {
-        return $this->_villePersonne;
-    }
-    public function setVillePersonne($_villePersonne)
-    {
-        return $this->_villePersonne = $_villePersonne;
     }
     public function getEmailPersonne()
     {
@@ -166,7 +159,26 @@ class Personnes
     {
         return $this->_typePersonne = $_typePersonne;
     }
+    public function getIdVille()
+    {
+        return $this->_idVille;
+    }
 
+    public function setIdVille($_idVille)
+    {
+        $this->_idVille = $_idVille;
+        $v=VillesManager::getById($_idVille);
+        $this->setVille($v);
+    }
+    public function getVille()
+    {
+        return $this->_Ville;
+    }
+
+    public function setVille($_Ville)
+    {
+        $this->_Ville = $_Ville;
+    }
     /*******************************Construct*******************************/
     public function __construct(array $options = [])
     {
@@ -188,6 +200,6 @@ class Personnes
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdPersonne() . "\n" . $this->getNomPersonne() . "\n" . $this->getPrenomPersonne() . "\n" . $this->getDateNaissPersonne() . "\n" . $this->getLieuNaissPersonne() . "\n" . $this->getAdressePersonne() . "\n" . $this->getCpPersonne() . "\n" . $this->getVillePersonne() . "\n" . $this->getEmailPersonne() . "\n" . $this->getTelPersonne() . "\n" . $this->getAutorisationPhotos() . "\n" . $this->getBafaAquisBenevole() . "\n" . $this->getCasierJudiciaire() . "\n" . $this->getPaiementInscription() . "\n" . $this->getNomRepresentantLegal() . "\n" . $this->getPrenomRepresentantLegal() . "\n" . $this->getRemarquePersonne() . "\n" .  $this->getTypePersonne();
+        return $this->getIdPersonne() . "\n" . $this->getNomPersonne() . "\n" . $this->getPrenomPersonne() . "\n" . $this->getDateNaissPersonne() . "\n" . $this->getLieuNaissPersonne() . "\n" . $this->getAdressePersonne() . "\n" . $this->getCpPersonne() . "\n" . $this->getEmailPersonne() . "\n" . $this->getTelPersonne() . "\n" . $this->getAutorisationPhotos() . "\n" . $this->getBafaAquisBenevole() . "\n" . $this->getCasierJudiciaire() . "\n" . $this->getPaiementInscription() . "\n" . $this->getNomRepresentantLegal() . "\n" . $this->getPrenomRepresentantLegal() . "\n" . $this->getRemarquePersonne() . "\n" .  $this->getTypePersonne(). "\n" . $this->getVille()->toString();
     }
 }

@@ -292,6 +292,46 @@ a {
     font-weight: bold;
 }
 
+/********************************* Formulaire enfant ************************************/
+
+.formulaireEnfant {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    border: var(--color-blue2) solid 2px;
+    border-radius: 15px;
+    padding: 1vw;
+}
+.div-formEnfant {
+    display: flex;
+}
+.div-question {
+    justify-content: flex-end;
+    margin-bottom: 5vw;
+}
+.formEnfant {
+    flex: 2;
+    align-self: center;
+    font-size: 1.2em;
+    color: var( --color-orange);
+    font-weight: bold;
+}
+
+.inputformEnfant {
+    flex: 1; 
+    padding: 0.6vw;
+   font-size: 1.2em;
+   margin-top: 3vh;
+   margin-bottom: 3vh;
+}
+
+.centrer-Enfant {
+    display: flex;
+    justify-content: center;
+}
+
 /********************************* footer ******************************/
 
 footer {
@@ -430,6 +470,7 @@ nav{
 .contenu-ecriture {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .divTitre {
@@ -447,4 +488,9 @@ nav{
     flex: 1;
     text-align: center;
     align-items: center;
+}
+
+.inputEcriture {
+    height: 5vh;
+    align-self: center;
 }

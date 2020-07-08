@@ -80,7 +80,7 @@ DbConnect::init();
 // PCGAManager::addCompteFournisseur($c,$l);
 
 // // Update PCGAManager :
-// $m = PCGAManager::getById(4);
+// $m = PCGAManager::getByMaxId();
 // $m->setNumCompte(607);
 // $m->setLibelleCompte("Achats de marchandises");
 // $m->setIdClasseComptable(1);

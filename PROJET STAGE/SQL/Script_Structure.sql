@@ -41,10 +41,19 @@ CREATE TABLE Ecritures(
         dateEcriture        Date NOT NULL ,
         libelleEcriture     Varchar (100) NOT NULL ,
         lettrage            Varchar (100) DEFAULT NULL ,
-        solde               Decimal (6,2) NOT NULL ,
         idFacture           Int ,
         idExerciceComptable Int NOT NULL
 
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Villes
+#------------------------------------------------------------
+
+CREATE TABLE Villes(
+        idVille     Int  Auto_increment  NOT NULL PRIMARY KEY ,
+        libelleVille     Varchar (50) NOT NULL 
 )ENGINE=InnoDB;
 
 
@@ -104,7 +113,7 @@ CREATE TABLE Fournisseurs(
         idFournisseur      Int  Auto_increment  NOT NULL PRIMARY KEY ,
         codeFournisseur    Varchar (10) NOT NULL ,
         libelleFournisseur Varchar (50) NOT NULL ,
-        idPCGA             Int NOT NULL
+        idPCGA             Int NOT DEFAULT NULL
 
 )ENGINE=InnoDB;
 
@@ -121,7 +130,6 @@ CREATE TABLE Personnes(
         lieuNaissPersonne       Varchar (50) NOT NULL ,
         adressePersonne         Varchar (100) NOT NULL ,
         cpPersonne              Int NOT NULL ,
-        villePersonne           Varchar (50) NOT NULL ,
         emailPersonne           Varchar (50) NOT NULL ,
         telPersonne             Varchar (50) NOT NULL ,
         autorisationPhotos      Varchar (10) NOT NULL ,
@@ -131,7 +139,8 @@ CREATE TABLE Personnes(
         nomRepresentantLegal    Varchar (50) DEFAULT NULL ,
         prenomRepresentantLegal Varchar (50) DEFAULT NULL ,
         remarquePersonne        Varchar (100) DEFAULT NULL ,
-        typePersonne            Varchar (20) NOT NULL
+        typePersonne            Varchar (20) NOT NULL ,
+		idVille     			Int NOT NULL 
 )ENGINE=InnoDB;
 
 
@@ -174,7 +183,7 @@ CREATE TABLE Budgets(
 
 
 
-
+ALTER TABLE Personnes ADD CONSTRAINT Personnes_Villes_FK FOREIGN KEY (idVille) REFERENCES Villes(idVille);
 ALTER TABLE LigneEcriture ADD CONSTRAINT ligneEcriture_Ecritures_FK FOREIGN KEY (idEcriture) REFERENCES Ecritures(idEcriture);
 ALTER TABLE LigneEcriture ADD CONSTRAINT ligneEcriture_PCGA0_FK FOREIGN KEY (idPCGA) REFERENCES PCGA(idPCGA);
 ALTER TABLE Fournisseurs ADD CONSTRAINT Fournisseurs_PCGA_FK FOREIGN KEY (idPCGA) REFERENCES PCGA(idPCGA);

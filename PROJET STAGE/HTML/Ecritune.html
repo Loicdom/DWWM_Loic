@@ -27,10 +27,21 @@
             <div class="divTitre">Libellé écriture</div>
             <div class="divTitre">Débit</div>
             <div class="divTitre">Crédit</div>
-            <div class="divTitre">Solde</div>
             <div class="divTitre">Facture</div>
-            <div class="divTitre">Ajouter</div>
-            <div class="divTitre">Supprimer</div>
+            <div class="divTitre">Ajouter / Supprimer</div>
+        </div>
+
+        <div class="ligne">
+            <div class="ecritureComptable inputEcriture">13/12/2020</div>
+            <div class="ecritureComptable inputEcriture">607</div>
+            <div class="ecritureComptable inputEcriture">Achat de marchandise</div>
+            <div class="ecritureComptable inputEcriture">Achats fournisseur Lidl</div>
+            <div class="ecritureComptable inputEcriture">23.02</div>
+            <div class="ecritureComptable inputEcriture"></div>
+            <div class="ecritureComptable inputEcriture">Facture</div>
+            <a href="index.php?action=Form&m=suppr&id=<?php echo $elt->getIdLigneEcriture() ?>" class="bloc">
+                <div class="bouton">Supprimer</div>
+            </a>
         </div>
 
         <div class="ligne">
@@ -40,13 +51,9 @@
             <input class="ecritureComptable inputEcriture" type="text" id="libelleEcriture" name="libelleEcriture" required>
             <input class="ecritureComptable inputEcriture" type="number" step="0.01" id="debit" name="debit">
             <input class="ecritureComptable inputEcriture" type="number" step="0.01" id="credit" name="credit">
-            <div class="ecritureComptable inputEcriture">Solde afficher et automatiser</div>
             <div class="ecritureComptable inputEcriture">IMG</div>
-            <a href="index.php?action=Form&m=modif&id=<?php echo $elt->getIdBenevole() ?>" class="bloc">
+            <a href="index.php?action=Form&m=modif&id=<?php echo $elt->getIdLigneEcriture() ?>" class="bloc">
                 <div class="bouton">Ajouter</div>
-            </a>
-            <a href="index.php?action=Form&m=supp&id=<?php echo $elt->getIdBenevole() ?>" class="bloc">
-                <div class="bouton">Supprimer</div>
             </a>
         </div>
 

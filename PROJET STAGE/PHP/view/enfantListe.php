@@ -40,7 +40,7 @@ if (!empty($bénévoles)) { //Si rien dans comptes on affiche pas se qu'il y a e
                 <div class="bloc contenuListe"><?php echo $elt->getLieuNaissPersonne() ?></div>
                 <div class="bloc contenuListe"><?php echo $elt->getAdressePersonne() ?></div>
                 <div class="bloc contenuListe"><?php echo $elt->getCpPersonne() ?></div>
-                <div class="bloc contenuListe"><?php echo $elt->getVillePersonne() ?></div>
+                <div class="bloc contenuListe"><?php echo $elt->getVille()->getLibelleVille() ?></div>
                 <div class="bloc contenuListe"><?php echo $elt->getEmailPersonne() ?></div>
                 <div class="bloc contenuListe"><?php echo $elt->getTelPersonne() ?></div>
                 <div class="bloc contenuListe"><?php echo $elt->getAutorisationPhotos() ?></div>
