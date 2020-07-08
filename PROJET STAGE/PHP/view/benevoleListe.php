@@ -35,12 +35,12 @@ foreach ($bénévoles as $elt) { // On fait une boucle pour ramèner tout les b�
         <div class="bloc contenuListe"><?php echo $elt->getLieuNaissPersonne() ?></div>
         <div class="bloc contenuListe"><?php echo $elt->getAdressePersonne() ?></div>
         <div class="bloc contenuListe"><?php echo $elt->getCpPersonne() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getVillePersonne() ?></div>
+        <div class="bloc contenuListe"><?php echo $elt->getVille()->getLibelleVille() ?></div>
         <div class="bloc contenuListe"><?php echo $elt->getEmailPersonne() ?></div>
         <div class="bloc contenuListe"><?php echo $elt->getTelPersonne() ?></div>
         <div class="bloc contenuListe"><?php echo $elt->getAutorisationPhotos() ?></div>
         <div class="bloc contenuListe"><?php echo $elt->getBafaAquisBenevole() ?></div>
-        <div class="bloc contenuListe"><?php echo $elt->getRemarquePersonne() ?></div>
+        <div class="bloc contenuListe"><?php echo $elt->getCasierJudiciaire() ?></div>
         <div class="bloc contenuListe"><?php echo $elt->getRemarquePersonne() ?></div>
         <a href="index.php?action=benevoleForm&m=modif&id=<?php echo $elt->getIdPersonne() ?>" class="bloc">
             <div class="bouton">Modifier</div>

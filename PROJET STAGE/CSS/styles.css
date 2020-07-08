@@ -292,9 +292,9 @@ a {
     font-weight: bold;
 }
 
-/********************************* Formulaire enfant ************************************/
+/********************************* Formulaire enfant/bénévole ************************************/
 
-.formulaireEnfant {
+.formulairePersonne {
     display: flex;
     justify-content: center;
     margin-top: 5vh;
@@ -304,14 +304,14 @@ a {
     border-radius: 15px;
     padding: 1vw;
 }
-.div-formEnfant {
+.div-formPersonne {
     display: flex;
 }
 .div-question {
     justify-content: flex-end;
     margin-bottom: 5vw;
 }
-.formEnfant {
+.formPersonne {
     flex: 2;
     align-self: center;
     font-size: 1.2em;
@@ -319,7 +319,7 @@ a {
     font-weight: bold;
 }
 
-.inputformEnfant {
+.inputformPersonne {
     flex: 1; 
     padding: 0.6vw;
    font-size: 1.2em;
@@ -327,7 +327,7 @@ a {
    margin-bottom: 3vh;
 }
 
-.centrer-Enfant {
+.centrer-Personne {
     display: flex;
     justify-content: center;
 }

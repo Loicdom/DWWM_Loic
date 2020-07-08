@@ -11,9 +11,5 @@ var nomRepresentantLegal = document.getElementById("nomRepresentantLegal"); // o
 nomRepresentantLegal.addEventListener("input",NomRMAJ);
 
 function NomRMAJ() {
-    nomPersonne.value=nomPersonne.value.toUpperCase();
+    nomRepresentantLegal.value=nomRepresentantLegal.value.toUpperCase();
 }
-
-var villeSeletec = document.getElementById("villeSelected").value; // on récupère l'idClasseComptable dans la value de l'input
-document.getElementById("idVille").selectedIndex = villeSeletec-1; // -1 car index commence à 0
-// On recupère le select et ses options et on selectionne la bonne classe en fonction de l'idclasseComptable
