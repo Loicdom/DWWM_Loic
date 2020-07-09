@@ -56,14 +56,55 @@ class PCGAManager
         return $planComptable;
     }
 
-    public static function addCompteFournisseur($codeFournisseur, $libelléfournisseur) // ajoute un compte fournisseur (au moment de l'ajout d'un fournisseur)
+    public static function addCompteFournisseur($codeFournisseur, $libelleFournisseur) // ajoute un compte fournisseur (au moment de l'ajout d'un fournisseur)
     {
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan,idClasseComptable) VALUES (:numCompte,:libelleCompte,:dansBilan,:idClasseComptable)");
         $q->bindValue(":numCompte", "401$codeFournisseur");
-        $q->bindValue(":libelleCompte", "Fournisseur $libelléfournisseur");
+        $q->bindValue(":libelleCompte", "Fournisseur $libelleFournisseur");
         $q->bindValue(":dansBilan", "oui");
         $q->bindValue(":idClasseComptable", "4");
+        $q->execute();
+    }
+
+    public static function addCompteEvenement($codeEvenement, $libelleEvenement) // ajoute un compte Evenement (au moment de l'ajout d'un Evenement)
+    {
+        $db = DbConnect::getDb();
+        $q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan,idClasseComptable) VALUES (:numCompte,:libelleCompte,:dansBilan,:idClasseComptable)");
+        $q->bindValue(":numCompte", "60222$codeEvenement");
+        $q->bindValue(":libelleCompte", "Produits d'entretien $libelleEvenement");
+        $q->bindValue(":dansBilan", "oui");
+        $q->bindValue(":idClasseComptable", "6");
+        $q->execute();
+        $q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan,idClasseComptable) VALUES (:numCompte,:libelleCompte,:dansBilan,:idClasseComptable)");
+        $q->bindValue(":numCompte", "6071$codeEvenement");
+        $q->bindValue(":libelleCompte", "Achat marchandise atelier créatif $libelleEvenement");
+        $q->bindValue(":dansBilan", "oui");
+        $q->bindValue(":idClasseComptable", "6");
+        $q->execute();
+        $q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan,idClasseComptable) VALUES (:numCompte,:libelleCompte,:dansBilan,:idClasseComptable)");
+        $q->bindValue(":numCompte", "6072$codeEvenement");
+        $q->bindValue(":libelleCompte", "Achats marchandise pour cuisine $libelleEvenement");
+        $q->bindValue(":dansBilan", "oui");
+        $q->bindValue(":idClasseComptable", "6");
+        $q->execute();
+        $q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan,idClasseComptable) VALUES (:numCompte,:libelleCompte,:dansBilan,:idClasseComptable)");
+        $q->bindValue(":numCompte", "60631$codeEvenement");
+        $q->bindValue(":libelleCompte", "Achats petits matériels $libelleEvenement");
+        $q->bindValue(":dansBilan", "oui");
+        $q->bindValue(":idClasseComptable", "6");
+        $q->execute();
+        $q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan,idClasseComptable) VALUES (:numCompte,:libelleCompte,:dansBilan,:idClasseComptable)");
+        $q->bindValue(":numCompte", "60632$codeEvenement");
+        $q->bindValue(":libelleCompte", "Achats matériels et entretiens jardin $libelleEvenement");
+        $q->bindValue(":dansBilan", "oui");
+        $q->bindValue(":idClasseComptable", "6");
+        $q->execute();
+        $q = $db->prepare("INSERT INTO PCGA (numCompte,libelleCompte,dansBilan,idClasseComptable) VALUES (:numCompte,:libelleCompte,:dansBilan,:idClasseComptable)");
+        $q->bindValue(":numCompte", "7061$codeEvenement");
+        $q->bindValue(":libelleCompte", "Produit de manifestation : $libelleEvenement");
+        $q->bindValue(":dansBilan", "oui");
+        $q->bindValue(":idClasseComptable", "7");
         $q->execute();
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 $fournisseurs = FournisseursManager::getList(); //Ramène les informations (la liste) des fournisseurs pour pouvoir les afficher
 ?>
 <a href="index.php?action=fournisseursForm&m=ajout">

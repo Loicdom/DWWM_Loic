@@ -142,6 +142,18 @@ if (isset($_GET['action'])) {
                 afficherPageImpression('PHP/view/', 'impressionBenevole', "");
                 break;
             }
+        case 'evenementsListe': {
+                afficherPage('PHP/view/', 'evenementsListe', "Liste des événements");
+                break;
+            }
+        case 'evenementsForm': {
+                afficherPage('PHP/view/', 'evenementsForm', "Evénements");
+                break;
+            }
+        case 'evenementsAction': {
+                afficherPage('PHP/view/', 'evenementsAction', "");
+                break;
+            }
     }
 } else { // Sinon, on affiche la page principale du site
     afficherPageFooter1('PHP/view/', 'formConnexion', "Connexion");

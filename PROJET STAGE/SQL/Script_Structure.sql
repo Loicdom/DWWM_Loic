@@ -113,10 +113,21 @@ CREATE TABLE Fournisseurs(
         idFournisseur      Int  Auto_increment  NOT NULL PRIMARY KEY ,
         codeFournisseur    Varchar (10) NOT NULL ,
         libelleFournisseur Varchar (50) NOT NULL ,
-        idPCGA             Int NOT DEFAULT NULL
+        idPCGA             Int DEFAULT NULL
 
 )ENGINE=InnoDB;
 
+#------------------------------------------------------------
+# Table: Evenements
+#------------------------------------------------------------
+
+CREATE TABLE Evenements(
+        idEvenement      Int  Auto_increment  NOT NULL PRIMARY KEY ,
+        codeEvenement    Varchar (10) NOT NULL ,
+        libelleEvenement Varchar (50) NOT NULL ,
+        idPCGA             Int DEFAULT NULL
+
+)ENGINE=InnoDB;
 
 #------------------------------------------------------------
 # Table: Personnes
@@ -182,7 +193,7 @@ CREATE TABLE Budgets(
 )ENGINE=InnoDB;
 
 
-
+ALTER TABLE Evenements ADD CONSTRAINT Evenements_PCGA_FK FOREIGN KEY (idPCGA) REFERENCES PCGA(idPCGA);
 ALTER TABLE Personnes ADD CONSTRAINT Personnes_Villes_FK FOREIGN KEY (idVille) REFERENCES Villes(idVille);
 ALTER TABLE LigneEcriture ADD CONSTRAINT ligneEcriture_Ecritures_FK FOREIGN KEY (idEcriture) REFERENCES Ecritures(idEcriture);
 ALTER TABLE LigneEcriture ADD CONSTRAINT ligneEcriture_PCGA0_FK FOREIGN KEY (idPCGA) REFERENCES PCGA(idPCGA);
