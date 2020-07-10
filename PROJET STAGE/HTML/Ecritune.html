@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <meta name="viewport" content="width-device-width,initial-scale=1">
     <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
-    <title>Bénévole</title>
+    <title>Ecriture</title>
 </head>
 
 <body class="body-co">
@@ -19,44 +19,30 @@
         <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
     </header>
 
+    <a href="index.php?action=Form&m=modif&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
+        <div class="bouton btn">Ajouter</div>
+    </a>
+
     <div class="contenu-ecriture">
         <div class="ligne">
             <div class="divTitre">Date</div>
-            <div class="divTitre">Numéro de compte</div>
-            <div class="divTitre">Intitulé Compte</div>
             <div class="divTitre">Libellé écriture</div>
-            <div class="divTitre">Débit</div>
-            <div class="divTitre">Crédit</div>
             <div class="divTitre">Facture</div>
-            <div class="divTitre">Ajouter / Supprimer</div>
+            <div class="divTitre">Voir ligne d'écritures</div>
+            <div class="divTitre">Supprimer</div>
         </div>
 
         <div class="ligne">
             <div class="ecritureComptable inputEcriture">13/12/2020</div>
-            <div class="ecritureComptable inputEcriture">607</div>
-            <div class="ecritureComptable inputEcriture">Achat de marchandise</div>
             <div class="ecritureComptable inputEcriture">Achats fournisseur Lidl</div>
-            <div class="ecritureComptable inputEcriture">23.02</div>
-            <div class="ecritureComptable inputEcriture"></div>
             <div class="ecritureComptable inputEcriture">Facture</div>
+            <a href="index.php?action=Form&m=suppr&id=<?php echo $elt->getIdLigneEcriture() ?>" class="bloc">
+                <div class="bouton">Voir ligne d'écritures</div>
+            </a>
             <a href="index.php?action=Form&m=suppr&id=<?php echo $elt->getIdLigneEcriture() ?>" class="bloc">
                 <div class="bouton">Supprimer</div>
             </a>
         </div>
-
-        <div class="ligne">
-            <input class="ecritureComptable inputEcriture" type="date" id="dateEcriture" name="dateEcriture" required autofocus>
-            <input class="ecritureComptable inputEcriture" type="text" id="numCompteEcriture" name="numCompteEcriture" required>
-            <div class="ecritureComptable inputEcriture">intitulé en fonction du compte</div>
-            <input class="ecritureComptable inputEcriture" type="text" id="libelleEcriture" name="libelleEcriture" required>
-            <input class="ecritureComptable inputEcriture" type="number" step="0.01" id="debit" name="debit">
-            <input class="ecritureComptable inputEcriture" type="number" step="0.01" id="credit" name="credit">
-            <div class="ecritureComptable inputEcriture">IMG</div>
-            <a href="index.php?action=Form&m=modif&id=<?php echo $elt->getIdLigneEcriture() ?>" class="bloc">
-                <div class="bouton">Ajouter</div>
-            </a>
-        </div>
-
       
     </div>
     <a href="index.php?action=tableauBord">

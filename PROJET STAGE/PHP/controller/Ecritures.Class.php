@@ -6,7 +6,6 @@ class Ecritures
     private $_dateEcriture;
     private $_libelleEcriture;
     private $_lettrage;
-    private $_solde;
     private $_idFacture;
     private $_idExerciceComptable;
 
@@ -43,21 +42,23 @@ class Ecritures
     {
         return $this->_lettrage = $_lettrage;
     }
-    public function getSolde()
-    {
-        return $this->_solde;
-    }
-    public function setSolde($_solde)
-    {
-        return $this->_solde = $_solde;
-    }
     public function getIdFacture()
     {
         return $this->_idFacture;
     }
     public function setIdFacture($_idFacture)
     {
-        return $this->_idFacture = $_idFacture;
+        $this->_idClasseComptable = $_idFacture;
+        $m=ClasseComptableManager::getById($_idFacture);
+        $this->setFacture($m);
+    }
+    public function getFacture()
+    {
+        return $this->_facture;
+    }
+    public function setFacture($_facture)
+    {
+        return $this->_facture = $_facture;
     }
     public function getIdExerciceComptable()
     {
@@ -65,7 +66,17 @@ class Ecritures
     }
     public function setIdExerciceComptable($_idExerciceComptable)
     {
-        return $this->_idExerciceComptable = $_idExerciceComptable;
+        $this->_idClasseComptable = $_idExerciceComptable;
+        $m=ClasseComptableManager::getById($_idExerciceComptable);
+        $this->setExerciceComptable($m);
+    }
+    public function getExerciceComptable()
+    {
+        return $this->_exerciceComptable;
+    }
+    public function setExerciceComptable($_exerciceComptable)
+    {
+        return $this->_exerciceComptable = $_exerciceComptable;
     }
 
     /*******************************Construct*******************************/
@@ -89,6 +100,6 @@ class Ecritures
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdEcriture() . "\n" . $this->getDateEcriture() . "\n" . $this->getLibelleEcriture() . "\n" . $this->getLettrage() . "\n" . $this->getSolde() . "\n" . $this->getIdFacture() . "\n" . $this->getIdExerciceComptable();
+        return $this->getIdEcriture() . "\n" . $this->getDateEcriture() . "\n" . $this->getLibelleEcriture() . "\n" . $this->getLettrage() . "\n" . $this->getFacture() . "\n" . $this->getExerciceComptable();
     }
 }

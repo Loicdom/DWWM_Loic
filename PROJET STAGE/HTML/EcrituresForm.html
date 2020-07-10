@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
+    <title>Ecriture</title>
+</head>
+
+<body class="body-enfant">
+
+    <header class="header-co">
+        <div class="logo">
+            <img src="../Images/logo.jpg" alt="Logo"></div>
+        <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
+    </header>
+
+    <div class="contenu-ecriture">
+        <div class="ligne">
+            <div class="divTitre">Date</div>
+            <div class="divTitre">Numéro de compte</div>
+            <div class="divTitre">Choix du compte</div>
+            <div class="divTitre">Libellé du compte</div>
+            <div class="divTitre">Libellé de l'écriture</div>
+            <div class="divTitre">Débit</div>
+            <div class="divTitre">Crédit</div>
+            <div class="divTitre">Facture</div>
+        </div>
+
+    <div class="formulaire">
+        <form action="index.php?action=ecritureAction&m=' . $mode . '" method="POST">
+            <div>
+                <label class="form" for="dateEcriture">Date : </label> <br />
+                <input class="inputForm" type="date" id="dateEcriture" name="dateEcriture" placeholder="Code du fournisseur" required autofocus>
+            </div>
+            <div>
+                <label class="form" for="libelleFournisseur">Libellé du fournisseur : </label><br />
+                <input class="inputForm" type="text" id="libelleFournisseur" name="libelleFournisseur" placeholder="Libellé du fournisseur" required autofocus>
+            </div>
+            <div>
+                <label class="form" for="codeFournisseur">Code du fournisseur : </label> <br />
+                <input class="inputForm" type="text" id="codeFournisseur" name="codeFournisseur" placeholder="Code du fournisseur" required autofocus>
+            </div>
+            <div>
+                <label class="form" for="libelleFournisseur">Libellé du fournisseur : </label><br />
+                <input class="inputForm" type="text" id="libelleFournisseur" name="libelleFournisseur" placeholder="Libellé du fournisseur" required autofocus>
+            </div>
+            <div>
+                <label class="form" for="codeFournisseur">Code du fournisseur : </label> <br />
+                <input class="inputForm" type="text" id="codeFournisseur" name="codeFournisseur" placeholder="Code du fournisseur" required autofocus>
+            </div>
+            <div>
+                <label class="form" for="libelleFournisseur">Libellé du fournisseur : </label><br />
+                <input class="inputForm" type="text" id="libelleFournisseur" name="libelleFournisseur" placeholder="Libellé du fournisseur" required autofocus>
+            </div>
+            <div>
+                <label class="form" for="codeFournisseur">Code du fournisseur : </label> <br />
+                <input class="inputForm" type="text" id="codeFournisseur" name="codeFournisseur" placeholder="Code du fournisseur" required autofocus>
+            </div>
+            <div>
+                <label class="form" for="libelleFournisseur">Libellé du fournisseur : </label><br />
+                <input class="inputForm" type="text" id="libelleFournisseur" name="libelleFournisseur" placeholder="Libellé du fournisseur" required autofocus>
+            </div>
+            <div class="centrer">
+                <button class="bouton" id="submit" type="submit" value="Valider">Valider</button>
+            </div>
+        </form>
+    </div>
+    <a href="index.php?action=FournisseursListe">
+        <div class="bouton btn">Retour</div>
+    </a>
+    </div>
+</body>
+
+</html>
