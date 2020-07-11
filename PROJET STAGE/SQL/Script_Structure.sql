@@ -200,4 +200,36 @@ ALTER TABLE LigneEcriture ADD CONSTRAINT ligneEcriture_PCGA0_FK FOREIGN KEY (idP
 ALTER TABLE Fournisseurs ADD CONSTRAINT Fournisseurs_PCGA_FK FOREIGN KEY (idPCGA) REFERENCES PCGA(idPCGA);
 ALTER TABLE PCGA ADD CONSTRAINT PCGA_ClasseComptable_FK FOREIGN KEY (idClasseComptable) REFERENCES ClasseComptable(idClasseComptable);
 ALTER TABLE Ecritures ADD CONSTRAINT Ecritures_Factures_FK FOREIGN KEY (idFacture) REFERENCES Factures(idFacture);
-ALTER TABLE Ecritures ADD CONSTRAINT Ecritures_ExerciceComptable0_FK FOREIGN KEY (idExerciceComptable) REFERENCES ExerciceComptable(idExerciceComptable);
+ALTER TABLE Ecritures ADD CONSTRAINT Ecritures_ExerciceComptable0_FK FOREIGN KEY (idExerciceComptable) REFERENCES ExerciceComptable(idExerciceComptable)
+
+CREATE VIEW ecrituresComptable AS SELECT
+    factures.idFacture,
+    factures.libelleFact,
+    factures.enregFact,
+    exercicecomptable.idExerciceComptable,
+    exercicecomptable.libelleExercice,
+    ecritures.idEcriture,
+    ecritures.typeEcriture,
+    ecritures.dateEcriture,
+    ecritures.libelleEcriture,
+    ecritures.lettrage,
+    classecomptable.idClasseComptable,
+    classecomptable.numeroClasseComptable,
+    classecomptable.libelleClasseComptable,
+    pcga.idPCGA,
+    pcga.numCompte,
+    pcga.libelleCompte,
+    pcga.dansBilan,
+    ligneecriture.idLigneEcriture,
+    ligneecriture.montant,
+    ligneecriture.sens
+FROM
+    factures,
+    exercicecomptable,
+    ecritures,
+    classecomptable,
+    pcga,
+    ligneecriture
+WHERE
+    factures.idFacture = ecritures.idFacture AND exercicecomptable.idExerciceComptable = ecritures.idExerciceComptable AND ecritures.idEcriture = ligneecriture.idEcriture AND classecomptable.idClasseComptable = pcga.idClasseComptable AND pcga.idPCGA = ligneecriture.idPCGA 
+	

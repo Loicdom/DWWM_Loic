@@ -16,8 +16,8 @@ INSERT INTO `villes` (`idVille`, `libelleVille`) VALUES
 INSERT INTO `users` (`idUser`, `pseudo`, `motDePasse`, `role`) VALUES
 (4, 'LoicDom', '3389897c975426af6951aead6bd596e9', 1),
 (5, 'Fabienne', 'ace83f2f5d3dc8da858cc058e94fce6b', 2),
-(6, 'Gilles', '3ff1ae4e5a07ed059d815e628b90f509', 2),
-(11, 'Violène', '03c06fa8ae475a7bd2b700ef1aa4eaa7', 2);
+(11, 'Violène', '03c06fa8ae475a7bd2b700ef1aa4eaa7', 2),
+(12, 'Gilles', '99833c3902bf36bb36d694dbad67d0b7', 2);
 
 --
 -- Déchargement des données de la table `personnes`
@@ -30,8 +30,10 @@ INSERT INTO `personnes` (`idPersonne`, `nomPersonne`, `prenomPersonne`, `dateNai
 (6, 'Dom', 'Marc', '2010-03-21', 'Dunkerque', '25 rue de l rue', 59000, 'N@hotmail.fr', '06-06-05-04-02', 'oui', NULL, NULL, 'cheque', 'Dom', 'Gilles', NULL, 'Employé', 5),
 (7, 'Dom', 'Gilles', '2010-03-21', 'Dunkerque', '25 rue de l rue', 59000, 'N@hotmail.fr', '06-06-05-04-02', 'oui', NULL, NULL, 'cheque', 'Dom', 'Gilles', NULL, 'Employé', 5),
 (9, 'Doma', 'Fab', '1967-07-15', 'Dunkerque', '11 res du cp', 59000, 'emaildePersonne@gmail.fr', '06-05-10-08-09', 'oui', 'oui', NULL, NULL, NULL, NULL, NULL, 'Bénévole', 2),
-(11, 'DOMAIN', 'Noam', '2007-08-10', 'Dunkerque', '11 résidence du camp d\'arc', 62370, 'ee@gmail.com', '06-12-13-14-15', 'oui', NULL, NULL, 'cheque', 'DOMAIN', 'Gilles', '', 'Enfant', 1);
-
+(11, 'DOMAIN', 'Noam', '2007-08-10', 'Dunkerque', '11 résidence du camp d\'arc', 62370, 'ee@gmail.com', '06-12-13-14-15', 'oui', NULL, NULL, 'cheque', 'DOMAIN', 'Gilles', '', 'Enfant', 4),
+(12, 'DOM', 'Violene', '2003-10-04', 'Dunkerque', '11 résidence du camp d\'arc', 62370, 'ee@gmail.com', '0612131415', 'oui', NULL, NULL, 'cheque', 'DOM', 'Gilles', '', 'Enfant', 2),
+(14, 'DOMAX', 'Fab', '1967-07-15', 'Dunkerque', '11 résidence du camp d\'arc', 62370, 'fab@gmail.com', '0612131415', 'Oui', 'Oui', 'Oui', NULL, NULL, NULL, 'ras', 'Bénévole', 3),
+(15, 'DDD', 'Loic', '1995-11-13', 'Dunkerque', '11 résidence du camp d\'arc', 62370, 'ssdd@gmail.com', '0612131418', 'oui', NULL, NULL, 'Espèces', 'DOM', 'Gilles', 'dd', 'Enfant', 3);
 --
 -- Déchargement des données de la table `classecomptable`
 --
@@ -63,15 +65,32 @@ INSERT INTO `pcga` (`idPCGA`, `numCompte`, `libelleCompte`, `dansBilan`, `idClas
 (10, '626', 'Frais postaux et téléphone', NULL, 6),
 (11, '627', 'Services bancaires et assimilés', NULL, 6),
 (12, '60222', 'Produits d\'entretien', NULL, 6),
-(13, '6071', 'Achat marchandise atelier créatif', NULL, 6),
+(13, '6071', 'Achat marchandise pour atelier créatif', NULL, 6),
 (14, '6072', 'Achats marchandise pour cuisine', NULL, 6),
 (15, '60631', 'Achats petits matériels', NULL, 6),
 (16, '60632', 'Achats matériels et entretiens jardin', NULL, 6),
 (17, '7061', 'Produit de manifestation', NULL, 7),
-(20, '7062MER', 'Participation IME pour les activités', NULL, 7),
+(18, '7062', 'Participation familles activités du mercredi', NULL, 7),
+(19, '7063', 'Anniversaires', NULL, 7),
+(20, '7064', 'Participation IME pour les activités', NULL, 7),
 (21, '756', 'Adhésion Ferme', NULL, 7),
 (32, '401G20', 'Fournisseur MagasinG20', 'oui', 4),
-(36, '401INT', 'Fournisseur InterMarché', 'oui', 4);
+(36, '401INT', 'Fournisseur InterMarché', 'oui', 4),
+(40, '401CAR', 'Fournisseur Carrefour', 'oui', 4),
+(41, '401LID', 'Fournisseur Lidl', 'oui', 4),
+(43, '60222MER', 'Produits d\'entretien Activités Mercredi', 'oui', 6),
+(44, '6071MER', 'Achat marchandise atelier créatif Activités Mercredi', 'oui', 6),
+(45, '6072MER', 'Achats marchandise pour cuisine Activités Mercredi', 'oui', 6),
+(46, '60631MER', 'Achats petits matériels Activités Mercredi', 'oui', 6),
+(47, '60632MER', 'Achats matériels et entretiens jardin Activités Mercredi', 'oui', 6),
+(48, '7061MER', 'Produit de manifestation : Activités Mercredi', 'oui', 7),
+(49, '60222ANN', 'Produits d\'entretien Anniversaire', 'oui', 6),
+(50, '6071ANN', 'Achat marchandise atelier créatif Anniversaire', 'oui', 6),
+(51, '6072ANN', 'Achats marchandise pour cuisine Anniversaire', 'oui', 6),
+(52, '60631ANN', 'Achats petits matériels Anniversaire', 'oui', 6),
+(53, '60632ANN', 'Achats matériels et entretiens jardin Anniversaire', 'oui', 6),
+(54, '7061ANN', 'Produit de manifestation : Anniversaire', 'oui', 7),
+(55, '401ALD', 'Fournisseur Aldi', 'oui', 4);
 
 --
 -- Déchargement des données de la table `fournisseurs`
@@ -79,7 +98,10 @@ INSERT INTO `pcga` (`idPCGA`, `numCompte`, `libelleCompte`, `dansBilan`, `idClas
 
 INSERT INTO `fournisseurs` (`idFournisseur`, `codeFournisseur`, `libelleFournisseur`, `idPCGA`) VALUES
 (20, 'G20', 'MagasinG20', 32),
-(21, 'INT', 'InterMarché', 36);
+(21, 'INT', 'InterMarché', 36),
+(23, 'CAR', 'Carrefour', 40),
+(24, 'LID', 'Lidl', 41),
+(25, 'ALD', 'Aldi', 55);
 
 --
 -- Déchargement des données de la table `factures`
@@ -126,3 +148,11 @@ INSERT INTO `budgets` (`idBudget`, `fournitureAtelierCreatif`, `atelierCuisineGo
 INSERT INTO `ligneecriture` (`idLigneEcriture`, `montant`, `sens`, `idEcriture`, `idPCGA`) VALUES
 (1, '1242.00', 'Debit', 1, 2),
 (3, '1246.23', 'Credit', 1, 4);
+
+--
+-- Déchargement des données de la table `evenements`
+--
+
+INSERT INTO `evenements` (`idEvenement`, `codeEvenement`, `libelleEvenement`, `idPCGA`) VALUES
+(1, 'MER', 'Activités Mercredi', 43),
+(2, 'ANN', 'Anniversaire', 49);
