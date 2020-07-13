@@ -494,3 +494,68 @@ nav{
     height: 5vh;
     align-self: center;
 }
+
+/********************************* Formulaire écriture **************************************/
+
+.contenuEcriture {
+    display: flex;
+}
+
+.div_ecriture {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputform_ecriture, .select_ecriture, .btn_ecriture {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+.btn_ecriture {
+    flex: 1;
+    width: 83%;
+}
+
+.inputForm_ecritureDate {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+.label_file, .btn_ecriture{
+    font-weight: bold;
+    background-color: var(--color-blue2);
+    color: var(--color-jaune);
+    text-align: center;
+    border: 2px solid var(--color-orange);
+    margin: 0.5vw;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 1vh;
+}
+
+.input_file {
+	opacity: 0;
+    position: absolute;
+    margin: 0.5vw;
+    cursor: pointer;
+}
+
+.centrer_ecriture {
+    display: flex;
+    justify-content: center;
+}
+
+.valideEcriture {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    margin-bottom: 10vh;
+}

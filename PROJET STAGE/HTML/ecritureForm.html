@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width-device-width,initial-scale=1">
+    <script src="https://kit.fontawesome.com/13bc1841db.js" crossorigin="anonymous"></script>
+    <title>Ecriture</title>
+</head>
+
+<body class="body-enfant">
+
+    <header class="header-co">
+        <div class="logo">
+            <img src="../Images/logo.jpg" alt="Logo"></div>
+        <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
+    </header>
+
+    <div class="ligne">
+        <div class="divTitre">Date</div>
+        <div class="divTitre">Code</div>
+        <div class="divTitre">Numéro du compte</div>
+        <div class="divTitre">Libellé du compte</div>
+        <div class="divTitre">Libellé de l'écriture</div>
+        <div class="divTitre">Débit</div>
+        <div class="divTitre">Crédit</div>
+        <div class="divTitre">Plus</div>
+    </div>
+
+    <div class="formulaire_ecriture">
+        <form action="index.php?action=ecritureAction&m=' . $mode . '" method="POST">
+            <div class="contenuEcriture">
+                <div class="div_ecriture">
+                    <input class="inputForm_ecritureDate" type="date" name="dateEcriture" required autofocus>
+                </div>
+                <div class="div_ecriture">
+                    <select name="codeEvenement" class="select_ecriture">
+                        <option value="">Code de l'évènement</option>
+                        <option value="MER">Activité du mercredi</option>
+                    </select>
+                </div>
+                <div class="div_ecriture">
+                    <input class="inputform_ecriture" type="text" name="numCompte" placeholder="Numéro du compte"
+                        required>
+                </div>
+                <div class="div_ecriture">
+                    <select name="libelleCompte" class="select_ecriture">
+                        <option value=""></option>
+                        <option value="MER">Produits d'entretien</option>
+                    </select>
+                </div>
+                <div class="div_ecriture">
+                    <input class="inputform_ecriture" type="text" name="libelleEcriture"
+                        placeholder="Libellé de l'écriture" required>
+                </div>
+                <div class="div_ecriture">
+                    <input class="inputform_ecriture" type="number" step="0.01" name="debit"
+                        placeholder="Montant au débit" required>
+                </div>
+                <div class="div_ecriture">
+                    <input class="inputform_ecriture" type="number" step="0.01" name="cedit"
+                        placeholder="Montant au crédit" required>
+                </div>
+                <div class="div_ecriture">
+                    <div class="btn_ecriture">+</div>
+                </div>
+            </div>
+            <div class="contenuEcriture">
+                <div class="div_ecriture">
+                    <input class="inputForm_ecritureDate" type="date" name="dateEcriture" placeholder="Date de l'écriture"
+                        required>
+                </div>
+                <div class="div_ecriture">
+                    <select name="codeFournisseur" class="select_ecriture">
+                        <option value="">Code du fournisseur</option>
+                        <option value="CAR">Fournisseur carrefour</option>
+                    </select>
+                </div>
+                <div class="div_ecriture">
+                    <input class="inputform_ecriture" type="text" name="numCompte" placeholder="Numéro du compte"
+                        required>
+                </div>
+                <div class="div_ecriture">
+                    <select name="libelleCompte" class="select_ecriture">
+                        <option value=""></option>
+                        <option value="MER">Produits d'entretien</option>
+                    </select>
+                </div>
+                <div class="div_ecriture">
+                    <input class="inputform_ecriture" type="text" name="libelleEcriture"
+                        placeholder="Libellé de l'écriture" required>
+                </div>
+                <div class="div_ecriture">
+                   <input class="inputform_ecriture" type="number" step="0.01" name="debit"
+                        placeholder="Montant au débit" required>
+                </div>
+                <div class="div_ecriture">
+                    <input class="inputform_ecriture" type="number" step="0.01" name="cedit"
+                        placeholder="Montant au crédit" required>
+                </div>
+                <div class="div_ecriture">
+                    <label for="file" class="label_file">Enregistrer facture</label>
+                    <input class="input_file" type="file" name="facture" required>
+                </div>
+            </div>
+            <div class="centrer_ecriture">
+                <button class="bouton valideEcriture" id="submit" type="submit" value="Valider">Valider</button>
+            </div>
+        </form>
+    </div>
+    <a href="index.php?action=ecritureListeListe">
+        <div class="bouton btn">Retour</div>
+    </a>
+</body>
+
+</html>
