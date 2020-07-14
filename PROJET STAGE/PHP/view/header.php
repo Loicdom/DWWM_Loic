@@ -31,10 +31,10 @@ $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
             </div>
             <div class="menu"><a href="#">Journaux</a>
                 <div class="sousMenu">
-                    <div><a href="#">Charges</a></div>
-                    <div><a href="#">Recettes</a></div>
-                    <div><a href="#">Banque</a></div>
-                    <div><a href="#">Caisse</a></div>
+                    <div><a href="index.php?action=ecritureListe&j=charges">Charges</a></div>
+                    <div><a href="index.php?action=ecritureListe&j=recettes">Recettes</a></div>
+                    <div><a href="index.php?action=ecritureListe&j=banque">Banque</a></div>
+                    <div><a href="index.php?action=ecritureListe&j=caisse">Caisse</a></div>
                 </div>
             </div>
             <div class="menu"><a href="#">Comptes</a>

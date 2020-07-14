@@ -134,6 +134,18 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'enfantAction', "");
                 break;
             }
+        case 'ecritureListe': {
+                afficherPage('PHP/view/', 'ecritureListe', "Liste Ecritures");
+                break;
+            }
+        case 'ecritureForm': {
+                afficherPage('PHP/view/', 'ecritureForm', "Ecritures");
+                break;
+            }
+        case 'ecritureAction': {
+                afficherPage('PHP/view/', 'ecritureAction', "");
+                break;
+            }
         case 'impressionEnfant': {
                 afficherPageImpression('PHP/view/', 'impressionEnfant', "");
                 break;
