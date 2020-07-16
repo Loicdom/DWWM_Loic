@@ -20,11 +20,11 @@ $comptes = PCGAManager::getList();
             <div class="div_ecriture">
                 <input class="inputForm_ecritureDate" type="date" name="dateEcriture" required autofocus> </div>
             <div class="div_ecriture">
-                <select name="codeEvenement" class="select_ecriture">
+                <select name="codeEvenement" class="select_ecriture_event">
                     <option value="">Code de l'évènement</option>
                     <?php
                 foreach ($evenements as $elt) {
-                    echo "<option value='$elt->getCodeEvenement()'>".$elt->getLibelleEvenement() ."</option>"; 
+                    echo "<option value='".$elt->getCodeEvenement()."'>".$elt->getLibelleEvenement() ."</option>"; 
                 } ?>
                 </select>
             </div>
@@ -32,11 +32,11 @@ $comptes = PCGAManager::getList();
                 <input class="inputform_ecriture" type="text" name="numCompte" placeholder="Numéro du compte" required>
             </div>
             <div class="div_ecriture">
-                <select name="libelleCompte" class="select_ecriture">
+                <select name="libelleCompte" class="select_ecriture_compteEvent">
                     <option value="">Libellé du compte</option>
                     <?php
                 foreach ($comptes as $elmt) {
-                    echo "<option value='$elmt->getNumCompte()'>".$elmt->getLibelleCompte() ."</option>"; 
+                    echo "<option value='".$elmt->getNumCompte()."'>".$elmt->getLibelleCompte() ."</option>"; 
                 } ?>
                 </select>
             </div>
@@ -62,7 +62,7 @@ $comptes = PCGAManager::getList();
                     <option value="">Code du fournisseur</option>
                     <?php
                 foreach ($fournisseurs as $elmts) {
-                    echo "<option value='$elmts->getCodeFournisseur()'>".$elmts->getLibelleFournisseur() ."</option>"; 
+                    echo "<option value='".$elmts->getCodeFournisseur()."'>".$elmts->getLibelleFournisseur() ."</option>"; 
                 } ?>
                 </select>
             </div>
@@ -74,7 +74,7 @@ $comptes = PCGAManager::getList();
                     <option value="">Libellé du compte</option>
                     <?php
                 foreach ($comptes as $elmt) {
-                    echo "<option value='$elmt->getNumCompte()'>".$elmt->getLibelleCompte() ."</option>"; 
+                    echo "<option value='".$elmt->getNumCompte()."'>".$elmt->getLibelleCompte() ."</option>"; 
                 } ?>
                 </select>
             </div>

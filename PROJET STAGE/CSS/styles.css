@@ -507,7 +507,7 @@ nav{
     width: 100%;
 }
 
-.inputform_ecriture, .select_ecriture, .btn_ecriture {
+.inputform_ecriture, .select_ecriture, .select_ecriture_event, .select_ecriture_compteEvent, .btn_ecriture {
     flex: 1;
     width: 100%;
     text-align: center;

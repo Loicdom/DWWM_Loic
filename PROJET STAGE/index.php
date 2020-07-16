@@ -11,12 +11,29 @@ function ChargerClasse($classe)
     }
 }
 
-function afficherPageFooter1($chemin, $page, $titre)
+spl_autoload_register("ChargerClasse");
+function afficherPage($chemin, $page, $titre)
+{
+    require  'PHP/view/head.php';
+    require  'PHP/view/header.php';
+    require $chemin . $page . '.php';
+    require 'PHP/view/footer.php';
+}
+
+function afficherPageEcriture($chemin, $page, $titre)
+{
+    require  'PHP/view/head.php';
+    require  'PHP/view/header.php';
+    require $chemin . $page . '.php';
+    require 'PHP/view/footerEcriture.php';
+}
+
+function afficherPageFooterConnexion($chemin, $page, $titre)
 {
     require  'PHP/view/head.php';
     require  'PHP/view/header1.php';
     require $chemin . $page . '.php';
-    require 'PHP/view/footer1.php';
+    require 'PHP/view/footerConnexion.php';
 }
 
 function afficherPageImpression($chemin, $page, $titre)
@@ -26,14 +43,6 @@ function afficherPageImpression($chemin, $page, $titre)
     require 'PHP/view/footer.php';
 }
 
-spl_autoload_register("ChargerClasse");
-function afficherPage($chemin, $page, $titre)
-{
-    require  'PHP/view/head.php';
-    require  'PHP/view/header.php';
-    require $chemin . $page . '.php';
-    require 'PHP/view/footer.php';
-}
 // on initialise les paramètres du fichier parametre.ini
 Parametre::init();
 //on active la connexion 
@@ -51,7 +60,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'connect': {
-                afficherPageFooter1('PHP/view/', 'formConnexion', "Connexion");
+                afficherPageFooterConnexion('PHP/view/', 'formConnexion', "Connexion");
                 break;
             }
         case 'deconnect': {
@@ -91,7 +100,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'usersForm': {
-                afficherPageFooter1('PHP/view/', 'usersForm', "utilisateur");
+                afficherPageFooterConnexion('PHP/view/', 'usersForm', "utilisateur");
                 break;
             }
         case 'formEnregistrement': {
@@ -135,15 +144,15 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'ecritureListe': {
-                afficherPage('PHP/view/', 'ecritureListe', "Liste Ecritures");
+                afficherPageEcriture('PHP/view/', 'ecritureListe', "Liste Ecritures");
                 break;
             }
         case 'ecritureForm': {
-                afficherPage('PHP/view/', 'ecritureForm', "Ecritures");
+                afficherPageEcriture('PHP/view/', 'ecritureForm', "Ecritures");
                 break;
             }
         case 'ecritureAction': {
-                afficherPage('PHP/view/', 'ecritureAction', "");
+                afficherPageEcriture('PHP/view/', 'ecritureAction', "");
                 break;
             }
         case 'impressionEnfant': {
@@ -168,5 +177,5 @@ if (isset($_GET['action'])) {
             }
     }
 } else { // Sinon, on affiche la page principale du site
-    afficherPageFooter1('PHP/view/', 'formConnexion', "Connexion");
+    afficherPageFooterConnexion('PHP/view/', 'formConnexion', "Connexion");
 }

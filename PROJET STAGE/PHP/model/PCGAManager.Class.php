@@ -107,4 +107,30 @@ class PCGAManager
         $q->bindValue(":idClasseComptable", "7");
         $q->execute();
     }
+
+    static public function ComptesParEvent($choixCode)
+	{
+		$db = DbConnect::getDb(); // Instance de PDO.
+		$q = $db->prepare('SELECT numCompte,libelleCompte FROM PCGA WHERE libelleCompte LIKE "%'.$choixCode.'" ORDER BY libelleCompte'); //requete sql qui ramène tout les codes Evenements
+        $q->execute();
+        
+        if($donnees = $q->fetch(PDO::FETCH_OBJ)) {
+            do {
+                $codeEvenementChoix[]=$donnees; // on fait un tableau avec les données récolter
+            }
+            while ($donnees = $q->fetch(PDO::FETCH_OBJ));
+        
+            echo json_encode($codeEvenementChoix); 
+        
+        }
+	}
 }
+// if(isset($_POST["idAuteur"])){
+//     mysql_connect("localhost","root","root");
+//     mysql_select_db("test");
+//     $res = mysql_query("SELECT id,titre FROM livre 
+//         WHERE idAuteur=".$_POST["idAuteur"]." ORDER BY titre");
+//     while($row = mysql_fetch_assoc($res)){
+//         echo "<option value='".$row["id"]."'>".$row["titre"]."</option>";
+//     }
+// }
