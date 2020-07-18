@@ -4,7 +4,6 @@ choixCodeEvent.addEventListener("change", function () { compteParCode(); });
 // }
 function compteParCode() {
 
-    var choixEvent = choixCodeEvent.options[choixCodeEvent.selectedIndex].text;
     // on définit une requete
     const requ = new XMLHttpRequest();
 
@@ -14,19 +13,19 @@ function compteParCode() {
                 // la requete a abouti et a fournit une reponse
                 console.log("Réponse reçue: %s", this.responseText);
                 //on décode la réponse, pour obtenir un objet
-                reponse = this.responseText;
+                reponse = JSON.parse(this.responseText);
                 console.log(reponse);
                 libelleCompte = document.getElementsByClassName('select_ecriture_compteEvent')[0];
                 libelleCompteValue = document.getElementsByClassName('select_ecriture_compteEvent')[0].value;
                 //on vide les anciens elements
-                nbEntree = libelleCompte.length; 
-                for (let i=0;i<nbEntree;i++) 
-                libelleCompte.remove(0);
+                nbEntree = libelleCompte.length;
+                for (let i = 0; i < nbEntree; i++)
+                    libelleCompte.remove(0);
                 //on boucle sur la reponse
                 for (i = 0; i < reponse.length; i++) {
                     var option = document.createElement("option");
-                    option.text=reponse[i].libelleCompte;
-                    option.value=reponse[i].numCompte;
+                    option.text = reponse[i].libelleCompte;
+                    option.value = reponse[i].numCompte;
                     console.log(reponse[i].libelleCompte);
                     libelleCompte.add(option);
                 }
@@ -39,6 +38,20 @@ function compteParCode() {
     };
     //on envoi la requête
     requ.open('POST', '/DWWM_Loïc/PROJET STAGE/PHP/MODEL/APISelectEcritureEvenements.php', true);
+    requ.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     var choix = choixCodeEvent.options[choixCodeEvent.selectedIndex].text;
-    requ.send("choixCode=" + choix);
+    var args = "choixCode=" + choix;
+    requ.send(args);
+}
+
+inputNumcompteEvt = document.getElementById('numComteEvt');
+libelleCpteEvt = document.getElementById('libelleCompteEvt');
+libelleCpteEvt.addEventListener("change", function () { affichageCompte(inputNumcompteEvt, libelleCpteEvt); });
+
+
+function affichageCompte(NumcompteEvt, libelleCompteEvt) {
+    var choixEvt = libelleCompteEvt.options[libelleCompteEvt.selectedIndex].text;
+    if (choixEvt != "Libellé du compte") {
+        NumcompteEvt.value = libelleCompteEvt.options[libelleCompteEvt.selectedIndex].value;
+    }
 }

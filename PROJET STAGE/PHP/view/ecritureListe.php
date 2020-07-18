@@ -36,5 +36,5 @@ if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a e
     <?php } ?>
 <?php } ?>
     <a href="index.php?action=tableauBord">
-        <div class="bouton btn">Retour</div>
+        <div class="bouton btn bouton_ecriture">Retour</div>
     </a>

@@ -29,10 +29,10 @@ $comptes = PCGAManager::getList();
                 </select>
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="text" name="numCompte" placeholder="Numéro du compte" required>
+                <input class="inputform_ecriture"  type="text" id="numComteEvt" name="numCompte" placeholder="Numéro du compte" required>
             </div>
             <div class="div_ecriture">
-                <select name="libelleCompte" class="select_ecriture_compteEvent">
+                <select name="libelleCompte" id="libelleCompteEvt" class="select_ecriture_compteEvent">
                     <option value="">Libellé du compte</option>
                     <?php
                 foreach ($comptes as $elmt) {
@@ -58,7 +58,7 @@ $comptes = PCGAManager::getList();
                 <input class="inputForm_ecritureDate" type="date" name="dateEcriture" placeholder="Date de l'écriture" required>
             </div>
             <div class="div_ecriture">
-                <select name="codeFournisseur" class="select_ecriture">
+                <select name="codeFournisseur" id="codeFour" class="select_ecriture">
                     <option value="">Code du fournisseur</option>
                     <?php
                 foreach ($fournisseurs as $elmts) {
@@ -67,10 +67,10 @@ $comptes = PCGAManager::getList();
                 </select>
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="text" name="numCompte" placeholder="Numéro du compte" required>
+                <input class="inputform_ecriture" type="text" id="numCompteF" name="numCompte" placeholder="Numéro du compte" required>
             </div>
             <div class="div_ecriture">
-                <select name="libelleCompte" class="select_ecriture">
+                <select name="libelleCompte" id="libelleCompteF" class="select_ecriture">
                     <option value="">Libellé du compte</option>
                     <?php
                 foreach ($comptes as $elmt) {
