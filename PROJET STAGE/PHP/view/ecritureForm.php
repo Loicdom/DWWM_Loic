@@ -16,11 +16,11 @@ $comptes = PCGAManager::getList();
 
 <div class="formulaire_ecriture">
     <form action="index.php?action=ecritureAction&m=' . $mode . '" method="POST">
-        <div class="contenuEcriture">
+        <div class="contenuEcriture" id="contenuEcriture">
             <div class="div_ecriture">
                 <input class="inputForm_ecritureDate" type="date" name="dateEcriture" required autofocus> </div>
             <div class="div_ecriture">
-                <select name="codeEvenement" class="select_ecriture_event">
+                <select name="codeEvenement" id="codeEvt" class="select_ecriture_event">
                     <option value="">Code de l'évènement</option>
                     <?php
                 foreach ($evenements as $elt) {
@@ -50,9 +50,14 @@ $comptes = PCGAManager::getList();
                 <input class="inputform_ecriture" type="number" step="0.01" name="cedit" placeholder="Montant au crédit" required>
             </div>
             <div class="div_ecriture">
-                <div class="btn_ecriture">+</div>
+                <button class="btn_ecriture" id="btn_add" data-nbre="0" data-max="8">+</button>
             </div>
         </div>
+
+        <div class="contenuEcriture"> 
+            <div id="add_contenuEcriture"></div>
+        </div>
+
         <div class="contenuEcriture">
             <div class="div_ecriture">
                 <input class="inputForm_ecritureDate" type="date" name="dateEcriture" placeholder="Date de l'écriture" required>
