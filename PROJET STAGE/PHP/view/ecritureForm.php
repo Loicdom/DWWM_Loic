@@ -18,8 +18,9 @@ $comptes = PCGAManager::getList();
     <form action="index.php?action=ecritureAction&m=' . $mode . '" method="POST">
         <div class="contenuEcriture" id="contenuEcriture">
             <div class="div_ecriture">
-                <input class="inputForm_ecritureDate" type="date" name="dateEcriture" required autofocus> </div>
-            <div class="div_ecriture">
+                <input class="inputForm_ecritureDate" id="dateEcriture" type="date" name="dateEcriture[]" required autofocus> </div>
+                <i class="far fa-question-circle" id="questionEcriture" title="Remplir la date et le libellé de l'écriture pour ajouter une ligne"></i>
+                <div class="div_ecriture">
                 <select name="codeEvenement[]" id="codeEvt" class="select_ecriture_event">
                     <option value="">Code de l'évènement</option>
                     <?php
@@ -41,13 +42,13 @@ $comptes = PCGAManager::getList();
                 </select>
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="text" name="libelleEcriture[]" placeholder="Libellé de l'écriture" required>
+                <input class="inputform_ecriture" type="text" id="libelleEcriture" name="libelleEcriture[]" placeholder="Libellé de l'écriture" required>
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="number" step="0.01" name="debit[]" placeholder="Montant au débit" required>
+                <input class="inputform_ecriture" type="number" step="0.01" name="debit[]" placeholder="Montant au débit">
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="number" step="0.01" name="cedit[]" placeholder="Montant au crédit" required>
+                <input class="inputform_ecriture" type="number" step="0.01" name="credit[]" placeholder="Montant au crédit">
             </div>
             <div class="div_ecriture">
                 <button class="btn_ecriture" name="btn_ecriture[]" id="btn_add" data-nbre="0" data-max="8">+</button>
@@ -62,7 +63,7 @@ $comptes = PCGAManager::getList();
 
         <div class="contenuEcriture">
             <div class="div_ecriture">
-                <input class="inputForm_ecritureDate" type="date" name="dateEcriture" placeholder="Date de l'écriture" required>
+                <input class="inputForm_ecritureDate" type="date" name="dateEcriture[]" placeholder="Date de l'écriture" required>
             </div>
             <div class="div_ecriture">
                 <select name="codeFournisseur" id="codeFour" class="select_ecriture">
@@ -74,10 +75,10 @@ $comptes = PCGAManager::getList();
                 </select>
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="text" id="numCompteF" name="numCompte" placeholder="Numéro du compte" required>
+                <input class="inputform_ecriture" type="text" id="numCompteF" name="numCompte[]" placeholder="Numéro du compte" required>
             </div>
             <div class="div_ecriture">
-                <select name="libelleCompte" id="libelleCompteF" class="select_ecriture">
+                <select name="libelleCompte[]" id="libelleCompteF" class="select_ecriture">
                     <option value="">Libellé du compte</option>
                     <?php
                     foreach ($comptes as $elmt) {
@@ -86,13 +87,13 @@ $comptes = PCGAManager::getList();
                 </select>
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="text" name="libelleEcriture" placeholder="Libellé de l'écriture" required>
+                <input class="inputform_ecriture" type="text" name="libelleEcriture[]" placeholder="Libellé de l'écriture" required>
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="number" step="0.01" name="debit" placeholder="Montant au débit" required>
+                <input class="inputform_ecriture" type="number" step="0.01" name="debit[]" placeholder="Montant au débit">
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="number" step="0.01" name="cedit" placeholder="Montant au crédit" required>
+                <input class="inputform_ecriture" type="number" step="0.01" id="dernierCredit" name="credit[]" placeholder="Montant au crédit">
             </div>
             <div class="div_ecriture">
                 <label for="file" class="label_file">Enregistrer facture</label>

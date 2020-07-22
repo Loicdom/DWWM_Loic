@@ -579,3 +579,15 @@ nav{
 .bouton_ecriture {
     margin-right: 36vw;
 }
+
+#affichage_compte {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    margin-left: 41.5%;
+    
+}
+
+#questionEcriture {
+    align-self: center;
+}

@@ -54,8 +54,10 @@ btn_add.addEventListener('click', function () {
 
 function lancement() {
     inputNumcompte = document.getElementsByName('numCompte[]');
-    libelleCompteSelect = document.getElementsByName('libelleCompte[]');
-    for (i = 1; i < libelleCompteSelect.length; i++) {
+    tailleInputNumCompte = inputNumcompte.length;
+    for (i = 1; i < tailleInputNumCompte; i++) {
+        libelleCompteSelect = document.getElementsByName('libelleCompte[]');
+        inputNumcompte = document.getElementsByName('numCompte[]');
         inputNumcompte = inputNumcompte[i];
         libelleCompteSelect = libelleCompteSelect[i];
         affichageNumCompte(inputNumcompte, libelleCompteSelect);
