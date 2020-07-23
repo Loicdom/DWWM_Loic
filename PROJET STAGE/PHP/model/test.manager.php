@@ -149,9 +149,10 @@ DbConnect::init();
 //*********************************Factures**************************** *//
 
 // // ADD FacturesManager :
-// $m = new Factures(["libelleFact"=>"factureachat"]);
-// var_dump($m);
-// FacturesManager::add($m);
+// $m = "Lidl Charges";
+// $fact = "Factures/";
+// // var_dump($m);
+// FacturesManager::add($m,$fact);
 
 // // Update FacturesManager :
 // $m = FacturesManager::getById(2);
@@ -164,11 +165,11 @@ DbConnect::init();
 // FacturesManager::delete(3);
 
 // // GetList FacturesManager :
-// $tableau = FacturesManager::getList();
-// foreach ($tableau as $info)
-// {
-//     echo $info->toString();
-// }
+// // $tableau = FacturesManager::getList();
+// // foreach ($tableau as $info)
+// // {
+// //     echo $info->toString();
+// // }
 
 //*********************************Ecritures**************************** *//
 

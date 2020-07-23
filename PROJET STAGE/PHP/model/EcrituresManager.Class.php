@@ -4,7 +4,8 @@ class EcrituresManager
     public static function add(Ecritures $obj) // ajoute une écriture
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO Ecritures (dateEcriture,libelleEcriture,lettrage,idFacture,idExerciceComptable) VALUES (:dateEcriture,:libelleEcriture,:lettrage,:idFacture,:idExerciceComptable)");
+        $q = $db->prepare("INSERT INTO Ecritures (typeEcriture,dateEcriture,libelleEcriture,lettrage,idFacture,idExerciceComptable) VALUES (:typeEcriture,:dateEcriture,:libelleEcriture,:lettrage,:idFacture,:idExerciceComptable)");
+        $q->bindValue(":typeEcriture", $obj->getTypeEcriture());
         $q->bindValue(":dateEcriture", $obj->getDateEcriture());
         $q->bindValue(":libelleEcriture", $obj->getLibelleEcriture());
         $q->bindValue(":lettrage", $obj->getLettrage());
@@ -16,7 +17,8 @@ class EcrituresManager
     public static function update(Ecritures $obj) // modifie une écriture
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE Ecritures SET dateEcriture=:dateEcriture, libelleEcriture=:libelleEcriture, lettrage=:lettrage, idFacture=:idFacture, idExerciceComptable=:idExerciceComptable WHERE idEcriture=:idEcriture");
+        $q = $db->prepare("UPDATE Ecritures SET typeEcriture=:typeEcriture, dateEcriture=:dateEcriture, libelleEcriture=:libelleEcriture, lettrage=:lettrage, idFacture=:idFacture, idExerciceComptable=:idExerciceComptable WHERE idEcriture=:idEcriture");
+        $q->bindValue(":typeEcriture", $obj->getTypeEcriture());
         $q->bindValue(":dateEcriture", $obj->getDateEcriture());
         $q->bindValue(":libelleEcriture", $obj->getLibelleEcriture());
         $q->bindValue(":lettrage", $obj->getLettrage());

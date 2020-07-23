@@ -524,7 +524,7 @@ nav{
     flex: 1;
     width: 11%;
     right: 0.4%;
-    top: 52%;
+    top: 55%;
     font-weight: bold;
     background-color: var(--color-blue2);
     color: var(--color-jaune);
@@ -590,4 +590,26 @@ nav{
 
 #questionEcriture {
     align-self: center;
+}
+
+/***************************** Visuel facture *************************/
+
+.visuelFactImg {
+    display: flex;
+    justify-content: center;
+    padding: 1vw;
+}
+
+.visuelFact {
+    display: flex;
+    justify-content: center;
+    padding: 1vw;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--color-blue2);
+    border: 2px solid var(--color-orange);
+}
+
+.imgFact {
+    width: 40%;
 }

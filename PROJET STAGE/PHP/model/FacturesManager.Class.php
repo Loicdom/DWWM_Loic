@@ -1,13 +1,15 @@
 <?php
 class FacturesManager
 {
-public static function add(Factures $obj) // Pour ajouter une facture
+public static function add($libelleFact, $chemin) // Pour ajouter une facture
 {
 $db = DbConnect::getDb();
 $q = $db->prepare("INSERT INTO Factures (libelleFact,enregFact) VALUES (:libelleFact,:enregFact)");
-$q->bindValue(":libelleFact", $obj->getLibelleFact());
-$q->bindValue(":enregFact", $obj->getEnregFact());
- $q->execute();
+$q->bindValue(":libelleFact", "Facture : $libelleFact");
+$q->bindValue(":enregFact", "$chemin");
+$q->execute();
+$id_data = $q->lastInsertId();
+return $id_data;
 }
 
 public static function update(Factures $obj) // Pour modifier une facture 

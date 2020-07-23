@@ -3,6 +3,7 @@ class Ecritures
 {
     /*******************************Attributs*******************************/
     private $_idEcriture;
+    private $_typeEcriture;
     private $_dateEcriture;
     private $_libelleEcriture;
     private $_lettrage;
@@ -17,6 +18,14 @@ class Ecritures
     public function setIdEcriture($_idEcriture)
     {
         return $this->_idEcriture = $_idEcriture;
+    }
+    public function getTypeEcriture()
+    {
+        return $this->_typeEcriture;
+    }
+    public function setTypeEcriture($_typeEcriture)
+    {
+        return $this->_typeEcriture = $_typeEcriture;
     }
     public function getDateEcriture()
     {
@@ -48,17 +57,7 @@ class Ecritures
     }
     public function setIdFacture($_idFacture)
     {
-        $this->_idClasseComptable = $_idFacture;
-        $m=ClasseComptableManager::getById($_idFacture);
-        $this->setFacture($m);
-    }
-    public function getFacture()
-    {
-        return $this->_facture;
-    }
-    public function setFacture($_facture)
-    {
-        return $this->_facture = $_facture;
+        return $this->_idFacture = $_idFacture;
     }
     public function getIdExerciceComptable()
     {
@@ -66,18 +65,9 @@ class Ecritures
     }
     public function setIdExerciceComptable($_idExerciceComptable)
     {
-        $this->_idClasseComptable = $_idExerciceComptable;
-        $m=ClasseComptableManager::getById($_idExerciceComptable);
-        $this->setExerciceComptable($m);
+        $this->_idExerciceComptable = $_idExerciceComptable;
     }
-    public function getExerciceComptable()
-    {
-        return $this->_exerciceComptable;
-    }
-    public function setExerciceComptable($_exerciceComptable)
-    {
-        return $this->_exerciceComptable = $_exerciceComptable;
-    }
+
 
     /*******************************Construct*******************************/
     public function __construct(array $options = [])
@@ -100,6 +90,6 @@ class Ecritures
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdEcriture() . "\n" . $this->getDateEcriture() . "\n" . $this->getLibelleEcriture() . "\n" . $this->getLettrage() . "\n" . $this->getFacture() . "\n" . $this->getExerciceComptable();
+        return $this->getIdEcriture() . "\n" . $this->getTypeEcriture(). "\n" . $this->getDateEcriture() . "\n" . $this->getLibelleEcriture() . "\n" . $this->getLettrage() . "\n" . $this->getIdFacture() . "\n" . $this->getIdExerciceComptable();
     }
 }

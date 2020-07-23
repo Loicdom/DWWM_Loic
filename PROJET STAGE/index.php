@@ -20,6 +20,14 @@ function afficherPage($chemin, $page, $titre)
     require 'PHP/view/footer.php';
 }
 
+function afficherPageFournisseur($chemin, $page, $titre)
+{
+    require  'PHP/view/head.php';
+    require  'PHP/view/header.php';
+    require $chemin . $page . '.php';
+    require 'PHP/view/footerFournisseur.php';
+}
+
 function afficherPageEcriture($chemin, $page, $titre)
 {
     require  'PHP/view/head.php';
@@ -68,15 +76,15 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'fournisseursListe': {
-                afficherPage('PHP/view/', 'fournisseursListe', "Liste des fournisseurs");
+            afficherPageFournisseur('PHP/view/', 'fournisseursListe', "Liste des fournisseurs");
                 break;
             }
         case 'fournisseursForm': {
-                afficherPage('PHP/view/', 'fournisseursForm', "Fournisseur");
+            afficherPageFournisseur('PHP/view/', 'fournisseursForm', "Fournisseur");
                 break;
             }
         case 'fournisseursAction': {
-                afficherPage('PHP/view/', 'fournisseursAction', "");
+            afficherPageFournisseur('PHP/view/', 'fournisseursAction', "");
                 break;
             }
         case 'bureau': {
@@ -173,6 +181,10 @@ if (isset($_GET['action'])) {
             }
         case 'evenementsAction': {
                 afficherPage('PHP/view/', 'evenementsAction', "");
+                break;
+            }
+        case 'visuelFacture': {
+                afficherPage('PHP/view/', 'visuelFacture', "Visuel facture");
                 break;
             }
     }

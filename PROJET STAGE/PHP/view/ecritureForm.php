@@ -2,6 +2,7 @@
 $evenements = EvenementsManager::getList();
 $fournisseurs = FournisseursManager::getList();
 $comptes = PCGAManager::getList();
+$journal= $_GET["j"];
 ?>
 <div class="ligne">
     <div class="divTitre">Date</div>
@@ -15,7 +16,7 @@ $comptes = PCGAManager::getList();
 </div>
 
 <div class="formulaire_ecriture">
-    <form action="index.php?action=ecritureAction&m=' . $mode . '" method="POST">
+    <form action="index.php?action=ecritureAction&j=<?php.$journal.?>" method="POST" enctype="multipart/form-data">  >
         <div class="contenuEcriture" id="contenuEcriture">
             <div class="div_ecriture">
                 <input class="inputForm_ecritureDate" id="dateEcriture" type="date" name="dateEcriture[]" required autofocus> </div>
@@ -96,7 +97,7 @@ $comptes = PCGAManager::getList();
                 <input class="inputform_ecriture" type="number" step="0.01" id="dernierCredit" name="credit[]" placeholder="Montant au crédit">
             </div>
             <div class="div_ecriture">
-                <label for="file" class="label_file">Enregistrer facture</label>
+                <label for="facture" class="label_file">Enregistrer facture</label>
                 <input class="input_file" type="file" name="facture" required>
             </div>
         </div>
