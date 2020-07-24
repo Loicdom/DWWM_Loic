@@ -231,5 +231,5 @@ FROM
     pcga,
     ligneecriture
 WHERE
-    factures.idFacture = ecritures.idFacture AND exercicecomptable.idExerciceComptable = ecritures.idExerciceComptable AND ecritures.idEcriture = ligneecriture.idEcriture AND classecomptable.idClasseComptable = pcga.idClasseComptable AND pcga.idPCGA = ligneecriture.idPCGA 
+    factures.idFacture = ecritures.idFacture AND exercicecomptable.idExerciceComptable = ecritures.idExerciceComptable AND ecritures.idEcriture = ligneecriture.idEcriture AND classecomptable.idClasseComptable = pcga.idClasseComptable AND pcga.idPCGA = ligneecriture.idPCGA; 
 	

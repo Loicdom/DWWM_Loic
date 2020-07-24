@@ -1,6 +1,6 @@
 <?php
 $journal= $_GET["j"];
-$ecritures = EcrituresManager::getList(); // on récupere le plan comptable (la liste des ecritures)
+$ecritures = EcrituresManager::getList($annee); // on récupere le plan comptable (la liste des ecritures)
 ?>
 <a href="index.php?action=ecritureForm&j=<?php echo $journal ?>">
     <div class="bouton btn"> Ajouter les lignes</div>
@@ -24,7 +24,7 @@ if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a e
         <div class="ligne">
             <div class="bloc contenuListe"><?php echo $elt->getDateEcriture() ?></div>
             <div class="bloc contenuListe"><?php echo $elt->getLibelleEcriture() ?></div>
-            <a href="index.php?action=visuelFacture&id=<?php echo $elt->getIdFacture() ?>" class="bloc">
+            <a href="index.php?action=visuelFacture&j=<?php echo $journal ?>&id=<?php echo $elt->getIdFacture() ?>" class="bloc">
                 <div class="bouton">Voir facture</div>
             <a href="index.php?action=visuelLigne&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
                 <div class="bouton">Voir ligne d'écritures</div>

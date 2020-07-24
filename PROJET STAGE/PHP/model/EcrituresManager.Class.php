@@ -47,17 +47,25 @@ class EcrituresManager
         }
     }
 
-    public static function getList() // Ramène une liste de toutes les écritures
+    public static function getList($years) // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();
         $ecritures = [];
-        $q = $db->query("SELECT * FROM Ecritures");
+        $q = $db->query("SELECT * FROM Ecritures WHERE idExerciceComptable=$years");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $ecritures[] = new Ecritures($donnees);
             }
         }
         return $ecritures;
+    }
+
+    Public static function getMaxIdEcriture(){
+        //--- Récupérer le dernier id dans une table ---//
+        $db = DbConnect::getDb();
+        $max = $db->query('SELECT MAX(idEcriture) id FROM Ecritures');
+        $result = $max->fetch();
+        return $result['id'];
     }
 
     public static function getByCritere()  // pour faire une recherche multicritere

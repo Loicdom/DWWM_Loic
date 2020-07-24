@@ -1,15 +1,11 @@
 <?php
 function ChargerClasse($classe)
 {
-    if (file_exists("../model/" . $classe . ".Class.php"))
-    {
+    if (file_exists("../model/" . $classe . ".Class.php")) {
         require "../model/" . $classe . ".Class.php";
-    }
-    else
-    {
+    } else {
         require "../controller/" . $classe . ".Class.php";
     }
-
 }
 spl_autoload_register("ChargerClasse");
 
@@ -160,6 +156,8 @@ DbConnect::init();
 // var_dump($m);
 // FacturesManager::update($m);
 
+// echo FacturesManager::getMaxIdFacture();
+
 
 // // Delete FacturesManager :
 // FacturesManager::delete(3);
@@ -290,6 +288,3 @@ DbConnect::init();
 // {
 //     echo $info->toString();
 // }
-
-
-

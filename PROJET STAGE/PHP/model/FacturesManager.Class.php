@@ -8,8 +8,6 @@ $q = $db->prepare("INSERT INTO Factures (libelleFact,enregFact) VALUES (:libelle
 $q->bindValue(":libelleFact", "Facture : $libelleFact");
 $q->bindValue(":enregFact", "$chemin");
 $q->execute();
-$id_data = $q->lastInsertId();
-return $id_data;
 }
 
 public static function update(Factures $obj) // Pour modifier une facture 
@@ -52,6 +50,13 @@ $factures[] = new Factures($donnees);
 }
 }
 return $factures;
- }
+}
 
+ Public static function getMaxIdFacture(){
+    //--- Récupérer le dernier id dans une table ---//
+    $db = DbConnect::getDb();
+    $max = $db->query('SELECT MAX(IdFacture) id FROM Factures');
+    $result = $max->fetch();
+    return $result['id'];
+}
 }

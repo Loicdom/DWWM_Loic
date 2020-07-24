@@ -23,34 +23,42 @@ if (!isset($erreur)) //S'il n'y a pas d'erreur, on upload
     $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
     if (move_uploaded_file($_FILES['facture']['tmp_name'], $dossier . $fichier)) //correct si la fonction renvoie TRUE
     {
-        echo 'Upload effectué avec succès !';
+        echo 'Enregistement effectué avec succès !';
         $chemin = $dossier . $fichier;
-        $q=FacturesManager::add($libelleFacture,$chemin);
-        var_dump($q);
+        $q = FacturesManager::add($libelleFacture, $chemin);
     } else //sinon, cas où la fonction renvoie FALSE
     {
-        echo 'Echec de l\'upload !';
+        echo 'Echec de l\'enregistement !';
     }
 } else {
     echo $erreur;
 }
 
+$idFact = FacturesManager::getMaxIdFacture();
+$typeEcriture = $_GET["j"];
+$dateEcriture = $_POST['dateEcriture'][0];
+$libelleEcriture = $_POST['libelleEcriture'][0];
+// // ADD Ecriture :
+$e = new Ecritures(["typeEcriture" => $typeEcriture, "dateEcriture" => $dateEcriture, "libelleEcriture" => $libelleEcriture, "idFacture" => $idFact, "idExerciceComptable" => $annee]);
+EcrituresManager::add($e);
 
-// $mode = $_GET["m"];
-// if ($mode != "ajout") {
-//     $id = $_POST["idPersonne"]; // on récupère le mode et si différent d'ajout on récupère l'id sur lequel on doit modifier ou supprimer
-// }    
-// var_dump($_POST);
-// $p = $_POST['dateEcriture'][0];
-// var_dump($p);
-// switch ($mode) {
-//     case "ajout":
-//         PersonnesManager::addEnfant($p); // Lance la fonction pour ajouter un enfant
-//         break;
-//     case "modif":
-//         PersonnesManager::updateEnfant($p); // Lance la fonction pour modifier un enfant
-//         break;
-//     case "suppr":
-//         PersonnesManager::delete($id); // Lance la fonction pour supprimer un enfant
-// }
-// header("location:index.php?action=enfantListe"); // renvoi vers enfant liste, juste après avoir exécuter la fonction
+$taille = count(array_values($_POST['numCompte']));
+$idEcriture = EcrituresManager::getMaxIdEcriture();
+for ($i = 0; $i < $taille; $i++) {
+    $numeroCompte = $_POST['numCompte'][$i];
+    $idPCGA = PCGAManager::getIdByNumcompte($numeroCompte);
+    $débit = $_POST['debit'][$i];
+    $credit = $_POST['credit'][$i];
+    if ($débit != '') {
+        $montant = $débit;
+        $sens = "Débit";
+    } else if ($credit != '') {
+        $montant = $credit;
+        $sens = "Crédit";
+    }
+    // // ADD LigneEcriture :
+    $ligne = new LigneEcriture(["montant" => $montant, "sens" => $sens, "idEcriture" => $idEcriture, "idPCGA" => $idPCGA]);
+    LigneEcritureManager::add($ligne);
+}
+
+header("refresh:2,url=index.php?action=ecritureListe&j=$typeEcriture"); // renvoi vers ecriture liste, juste après avoir exécuter la page

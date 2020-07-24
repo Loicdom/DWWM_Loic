@@ -3,6 +3,7 @@ $evenements = EvenementsManager::getList();
 $fournisseurs = FournisseursManager::getList();
 $comptes = PCGAManager::getList();
 $journal= $_GET["j"];
+$ExerciceComptable = ExerciceComptableManager::getById($annee);
 ?>
 <div class="ligne">
     <div class="divTitre">Date</div>
@@ -16,10 +17,10 @@ $journal= $_GET["j"];
 </div>
 
 <div class="formulaire_ecriture">
-    <form action="index.php?action=ecritureAction&j=<?php.$journal.?>" method="POST" enctype="multipart/form-data">  >
+    <form action="index.php?action=ecritureAction&j=<?php echo $journal?>" method="POST" enctype="multipart/form-data">  
         <div class="contenuEcriture" id="contenuEcriture">
             <div class="div_ecriture">
-                <input class="inputForm_ecritureDate" id="dateEcriture" type="date" name="dateEcriture[]" required autofocus> </div>
+                <input class="inputForm_ecritureDate" id="dateEcriture" type="date" name="dateEcriture[]" min="<?php echo $ExerciceComptable->getLibelleExercice()?>-01-01" max="<?php echo $ExerciceComptable->getLibelleExercice()?>-12-31" required autofocus> </div>
                 <i class="far fa-question-circle" id="questionEcriture" title="Remplir la date et le libellé de l'écriture pour ajouter une ligne"></i>
                 <div class="div_ecriture">
                 <select name="codeEvenement[]" id="codeEvt" class="select_ecriture_event">
@@ -64,7 +65,7 @@ $journal= $_GET["j"];
 
         <div class="contenuEcriture">
             <div class="div_ecriture">
-                <input class="inputForm_ecritureDate" type="date" name="dateEcriture[]" placeholder="Date de l'écriture" required>
+                <input class="inputForm_ecritureDate" type="date" name="dateEcriture[]" min="<?php echo $ExerciceComptable->getLibelleExercice()?>-01-01" max="<?php echo $ExerciceComptable->getLibelleExercice()?>-12-31" placeholder="Date de l'écriture" required>
             </div>
             <div class="div_ecriture">
                 <select name="codeFournisseur" id="codeFour" class="select_ecriture">
@@ -107,6 +108,6 @@ $journal= $_GET["j"];
     </form>
 </div>
 <div id="btn_affichageCompte"></div>
-<a href="index.php?action=ecritureListe">
+<a href="index.php?action=ecritureListe&j=<?php echo $journal?>">
     <div class="bouton btn">Retour</div>
 </a>

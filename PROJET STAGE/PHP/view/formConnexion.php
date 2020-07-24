@@ -20,6 +20,7 @@ else // On check le mot de passe
         if ($utilisateur->getMotDePasse() == md5($_POST['motDePasse'])) // Acces OK !
         {
             $_SESSION['pseudo'] = $utilisateur->getPseudo();
+            $_SESSION['idExerciceComptable'] = $_POST['idExerciceComptable'];
             $_SESSION['id'] = $utilisateur->getIdUser();
             $message = '<p>Bienvenue ' . $utilisateur->getPseudo() . ', vous êtes maintenant connecté!</p>';
             header("refresh:2,url=index.php?action=tableauBord");?>

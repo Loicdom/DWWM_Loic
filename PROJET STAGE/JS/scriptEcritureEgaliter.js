@@ -40,10 +40,10 @@ function verifDebitCredit() { // a revoir la somme ne marche pas
         montantsDebit = montantsDebit[i];
         montantsCredit = montantsCredit[i];
         if(montantsDebit.value != '') {
-            sommeDebit = sommeDebit + parseInt(montantsDebit.valueAsNumber);
+            sommeDebit = sommeDebit + parseFloat(montantsDebit.valueAsNumber);
         }
         if(montantsCredit.value != '') {
-            sommeCredit = sommeCredit + parseInt(montantsCredit.valueAsNumber);
+            sommeCredit = sommeCredit + parseFloat(montantsCredit.valueAsNumber);
         }
     }
     if (sommeDebit == sommeCredit) {

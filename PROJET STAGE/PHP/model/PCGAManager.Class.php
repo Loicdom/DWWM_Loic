@@ -43,6 +43,17 @@ class PCGAManager
         }
     }
 
+    public static function getIdByNumcompte($numCompte) // Ramène un compte en particulier (avec le numéro de compte)
+    {
+        $db = DbConnect::getDb();
+        $q = $db->prepare("SELECT idPCGA FROM PCGA WHERE numCompte = :numCompte");
+        $q->bindValue ( ':numCompte', $numCompte );
+		$q->execute ();
+		$donnees = $q->fetch ( PDO::FETCH_ASSOC );
+		$q->CloseCursor ();
+        return $donnees['idPCGA'];
+    }
+
     public static function getList() // ramène la liste des comptes
     {
         $db = DbConnect::getDb();

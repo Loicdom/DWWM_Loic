@@ -2,6 +2,8 @@
 //Attribution des variables de session
 $pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : ''; // on mets le pseudo et le rôle dans une variable session pour pouvoir les utiliser sur l'application
 $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
+$annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceComptable'] : '';
+
 ?>
 
 <body>
