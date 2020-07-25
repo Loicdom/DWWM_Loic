@@ -187,6 +187,18 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'visuelFacture', "Visuel facture");
                 break;
             }
+            case 'visuelLigne': {
+                afficherPage('PHP/view/', 'visuelLigne', "Visuel ligne écritures");
+                break;
+            }
+            case 'suppressionEcriture': {
+                afficherPage('PHP/view/', 'suppressionEcriture', "Suppression");
+                break;
+            }
+            case 'suppressionAction': {
+                afficherPage('PHP/view/', 'suppressionAction', "Suppression");
+                break;
+            }
     }
 } else { // Sinon, on affiche la page principale du site
     afficherPageFooterConnexion('PHP/view/', 'formConnexion', "Connexion");

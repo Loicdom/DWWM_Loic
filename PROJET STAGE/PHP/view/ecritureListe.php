@@ -26,10 +26,10 @@ if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a e
             <div class="bloc contenuListe"><?php echo $elt->getLibelleEcriture() ?></div>
             <a href="index.php?action=visuelFacture&j=<?php echo $journal ?>&id=<?php echo $elt->getIdFacture() ?>" class="bloc">
                 <div class="bouton">Voir facture</div>
-            <a href="index.php?action=visuelLigne&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
+            <a href="index.php?action=visuelLigne&j=<?php echo $journal ?>&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
                 <div class="bouton">Voir ligne d'écritures</div>
             </a>
-            <a href="index.php?action=ecritureForm&m=suppr&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
+            <a href="index.php?action=suppressionEcriture&j=<?php echo $journal ?>&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
                 <div class="bouton">Supprimer</div>
             </a>
         </div>

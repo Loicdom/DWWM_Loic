@@ -131,6 +131,8 @@ DbConnect::init();
 // var_dump($m);
 // LigneEcritureManager::update($m);
 
+// $m = LigneEcritureManager::getByIdEcriture(27);
+// var_dump($m);
 
 // // Delete LigneEcritureManager :
 // LigneEcritureManager::delete(2);
