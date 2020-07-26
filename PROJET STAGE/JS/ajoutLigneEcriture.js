@@ -18,6 +18,11 @@ btn_add.addEventListener('click', function () {
         button.classList.add("btn_ecriture1");
         button.textContent = "-";
 
+        var classeComptable = document.getElementById('classComptable');
+        if (classeComptable != null) {
+            button.classList.add("btn_ecriture2");
+        }
+
         button.addEventListener( // le bouton "-" supprime tout le div
             "click", function (e) {
                 add_contenuEcriture.removeChild(e.target.parentElement);
@@ -48,6 +53,11 @@ btn_add.addEventListener('click', function () {
         if (lancementAffichageCompte) {
             lancementAffichageCompte.addEventListener('click', lancement);
         }
+        dateComplet = document.getElementsByName('dateEcriture[]');
+        tailleInput = dateComplet.length;
+        input = document.getElementsByName('credit[]');
+        dernierCredit = input[tailleInput - 1];
+        dernierCredit.addEventListener("input", verifDebitCredit);
     }
 });
 

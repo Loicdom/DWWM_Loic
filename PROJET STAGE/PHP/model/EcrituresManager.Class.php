@@ -47,11 +47,11 @@ class EcrituresManager
         }
     }
 
-    public static function getList($years) // Ramène une liste de toutes les écritures
+    public static function getList($years,$journal) // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();
         $ecritures = [];
-        $q = $db->query("SELECT * FROM Ecritures WHERE idExerciceComptable=$years");
+        $q = $db->query("SELECT * FROM Ecritures WHERE idExerciceComptable=$years AND typeEcriture='$journal'");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $ecritures[] = new Ecritures($donnees);

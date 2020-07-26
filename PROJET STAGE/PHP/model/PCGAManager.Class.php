@@ -134,5 +134,23 @@ class PCGAManager
             echo json_encode($codeEvenementChoix); 
         
         }
+    }
+    
+    static public function ComptesParClasseComptable($choixCode)
+	{
+		$db = DbConnect::getDb(); // Instance de PDO.
+        $q = $db->prepare("SELECT numCompte,libelleCompte FROM PCGA WHERE idClasseComptable = :idClasseComptable");
+        $q->bindValue ( ':idClasseComptable', $choixCode );
+		$q->execute ();
+        
+        if($donnees = $q->fetch(PDO::FETCH_OBJ)) {
+            do {
+                $ClasseComtableChoix[]=$donnees; // on fait un tableau avec les données récolter
+            }
+            while ($donnees = $q->fetch(PDO::FETCH_OBJ));
+        
+            echo json_encode($ClasseComtableChoix); 
+        
+        }
 	}
 }

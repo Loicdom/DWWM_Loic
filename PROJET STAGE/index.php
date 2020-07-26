@@ -72,7 +72,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'deconnect': {
-                afficherPage('PHP/view/', 'formDeconnexion ', "Déconnexion");
+                afficherPage('PHP/view/', 'formDeconnexion', "Déconnexion");
                 break;
             }
         case 'fournisseursListe': {

@@ -1,6 +1,6 @@
 <?php
 $journal= $_GET["j"];
-$ecritures = EcrituresManager::getList($annee); // on récupere le plan comptable (la liste des ecritures)
+$ecritures = EcrituresManager::getList($annee,$journal); // on récupere le plan comptable (la liste des ecritures)
 ?>
 <a href="index.php?action=ecritureForm&j=<?php echo $journal ?>">
     <div class="bouton btn"> Ajouter les lignes</div>
