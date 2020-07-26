@@ -13,6 +13,11 @@ html,body {
     font-family: 'Apple Chancery', cursive;
 }
 
+#btn_co {
+    width: 25%;
+    margin-right: 5vw;
+}
+
 .header {
     display: flex;
     height: 18vh;

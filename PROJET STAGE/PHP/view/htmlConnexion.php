@@ -32,7 +32,7 @@ $annees = ExerciceComptableManager::getList();
 
 
 
-        <input class="bouton" type="submit" value="Valider" />
+        <input class="bouton" id="btn_co" type="submit" value="Valider" />
 
 
     </form>
