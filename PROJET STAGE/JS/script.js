@@ -6,7 +6,7 @@ document.getElementsByTagName("header")[0].addEventListener("click",CacherLesSou
 function MontrersousMenu(e){ // pour les montrer on fait un display flex pour les voir
     CacherLesSousMenus();
     menu = e.target.parentNode;
-    menu.style.borderTop="solid 2px blue"
+    menu.style.borderTop="solid 2px orange"
     submenu= menu.getElementsByClassName("sousMenu")[0];
     submenu.style.display="flex";
 

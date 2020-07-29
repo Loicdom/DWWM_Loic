@@ -429,7 +429,7 @@ nav{
 
 .menu {
     flex: 1;
-    background-color: var(--color-blue2);;
+    background-color: var(--color-blue2);
     padding: 1vw 2vw;
     text-align: center;
     font-size: 1.2em;
@@ -444,7 +444,7 @@ nav{
 .sousMenu a{ 
     text-decoration: none;
     margin-top: 2vh;
-    border-bottom: 1px solid white; 
+    border-bottom: 1px solid var(--color-orange); 
 }
 
 /**************************************** Budget Prévisionnelle **************************************************/
