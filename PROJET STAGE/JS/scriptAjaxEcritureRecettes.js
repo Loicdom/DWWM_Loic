@@ -55,3 +55,14 @@ function affichageCompteParClasse(Numcompte, libelleCompte) {
     }
 }
 
+
+var libelleCompteChoix = document.getElementById('libelleCompteClasse');
+var inputNum = document.getElementById('numCompteClasse');
+libelleCompteChoix.addEventListener('change', function () { affichageDuCompte(inputNum, libelleCompteChoix); });
+
+function affichageDuCompte(Numcompte, libelleCompte) {
+    var choix = libelleCompte.options[libelleCompte.selectedIndex].text;
+    if (choix != "Libellé du compte") {
+        Numcompte.value = libelleCompte.options[libelleCompte.selectedIndex].value;
+    }
+}

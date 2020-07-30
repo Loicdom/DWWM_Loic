@@ -18,6 +18,10 @@ btn_add.addEventListener('click', function () {
         button.classList.add("btn_ecriture1");
         button.textContent = "-";
 
+        var numCompteVide = document.getElementsByName("numCompte[]");
+        var aVider = numCompteVide[1];
+        aVider.value = "";
+
         var classeComptable = document.getElementById('classComptable');
         if (classeComptable != null) {
             button.classList.add("btn_ecriture2");

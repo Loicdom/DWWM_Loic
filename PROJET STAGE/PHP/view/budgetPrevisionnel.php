@@ -1,5 +1,6 @@
 <?php
-
+$journal = $_GET["j"];
+$ecritures = EcrituresManager::getList($annee, $journal); 
 $budgetsPrev = BudgetsManager::getList();  // Ramène la liste des budgets
 ?>
 

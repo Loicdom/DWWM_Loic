@@ -661,3 +661,36 @@ h1 {
 .btn_ecriture2 {
     margin-top: 4vw;
 }
+
+/************************************** Montant départ **********************************/
+
+.div_montantDepart {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.form_montantDepart {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-orange);
+    margin-top: 6vh;
+}
+
+.btnDep {
+    margin-right: 5vw;
+    width: 15%;
+    margin-top: 6vh;
+}
+
+.inputform_montantDepart {
+    width: 20%;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 1vw;
+}
+
+.div_lettrage {
+    display: flex;
+}

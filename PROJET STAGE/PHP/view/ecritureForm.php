@@ -209,10 +209,10 @@ $ExerciceComptable = ExerciceComptableManager::getById($annee);
     <a href="index.php?action=ecritureListe&j=<?php echo $journal ?>">
         <div class="bouton btn">Retour</div>
     </a>
-    <?php } else if ($journal == "banque") { ?>
+    <?php } else if ($journal == "banque" || $journal == "caisse") { ?>
 
 <div class="formulaire_ecriture">
-    <form action="index.php?action=ecritureAction&j=<?php echo $journal ?>" method="POST" enctype="multipart/form-data">
+    <form action="index.php?action=ecritureAction&j=<?php echo $journal ?>" method="POST">
         <div class="contenuEcriture">
             <div class="div_ecriture">
                 <input class="inputForm_ecritureDate" id="dateEcriture" type="date" name="dateEcriture[]" min="<?php echo $ExerciceComptable->getLibelleExercice() ?>-01-01" max="<?php echo $ExerciceComptable->getLibelleExercice() ?>-12-31" placeholder="Date de l'écriture" required autofocus></div>
@@ -245,7 +245,7 @@ $ExerciceComptable = ExerciceComptableManager::getById($annee);
                 <input class="inputform_ecriture" type="number" step="0.01" name="debit[]" placeholder="Montant au débit">
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="number" step="0.01" id="dernierCredit" name="credit[]" placeholder="Montant au crédit">
+                <input class="inputform_ecriture" type="number" step="0.01" name="credit[]" placeholder="Montant au crédit">
             </div>
             <div class="div_ecriture">
             </div>
@@ -264,10 +264,10 @@ $ExerciceComptable = ExerciceComptableManager::getById($annee);
                 </select>
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="text" id="numComteEvt" name="numCompte[]" placeholder="Numéro du compte" required>
+                <input class="inputform_ecriture" type="text" id="numCompteClasse" name="numCompte[]" placeholder="Numéro du compte" required>
             </div>
             <div class="div_ecriture">
-                <select name="libelleCompte[]" id="libelleCompteEvt" class="select_ecriture_compteEvent">
+                <select name="libelleCompte[]" id="libelleCompteClasse" class="select_ecriture_compteEvent">
                     <option value="">Libellé du compte</option>
                     <?php
                     foreach ($comptes as $elmt) {
@@ -282,7 +282,7 @@ $ExerciceComptable = ExerciceComptableManager::getById($annee);
                 <input class="inputform_ecriture" type="number" step="0.01" name="debit[]" placeholder="Montant au débit">
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="number" step="0.01" name="credit[]" placeholder="Montant au crédit">
+                <input class="inputform_ecriture" type="number" step="0.01" name="credit[]" id="dernierCredit" placeholder="Montant au crédit">
             </div>
             <div class="div_ecriture">
                 <button class="btn_ecriture" name="btn_ecriture[]" id="btn_add" data-nbre="0" data-max="8">+</button>

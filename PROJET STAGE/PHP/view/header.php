@@ -44,14 +44,14 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
                 <div class="sousMenu">
                     <div><a href="#">Visuel par comptes</a></div>
                     <div><a href="index.php?action=planComptableListe">Plan comptable</a></div>
-                    <div><a href="#">Lettrage</a></div>
+                    <div><a href="index.php?action=lettrage">Lettrage</a></div>
                     <div><a href="https://www.creditmutuel.fr/fr/authentification.html" target="_blank">Crédit Mutuel</a></div>
                 </div>
             </div>
             <div class="menu"><a href="#">Budget</a>
                 <div class="sousMenu">
                     <div><a href="#">Budget actuel</a></div>
-                    <div><a href="index.php?action=budgetPrevisionnel">Budget prévisionnel</a></div>
+                    <div><a href="index.php?action=budgetPrevisionnel&j=budgetPrev">Budget prévisionnel</a></div>
                 </div>
             </div>
             <div class="menu"><a href="#">Impressions</a>

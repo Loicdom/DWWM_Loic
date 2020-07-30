@@ -23,7 +23,7 @@ else // On check le mot de passe
             $_SESSION['idExerciceComptable'] = $_POST['idExerciceComptable'];
             $_SESSION['id'] = $utilisateur->getIdUser();
             $message = '<p>Bienvenue ' . $utilisateur->getPseudo() . ', vous êtes maintenant connecté!</p>';
-            header("refresh:2,url=index.php?action=tableauBord");?>
+            header("refresh:2,url=index.php?action=montantDepart");?>
 		<?php }
     else // Acces pas OK !
         {

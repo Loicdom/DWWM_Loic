@@ -25,7 +25,7 @@ if ($typeEcriture == "charges" || $typeEcriture == "recettes") {
         $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
         if (move_uploaded_file($_FILES['facture']['tmp_name'], $dossier . $fichier)) //correct si la fonction renvoie TRUE
         {
-            echo 'Enregistement effectué avec succès !';
+            echo 'Enregistement de la facture effectué avec succès !';
             $chemin = $dossier . $fichier;
             $q = FacturesManager::add($libelleFacture, $chemin);
         } else //sinon, cas où la fonction renvoie FALSE
@@ -70,5 +70,5 @@ for ($i = 0; $i < $taille; $i++) {
     $ligne = new LigneEcriture(["montant" => $montant, "sens" => $sens, "idEcriture" => $idEcriture, "idPCGA" => $idPCGA]);
     LigneEcritureManager::add($ligne);
 }
-
+echo 'Enregistement effectué avec succès !';
 header("refresh:2,url=index.php?action=ecritureListe&j=$typeEcriture"); // renvoi vers ecriture liste, juste après avoir exécuter la page

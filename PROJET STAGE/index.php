@@ -67,6 +67,14 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'tableauBord', "Tableau de bord");
                 break;
             }
+            case 'montantDepart': {
+                afficherPage('PHP/view/', 'montantDepart', "Montant banque et caisse");
+                break;
+            }
+            case 'montantDepartAction': {
+                afficherPage('PHP/view/', 'montantDepartAction', "Montant banque et caisse");
+                break;
+            }
         case 'connect': {
                 afficherPageFooterConnexion('PHP/view/', 'formConnexion', "Connexion");
                 break;
@@ -197,6 +205,10 @@ if (isset($_GET['action'])) {
             }
             case 'suppressionAction': {
                 afficherPage('PHP/view/', 'suppressionAction', "Suppression");
+                break;
+            }
+            case 'lettrage': {
+                afficherPage('PHP/view/', 'lettrage', "lettrage");
                 break;
             }
     }
