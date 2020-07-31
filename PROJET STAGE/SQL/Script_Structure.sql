@@ -203,9 +203,6 @@ ALTER TABLE Ecritures ADD CONSTRAINT Ecritures_Factures_FK FOREIGN KEY (idFactur
 ALTER TABLE Ecritures ADD CONSTRAINT Ecritures_ExerciceComptable0_FK FOREIGN KEY (idExerciceComptable) REFERENCES ExerciceComptable(idExerciceComptable)
 
 CREATE VIEW ecrituresComptable AS SELECT
-    factures.idFacture,
-    factures.libelleFact,
-    factures.enregFact,
     exercicecomptable.idExerciceComptable,
     exercicecomptable.libelleExercice,
     ecritures.idEcriture,
@@ -224,12 +221,11 @@ CREATE VIEW ecrituresComptable AS SELECT
     ligneecriture.montant,
     ligneecriture.sens
 FROM
-    factures,
     exercicecomptable,
     ecritures,
     classecomptable,
     pcga,
     ligneecriture
 WHERE
-    factures.idFacture = ecritures.idFacture AND exercicecomptable.idExerciceComptable = ecritures.idExerciceComptable AND ecritures.idEcriture = ligneecriture.idEcriture AND classecomptable.idClasseComptable = pcga.idClasseComptable AND pcga.idPCGA = ligneecriture.idPCGA; 
+    exercicecomptable.idExerciceComptable = ecritures.idExerciceComptable AND ecritures.idEcriture = ligneecriture.idEcriture AND classecomptable.idClasseComptable = pcga.idClasseComptable AND pcga.idPCGA = ligneecriture.idPCGA; 
 	

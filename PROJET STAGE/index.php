@@ -36,6 +36,14 @@ function afficherPageEcriture($chemin, $page, $titre)
     require 'PHP/view/footerEcriture.php';
 }
 
+function afficherPagefooterVisuelCompte($chemin, $page, $titre)
+{
+    require  'PHP/view/head.php';
+    require  'PHP/view/header.php';
+    require $chemin . $page . '.php';
+    require 'PHP/view/footerVisuelCompte.php';
+}
+
 function afficherPageFooterConnexion($chemin, $page, $titre)
 {
     require  'PHP/view/head.php';
@@ -215,8 +223,16 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'lettrageForm', "Lettrage");
                 break;
             }
-            case 'lettrageAction': {
+        case 'lettrageAction': {
                 afficherPage('PHP/view/', 'lettrageAction', "Lettrage");
+                break;
+            }
+        case 'visuelParCompteDate': {
+            afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompteDate', "Choix des dates");
+                break;
+            }
+        case 'visuelParCompte': {
+            afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompte', "Visuel par choix comptes");
                 break;
             }
     }

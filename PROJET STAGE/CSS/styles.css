@@ -753,3 +753,32 @@ h1 {
     padding-bottom: 2vh;
     align-self: center;
 }
+
+/********************************* Visuel comptes **************************************/
+
+#submit_visuelCompte {
+    margin-bottom: -5vh;
+    margin-right: 5vw; 
+}
+
+.inputForm_visuelCompte {
+    padding: 1vw;
+    font-size: 1.2em;
+}
+
+.inputForm_visuelCompte1 {
+    padding: 0.5vw;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+#informationVisuelCompte {
+    align-self: center;
+    font-size: 2em;
+    padding: 1vw;
+}
+
+.select_visuel_compte {
+    padding: 1.5vw;
+    margin-bottom: 2vh;
+}
