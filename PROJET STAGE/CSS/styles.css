@@ -691,6 +691,65 @@ h1 {
     padding: 1vw;
 }
 
+/*********************************** Lettrage ****************************************/
+
 .div_lettrage {
     display: flex;
+    margin-bottom: 2vh;
+}
+
+.form_lettrage {
+    flex: 1;
+    align-self: center;
+    color: var(--color-orange);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.inputForm_lettrage {
+    flex: 3.3;
+    padding: 0.5vw;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.select_lettrage {
+    padding: 0.5vw;
+    flex: 1;
+    font-size: 1.2em;
+}
+
+.btn_lettrage {
+    width: 10%;
+    margin-left: 44vw;
+}
+
+#submit_Lettrage {
+    margin-bottom: -5vh;
+}
+
+.contenu_Lettrage {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulaire_lettrage {
+    flex: 1;
+    margin-bottom: 8vh;
+    text-align: center;
+    margin-top: -5vh;
+}
+
+.h1_lettrage {
+    text-decoration: none;
+}
+
+.divTitreLettrage {
+    flex: 1;
+    text-align: center;
+    background-color:var(--color-orange);
+    color: var( --color-jaune);
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    align-self: center;
 }

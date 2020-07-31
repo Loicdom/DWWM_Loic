@@ -25,7 +25,7 @@ if ($typeEcriture == "charges" || $typeEcriture == "recettes") {
         $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
         if (move_uploaded_file($_FILES['facture']['tmp_name'], $dossier . $fichier)) //correct si la fonction renvoie TRUE
         {
-            echo 'Enregistement de la facture effectué avec succès !';
+            echo 'Enregistement de la facture effectué avec succès !</br>';
             $chemin = $dossier . $fichier;
             $q = FacturesManager::add($libelleFacture, $chemin);
         } else //sinon, cas où la fonction renvoie FALSE

@@ -82,13 +82,26 @@ class EcrituresComptableManager
     public static function getList()
     {
         $db = DbConnect::getDb();
-        $EcrituresComptable = [];
+        $ecrituresComptable = [];
         $q = $db->query("SELECT * FROM EcrituresComptable");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
-                $EcrituresComptable[] = new EcrituresComptable($donnees);
+                $ecrituresComptable[] = new EcrituresComptable($donnees);
             }
         }
-        return $EcrituresComptable;
+        return $ecrituresComptable;
+    }
+
+    public static function getListLettrage($date1,$date2,$typeEcriture) // Ramène une liste de toutes les écritures
+    {
+        $db = DbConnect::getDb();
+        $ecrituresComptable = [];
+        $q = $db->query("SELECT * FROM `ecriturescomptable` WHERE `typeEcriture` LIKE '$typeEcriture' AND `dateEcriture` BETWEEN '$date1' AND '$date2' AND idClasseComptable = 4");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
+                $ecrituresComptable[] = new EcrituresComptable($donnees);
+            }
+        }
+        return $ecrituresComptable;
     }
 }

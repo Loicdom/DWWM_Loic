@@ -41,9 +41,11 @@ function verifDebitCredit() { // a revoir la somme ne marche pas
         montantsCredit = montantsCredit[i];
         if(montantsDebit.value != '') {
             sommeDebit = parseFloat(sommeDebit) + parseFloat(montantsDebit.valueAsNumber);
+            sommeDebit = sommeDebit.toFixed(2);
         }
         if(montantsCredit.value != '') {
             sommeCredit = parseFloat(sommeCredit) + parseFloat(montantsCredit.valueAsNumber);
+            sommeCredit = sommeCredit.toFixed(2);
         }
     }
     if (sommeDebit == sommeCredit) {

@@ -267,26 +267,15 @@ DbConnect::init();
 //     echo $info->toString();
 // }
 
-//*********************************Budgets**************************** *//
 
-// // ADD BudgetsManager :
-// $m = new Budgets(["fournitureAtelierCreatif"=>1340,"atelierCuisineGouter"=>1100,"petitMateriel"=>123,"salaireEmploye"=>1400,"assurance"=>652,"fraisPostauxTel"=>5900,"entretienMaterielJadin"=>12,"produitEntretien"=>123,"fraisBancaires"=>42,"ursaff"=>126,"subvMunicipale"=>17000,"participationFamille"=>240,"produitManif"=>1800,"anniversaire"=>2480,"adhesion"=>170,"participationIME"=>240]);
-// var_dump($m);
-// BudgetsManager::add($m);
+/*********************************** VUE EcritureComptable ********************************/
 
-// // Update BudgetsManager :
-// $m = BudgetsManager::getById(2);
-// $m->setAtelierCuisineGouter(1234);
-// var_dump($m);
-// BudgetsManager::update($m);
-
-
-// // Delete BudgetsManager :
-// BudgetsManager::delete(2);
-
-// // GetList BudgetsManager :
-// $tableau = BudgetsManager::getList();
+// // getListLettrage EcritureComptable :
+// $datemini = '2020-02-01';
+// $datemax = '2020-04-30';
+// $type = 'charges';
+// $tableau = EcrituresComptableManager::getListLettrage($datemini,$datemax,$type);
 // foreach ($tableau as $info)
 // {
-//     echo $info->toString();
+//     echo $info->toString().'</br>';
 // }

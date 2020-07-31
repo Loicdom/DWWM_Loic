@@ -67,11 +67,11 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'tableauBord', "Tableau de bord");
                 break;
             }
-            case 'montantDepart': {
+        case 'montantDepart': {
                 afficherPage('PHP/view/', 'montantDepart', "Montant banque et caisse");
                 break;
             }
-            case 'montantDepartAction': {
+        case 'montantDepartAction': {
                 afficherPage('PHP/view/', 'montantDepartAction', "Montant banque et caisse");
                 break;
             }
@@ -84,15 +84,15 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'fournisseursListe': {
-            afficherPageFournisseur('PHP/view/', 'fournisseursListe', "Liste des fournisseurs");
+                afficherPageFournisseur('PHP/view/', 'fournisseursListe', "Liste des fournisseurs");
                 break;
             }
         case 'fournisseursForm': {
-            afficherPageFournisseur('PHP/view/', 'fournisseursForm', "Fournisseur");
+                afficherPageFournisseur('PHP/view/', 'fournisseursForm', "Fournisseur");
                 break;
             }
         case 'fournisseursAction': {
-            afficherPageFournisseur('PHP/view/', 'fournisseursAction', "");
+                afficherPageFournisseur('PHP/view/', 'fournisseursAction', "");
                 break;
             }
         case 'bureau': {
@@ -195,20 +195,28 @@ if (isset($_GET['action'])) {
                 afficherPage('PHP/view/', 'visuelFacture', "Visuel facture");
                 break;
             }
-            case 'visuelLigne': {
+        case 'visuelLigne': {
                 afficherPage('PHP/view/', 'visuelLigne', "Visuel ligne écritures");
                 break;
             }
-            case 'suppressionEcriture': {
+        case 'suppressionEcriture': {
                 afficherPage('PHP/view/', 'suppressionEcriture', "Suppression");
                 break;
             }
-            case 'suppressionAction': {
+        case 'suppressionAction': {
                 afficherPage('PHP/view/', 'suppressionAction', "Suppression");
                 break;
             }
-            case 'lettrage': {
-                afficherPage('PHP/view/', 'lettrage', "lettrage");
+        case 'lettrage': {
+                afficherPage('PHP/view/', 'lettrage', "Lettrage");
+                break;
+            }
+        case 'lettrageForm': {
+                afficherPage('PHP/view/', 'lettrageForm', "Lettrage");
+                break;
+            }
+            case 'lettrageAction': {
+                afficherPage('PHP/view/', 'lettrageAction', "Lettrage");
                 break;
             }
     }
