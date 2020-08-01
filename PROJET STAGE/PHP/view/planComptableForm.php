@@ -38,7 +38,7 @@ if ($mode != "ajout") { // si différent d'ajout je recupère l'idclasseComptabl
 }
 echo '          </div> ';
 echo '          <div class="centrer">
-                <button class="bouton" id="submit" type="submit">';
+                <button class="bouton btnPlanComptable" id="submit" type="submit">';
 switch ($mode) {
     case "ajout":
         echo 'Ajouter'; // on change le bouton en fonction du mode
@@ -55,5 +55,5 @@ echo '          </button>
             </form>
         </div>';
 echo ' <a href="index.php?action=planComptableListe">
-        <div class="bouton btn">Retour</div>
+        <div class="bouton" id="btnRetourPlanComp">Retour</div>
     </a>';

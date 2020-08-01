@@ -8,10 +8,10 @@ $comptes = PCGAManager::getList();
         <div class="div_lettrage">
             <label class="form_lettrage" for="date1">De</label>
             <input class="inputForm_visuelCompte" type="date" name="date1" min="<?php echo $exerciceComptable->getLibelleExercice() ?>-01-01" max="<?php echo $exerciceComptable->getLibelleExercice() ?>-12-31" required autofocus>
-            <i class="far fa-question-circle" id="informationVisuelCompte" title="Choix d'une classe pour tout les comptes de cette classe (si il faut un compte en particulier choisir un compte dans libellé correspondant à la classe)"></i>
+            <i class="far fa-question-circle" id="informationVisuelCompte" title="Choisir une classe pour voir tout les comptes de cette classe. (Si il faut un compte en particulier choisir un compte dans libellé correspondant à la classe avec le numéro de compte qui s'affiche)"></i>
         </div>
         <div class="div_lettrage">
-            <label class="form_lettrage" for="date1">A</label>
+            <label class="form_lettrage" for="date2">A</label>
             <input class="inputForm_visuelCompte" type="date" name="date2" min="<?php echo $exerciceComptable->getLibelleExercice() ?>-01-01" max="<?php echo $exerciceComptable->getLibelleExercice() ?>-12-31" required>
         </div>
         <div class="div_ecriture">
@@ -24,7 +24,7 @@ $comptes = PCGAManager::getList();
                     </select>
                     </div>
                 <div class="div_ecriture">
-                    <input class="inputForm_visuelCompte1" type="text" id="numCompte" name="numCompte[]" placeholder="Numéro du compte">
+                    <input class="inputForm_visuelCompte1" type="text" id="numCompte" name="numCompte" placeholder="Numéro du compte">
                 </div>
                 <div class="div_ecriture">
                     <select name="libelleCompte" id="libelleCompte" class="select_visuel_compte">
@@ -41,5 +41,5 @@ $comptes = PCGAManager::getList();
     </form>
 </div>
 <a  href="index.php?action=tableauBord">
-    <div class="bouton btn_lettrage">Retour</div>
+    <div class="bouton btn_visuelCompte">Retour</div>
 </a>

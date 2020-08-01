@@ -60,6 +60,19 @@ class EcrituresManager
         return $ecritures;
     }
 
+    public static function getListIdFact($date1,$date2) // Ramène une liste de toutes les écritures
+    {
+        $db = DbConnect::getDb();
+        $ecritures = [];
+        $q = $db->query("SELECT * FROM Ecritures WHERE `dateEcriture` BETWEEN '$date1' AND '$date2'");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
+                $ecritures[] = new Ecritures($donnees);
+            }
+        }
+        return $ecritures;
+    }
+
     Public static function getMaxIdEcriture(){
         //--- Récupérer le dernier id dans une table ---//
         $db = DbConnect::getDb();

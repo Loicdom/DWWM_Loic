@@ -104,4 +104,30 @@ class EcrituresComptableManager
         }
         return $ecrituresComptable;
     }
+
+    public static function getListVisuelParClasse($date1,$date2,$classeComptable) // Ramène une liste de toutes les écritures
+    {
+        $db = DbConnect::getDb();
+        $ecrituresComptable = [];
+        $q = $db->query("SELECT * FROM `ecriturescomptable` WHERE `dateEcriture` BETWEEN '$date1' AND '$date2' AND idClasseComptable = $classeComptable");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
+                $ecrituresComptable[] = new EcrituresComptable($donnees);
+            }
+        }
+        return $ecrituresComptable;
+    }
+
+    public static function getListVisuelParCompte($date1,$date2,$numcompte) // Ramène une liste de toutes les écritures
+    {
+        $db = DbConnect::getDb();
+        $ecrituresComptable = [];
+        $q = $db->query("SELECT * FROM `ecriturescomptable` WHERE `dateEcriture` BETWEEN '$date1' AND '$date2' AND `numCompte` LIKE '$numcompte' ORDER BY `dateEcriture` ASC");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
+                $ecrituresComptable[] = new EcrituresComptable($donnees);
+            }
+        }
+        return $ecrituresComptable;
+    }
 }

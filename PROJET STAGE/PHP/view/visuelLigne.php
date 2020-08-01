@@ -35,8 +35,8 @@ if (!empty($ligne)) { //Si rien dans ecritures on affiche pas se qu'il y a en de
                                                     echo $elt->getMontant();
                                                 } ?></div>
             </div>
-        <?php } ?>
-    <?php } ?>
+        <?php } 
+     } ?>
 
     <a href="index.php?action=ecritureListe&j=<?php echo $journal ?>">
         <div class="bouton">Retour</div>

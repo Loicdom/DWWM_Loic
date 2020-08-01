@@ -88,7 +88,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'deconnect': {
-                afficherPage('PHP/view/', 'formDeconnexion', "Déconnexion");
+            afficherPageFooterConnexion('PHP/view/', 'formDeconnexion', "Déconnexion");
                 break;
             }
         case 'fournisseursListe': {
@@ -228,11 +228,19 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'visuelParCompteDate': {
-            afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompteDate', "Choix des dates");
+                afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompteDate', "Choix des dates");
                 break;
             }
         case 'visuelParCompte': {
-            afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompte', "Visuel par choix comptes");
+                afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompte', "Visuel par choix comptes");
+                break;
+            }
+        case 'dateImpresFact': {
+                afficherPage('PHP/view/', 'dateImpresFact', "Choix dates pour impression");
+                break;
+            }
+        case 'factureImpression': {
+                afficherPageImpression('PHP/view/', 'factureImpression', "Impression factures");
                 break;
             }
     }

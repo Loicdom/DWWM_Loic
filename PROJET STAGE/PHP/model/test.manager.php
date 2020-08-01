@@ -279,3 +279,20 @@ DbConnect::init();
 // {
 //     echo $info->toString().'</br>';
 // }
+
+// $type = 4;
+// $tableau = EcrituresComptableManager::getListVisuelParClasse($type);
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString().'</br>';
+// }
+
+// // getListLettrage EcritureComptable :
+// $datemini = '2020-11-01';
+// $datemax = '2020-12-01';
+// $numCompteChoix = '53';
+// $tableau = EcrituresComptableManager::getListVisuelParCompte($datemini,$datemax,$numCompteChoix);
+// foreach ($tableau as $info)
+// {
+//     echo $info->toString().'</br>';
+// }
