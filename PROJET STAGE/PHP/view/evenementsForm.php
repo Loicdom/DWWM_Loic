@@ -27,7 +27,7 @@ if ($mode != "ajout") {
 echo '          >
         </div> ';
 echo '          <div class="centrer">
-                <button class="bouton" id="submit" type="submit">';
+                <button class="bouton btn_four" id="submit" type="submit">';
 switch ($mode) { // on change le bouton en fonction du mode 
     case "ajout":
         echo 'Ajouter';

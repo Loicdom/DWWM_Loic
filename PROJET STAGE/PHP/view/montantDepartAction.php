@@ -19,7 +19,7 @@ for ($i = 0; $i <= 1; $i++) {
     }
     
     // // ADD LigneEcriture :
-    $ligne = new LigneEcriture(["montant" => $montant, "sens" => "Crédit", "idEcriture" => $idEcriture, "idPCGA" => $idPCGA]);
+    $ligne = new LigneEcriture(["montant" => $montant, "sens" => "Débit", "idEcriture" => $idEcriture, "idPCGA" => $idPCGA]);
     LigneEcritureManager::add($ligne);
 }
 

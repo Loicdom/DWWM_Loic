@@ -39,5 +39,5 @@ if (!empty($ligne)) { //Si rien dans ecritures on affiche pas se qu'il y a en de
      } ?>
 
     <a href="index.php?action=ecritureListe&j=<?php echo $journal ?>">
-        <div class="bouton">Retour</div>
+        <div class="bouton btn_visuel_ligne">Retour</div>
     </a>

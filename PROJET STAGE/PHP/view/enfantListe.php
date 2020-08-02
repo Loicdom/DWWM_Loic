@@ -3,7 +3,7 @@
 $enfants = PersonnesManager::getListByEnfant();
 ?>
 <a href="index.php?action=enfantForm&m=ajout">
-    <div class="bouton btn"> Ajouter un enfant</div>
+    <div class="bouton btn_retour_enfant"> Ajouter un enfant</div>
 </a>
 
 <?php
@@ -59,6 +59,6 @@ if (!empty($enfants)) { //Si rien dans comptes on affiche pas se qu'il y a en de
         ?>
 <?php } ?>
     <a href="index.php?action=tableauBord">
-        <div class="bouton btn">Retour</div>
+        <div class="bouton btn_retour_benevole">Retour</div>
     </a>
     <!-- le bouton retour permet de retourner au tableau de bord -->

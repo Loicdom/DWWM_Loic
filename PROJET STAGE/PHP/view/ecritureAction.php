@@ -9,7 +9,6 @@ if ($typeEcriture == "charges" || $typeEcriture == "recettes") {
     $extension = strrchr($_FILES['facture']['name'], '.');
     $libelleFacture = $_POST['libelleEcriture'][0];
 
-
     //Début des vérifications de sécurité...
     if (!in_array($extension, $format)) //Si le fichier n'est pas d'un bon format
     {
@@ -25,8 +24,8 @@ if ($typeEcriture == "charges" || $typeEcriture == "recettes") {
         $fichier = preg_replace('/([^.a-z0-9]+)/i', '-', $fichier);
         if (move_uploaded_file($_FILES['facture']['tmp_name'], $dossier . $fichier)) //correct si la fonction renvoie TRUE
         {
-            echo 'Enregistement de la facture effectué avec succès !</br>';
             $chemin = $dossier . $fichier;
+            echo 'Facture enregistrée avec succès';
             $q = FacturesManager::add($libelleFacture, $chemin);
         } else //sinon, cas où la fonction renvoie FALSE
         {
@@ -39,7 +38,6 @@ if ($typeEcriture == "charges" || $typeEcriture == "recettes") {
 if ($typeEcriture == "charges" || $typeEcriture == "recettes") {
     $idFact = FacturesManager::getMaxIdFacture();
 }
-$typeEcriture = $_GET["j"];
 $dateEcriture = $_POST['dateEcriture'][0];
 $libelleEcriture = $_POST['libelleEcriture'][0];
 // // ADD Ecriture :
@@ -70,5 +68,6 @@ for ($i = 0; $i < $taille; $i++) {
     $ligne = new LigneEcriture(["montant" => $montant, "sens" => $sens, "idEcriture" => $idEcriture, "idPCGA" => $idPCGA]);
     LigneEcritureManager::add($ligne);
 }
-echo 'Enregistement effectué avec succès !';
+
 header("refresh:2,url=index.php?action=ecritureListe&j=$typeEcriture"); // renvoi vers ecriture liste, juste après avoir exécuter la page
+?>

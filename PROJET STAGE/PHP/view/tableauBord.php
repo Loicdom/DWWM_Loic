@@ -12,6 +12,6 @@
             </div>
         </div>
         <a href="https://www.creditmutuel.fr/fr/authentification.html" target="_blank">
-            <div class="bouton">Lien vers le Crédit Mutuel</div>
+            <div class="bouton btn_CreditMut">Lien vers le Crédit Mutuel</div>
         </a>
     </div>

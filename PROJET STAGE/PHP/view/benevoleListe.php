@@ -54,5 +54,5 @@ if (!empty($bénévoles)) { //Si rien dans comptes on imprime pas se qu'il y a e
         <?php } ?>
 <?php } ?>
     <a href="index.php?action=tableauBord">
-        <div class="bouton btn">Retour</div>
+        <div class="bouton btn_retour_benevole">Retour</div>
     </a>

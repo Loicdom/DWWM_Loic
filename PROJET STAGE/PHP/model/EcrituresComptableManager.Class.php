@@ -83,7 +83,7 @@ class EcrituresComptableManager
     {
         $db = DbConnect::getDb();
         $ecrituresComptable = [];
-        $q = $db->query("SELECT * FROM EcrituresComptable");
+        $q = $db->query("SELECT * FROM EcrituresComptable WHERE typeEcriture = 'budgetPrev'");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $ecrituresComptable[] = new EcrituresComptable($donnees);
@@ -129,5 +129,17 @@ class EcrituresComptableManager
             }
         }
         return $ecrituresComptable;
+    }
+
+    public static function getBybudget($years, $numcompte)
+    {
+        $db = DbConnect::getDb();
+        $q = $db->query("SELECT * FROM EcrituresComptable WHERE `numCompte` LIKE '$numcompte' AND typeEcriture = 'budgetPrev' AND idExerciceComptable=$years");
+        $results = $q->fetch(PDO::FETCH_ASSOC);
+        if ($results != false) {
+            return new EcrituresComptable($results);
+        } else {
+            return false;
+        }
     }
 }

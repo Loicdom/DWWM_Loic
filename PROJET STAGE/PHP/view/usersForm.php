@@ -48,7 +48,7 @@ if ($mode == "suppr") {
 echo '          >
         </div> ';
 echo '          <div class="centrer">
-                <button class="bouton" id="submit" type="submit">';
+                <button class="bouton btn_four" id="submit" type="submit">';
 switch ($mode) {
     case "ajout":
         echo 'Ajouter';
