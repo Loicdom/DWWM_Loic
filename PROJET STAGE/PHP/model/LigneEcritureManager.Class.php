@@ -56,6 +56,18 @@ class LigneEcritureManager
         return $ligneComptable;
     }
 
+    public static function getByIdEcritureNumcompte($idEcriture,$idPCGA) // Ramène un compte en particulier (avec l'idEriture')
+    {
+        $db = DbConnect::getDb();
+        $q = $db->query("SELECT * FROM LigneEcriture WHERE idEcriture=$idEcriture AND idPCGA=$idPCGA");
+        $results = $q->fetch(PDO::FETCH_ASSOC);
+        if ($results != false) {
+            return new LigneEcriture($results);
+        } else {
+            return false;
+        }
+    }
+
     public static function getList() //Ramène la liste de toutes les lignes d'écritures
     {
         $db = DbConnect::getDb();

@@ -1,7 +1,4 @@
 <?php
-
-use Automattic\WooCommerce\Blocks\RestApi\Controllers\Variations;
-
 $typeEcriture = $_GET["j"];
 $libelleAnnee = ExerciceComptableManager::getById($annee);
 $date = $libelleAnnee->getLibelleExercice()."/01/01";

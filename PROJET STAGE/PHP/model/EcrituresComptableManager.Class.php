@@ -92,7 +92,7 @@ class EcrituresComptableManager
         return $ecrituresComptable;
     }
 
-    public static function getListLettrage($date1,$date2,$typeEcriture) // Ramène une liste de toutes les écritures
+    public static function getListLettrage($date1, $date2, $typeEcriture) // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();
         $ecrituresComptable = [];
@@ -105,7 +105,7 @@ class EcrituresComptableManager
         return $ecrituresComptable;
     }
 
-    public static function getListVisuelParClasse($date1,$date2,$classeComptable) // Ramène une liste de toutes les écritures
+    public static function getListVisuelParClasse($date1, $date2, $classeComptable) // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();
         $ecrituresComptable = [];
@@ -118,7 +118,7 @@ class EcrituresComptableManager
         return $ecrituresComptable;
     }
 
-    public static function getListVisuelParCompte($date1,$date2,$numcompte) // Ramène une liste de toutes les écritures
+    public static function getListVisuelParCompte($date1, $date2, $numcompte) // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();
         $ecrituresComptable = [];

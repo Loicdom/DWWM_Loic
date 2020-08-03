@@ -56,11 +56,11 @@ if (!empty($budgets)) { //Si rien dans fournisseurs on affiche pas se qu'il y a 
                 <div class="blocColonne"><?php $budgetsPrev = EcrituresComptableManager::getBybudget($annee, '7063'); echo $budgetsPrev->getMontant() ?></div>
                 <div class="blocColonne"><?php $budgetsPrev = EcrituresComptableManager::getBybudget($annee, '756'); echo $budgetsPrev->getMontant() ?></div>
                 <div class="blocColonne"><?php $budgetsPrev = EcrituresComptableManager::getBybudget($annee, '7064'); echo $budgetsPrev->getMontant() ?></div>
-                <a href="index.php?action=budgetPrevisionnelForm&m=modif>" class="bloc">
-                    <div class="bouton ">Modifier</div>
+                <a href="index.php?action=budgetPrevisionnelForm&m=modif" class="bloc">
+                    <div class="bouton btn_prev ">Modifier</div>
                 </a>
                 <a href="index.php?action=budgetPrevisionnelForm&m=suppr" class="bloc">
-                    <div class="bouton enColonne">Supprimer</div>
+                    <div class="bouton enColonne btn_prev">Supprimer</div>
                 </a>
             </div>
     </div>

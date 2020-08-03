@@ -47,7 +47,7 @@ class EcrituresManager
         }
     }
 
-    public static function getList($years,$journal) // Ramène une liste de toutes les écritures
+    public static function getList($years, $journal) // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();
         $ecritures = [];
@@ -60,7 +60,21 @@ class EcrituresManager
         return $ecritures;
     }
 
-    public static function getListIdFact($date1,$date2) // Ramène une liste de toutes les écritures
+    public static function getByIdparType($years) // Ramène un compte en particulier (avec l'idEriture')
+    {
+        $db = DbConnect::getDb();
+        $ligneComptable = [];
+        $q = $db->query("SELECT idEcriture FROM Ecritures WHERE typeEcriture='budgetPrev' AND idExerciceComptable=$years");
+        $results = $q->fetch(PDO::FETCH_ASSOC);
+        if ($results != false) {
+            return new Ecritures($results);
+        } else {
+            return false;
+        }
+    }
+
+
+    public static function getListIdFact($date1, $date2) // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();
         $ecritures = [];
@@ -73,7 +87,8 @@ class EcrituresManager
         return $ecritures;
     }
 
-    Public static function getMaxIdEcriture(){
+    public static function getMaxIdEcriture()
+    {
         //--- Récupérer le dernier id dans une table ---//
         $db = DbConnect::getDb();
         $max = $db->query('SELECT MAX(idEcriture) id FROM Ecritures');
