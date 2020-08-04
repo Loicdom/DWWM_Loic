@@ -886,3 +886,26 @@ h1 {
     border: 1px solid var(--color-orange);
     padding: 1vw;
 }
+
+/**************************************** Pour ajout d'une ville *****************************************/
+
+.ajoutVille {
+    text-align: center;
+    text-decoration: none;
+    margin-right: 0.5vw;
+    margin-top: 1vw;
+    border: 1px solid var(--color-blue2);
+    border-radius: 10px;
+    background-color: var(--color-orange);
+    width: 28%;
+    margin-left: 71.5%;
+}
+
+.btn_Ville {
+    width: 15%;
+    margin-left: 42%;
+}
+
+.bouton_ville {
+    margin-right: 9.5vw;
+}

@@ -68,13 +68,14 @@ echo '      <div class="div-formPersonne">
                 <label class="formPersonne" for="idVille">Ville : </label>
                 <select name="idVille" id="idVille"> ';  
         foreach ($villes as $elt) {
-echo'   "<option value="'.$elt->getIdVille().'">'.$elt->getLibelleVille().'</option>';
-        }  
+echo'   <option value="'.$elt->getIdVille().'">'.$elt->getLibelleVille().'</option>';
+        }    
 echo    '</select>';  
 if ($mode != "ajout") { // si différent d'ajout je recupère l'idVille pour pouvoir selectionner la bonne option
     echo '  <input type="number" id="villeSelected" name="villeSelected" hidden value = "' . $benevole->getIdVille() . '"> ';
 }
 echo '       </div> ';
+echo    '<div class="ajoutVille"><a href="index.php?action=villeForm&m=benevole">Ajouter une ville</a></div>';    
 echo '      <div class="div-formPersonne"> 
                 <label class="formPersonne" for="emailPersonne">Email : </label>
                 <input class="inputformPersonne" type="text" id="emailPersonne" name="emailPersonne" placeholder="Email" '; ?> pattern="^[a-zA-Z0-9-._]{2,}@[a-zA-Z0-9-]{2,}\.[a-z]{2,}(.[a-z]{2,})?$" <?php ' required ';

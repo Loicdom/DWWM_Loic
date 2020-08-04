@@ -187,12 +187,20 @@ if (isset($_GET['action'])) {
                 afficherPageImpression('PHP/view/', 'impressionBenevole', "");
                 break;
             }
+            case 'villeForm': {
+                afficherPage('PHP/view/', 'villeForm', "Ville");
+                break;
+            }
+            case 'villeAction': {
+                afficherPage('PHP/view/', 'villeAction', "");
+                break;
+            }
         case 'evenementsListe': {
                 afficherPage('PHP/view/', 'evenementsListe', "Liste des événements");
                 break;
             }
         case 'evenementsForm': {
-                afficherPage('PHP/view/', 'evenementsForm', "Evénements");
+                afficherPage('PHP/view/', 'evenementsForm', "Evenements");
                 break;
             }
         case 'evenementsAction': {

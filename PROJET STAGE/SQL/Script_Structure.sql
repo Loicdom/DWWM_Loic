@@ -14,7 +14,8 @@ USE `COMPTAFERME`;
 # Table: Factures
 #------------------------------------------------------------
 
-CREATE TABLE Factures(
+DROP TABLE IF EXISTS `Factures`;
+CREATE TABLE IF NOT EXISTS Factures(
         idFacture   Int  Auto_increment  NOT NULL PRIMARY KEY ,
         libelleFact Varchar (100) NOT NULL ,
         enregFact   Varchar (100) DEFAULT NULL
@@ -25,9 +26,10 @@ CREATE TABLE Factures(
 # Table: ExerciceComptable
 #------------------------------------------------------------
 
-CREATE TABLE ExerciceComptable(
+DROP TABLE IF EXISTS `Exercicecomptable`;
+CREATE TABLE IF NOT EXISTS ExerciceComptable(
         idExerciceComptable Int  Auto_increment  NOT NULL PRIMARY KEY ,
-        libelleExercice     Varchar (50) NOT NULL
+        libelleExercice int NOT NULL
 )ENGINE=InnoDB;
 
 
@@ -35,13 +37,14 @@ CREATE TABLE ExerciceComptable(
 # Table: Ecritures
 #------------------------------------------------------------
 
-CREATE TABLE Ecritures(
+DROP TABLE IF EXISTS `ecritures`;
+CREATE TABLE IF NOT EXISTS Ecritures(
         idEcriture          Int  Auto_increment  NOT NULL PRIMARY KEY ,
 		typeEcriture		Varchar (10) NOT NULL ,
         dateEcriture        Date NOT NULL ,
         libelleEcriture     Varchar (100) NOT NULL ,
         lettrage            Varchar (100) DEFAULT NULL ,
-        idFacture           Int ,
+        idFacture           Int  DEFAULT NULL,
         idExerciceComptable Int NOT NULL
 
 )ENGINE=InnoDB;
@@ -51,7 +54,8 @@ CREATE TABLE Ecritures(
 # Table: Villes
 #------------------------------------------------------------
 
-CREATE TABLE Villes(
+DROP TABLE IF EXISTS `Villes`;
+CREATE TABLE IF NOT EXISTS Villes(
         idVille     Int  Auto_increment  NOT NULL PRIMARY KEY ,
         libelleVille     Varchar (50) NOT NULL 
 )ENGINE=InnoDB;
@@ -61,7 +65,8 @@ CREATE TABLE Villes(
 # Table: Users
 #------------------------------------------------------------
 
-CREATE TABLE Users(
+DROP TABLE IF EXISTS Users;
+CREATE TABLE IF NOT EXISTS Users(
         idUser     Int  Auto_increment  NOT NULL PRIMARY KEY ,
         pseudo     Varchar (50) NOT NULL ,
         motDePasse Varchar (100) NOT NULL ,
@@ -73,7 +78,8 @@ CREATE TABLE Users(
 # Table: Documents
 #------------------------------------------------------------
 
-CREATE TABLE Documents(
+DROP TABLE IF EXISTS `Documents`;
+CREATE TABLE IF NOT EXISTS Documents(
         idDocument      Int  Auto_increment  NOT NULL PRIMARY KEY ,
         libelleDocument Varchar (100) NOT NULL ,
         enregDocument   Varchar (100) DEFAULT NULL
@@ -84,7 +90,8 @@ CREATE TABLE Documents(
 # Table: ClasseComptable
 #------------------------------------------------------------
 
-CREATE TABLE ClasseComptable(
+DROP TABLE IF EXISTS `Classecomptable`;
+CREATE TABLE IF NOT EXISTS ClasseComptable(
         idClasseComptable      Int  Auto_increment  NOT NULL PRIMARY KEY ,
         numeroClasseComptable  Int NOT NULL ,
         libelleClasseComptable Varchar (50) NOT NULL
@@ -95,7 +102,8 @@ CREATE TABLE ClasseComptable(
 # Table: PCGA
 #------------------------------------------------------------
 
-CREATE TABLE PCGA(
+DROP TABLE IF EXISTS `PCGA`;
+CREATE TABLE IF NOT EXISTS PCGA(
         idPCGA            Int  Auto_increment  NOT NULL PRIMARY KEY ,
         numCompte         Varchar (10) NOT NULL ,
         libelleCompte     Varchar (100) NOT NULL ,
@@ -109,7 +117,8 @@ CREATE TABLE PCGA(
 # Table: Fournisseurs
 #------------------------------------------------------------
 
-CREATE TABLE Fournisseurs(
+DROP TABLE IF EXISTS `Fournisseurs`;
+CREATE TABLE IF NOT EXISTS Fournisseurs(
         idFournisseur      Int  Auto_increment  NOT NULL PRIMARY KEY ,
         codeFournisseur    Varchar (10) NOT NULL ,
         libelleFournisseur Varchar (50) NOT NULL ,
@@ -121,7 +130,8 @@ CREATE TABLE Fournisseurs(
 # Table: Evenements
 #------------------------------------------------------------
 
-CREATE TABLE Evenements(
+DROP TABLE IF EXISTS `Evenements`;
+CREATE TABLE IF NOT EXISTS Evenements(
         idEvenement      Int  Auto_increment  NOT NULL PRIMARY KEY ,
         codeEvenement    Varchar (10) NOT NULL ,
         libelleEvenement Varchar (50) NOT NULL ,
@@ -133,7 +143,8 @@ CREATE TABLE Evenements(
 # Table: Personnes
 #------------------------------------------------------------
 
-CREATE TABLE Personnes(
+DROP TABLE IF EXISTS `Personnes`;
+CREATE TABLE IF NOT EXISTS Personnes(
         idPersonne              Int  Auto_increment  NOT NULL PRIMARY KEY ,
         nomPersonne             Varchar (50) NOT NULL ,
         prenomPersonne          Varchar (50) NOT NULL ,
@@ -159,39 +170,15 @@ CREATE TABLE Personnes(
 # Table: LigneEcriture
 #------------------------------------------------------------
 
-CREATE TABLE LigneEcriture(
+DROP TABLE IF EXISTS `LigneEcriture`;
+CREATE TABLE IF NOT EXISTS LigneEcriture(
         idLigneEcriture  Int  Auto_increment  NOT NULL PRIMARY KEY ,
         montant    Decimal (6,2) NOT NULL ,
-        sens       Varchar (100) NOT NULL ,
+        sens       Varchar (20) NOT NULL ,
         idEcriture Int NOT NULL ,
         idPCGA     Int NOT NULL 
 
 )ENGINE=InnoDB;
-
-#------------------------------------------------------------
-# Table: Budgets
-#------------------------------------------------------------
-
-CREATE TABLE Budgets(
-        idBudget                 Int  Auto_increment  NOT NULL PRIMARY KEY ,
-        fournitureAtelierCreatif Int NOT NULL ,
-        atelierCuisineGouter     Int NOT NULL ,
-        petitMateriel            Int NOT NULL ,
-        salaireEmploye           Int NOT NULL ,
-        assurance                Int NOT NULL ,
-        fraisPostauxTel          Int NOT NULL ,
-        entretienMaterielJadin   Int NOT NULL ,
-        produitEntretien         Int NOT NULL ,
-        fraisBancaires           Int NOT NULL ,
-        ursaff                   Int NOT NULL ,
-        subvMunicipale           Int NOT NULL ,
-        participationFamille     Int NOT NULL ,
-        produitManif             Int NOT NULL ,
-        anniversaire             Int NOT NULL ,
-        adhesion                 Int NOT NULL ,
-        participationIME         Int NOT NULL 
-)ENGINE=InnoDB;
-
 
 ALTER TABLE Evenements ADD CONSTRAINT Evenements_PCGA_FK FOREIGN KEY (idPCGA) REFERENCES PCGA(idPCGA);
 ALTER TABLE Personnes ADD CONSTRAINT Personnes_Villes_FK FOREIGN KEY (idVille) REFERENCES Villes(idVille);
@@ -200,7 +187,8 @@ ALTER TABLE LigneEcriture ADD CONSTRAINT ligneEcriture_PCGA0_FK FOREIGN KEY (idP
 ALTER TABLE Fournisseurs ADD CONSTRAINT Fournisseurs_PCGA_FK FOREIGN KEY (idPCGA) REFERENCES PCGA(idPCGA);
 ALTER TABLE PCGA ADD CONSTRAINT PCGA_ClasseComptable_FK FOREIGN KEY (idClasseComptable) REFERENCES ClasseComptable(idClasseComptable);
 ALTER TABLE Ecritures ADD CONSTRAINT Ecritures_Factures_FK FOREIGN KEY (idFacture) REFERENCES Factures(idFacture);
-ALTER TABLE Ecritures ADD CONSTRAINT Ecritures_ExerciceComptable0_FK FOREIGN KEY (idExerciceComptable) REFERENCES ExerciceComptable(idExerciceComptable)
+ALTER TABLE Ecritures ADD CONSTRAINT Ecritures_ExerciceComptable0_FK FOREIGN KEY (idExerciceComptable) REFERENCES ExerciceComptable(idExerciceComptable);
+ALTER TABLE Personnes ADD CONSTRAINT Personnes_Villes_FK FOREIGN KEY (idVille) REFERENCES villes(idVille)
 
 CREATE VIEW ecrituresComptable AS SELECT
     exercicecomptable.idExerciceComptable,

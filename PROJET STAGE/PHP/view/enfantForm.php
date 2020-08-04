@@ -75,6 +75,7 @@ if ($mode != "ajout") { // si différent d'ajout je recupère l'idVille pour pou
     echo '  <input type="number" id="villeSelected" name="villeSelected" hidden value = "' . $enfant->getIdVille() . '"> ';
 }
 echo '       </div> ';
+echo    '<div class="ajoutVille"><a href="index.php?action=villeForm&m=enfant">Ajouter une ville</a></div>';    
 echo '      <div class="div-formPersonne"> 
                 <label class="formPersonne" for="emailPersonne">Email : </label>
                 <input class="inputformPersonne" type="text" id="emailPersonne" name="emailPersonne" placeholder="Email parent" '; ?> pattern="^[a-zA-Z0-9-._]{2,}@[a-zA-Z0-9-]{2,}\.[a-z]{2,}(.[a-z]{2,})?$" <?php ' required ';
