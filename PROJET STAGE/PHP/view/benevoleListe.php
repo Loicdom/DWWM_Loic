@@ -52,7 +52,9 @@ if (!empty($bénévoles)) { //Si rien dans comptes on imprime pas se qu'il y a e
                 </a>
             </div>
         <?php } ?>
-<?php } ?>
-    <a href="index.php?action=tableauBord">
-        <div class="bouton btn_retour_benevole">Retour</div>
-    </a>
+    <?php } ?>
+    <div class="ligne2">
+        <a href="index.php?action=tableauBord">
+            <div class="bouton btn">Retour</div>
+        </a>
+    </div>

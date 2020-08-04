@@ -17,6 +17,7 @@ echo '          >
         </div>';
 if ($mode != "ajout") {
     echo '  <input type="number" id="idFournisseur" name="idFournisseur" hidden value = "' . $fournisseurs->getIdFournisseur() . '"> ';
+    echo '  <input type="number" id="idPCGA" name="idPCGA" hidden value = "' . $fournisseurs->getIdPCGA() . '"> ';
 }
 echo '      <div>  
                 <label class="form" for="libelleFournisseur">Libellé du fournisseur : </label><br>
