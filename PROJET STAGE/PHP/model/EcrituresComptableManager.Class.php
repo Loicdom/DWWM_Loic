@@ -53,18 +53,6 @@ class EcrituresComptableManager
         }
     }
 
-    public static function getByIdFacture($id)
-    {
-        $db = DbConnect::getDb();
-        $id = (int) $id;
-        $q = $db->query("SELECT * FROM EcrituresComptable WHERE idFacture=$id");
-        $results = $q->fetch(PDO::FETCH_ASSOC);
-        if ($results != false) {
-            return new EcrituresComptable($results);
-        } else {
-            return false;
-        }
-    }
 
     public static function getByIdPCGA($id)
     {

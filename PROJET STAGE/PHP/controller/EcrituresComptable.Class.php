@@ -2,9 +2,6 @@
 class EcrituresComptable
 {
     /*******************************Attributs*******************************/
-    private $_idFacture;
-    private $_libelleFact;
-    private $_enregFact;
     private $_idExerciceComptable;
     private $_libelleExercice;
     private $_idEcriture;
@@ -24,30 +21,7 @@ class EcrituresComptable
     private $_sens;
 
     /******************************Accesseurs*******************************/
-    public function getIdFacture()
-    {
-        return $this->_idFacture;
-    }
-    public function setIdFacture($_idFacture)
-    {
-        return $this->_idFacture = $_idFacture;
-    }
-    public function getLibelleFact()
-    {
-        return $this->_libelleFact;
-    }
-    public function setLibelleFact($_libelleFact)
-    {
-        return $this->_libelleFact = $_libelleFact;
-    }
-    public function getEnregFact()
-    {
-        return $this->_enregFact;
-    }
-    public function setEnregFact($_enregFact)
-    {
-        return $this->_enregFact = $_enregFact;
-    }
+    
     public function getIdExerciceComptable()
     {
         return $this->_idExerciceComptable;
@@ -206,6 +180,6 @@ class EcrituresComptable
     /****************************Autres méthodes****************************/
     public function toString()
     {
-        return $this->getIdFacture() . "\n" . $this->getLibelleFact() . "\n" . $this->getEnregFact() . "\n" . $this->getIdExerciceComptable() . "\n" . $this->getLibelleExercice() . "\n" . $this->getIdEcriture() . "\n" . $this->getTypeEcriture() . "\n" . $this->getDateEcriture() . "\n" . $this->getLibelleEcriture() . "\n" . $this->getLettrage() . "\n" . $this->getIdClasseComptable() . "\n" . $this->getNumeroClasseComptable() . "\n" . $this->getLibelleClasseComptable() . "\n" . $this->getIdPCGA() . "\n" . $this->getNumCompte() . "\n" . $this->getLibelleCompte() . "\n" . $this->getDansBilan() . "\n" . $this->getIdLigneEcriture() . "\n" . $this->getMontant() . "\n" . $this->getSens();
+        return $this->getIdExerciceComptable() . "\n" . $this->getLibelleExercice() . "\n" . $this->getIdEcriture() . "\n" . $this->getTypeEcriture() . "\n" . $this->getDateEcriture() . "\n" . $this->getLibelleEcriture() . "\n" . $this->getLettrage() . "\n" . $this->getIdClasseComptable() . "\n" . $this->getNumeroClasseComptable() . "\n" . $this->getLibelleClasseComptable() . "\n" . $this->getIdPCGA() . "\n" . $this->getNumCompte() . "\n" . $this->getLibelleCompte() . "\n" . $this->getDansBilan() . "\n" . $this->getIdLigneEcriture() . "\n" . $this->getMontant() . "\n" . $this->getSens();
     }
 }

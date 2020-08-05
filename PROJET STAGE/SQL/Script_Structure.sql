@@ -43,7 +43,7 @@ CREATE TABLE IF NOT EXISTS Ecritures(
 		typeEcriture		Varchar (10) NOT NULL ,
         dateEcriture        Date NOT NULL ,
         libelleEcriture     Varchar (100) NOT NULL ,
-        lettrage            Varchar (100) DEFAULT NULL ,
+        lettrage            Varchar (10) DEFAULT NULL ,
         idFacture           Int  DEFAULT NULL,
         idExerciceComptable Int NOT NULL
 
@@ -156,7 +156,7 @@ CREATE TABLE IF NOT EXISTS Personnes(
         telPersonne             Varchar (50) NOT NULL ,
         autorisationPhotos      Varchar (10) NOT NULL ,
         bafaAquisBenevole       Varchar (10) DEFAULT NULL ,
-        casierJudiciaire        Varchar (100) DEFAULT NULL ,
+        casierJudiciaire        Varchar (10) DEFAULT NULL ,
         paiementInscription     Varchar (50) DEFAULT NULL ,
         nomRepresentantLegal    Varchar (50) DEFAULT NULL ,
         prenomRepresentantLegal Varchar (50) DEFAULT NULL ,

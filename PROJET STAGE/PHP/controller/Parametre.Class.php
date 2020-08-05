@@ -56,7 +56,7 @@ class Parametre
             $ligne = fgets($flux, 4096);
             if ($ligne) // si la ligne n'est pas vide
             {
-                $info = explode(":", $ligne); // on sépare la ligne selon le ;
+                $info = explode(":", $ligne); // on sépare la ligne selon le :
                 $param[$info[0]] = rtrim($info[1]); //on remplit un tableau associatif avec la 1ere partie en clé, la 2nde en valeur
             }
         }
