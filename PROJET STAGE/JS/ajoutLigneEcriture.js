@@ -8,7 +8,7 @@ btn_add.addEventListener('click', function () {
     if (nbre_add < nbre_max) {
         btn_add.dataset.nbre = Number(btn_add.dataset.nbre) + 1;
 
-        // on clone le div modele
+        // on clone la div contenuEcriture qui correspond à toute la première ligne
         let form_input_clone = contenuEcriture.cloneNode(true);
         form_input_clone.removeAttribute('id'); // on supprime l attribut id du clone (car un id est unique)
 

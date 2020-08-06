@@ -1,6 +1,6 @@
 <?php
 $idEcriture = $_GET["id"];
-$ligne = LigneEcritureManager::getByIdEcriture($idEcriture);
+$ligne = LigneEcritureManager::getByIdEcriture($idEcriture); // pour récupèrer les lignes en fonction de l'idEcriture
 $ecriture = EcrituresManager::getById($idEcriture);
 $journal = $_GET["j"];
 

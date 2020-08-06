@@ -1,6 +1,6 @@
 <?php
 $journal = $_GET["j"];
-$ecritures = EcrituresManager::getList($annee, $journal); // on récupere le plan comptable (la liste des ecritures)
+$ecritures = EcrituresManager::getList($annee, $journal); // on récupere la liste des ecritures
 ?>
 <a href="index.php?action=ecritureForm&j=<?php echo $journal ?>">
     <div class="bouton btn"> Ajouter les lignes</div>
@@ -14,14 +14,14 @@ if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a e
         <div class="ligne">
             <div class="divTitre">Date</div>
             <div class="divTitre">Libellé écriture</div>
-            <?php if ($journal == "charges" || $journal == "recettes") { 
+            <?php if ($journal == "charges" || $journal == "recettes") {
                 echo '<div class="divTitre">Facture</div>';
-             } ?>
+            } ?>
             <div class="divTitre">Voir ligne d'écritures</div>
             <div class="divTitre">Supprimer</div>
         </div>
         <?php
-        foreach ($ecritures as $elt) { // on fait une boucle pour afficher tout les ecritures
+        foreach ($ecritures as $elt) { // on fait une boucle pour afficher toutes les ecritures
         ?>
             <div class="ligne">
                 <div class="bloc contenuListe"><?php echo $elt->getDateEcriture() ?></div>

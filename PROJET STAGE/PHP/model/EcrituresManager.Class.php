@@ -60,7 +60,7 @@ class EcrituresManager
         return $ecritures;
     }
 
-    public static function getByIdparType($years) // Ramène un compte en particulier (avec l'idEriture')
+    public static function getByIdparType($years) // Ramène idEcriture en particulier (par rapport ou type et exercice comptable')
     {
         $db = DbConnect::getDb();
         $ligneComptable = [];
