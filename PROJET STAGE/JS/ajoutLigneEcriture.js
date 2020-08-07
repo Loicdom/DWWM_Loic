@@ -18,16 +18,7 @@ btn_add.addEventListener('click', function () {
         button.classList.add("btn_ecriture1");
         button.textContent = "-";
 
-        var numCompteVide = document.getElementsByName("numCompte[]");
-        var aVider = numCompteVide[1];
-        aVider.value = "";
-
-        var classeComptable = document.getElementById('classComptable');
-        if (classeComptable != null) {
-            button.classList.add("btn_ecriture2");
-        }
-
-        button.addEventListener( // le bouton "-" supprime tout le div
+        button.addEventListener( // le bouton "-" supprime tout la div
             "click", function (e) {
                 add_contenuEcriture.removeChild(e.target.parentElement);
                 e.preventDefault();
@@ -35,7 +26,6 @@ btn_add.addEventListener('click', function () {
                 btn_add.style.display = 'block';
             }
         );
-
         form_input_clone.appendChild(button);
         add_contenuEcriture.appendChild(form_input_clone);
 
