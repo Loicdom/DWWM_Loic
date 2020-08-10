@@ -3,6 +3,8 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(165, 192, 216);
+    margin-top: 3vw;
 }
 #jeu{
     display: flex;
