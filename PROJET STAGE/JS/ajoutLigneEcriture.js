@@ -15,7 +15,12 @@ btn_add.addEventListener('click', function () {
         // bouton de suppression de la ligne
         let button = document.createElement("button");
         button.type = "button";
-        button.classList.add("btn_ecriture1");
+        var btnBas = document.getElementsByClassName('btn_ecritureAjout')[0];
+        if(btnBas != undefined){
+            button.classList.add("btn_ecriture2");   
+        } else {
+            button.classList.add("btn_ecriture1");  
+        }
         button.textContent = "-";
 
         button.addEventListener( // le bouton "-" supprime tout la div

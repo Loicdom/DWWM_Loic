@@ -4,7 +4,7 @@ var btnAjoutLigne = document.getElementById('btn_add');
 var btnFormulaire = document.getElementById('submit');
 btnAjoutLigne.disabled = true;
 btnFormulaire.disabled = true;
-inputDernierCredit = document.getElementById('dernierCredit');
+var inputDernierCredit = document.getElementById('dernierCredit');
 
 dateEcriture.addEventListener("input", verifPlus);
 libelleEcriture.addEventListener("input", verifPlus);

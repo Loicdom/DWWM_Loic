@@ -593,7 +593,7 @@ nav{
     width: 100%;
 }
 
-.inputform_ecriture, .select_ecriture, .select_ecriture_event, .select_ecriture_compteEvent, .btn_ecriture {
+.inputform_ecriture, .select_ecriture, .select_ecriture_event, .select_ecriture_compteEvent, .btn_ecriture, .btn_ecritureAjout {
     flex: 1;
     width: 100%;
     text-align: center;
@@ -601,9 +601,25 @@ nav{
     padding-bottom: 0.5vh;
 }
 
-.btn_ecriture {
+.btn_ecriture, .btn_ecritureAjout {
     flex: 1;
     width: 90%;
+}
+
+.btn_ecriture2 {
+    flex: 1;
+    width: 11%;
+    right: 0.4%;
+    top: 60%;
+    font-weight: bold;
+    background-color: var(--color-blue2);
+    color: var(--color-jaune);
+    border: 2px solid var(--color-orange);
+    margin: 0.5vw;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 1vh;
+    position: absolute;
 }
 
 .btn_ecriture1 {
@@ -630,7 +646,7 @@ nav{
     padding-bottom: 0.5vh;
 }
 
-.label_file, .btn_ecriture{
+.label_file, .btn_ecritureAjout, .btn_ecriture {
     font-weight: bold;
     background-color: var(--color-blue2);
     color: var(--color-jaune);

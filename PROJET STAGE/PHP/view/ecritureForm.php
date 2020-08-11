@@ -149,7 +149,7 @@ $ExerciceComptable = ExerciceComptableManager::getById($annee);
                     <input class="inputform_ecriture" type="number" step="0.01" name="debit[]" placeholder="Montant au débit">
                 </div>
                 <div class="div_ecriture">
-                    <input class="inputform_ecriture" type="number" step="0.01" id="dernierCredit" name="credit[]" placeholder="Montant au crédit">
+                    <input class="inputform_ecriture" type="number" step="0.01" name="credit[]" placeholder="Montant au crédit">
                 </div>
                 <div class="div_ecriture">
                     <label for="facture" class="label_file">Enregistrer facture</label>
@@ -188,10 +188,10 @@ $ExerciceComptable = ExerciceComptableManager::getById($annee);
                     <input class="inputform_ecriture" type="number" step="0.01" name="debit[]" placeholder="Montant au débit">
                 </div>
                 <div class="div_ecriture">
-                    <input class="inputform_ecriture" type="number" step="0.01" name="credit[]" placeholder="Montant au crédit">
+                    <input class="inputform_ecriture" id="dernierCredit" type="number" step="0.01" name="credit[]" placeholder="Montant au crédit">
                 </div>
                 <div class="div_ecriture">
-                    <button class="btn_ecriture" name="btn_ecriture[]" id="btn_add" data-nbre="0" data-max="8">+</button>
+                    <button class="btn_ecritureAjout" name="btn_ecriture[]" id="btn_add" data-nbre="0" data-max="8">+</button>
                 </div>
             </div>
 
@@ -282,10 +282,10 @@ $ExerciceComptable = ExerciceComptableManager::getById($annee);
                 <input class="inputform_ecriture" type="number" step="0.01" name="debit[]" placeholder="Montant au débit">
             </div>
             <div class="div_ecriture">
-                <input class="inputform_ecriture" type="number" step="0.01" name="credit[]" id="dernierCredit" placeholder="Montant au crédit">
+                <input class="inputform_ecriture" id="dernierCredit" type="number" step="0.01" name="credit[]" id="dernierCredit" placeholder="Montant au crédit">
             </div>
             <div class="div_ecriture">
-                <button class="btn_ecriture" name="btn_ecriture[]" id="btn_add" data-nbre="0" data-max="8">+</button>
+                <button class="btn_ecritureAjout" name="btn_ecriture[]" id="btn_add" data-nbre="0" data-max="8">+</button>
             </div>
         </div>
 
