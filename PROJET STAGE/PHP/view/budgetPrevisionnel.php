@@ -1,6 +1,6 @@
 <?php
 $years = ExerciceComptableManager::getById($annee);
-$budgets = EcrituresComptableManager::getList('budgetPrev');
+$budgets = EcrituresComptableManager::getListBudgetPrev('budgetPrev');
 if (empty($budgets)) {
 ?>
     <a href="index.php?action=budgetPrevisionnelForm&m=ajout">
@@ -8,7 +8,7 @@ if (empty($budgets)) {
     </a>
 <?php
 }
-if (!empty($budgets)) { //Si rien dans fournisseurs on affiche pas se qu'il y a en dessous
+if (!empty($budgets)) { //Si rien dans budget on affiche pas se qu'il y a en dessous
 ?>
 
     <div class="budgetPrev">

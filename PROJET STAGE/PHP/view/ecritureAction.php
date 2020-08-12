@@ -69,5 +69,5 @@ for ($i = 0; $i < $taille; $i++) {
     LigneEcritureManager::add($ligne);
 }
 
-header("location:index.php?action=ecritureListe&j=$typeEcriture"); // renvoi vers ecriture liste, juste après avoir exécuter la page
+header("location: index.php?action=ecritureListe&j=" .$typeEcriture); // renvoi vers ecriture liste, juste après avoir exécuter la page
 ?>

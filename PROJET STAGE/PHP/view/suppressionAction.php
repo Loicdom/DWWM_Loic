@@ -14,4 +14,4 @@ $idfacture = $ecriture->getIdFacture();
 FacturesManager::delete($idfacture);
 
 
-header("location:index.php?action=ecritureListe&j=$journal"); // renvoi vers ecriture liste, juste après avoir exécuter la page
+header("location: index.php?action=ecritureListe&j=".$journal); // renvoi vers ecriture liste, juste après avoir exécuter la page

@@ -71,6 +71,19 @@ class EcrituresComptableManager
     {
         $db = DbConnect::getDb();
         $ecrituresComptable = [];
+        $q = $db->query("SELECT * FROM EcrituresComptable");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
+                $ecrituresComptable[] = new EcrituresComptable($donnees);
+            }
+        }
+        return $ecrituresComptable;
+    }
+
+    public static function getListBudgetPrev()
+    {
+        $db = DbConnect::getDb();
+        $ecrituresComptable = [];
         $q = $db->query("SELECT * FROM EcrituresComptable WHERE typeEcriture = 'budgetPrev'");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
@@ -98,6 +111,32 @@ class EcrituresComptableManager
         $db = DbConnect::getDb();
         $ecrituresComptable = [];
         $q = $db->query("SELECT * FROM `ecriturescomptable` WHERE `dateEcriture` BETWEEN '$date1' AND '$date2' AND idClasseComptable = $classeComptable");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
+                $ecrituresComptable[] = new EcrituresComptable($donnees);
+            }
+        }
+        return $ecrituresComptable;
+    }
+
+    public static function getListParCompte($date1, $date2, $numcompte) // Ramène une liste de toutes les écritures
+    {
+        $db = DbConnect::getDb();
+        $ecrituresComptable = [];
+        $q = $db->query("SELECT * FROM `ecriturescomptable` WHERE `dateEcriture` BETWEEN '$date1' AND '$date2' AND `numCompte` LIKE '$numcompte%'");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
+            if ($donnees != false) {
+                $ecrituresComptable[] = new EcrituresComptable($donnees);
+            }
+        }
+        return $ecrituresComptable;
+    }
+
+    public static function getListParCompteSubv($date1, $date2, $numcompte) // Ramène une liste de toutes les écritures
+    {
+        $db = DbConnect::getDb();
+        $ecrituresComptable = [];
+        $q = $db->query("SELECT * FROM `ecriturescomptable` WHERE `dateEcriture` BETWEEN '$date1' AND '$date2' AND `numCompte` LIKE '$numcompte%' AND sens='Crédit'");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $ecrituresComptable[] = new EcrituresComptable($donnees);

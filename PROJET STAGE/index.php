@@ -251,6 +251,10 @@ if (isset($_GET['action'])) {
                 afficherPageImpression('PHP/view/', 'factureImpression', "Impression factures");
                 break;
             }
+            case 'bilanImpression': {
+                afficherPageImpression('PHP/view/', 'bilanImpression', "Impression bilan");
+                break;
+            }
     }
 } else { // Sinon, on affiche la page principale du site
     afficherPageFooterConnexion('PHP/view/', 'formConnexion', "Connexion");
