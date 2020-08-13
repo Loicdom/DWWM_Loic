@@ -28,10 +28,26 @@ function afficherPageFournisseur($chemin, $page, $titre)
     require 'PHP/view/footerFournisseur.php';
 }
 
+function afficherPageFournisseurAction($chemin, $page, $titre)
+{
+    require  'PHP/view/head.php';
+    require  'PHP/view/header1.php';
+    require $chemin . $page . '.php';
+    require 'PHP/view/footerFournisseur.php';
+}
+
 function afficherPageEcriture($chemin, $page, $titre)
 {
     require  'PHP/view/head.php';
     require  'PHP/view/header.php';
+    require $chemin . $page . '.php';
+    require 'PHP/view/footerEcriture.php';
+}
+
+function afficherPageEcriture1($chemin, $page, $titre)
+{
+    require  'PHP/view/head.php';
+    require  'PHP/view/header1.php';
     require $chemin . $page . '.php';
     require 'PHP/view/footerEcriture.php';
 }
@@ -55,6 +71,7 @@ function afficherPageFooterConnexion($chemin, $page, $titre)
 function afficherPageImpression($chemin, $page, $titre)
 {
     require  'PHP/view/head1.php';
+    require  'PHP/view/header1.php';
     require $chemin . $page . '.php';
     require 'PHP/view/footer.php';
 }
@@ -72,190 +89,194 @@ if (isset($_GET['action'])) {
     switch ($_GET['action']) {
 
         case 'tableauBord': {
-                afficherPage('PHP/view/', 'tableauBord', "Tableau de bord");
+                afficherPage('PHP/view/', 'tableauBord', 'Tableau de bord');
                 break;
             }
         case 'montantDepart': {
-                afficherPage('PHP/view/', 'montantDepart', "Montant banque et caisse");
+            afficherPageImpression('PHP/view/', 'montantDepart', 'Montant banque et caisse');
                 break;
             }
         case 'montantDepartAction': {
-                afficherPage('PHP/view/', 'montantDepartAction', "Montant banque et caisse");
+            afficherPageImpression('PHP/view/', 'montantDepartAction', 'Montant banque et caisse');
                 break;
             }
         case 'connect': {
-                afficherPageFooterConnexion('PHP/view/', 'formConnexion', "Connexion");
+                afficherPageFooterConnexion('PHP/view/', 'formConnexion', 'Connexion');
                 break;
             }
         case 'deconnect': {
-            afficherPageFooterConnexion('PHP/view/', 'formDeconnexion', "Déconnexion");
+                afficherPageFooterConnexion('PHP/view/', 'formDeconnexion', 'Déconnexion');
                 break;
             }
         case 'fournisseursListe': {
-                afficherPageFournisseur('PHP/view/', 'fournisseursListe', "Liste des fournisseurs");
+                afficherPageFournisseur('PHP/view/', 'fournisseursListe', 'Liste des fournisseurs');
                 break;
             }
         case 'fournisseursForm': {
-                afficherPageFournisseur('PHP/view/', 'fournisseursForm', "Fournisseur");
+                afficherPageFournisseur('PHP/view/', 'fournisseursForm', 'Fournisseur');
                 break;
             }
         case 'fournisseursAction': {
-                afficherPageFournisseur('PHP/view/', 'fournisseursAction', "");
+                afficherPageFournisseurAction('PHP/view/', 'fournisseursAction', '');
                 break;
             }
         case 'bureau': {
-                afficherPage('PHP/view/', 'bureau', "Bureau de l'association");
+                afficherPage('PHP/view/', 'bureau', 'Bureau de l\'association');
                 break;
             }
         case 'benevoleListe': {
-                afficherPage('PHP/view/', 'benevoleListe', "Liste des bénévoles");
+                afficherPage('PHP/view/', 'benevoleListe', 'Liste des bénévoles');
                 break;
             }
         case 'benevoleForm': {
-                afficherPage('PHP/view/', 'benevoleForm', "Bénévole");
+                afficherPage('PHP/view/', 'benevoleForm', 'Bénévole');
                 break;
             }
         case 'benevoleAction': {
-                afficherPage('PHP/view/', 'benevoleAction', "");
+                afficherPageImpression('PHP/view/', 'benevoleAction', '');
                 break;
             }
         case 'usersListe': {
-                afficherPage('PHP/view/', 'usersListe', "Liste des utilisateurs");
+                afficherPage('PHP/view/', 'usersListe', 'Liste des utilisateurs');
                 break;
             }
         case 'usersForm': {
-                afficherPageFooterConnexion('PHP/view/', 'usersForm', "utilisateur");
+                afficherPageFooterConnexion('PHP/view/', 'usersForm', 'utilisateur');
                 break;
             }
         case 'formEnregistrement': {
-                afficherPage('PHP/view/', 'formEnregistrement', "utilisateur");
+                afficherPage('PHP/view/', 'formEnregistrement', 'utilisateur');
                 break;
             }
         case 'budgetPrevisionnel': {
-                afficherPage('PHP/view/', 'budgetPrevisionnel', "Budget Prévisionnel");
+                afficherPage('PHP/view/', 'budgetPrevisionnel', 'Budget Prévisionnel');
                 break;
             }
         case 'budgetPrevisionnelForm': {
-                afficherPage('PHP/view/', 'budgetPrevisionnelForm', "Budget Prévisionnel");
+                afficherPage('PHP/view/', 'budgetPrevisionnelForm', 'Budget Prévisionnel');
                 break;
             }
         case 'budgetPrevisionnelAction': {
-                afficherPage('PHP/view/', 'budgetPrevisionnelAction', "");
+                afficherPageImpression('PHP/view/', 'budgetPrevisionnelAction', '');
                 break;
             }
         case 'planComptableListe': {
-                afficherPage('PHP/view/', 'planComptableListe', "Plan comptable");
+                afficherPage('PHP/view/', 'planComptableListe', 'Plan comptable');
                 break;
             }
         case 'planComptableForm': {
-                afficherPage('PHP/view/', 'planComptableForm', "Plan comptable");
+                afficherPage('PHP/view/', 'planComptableForm', 'Plan comptable');
                 break;
             }
         case 'planComptableAction': {
-                afficherPage('PHP/view/', 'planComptableAction', "");
+            afficherPageImpression('PHP/view/', 'planComptableAction', '');
                 break;
             }
         case 'enfantListe': {
-                afficherPage('PHP/view/', 'enfantListe', "Liste Enfants");
+                afficherPage('PHP/view/', 'enfantListe', 'Liste Enfants');
                 break;
             }
         case 'enfantForm': {
-                afficherPage('PHP/view/', 'enfantForm', "Enfant");
+                afficherPage('PHP/view/', 'enfantForm', 'Enfant');
                 break;
             }
         case 'enfantAction': {
-                afficherPage('PHP/view/', 'enfantAction', "");
+                afficherPageImpression('PHP/view/', 'enfantAction', '');
                 break;
             }
         case 'ecritureListe': {
-                afficherPageEcriture('PHP/view/', 'ecritureListe', "Liste Ecritures");
+                afficherPageEcriture('PHP/view/', 'ecritureListe', 'Liste Ecritures');
                 break;
             }
         case 'ecritureForm': {
-                afficherPageEcriture('PHP/view/', 'ecritureForm', "Ecritures");
+                afficherPageEcriture('PHP/view/', 'ecritureForm', 'Ecritures');
                 break;
             }
         case 'ecritureAction': {
-                afficherPageEcriture('PHP/view/', 'ecritureAction', "");
+            afficherPageEcriture1('PHP/view/', 'ecritureAction', '');
                 break;
             }
         case 'impressionEnfant': {
-                afficherPageImpression('PHP/view/', 'impressionEnfant', "");
+                afficherPageImpression('PHP/view/', 'impressionEnfant', '');
                 break;
             }
         case 'impressionBenevole': {
-                afficherPageImpression('PHP/view/', 'impressionBenevole', "");
+                afficherPageImpression('PHP/view/', 'impressionBenevole', '');
                 break;
             }
-            case 'villeForm': {
-                afficherPage('PHP/view/', 'villeForm', "Ville");
+        case 'villeForm': {
+                afficherPage('PHP/view/', 'villeForm', 'Ville');
                 break;
             }
-            case 'villeAction': {
-                afficherPage('PHP/view/', 'villeAction', "");
+        case 'villeAction': {
+            afficherPageImpression('PHP/view/', 'villeAction', '');
                 break;
             }
         case 'evenementsListe': {
-                afficherPage('PHP/view/', 'evenementsListe', "Liste des événements");
+                afficherPage('PHP/view/', 'evenementsListe', 'Liste des événements');
                 break;
             }
         case 'evenementsForm': {
-                afficherPage('PHP/view/', 'evenementsForm', "Evenements");
+                afficherPage('PHP/view/', 'evenementsForm', 'Evenements');
                 break;
             }
         case 'evenementsAction': {
-                afficherPage('PHP/view/', 'evenementsAction', "");
+            afficherPageImpression('PHP/view/', 'evenementsAction', '');
                 break;
             }
         case 'visuelFacture': {
-                afficherPage('PHP/view/', 'visuelFacture', "Visuel facture");
+                afficherPage('PHP/view/', 'visuelFacture', 'Visuel facture');
                 break;
             }
         case 'visuelLigne': {
-                afficherPage('PHP/view/', 'visuelLigne', "Visuel ligne écritures");
+                afficherPage('PHP/view/', 'visuelLigne', 'Visuel ligne écritures');
                 break;
             }
         case 'suppressionEcriture': {
-                afficherPage('PHP/view/', 'suppressionEcriture', "Suppression");
+                afficherPage('PHP/view/', 'suppressionEcriture', 'Suppression');
                 break;
             }
         case 'suppressionAction': {
-                afficherPage('PHP/view/', 'suppressionAction', "Suppression");
+            afficherPageImpression('PHP/view/', 'suppressionAction', 'Suppression');
                 break;
             }
         case 'lettrage': {
-                afficherPage('PHP/view/', 'lettrage', "Lettrage");
+                afficherPage('PHP/view/', 'lettrage', 'Lettrage');
                 break;
             }
         case 'lettrageForm': {
-                afficherPage('PHP/view/', 'lettrageForm', "Lettrage");
+                afficherPage('PHP/view/', 'lettrageForm', 'Lettrage');
                 break;
             }
         case 'lettrageAction': {
-                afficherPage('PHP/view/', 'lettrageAction', "Lettrage");
+            afficherPageImpression('PHP/view/', 'lettrageAction', 'Lettrage');
                 break;
             }
         case 'visuelParCompteDate': {
-                afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompteDate', "Choix des dates");
+                afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompteDate', 'Choix des dates');
                 break;
             }
         case 'visuelParCompte': {
-                afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompte', "Visuel par choix comptes");
+                afficherPagefooterVisuelCompte('PHP/view/', 'visuelParCompte', 'Visuel par choix comptes');
                 break;
             }
         case 'dateImpresFact': {
-                afficherPage('PHP/view/', 'dateImpresFact', "Choix dates pour impression");
+                afficherPage('PHP/view/', 'dateImpresFact', 'Choix dates pour impression');
                 break;
             }
         case 'factureImpression': {
-                afficherPageImpression('PHP/view/', 'factureImpression', "Impression factures");
+                afficherPageImpression('PHP/view/', 'factureImpression', 'Impression factures');
                 break;
             }
-            case 'bilanImpression': {
-                afficherPageImpression('PHP/view/', 'bilanImpression', "Impression bilan");
+        case 'bilanImpression': {
+                afficherPageImpression('PHP/view/', 'bilanImpression', 'Impression bilan');
+                break;
+            }
+            case 'dateBilanImpession': {
+                afficherPage('PHP/view/', 'dateBilanImpession', 'Date pour impression bilan');
                 break;
             }
     }
 } else { // Sinon, on affiche la page principale du site
-    afficherPageFooterConnexion('PHP/view/', 'formConnexion', "Connexion");
+    afficherPageFooterConnexion('PHP/view/', 'formConnexion', 'Connexion');
 }

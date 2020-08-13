@@ -500,6 +500,13 @@ nav{
     border-bottom: 2px solid var(--color-orange);
 }
 
+.blocColonneTitreBilan {
+    padding: 1vw;
+    background-color:var(--color-blue2);
+    color: var( --color-jaune);
+    border-bottom: 2px solid var(--color-orange);
+}
+
 .debitCredit {
     padding: 2vw;
     background-color:var(--color-blue2);
@@ -508,8 +515,39 @@ nav{
     text-decoration: underline;
 }
 
+.debitCreditBilan {
+    padding: 1vw;
+    background-color:var(--color-blue2);
+    color: var(--color-orange);
+    border-bottom: 2px solid var(--color-orange);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    transform: scale(0.8);
+    background: rgb(255, 255, 255);
+    border: 2px solid var(--color-blue2);
+    border-radius: 15px;
+}
+
+[type="checkbox"]:checked {
+    background: var(--color-blue2);
+    border: 2px solid var(--color-orange);
+    border-radius: 15px;
+}
+
 .blocColonne {
     padding: 2vw;
+    color: blue;
+    border-bottom: 2px solid var(--color-orange);
+}
+
+.blocColonneBilan {
+    padding: 1vw;
     color: blue;
     border-bottom: 2px solid var(--color-orange);
 }

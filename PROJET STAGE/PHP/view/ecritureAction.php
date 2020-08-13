@@ -25,7 +25,6 @@ if ($typeEcriture == "charges" || $typeEcriture == "recettes") {
         if (move_uploaded_file($_FILES['facture']['tmp_name'], $dossier . $fichier)) //correct si la fonction renvoie TRUE
         {
             $chemin = $dossier . $fichier;
-            echo 'Facture enregistrée avec succès';
             $q = FacturesManager::add($libelleFacture, $chemin);
         } else //sinon, cas où la fonction renvoie FALSE
         {
@@ -70,4 +69,3 @@ for ($i = 0; $i < $taille; $i++) {
 }
 
 header("location: index.php?action=ecritureListe&j=" .$typeEcriture); // renvoi vers ecriture liste, juste après avoir exécuter la page
-?>

@@ -2,6 +2,7 @@
 <div class="dessusFooter"></div>
 <script src="JS/script.js"></script>
 <script src="JS/ville.js"></script>
+<script src="JS/bilanAnnee.js"></script>
 <script src="JS/villeAdd.js"></script>
 <script src="JS/impression.js"></script>
 <script src="JS/scriptEnfantForm.js"></script>

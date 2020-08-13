@@ -1,6 +1,8 @@
 <?php
 //Attribution des variables de session
 $pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : '';
+$role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
+$annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceComptable'] : '';
 ?>
 
 <body>

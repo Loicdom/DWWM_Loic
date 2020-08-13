@@ -12,11 +12,11 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
             <img src="Images/logo.jpg" alt="Logo"></div>
         <div id="title">Comptabilité Ferme d'animations éducatives des rives de l'Aa</div>
         <div class="esp">
-            <?php if ($pseudo != "") {
-                echo '<div class="esp">' . $pseudo . '</div> ';
-                echo '<div class="esp"><a href="index.php?action=deconnect">Déconnexion</a></div> ';
-            } // pour afficher le pseudo
-            ?> </div>
+            <?php if ($pseudo != "") { ?>
+                <div class="esp"><?php echo $pseudo; ?></div>
+                <div class="esp"><a href="index.php?action=deconnect">Déconnexion</a></div>
+           <?php } ?>
+        </div>
 
     </header>
     <!-- menu avec des liens vers chaque page (en passant par l'index) -->
@@ -59,7 +59,7 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
                     <div><a href="#">Journaux</a></div>
                     <div><a href="index.php?action=impressionBenevole">Liste bénévoles</a></div>
                     <div><a href="index.php?action=impressionEnfant">Liste enfants</a></div>
-                    <div><a href="index.php?action=bilanImpression&n=<?php echo $annee ?>">Bilan</a></div>
+                    <div><a href="index.php?action=dateBilanImpession">Bilan</a></div>
                     <div><a href="index.php?action=dateImpresFact">Factures</a></div>
                 </div>
             </div>
