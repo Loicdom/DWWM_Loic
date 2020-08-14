@@ -15,7 +15,7 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
             <?php if ($pseudo != "") { ?>
                 <div class="esp"><?php echo $pseudo; ?></div>
                 <div class="esp"><a href="index.php?action=deconnect">Déconnexion</a></div>
-           <?php } ?>
+            <?php } ?>
         </div>
 
     </header>
