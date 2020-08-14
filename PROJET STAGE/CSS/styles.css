@@ -968,3 +968,18 @@ h1 {
 .bouton_ville {
     margin-right: 9.5vw;
 }
+ 
+/******************************************************** Choix journal impression *************************************************/
+
+.btn_choix {
+   padding: 2vw;
+   color: var(--color-orange);
+   width: 30%;
+   margin-left: 32.8%;
+}
+
+.div_choix_conteneur {
+    display: flex;
+    flex-direction: column;
+}
+

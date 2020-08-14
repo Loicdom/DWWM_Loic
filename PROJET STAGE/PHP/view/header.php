@@ -50,25 +50,23 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
             </div>
             <div class="menu"><a href="#">Budget</a>
                 <div class="sousMenu">
-                    <div><a href="#">Budget actuel</a></div>
                     <div><a href="index.php?action=budgetPrevisionnel&j=budgetPrev">Budget prévisionnel</a></div>
                 </div>
             </div>
             <div class="menu"><a href="#">Impressions</a>
                 <div class="sousMenu">
-                    <div><a href="#">Journaux</a></div>
+                    <div><a href="index.php?action=impressionChoixListe">Journaux</a></div>
                     <div><a href="index.php?action=impressionBenevole">Liste bénévoles</a></div>
                     <div><a href="index.php?action=impressionEnfant">Liste enfants</a></div>
-                    <div><a href="index.php?action=dateBilanImpession">Bilan</a></div>
+                    <div><a href="index.php?action=dateBilanJournauxImpession&m=bilan">Bilan</a></div>
                     <div><a href="index.php?action=dateImpresFact">Factures</a></div>
                 </div>
             </div>
             <div class="menu"><a href="#">Exporter</a>
                 <div class="sousMenu">
-                    <div><a href="#">Journaux</a></div>
-                    <div><a href="#">Bilan</a></div>
-                    <div><a href="#">Liste bénévoles</a></div>
-                    <div><a href="#">Liste enfants</a></div>
+                    <div><a href="index.php?action=impressionChoixListe&e=export">Journaux</a></div>
+                    <div><a href="index.php?action=exportCsvListeBenevole">Liste bénévoles</a></div>
+                    <div><a href="index.php?action=exportCsvListeEnfant">Liste enfants</a></div>
                 </div>
             </div>
             <div class="menu"><a href="#">Outils</a>

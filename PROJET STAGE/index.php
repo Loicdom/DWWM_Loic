@@ -76,6 +76,11 @@ function afficherPageImpression($chemin, $page, $titre)
     require 'PHP/view/footer.php';
 }
 
+function afficherPageExport($chemin, $page, $titre)
+{
+    require $chemin . $page . '.php';
+}
+
 // on initialise les paramètres du fichier parametre.ini
 Parametre::init();
 //on active la connexion 
@@ -93,11 +98,11 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'montantDepart': {
-            afficherPageImpression('PHP/view/', 'montantDepart', 'Montant banque et caisse');
+                afficherPageImpression('PHP/view/', 'montantDepart', 'Montant banque et caisse');
                 break;
             }
         case 'montantDepartAction': {
-            afficherPageImpression('PHP/view/', 'montantDepartAction', 'Montant banque et caisse');
+                afficherPageImpression('PHP/view/', 'montantDepartAction', 'Montant banque et caisse');
                 break;
             }
         case 'connect': {
@@ -169,7 +174,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'planComptableAction': {
-            afficherPageImpression('PHP/view/', 'planComptableAction', '');
+                afficherPageImpression('PHP/view/', 'planComptableAction', '');
                 break;
             }
         case 'enfantListe': {
@@ -193,7 +198,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'ecritureAction': {
-            afficherPageEcriture1('PHP/view/', 'ecritureAction', '');
+                afficherPageEcriture1('PHP/view/', 'ecritureAction', '');
                 break;
             }
         case 'impressionEnfant': {
@@ -209,7 +214,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'villeAction': {
-            afficherPageImpression('PHP/view/', 'villeAction', '');
+                afficherPageImpression('PHP/view/', 'villeAction', '');
                 break;
             }
         case 'evenementsListe': {
@@ -221,7 +226,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'evenementsAction': {
-            afficherPageImpression('PHP/view/', 'evenementsAction', '');
+                afficherPageImpression('PHP/view/', 'evenementsAction', '');
                 break;
             }
         case 'visuelFacture': {
@@ -237,7 +242,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'suppressionAction': {
-            afficherPageImpression('PHP/view/', 'suppressionAction', 'Suppression');
+                afficherPageImpression('PHP/view/', 'suppressionAction', 'Suppression');
                 break;
             }
         case 'lettrage': {
@@ -249,7 +254,7 @@ if (isset($_GET['action'])) {
                 break;
             }
         case 'lettrageAction': {
-            afficherPageImpression('PHP/view/', 'lettrageAction', 'Lettrage');
+                afficherPageImpression('PHP/view/', 'lettrageAction', 'Lettrage');
                 break;
             }
         case 'visuelParCompteDate': {
@@ -272,8 +277,28 @@ if (isset($_GET['action'])) {
                 afficherPageImpression('PHP/view/', 'bilanImpression', 'Impression bilan');
                 break;
             }
-            case 'dateBilanImpession': {
-                afficherPage('PHP/view/', 'dateBilanImpession', 'Date pour impression bilan');
+        case 'dateBilanJournauxImpession': {
+                afficherPage('PHP/view/', 'dateBilanJournauxImpession', 'Date pour impression');
+                break;
+            }
+        case 'impressionChoixListe': {
+                afficherPage('PHP/view/', 'impressionChoixListe', 'Choix du journal');
+                break;
+            }
+        case 'journauxImpression': {
+                afficherPageImpression('PHP/view/', 'journauxImpression', 'Impression du journal');
+                break;
+            }
+        case 'exportCsvJournaux': {
+                afficherPageExport('PHP/view/', 'exportCsvJournaux', 'Exportation du journal');
+                break;
+            }
+        case 'exportCsvListeBenevole': {
+                afficherPageExport('PHP/view/', 'exportCsvListeBenevole', 'Exportation listes');
+                break;
+            }
+        case 'exportCsvListeEnfant': {
+                afficherPageExport('PHP/view/', 'exportCsvListeEnfant', 'Exportation listes');
                 break;
             }
     }

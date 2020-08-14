@@ -13,8 +13,6 @@ if (!empty($bénévoles)) { //Si rien dans comptes on imprime pas se qu'il y a e
             <div class="bloc titre1">Nom</div>
             <div class="bloc titre1">Prénom</div>
             <div class="bloc titre1">Date de naissance</div>
-            <div class="bloc titre1">adresse</div>
-            <div class="bloc titre1">Code postal</div>
             <div class="bloc titre1">Ville</div>
             <div class="bloc titre1">Email</div>
             <div class="bloc titre1">Téléphone</div>
@@ -30,8 +28,6 @@ if (!empty($bénévoles)) { //Si rien dans comptes on imprime pas se qu'il y a e
                 <div class="bloc contenuListe1"><?php echo $elt->getNomPersonne() ?></div>
                 <div class="bloc contenuListe1"><?php echo $elt->getPrenomPersonne() ?></div>
                 <div class="bloc contenuListe1"><?php echo $elt->getDateNaissPersonne() ?></div>
-                <div class="bloc contenuListe1"><?php echo $elt->getAdressePersonne() ?></div>
-                <div class="bloc contenuListe1"><?php echo $elt->getCpPersonne() ?></div>
                 <div class="bloc contenuListe1"><?php echo $elt->getVille()->getLibelleVille() ?></div>
                 <div class="bloc contenuListe1"><?php echo $elt->getEmailPersonne() ?></div>
                 <div class="bloc contenuListe1"><?php echo $elt->getTelPersonne() ?></div>

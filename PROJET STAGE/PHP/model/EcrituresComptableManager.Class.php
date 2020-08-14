@@ -119,6 +119,19 @@ class EcrituresComptableManager
         return $ecrituresComptable;
     }
 
+    public static function getListParTypeDate($date1, $date2, $typeEcriture) // Ramène une liste de toutes les écritures
+    {
+        $db = DbConnect::getDb();
+        $ecrituresComptable = [];
+        $q = $db->query("SELECT * FROM `ecriturescomptable` WHERE `dateEcriture` BETWEEN '$date1' AND '$date2' AND `typeEcriture` LIKE '$typeEcriture' ORDER BY `ecriturescomptable`.`idEcriture` ASC");
+        while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) { 
+            if ($donnees != false) {
+                $ecrituresComptable[] = new EcrituresComptable($donnees);
+            }
+        }
+        return $ecrituresComptable;
+    }
+
     public static function getListParCompte($date1, $date2, $numcompte) // Ramène une liste de toutes les écritures
     {
         $db = DbConnect::getDb();

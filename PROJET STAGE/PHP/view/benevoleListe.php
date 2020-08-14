@@ -22,8 +22,8 @@ if (!empty($bénévoles)) { //Si rien dans comptes on imprime pas se qu'il y a e
             <div class="bloc titre">Téléphone</div>
             <div class="bloc titre">Autorisation photos</div>
             <div class="bloc titre">Bafa acquis</div>
-            <div class="bloc titre">Remarque</div>
             <div class="bloc titre">Casier Judicaire</div>
+            <div class="bloc titre">Remarque</div>
             <div class="bloc titre">Modifier</div>
             <div class="bloc titre">Supprimer</div>
         </div>

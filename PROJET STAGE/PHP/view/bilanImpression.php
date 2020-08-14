@@ -201,6 +201,6 @@ if (!empty($listeEcriture)) { //Si rien dans fournisseurs on affiche pas se qu'i
 
 <div class="bouton btn" id="btn1">Imprimer</div>
 
-<a href="index.php?action=tableauBord">
+<a href="index.php?action=dateBilanJournauxImpession&m=bilan">
     <div class="bouton btn" id="btnRetour">Retour</div>
 </a>
