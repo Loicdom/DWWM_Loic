@@ -3,7 +3,6 @@
 $pseudo = (isset($_SESSION['pseudo'])) ? $_SESSION['pseudo'] : ''; // on mets le pseudo et le rôle dans une variable session pour pouvoir les utiliser sur l'application
 $role = (isset($_SESSION['role'])) ? $_SESSION['role'] : '';
 $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceComptable'] : '';
-
 ?>
 
 <body>
@@ -24,11 +23,13 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
         <div class="ligneMenu">
             <div class="menu"><a href="#">Gestion</a>
                 <div class="sousMenu">
+                    <?php if($role == 1) { ?>
                     <div><a href="index.php?action=fournisseursListe">Liste fournisseurs</a></div>
                     <div><a href="index.php?action=evenementsListe">Liste évènements</a></div>
+                    <div><a href="index.php?action=usersListe">Liste utilisateurs</a></div>
+                    <?php } ?>
                     <div><a href="index.php?action=benevoleListe">Liste bénévoles</a></div>
                     <div><a href="index.php?action=enfantListe">Liste enfants</a></div>
-                    <div><a href="index.php?action=usersListe">Liste utilisateurs</a></div>
                     <div><a href="index.php?action=bureau">Bureau</a></div>
                 </div>
             </div>
@@ -44,7 +45,9 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
                 <div class="sousMenu">
                     <div><a href="index.php?action=visuelParCompteDate">Visuel par comptes</a></div>
                     <div><a href="index.php?action=planComptableListe">Plan comptable</a></div>
+                    <?php if($role == 1) { ?>
                     <div><a href="index.php?action=lettrage">Lettrage</a></div>
+                    <?php } ?>
                     <div><a href="https://www.creditmutuel.fr/fr/authentification.html" target="_blank">Crédit Mutuel</a></div>
                 </div>
             </div>
@@ -62,17 +65,16 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
                     <div><a href="index.php?action=dateImpresFact">Factures</a></div>
                 </div>
             </div>
-            <div class="menu"><a href="#">Exporter</a>
+            <div class="menu"><a href="#">Exportation</a>
                 <div class="sousMenu">
                     <div><a href="index.php?action=impressionChoixListe&e=export">Journaux</a></div>
                     <div><a href="index.php?action=exportCsvListeBenevole">Liste bénévoles</a></div>
                     <div><a href="index.php?action=exportCsvListeEnfant">Liste enfants</a></div>
                 </div>
             </div>
-            <div class="menu"><a href="#">Outils</a>
+            <div class="menu"><a href="#">Autres</a>
                 <div class="sousMenu">
-                    <div><a href="#">Calculatrice</a></div>
-                    <div><a href="#">Documents/Projets</a></div>
+                    <div><a href="index.php?action=documentListe">Documents/Projets</a></div>
                 </div>
             </div>
         </div>

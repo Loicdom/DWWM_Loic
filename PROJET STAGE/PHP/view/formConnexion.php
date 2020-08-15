@@ -21,6 +21,7 @@ else // On check le mot de passe
         {
             $_SESSION['pseudo'] = $utilisateur->getPseudo();
             $_SESSION['idExerciceComptable'] = $_POST['idExerciceComptable'];
+            $_SESSION['role'] = $utilisateur->getRole();
             $_SESSION['id'] = $utilisateur->getIdUser();
             $message = '<p>Bienvenue ' . $utilisateur->getPseudo() . ', vous êtes maintenant connecté!</p>';
             header("refresh:2,url=index.php?action=montantDepart");?>

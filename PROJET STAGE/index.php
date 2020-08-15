@@ -301,6 +301,22 @@ if (isset($_GET['action'])) {
                 afficherPageExport('PHP/view/', 'exportCsvListeEnfant', 'Exportation listes');
                 break;
             }
+            case 'documentListe': {
+                afficherPageEcriture('PHP/view/', 'documentListe', 'Exportation listes');
+                break;
+            }
+            case 'documentForm': {
+                afficherPageEcriture('PHP/view/', 'documentForm', 'Exportation listes');
+                break;
+            }
+            case 'documentVisuel': {
+                afficherPage('PHP/view/', 'documentVisuel', 'Exportation listes');
+                break;
+            }
+            case 'documentAction': {
+                afficherPageImpression('PHP/view/', 'documentAction', 'Exportation listes');
+                break;
+            }
     }
 } else { // Sinon, on affiche la page principale du site
     afficherPageFooterConnexion('PHP/view/', 'formConnexion', 'Connexion');

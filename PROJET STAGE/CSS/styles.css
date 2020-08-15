@@ -983,3 +983,30 @@ h1 {
     flex-direction: column;
 }
 
+/*********************************************** Documents *****************************************/
+
+.div_document1 {
+    margin-top: 5vh;
+}
+
+.btn_document {
+    margin-right: 5vw;
+    margin-top: 5vh;
+}
+
+.inputform_document {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.div_document {
+    display: flex;
+    flex-direction: column;
+}
+
+.label_libelleDoc {
+    color: var(--color-orange);
+    margin-bottom: 2vh;
+    font-size: 1.2em;
+    font-weight: bold;
+}

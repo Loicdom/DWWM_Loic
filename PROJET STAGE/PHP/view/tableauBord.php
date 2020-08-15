@@ -16,15 +16,30 @@ $date2 = $years->getLibelleExercice()."-12-31";
                     for($i=0;$i<count($array_caisse);$i++) {
                         if($array_caisse[$i]->getSens() == 'Débit') {
                             $somme_caisse = $somme_caisse + $array_caisse[$i]->getMontant();
+                        } else {
+                            $somme_caisse = $somme_caisse - $array_caisse[$i]->getMontant();
                         }
                     }
-                    
+                    echo $somme_caisse;
                     ?>
                 </div>
             </div>
             <div class="resultat">
                 <div class="titreReultat">Résultat en banque :</div>
-                <div class="resultatSomme">1032,00 €</div>
+                <div class="resultatSomme">
+                <?php 
+                    $array_banque = EcrituresComptableManager::getListParCompte($date1, $date2, '512');
+                    $somme_banque = 0;
+                    for($i=0;$i<count($array_banque);$i++) {
+                        if($array_banque[$i]->getSens() == 'Débit') {
+                            $somme_banque = $somme_banque + $array_banque[$i]->getMontant();
+                        } else {
+                            $somme_banque = $somme_banque - $array_banque[$i]->getMontant();
+                        }
+                    }
+                    echo $somme_banque;
+                    ?>
+                </div>
             </div>
         </div>
         <a href="https://www.creditmutuel.fr/fr/authentification.html" target="_blank">

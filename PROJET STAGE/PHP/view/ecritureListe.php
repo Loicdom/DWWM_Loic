@@ -2,10 +2,11 @@
 $journal = $_GET["j"];
 $ecritures = EcrituresManager::getList($annee, $journal); // on récupere la liste des ecritures
 ?>
-<a href="index.php?action=ecritureForm&j=<?php echo $journal ?>">
-    <div class="bouton btn"> Ajouter les lignes</div>
-</a>
-
+<?php if ($role == 1) { ?>
+    <a href="index.php?action=ecritureForm&j=<?php echo $journal ?>">
+        <div class="bouton btn"> Ajouter les lignes</div>
+    </a>
+<?php } ?>
 <?php
 if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a en dessous
 ?>
@@ -18,7 +19,9 @@ if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a e
                 echo '<div class="divTitre">Facture</div>';
             } ?>
             <div class="divTitre">Voir ligne d'écritures</div>
-            <div class="divTitre">Supprimer</div>
+            <?php if ($role == 1) { ?>
+                <div class="divTitre">Supprimer</div>
+            <?php } ?>
         </div>
         <?php
         foreach ($ecritures as $elt) { // on fait une boucle pour afficher toutes les ecritures
@@ -29,13 +32,16 @@ if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a e
                 <?php if ($journal == "charges" || $journal == "recettes") { ?>
                     <a href="index.php?action=visuelFacture&j=<?php echo $journal ?>&id=<?php echo $elt->getIdFacture() ?>" class="bloc">
                         <div class="bouton">Voir facture</div>
-                    <?php } ?>
-                    <a href="index.php?action=visuelLigne&j=<?php echo $journal ?>&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
-                        <div class="bouton">Voir ligne d'écritures</div>
                     </a>
+                <?php } ?>
+                <a href="index.php?action=visuelLigne&j=<?php echo $journal ?>&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
+                    <div class="bouton">Voir ligne d'écritures</div>
+                </a>
+                <?php if ($role == 1) { ?>
                     <a href="index.php?action=suppressionEcriture&j=<?php echo $journal ?>&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
                         <div class="bouton">Supprimer</div>
                     </a>
+                <?php } ?>
             </div>
         <?php } ?>
     <?php } ?>
