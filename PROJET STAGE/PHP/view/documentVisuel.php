@@ -1,7 +1,6 @@
 <?php
-$fact= $_GET["id"];
-$facture = DocumentsManager::getById($fact); 
-$journal= $_GET["j"];
+$doc= $_GET["id"];
+$facture = DocumentsManager::getById($doc); 
 ?>
 
 <div class="visuelFact"><?php echo $facture->getLibelleDocument() ?></div>

@@ -986,7 +986,7 @@ h1 {
 /*********************************************** Documents *****************************************/
 
 .div_document1 {
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
 .btn_document {
@@ -1006,7 +1006,12 @@ h1 {
 
 .label_libelleDoc {
     color: var(--color-orange);
-    margin-bottom: 2vh;
+    margin-bottom: 3vh;
     font-size: 1.2em;
     font-weight: bold;
+}
+
+.btn_doc {
+    width: 30%;
+    margin-left: 10vw;
 }

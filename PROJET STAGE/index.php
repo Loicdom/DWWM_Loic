@@ -302,19 +302,27 @@ if (isset($_GET['action'])) {
                 break;
             }
             case 'documentListe': {
-                afficherPageEcriture('PHP/view/', 'documentListe', 'Exportation listes');
+                afficherPageEcriture('PHP/view/', 'documentListe', 'documents listes');
                 break;
             }
             case 'documentForm': {
-                afficherPageEcriture('PHP/view/', 'documentForm', 'Exportation listes');
+                afficherPageEcriture('PHP/view/', 'documentForm', 'Formulaire');
                 break;
             }
             case 'documentVisuel': {
-                afficherPage('PHP/view/', 'documentVisuel', 'Exportation listes');
+                afficherPageImpression('PHP/view/', 'documentVisuel', 'Visuel document');
                 break;
             }
             case 'documentAction': {
-                afficherPageImpression('PHP/view/', 'documentAction', 'Exportation listes');
+                afficherPageImpression('PHP/view/', 'documentAction', '');
+                break;
+            }
+            case 'suppressionDocument': {
+                afficherPageImpression('PHP/view/', 'suppressionDocument', 'Suppression document');
+                break;
+            }
+            case 'suppressionDocumentconfirmation': {
+                afficherPageImpression('PHP/view/', 'suppressionDocumentconfirmation', 'Suppression document');
                 break;
             }
     }
