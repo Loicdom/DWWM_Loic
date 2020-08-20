@@ -1,9 +1,9 @@
 <?php
 $dossier = 'Documents/';
 $fichier = basename($_FILES['document']['name']);
-$taille_maxi = 100000;
+$taille_maxi = 10000000;
 $taille = filesize($_FILES['document']['tmp_name']);
-$format = array('.png', '.gif', '.jpg', '.jpeg');
+$format = array('.png', '.gif', '.jpg', '.jpeg','.pdf','xlsx','xls');
 $extension = strrchr($_FILES['document']['name'], '.');
 $libelleDocument = $_POST['libelleDocument'];
 

@@ -65,7 +65,7 @@ $annee = (isset($_SESSION['idExerciceComptable'])) ? $_SESSION['idExerciceCompta
                     <div><a href="index.php?action=dateImpresFact">Factures</a></div>
                 </div>
             </div>
-            <div class="menu"><a href="#">Exportation</a>
+            <div class="menu"><a href="#">Exportations</a>
                 <div class="sousMenu">
                     <div><a href="index.php?action=impressionChoixListe&e=export">Journaux</a></div>
                     <div><a href="index.php?action=exportCsvListeBenevole">Liste bénévoles</a></div>
