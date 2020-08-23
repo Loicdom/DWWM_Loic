@@ -18,7 +18,7 @@ if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a e
             <?php if ($journal == "charges" || $journal == "recettes") {
                 echo '<div class="divTitre">Facture</div>';
             } ?>
-            <div class="divTitre">Lignes d'écritures</div>
+            <div class="divTitre">Lignes d'écriture</div>
             <?php if ($role == 1) { ?>
                 <div class="divTitre">Supprimer</div>
             <?php } ?>
@@ -35,7 +35,7 @@ if (!empty($ecritures)) { //Si rien dans ecritures on affiche pas se qu'il y a e
                     </a>
                 <?php } ?>
                 <a href="index.php?action=visuelLigne&j=<?php echo $journal ?>&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
-                    <div class="bouton">Voir lignes d'écritures</div>
+                    <div class="bouton">Voir lignes d'écriture</div>
                 </a>
                 <?php if ($role == 1) { ?>
                     <a href="index.php?action=suppressionEcriture&j=<?php echo $journal ?>&id=<?php echo $elt->getIdEcriture() ?>" class="bloc">
