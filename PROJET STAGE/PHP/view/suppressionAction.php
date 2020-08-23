@@ -4,7 +4,7 @@ $ligne = LigneEcritureManager::getByIdEcriture($idEcriture); // pour récupèrer
 $ecriture = EcrituresManager::getById($idEcriture);
 $journal = $_GET["j"];
 
-foreach ($ligne as $elt) { // on fait une boucle pour afficher tout les ecritures
+foreach ($ligne as $elt) { // on fait une boucle pour pouvoir supprimer toutes les lignes d'écriture
     $idligneEcriture = $elt->getIdLigneEcriture();
     LigneEcritureManager::delete($idligneEcriture);
 }
