@@ -1,0 +1,89 @@
+
+/*********************** GENERAL*****************/
+body{
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../Images/panier\ sans\ logo\ noir.png");
+    background-size: cover;
+    width: 95%;
+}
+
+fieldset {
+    color: rgb(187, 238, 238);
+    margin-top: 8vw;
+    border: rgb(117, 33, 0) solid 2px;
+}
+
+.body_co, .inscription {
+    margin-left: 8vw;
+}
+
+.bouton_co {
+    color: rgb(187, 238, 238);
+    background-color: rgb(43, 39, 39);
+    border: rgb(117, 33, 0) solid 2px;
+    border-radius: 10px;
+    padding: 0.8vw;
+    cursor: pointer;
+}
+
+.centrer_co {
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.inscription {
+    text-decoration: none;
+    color: rgb(187, 238, 238);
+    margin-top: 4vh;
+    font-weight: bold;
+}
+
+.ligne_co {
+    justify-content: flex-end;
+}
+
+.contenu_co {
+    margin: 1vw;
+}
+
+#identifiant, #motDePasse {
+    font-size: 1.1em;
+}
+
+.titre_co, footer{
+    color: rgb(187, 238, 238);
+    text-align: center;
+    padding: 1vw;
+    margin: 3vw;
+    border-radius: 10px;
+    border: rgb(117, 33, 0) solid 2px;
+}
+
+footer {
+    margin-top: 15vw;
+    position: relative;
+    border: rgb(117, 33, 0) solid 2px;
+}
+
+div{
+    display: flex;
+    flex: 1;
+}
+
+img {
+    width: 30%;
+    border-radius: 50%;
+}
+
+.logo {
+    justify-content: flex-end;
+    position: absolute;
+    margin-left: 30vw;
+    margin-top: 5vh;
+}
+
+
+
