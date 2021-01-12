@@ -70,4 +70,12 @@ class User{
 			}
 		}
 	}
+
+
+/****************************Autres méthodes****************************/
+public function toString() 
+{ 
+ return $this->getIdUser() . $this->getPseudo() . $this->getMotDePasse() . $this->getRole() ;
+}
+
 }

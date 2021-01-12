@@ -33,6 +33,18 @@ CREATE TABLE IF NOT EXISTS Niveaux(
 )ENGINE=InnoDB;
 
 
+#------------------------------------------------------------
+# Table: Matchs
+#------------------------------------------------------------
+
+DROP TABLE IF EXISTS `Matchs`;
+CREATE TABLE IF NOT EXISTS Matchs(
+        idMatch      	Int  Auto_increment  NOT NULL PRIMARY KEY ,
+        Adversaire	Varchar (100) NOT NULL ,
+		lieux		Varchar (100) NOT NULL
+)ENGINE=InnoDB;
+
+
 
 #------------------------------------------------------------
 # Table: Equipes
@@ -101,13 +113,15 @@ CREATE TABLE IF NOT EXISTS Stats(
 		fauteProv           Int NOT NULL ,
 		pointMarque       	Int NOT NULL ,
 		evaluation         	Int NOT NULL ,
-		idJoueur     		Int NOT NULL 
+		idJoueur     		Int NOT NULL ,
+		idMatch     		Int NOT NULL
 )ENGINE=InnoDB;
 
 #------------------------------------------------------------
 
 
 ALTER TABLE Stats ADD CONSTRAINT Stats_Joueurs_FK FOREIGN KEY (idJoueur) REFERENCES Joueurs(idJoueur);
+ALTER TABLE Stats ADD CONSTRAINT Stats_Matchs_FK FOREIGN KEY (idMatch) REFERENCES Matchs(idMatch);
 ALTER TABLE Joueurs ADD CONSTRAINT Joueurs_Equipes_FK FOREIGN KEY (idEquipe) REFERENCES Equipes(idEquipe);
 ALTER TABLE Equipes ADD CONSTRAINT Equipes_Niveaux_FK FOREIGN KEY (idNiveau) REFERENCES Niveaux(idNiveau)
 

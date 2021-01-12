@@ -5,7 +5,7 @@ class StatManager
     {
         var_dump($obj);
         $db = DbConnect::getDb();
-        $q = $db->prepare("INSERT INTO stats (idStat,dateStat,minuteJouer,deuxPointTente,deuxPointMarque,troisPointTente,troisPointMarque,lancerFrancTente,lancerFrancMarque,rebondDef,rebondOff,passeDec,ballePerdue,interception,contreRealise,contreSubit,fautePerso,fauteProv,pointMarque,evaluation,idJoueur) VALUES (:idStat,:dateStat,:minuteJouer,:deuxPointTente,:deuxPointMarque,:troisPointTente,:troisPointMarque,:lancerFrancTente,:lancerFrancMarque,:rebondDef,:rebondOff,:passeDec,:ballePerdue,:interception,:contreRealise,:contreSubit,:fautePerso,:fauteProv,:pointMarque,:evaluation,:idJoueur)");
+        $q = $db->prepare("INSERT INTO stats (idStat,dateStat,minuteJouer,deuxPointTente,deuxPointMarque,troisPointTente,troisPointMarque,lancerFrancTente,lancerFrancMarque,rebondDef,rebondOff,passeDec,ballePerdue,interception,contreRealise,contreSubit,fautePerso,fauteProv,pointMarque,evaluation,idJoueur,idMatch) VALUES (:idStat,:dateStat,:minuteJouer,:deuxPointTente,:deuxPointMarque,:troisPointTente,:troisPointMarque,:lancerFrancTente,:lancerFrancMarque,:rebondDef,:rebondOff,:passeDec,:ballePerdue,:interception,:contreRealise,:contreSubit,:fautePerso,:fauteProv,:pointMarque,:evaluation,:idJoueur,:idMatch)");
         $q->bindValue(":idStat", $obj->getIdStat());
         $q->bindValue(":dateStat", $obj->getDateStat());
         $q->bindValue(":minuteJouer", $obj->getMinuteJouer());
@@ -27,13 +27,14 @@ class StatManager
         $q->bindValue(":pointMarque", $obj->getPointMarque());
         $q->bindValue(":evaluation", $obj->getEvaluation());
         $q->bindValue(":idJoueur", $obj->getIdJoueur());
+        $q->bindValue(":idMatch", $obj->getIdMatch());
         $q->execute();
     }
 
     public static function update(Stat $obj)
     {
         $db = DbConnect::getDb();
-        $q = $db->prepare("UPDATE stats SET  dateStat=:dateStat, minuteJouer=:minuteJouer, deuxPointTente=:deuxPointTente, deuxPointMarque=:deuxPointMarque, troisPointTente=:troisPointTente, troisPointMarque=:troisPointMarque, lancerFrancTente=:lancerFrancTente, lancerFrancMarque=:lancerFrancMarque, rebondDef=:rebondDef, rebondOff=:rebondOff, passeDec=:passeDec, ballePerdue=:ballePerdue, interception=:interception, contreRealise=:contreRealise, contreSubit=:contreSubit, fautePerso=:fautePerso, fauteProv=:fauteProv, pointMarque=:pointMarque, evaluation=:evaluation, idJoueur=:idJoueur WHERE idStat=:idStat");
+        $q = $db->prepare("UPDATE stats SET  dateStat=:dateStat, minuteJouer=:minuteJouer, deuxPointTente=:deuxPointTente, deuxPointMarque=:deuxPointMarque, troisPointTente=:troisPointTente, troisPointMarque=:troisPointMarque, lancerFrancTente=:lancerFrancTente, lancerFrancMarque=:lancerFrancMarque, rebondDef=:rebondDef, rebondOff=:rebondOff, passeDec=:passeDec, ballePerdue=:ballePerdue, interception=:interception, contreRealise=:contreRealise, contreSubit=:contreSubit, fautePerso=:fautePerso, fauteProv=:fauteProv, pointMarque=:pointMarque, evaluation=:evaluation, idJoueur=:idJoueur, idMatch=:idMatch WHERE idStat=:idStat");
         $q->bindValue(":idStat", $obj->getIdStat());
         $q->bindValue(":dateStat", $obj->getDateStat());
         $q->bindValue(":minuteJouer", $obj->getMinuteJouer());
@@ -55,6 +56,7 @@ class StatManager
         $q->bindValue(":pointMarque", $obj->getPointMarque());
         $q->bindValue(":evaluation", $obj->getEvaluation());
         $q->bindValue(":idJoueur", $obj->getIdJoueur());
+        $q->bindValue(":idMatch", $obj->getIdMatch());
         $q->execute();
     }
 

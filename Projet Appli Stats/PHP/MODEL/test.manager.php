@@ -11,89 +11,117 @@ spl_autoload_register("ChargerClasse");
 
 Parametre::init();
 DbConnect::init();
+
 /******************** Test Annee *********************/
 
 // echo "tot";
-$p = AnneeManager::getById(1);
-// $s = FormateurManager::getByMatricule("88CN001");
-var_dump($p);
-// var_dump($s);
-// $p->setIdFormateur(null);
-// $p->setPrenom("Claud");
-// FormateurManager::add($p);
-// FormateurManager::update($p);
+// $p = AnneeManager::getById(2);
+// var_dump($p);
+// $p->setIdAnnee(null);
+// $p->setLibelleAnnee("2017");
+// AnneeManager::add($p);
+// AnneeManager::update($p);
+// $tableau = AnneeManager::getList();
+// foreach ($tableau as $uneAnnee)
+// {
+//     echo $uneAnnee->toString()."\n";
+// }
+// AnneeManager::delete($p);
+
+/******************** Test Equipe *********************/
+
+// echo "tot";
+// $p = EquipeManager::getById(3);
+// var_dump($p);
+// $p->setIdEquipe(null);
+// $p->setNomEquipe("Audruicq");
+// EquipeManager::add($p);
+// EquipeManager::update($p);
+// $tableau = EquipeManager::getList();
+// foreach ($tableau as $uneEquipe)
+// {
+//     echo $uneEquipe->toString()."\n";
+// }
+// EquipeManager::delete($p);
+
+/******************** Test Joueur *********************/
+
+// echo "tot";
+// $p = JoueurManager::getById(4);
+// var_dump($p);
+// $p->setIdJoueur(null);
+// $p->setNomJoueur("Dupont");
+// $p->setPrenomJoueur("Luc");
+// JoueurManager::add($p);
+// JoueurManager::update($p);
 // $tableau = JoueurManager::getList();
-// foreach ($tableau as $unFormateur)
+// foreach ($tableau as $unJoueur)
 // {
-//     echo $unFormateur->toString();
+//     echo $unJoueur->toString()."\n";
 // }
-// FormateurManager::delete($p);
+// JoueurManager::delete($p);
 
-/******************** Test Stagiaire *********************/
+/******************** Test Niveau *********************/
 
-// $p = StagiaireManager::findById(18);
-// $s = StagiaireManager::getByNumBenef("19124694");
+// echo "tot";
+// $p = NiveauManager::getById(2);
 // var_dump($p);
-// var_dump($s);
-// $p->setIdStagiaire(null);
-// $p->setPrenom("Claud");
-// StagiaireManager::add($p);
-// StagiaireManager::update($p);
-// $tableau = StagiaireManager::getList();
-// foreach ($tableau as $unStagiaire)
+// $p->setIdNiveau(null);
+// $p->setLibelleNiveau("Stras");
+// NiveauManager::add($p);
+// NiveauManager::update($p);
+// $tableau = NiveauManager::getList();
+// foreach ($tableau as $unNiveau)
 // {
-//     echo $unStagiaire->toString();
+//     echo $unNiveau->toString()."\n";
 // }
-// StagiaireManager::delete($p);
+// NiveauManager::delete($p);
 
-/******************** Test Formation *********************/
+/******************** Test Stats *********************/
 
-// $p = FormationManager::findById(14);
+// echo "tot";
+// $p = StatManager::getById(2);
 // var_dump($p);
-// $p->setIdFormation(null);
-// $p->setLibelleFormation("BBBBB");
-// FormationManager::add($p);
-// FormationManager::update($p); 
-// var_dump($p);
-// $tableau = FormationManager::getList();
-// foreach ($tableau as $uneFormation)
+// $p->setIdStat(null);
+// $p->setDeuxPointTente(57);
+// $p->setDeuxPointMarque(21);
+// StatManager::add($p);
+// StatManager::update($p);
+// $tableau = StatManager::getList();
+// foreach ($tableau as $uneStat)
 // {
-//     echo $uneFormation->toString();
+//     echo $uneStat->toString()."\n";
 // }
-// FormationManager::delete($p);
+// StatManager::delete($p);
 
-/******************** Test Offre *********************/
+/******************** Test Users *********************/
 
-// $p = OffreManager::findById(22);
+// echo "tot";
+// $p = UserManager::getById(2);
 // var_dump($p);
-// $p->setIdOffre(null);
-// $p->setNumOffre("1111111");
-// OffreManager::add($p);
-// OffreManager::update($p);
-// var_dump($p);
-// $tableau = OffreManager::getList();
-// foreach ($tableau as $uneOffre)
+// $p->setIdUser(null);
+// $p->setPseudo("Dunk");
+// UserManager::add($p);
+// UserManager::update($p);
+// $tableau = UserManager::getList();
+// foreach ($tableau as $unUser)
 // {
-//     echo $uneOffre->toString();
+//     echo $unUser->toString()."\n";
 // }
-// OffreManager::delete($p);
+// UserManager::delete(2);
 
-/******************** Test pointage_par_semaine *********************/
+/******************** Test Match *********************/
 
-// $p = Pointages_par_semainesManager::findById(1);
+// echo "tot";
+// $p = MatchManager::getById(3);
 // var_dump($p);
-// $tableau = Pointages_par_semainesManager::getList();
-// foreach ($tableau as $unPointage)
+// $p->setIdMatch(null);
+// $p->setAdversaire("Stras");
+// MatchManager::add($p);
+// MatchManager::update($p);
+// $tableau = MatchManager::getList();
+// foreach ($tableau as $unMatch)
 // {
-//     echo $unPointage->toString();
+//     echo $unMatch->toString()."\n";
 // }
-
-/******************** Test stagiaire_par_offres *********************/
-
-// $p = Stagiaires_par_offresManager::findById(167);
-// var_dump($p);
-// $tableau = Stagiaires_par_offresManager::getList();
-// foreach ($tableau as $StagiaireparOffre)
-// {
-//     echo $StagiaireparOffre->toString();
-// }
+// MatchManager::delete($p);

@@ -3,7 +3,6 @@ class AnneeManager
 {
     public static function add(Annee $obj)
     {
-        var_dump($obj);
         $db = DbConnect::getDb();
         $q = $db->prepare("INSERT INTO annee (idAnnee,libelleAnnee) VALUES (:idAnnee,:libelleAnnee)");
         $q->bindValue(":idAnnee", $obj->getIdAnnee());

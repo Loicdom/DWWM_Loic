@@ -23,6 +23,7 @@ private $_fauteProv;
 private $_pointMarque;
 private $_evaluation;
 private $_idJoueur;
+private $_idMatch;
 
 /******************************Accesseurs*******************************/
 public function getIdStat()
@@ -193,6 +194,14 @@ public function setIdJoueur($_idJoueur)
 {
  return $this->_idJoueur = $_idJoueur;
 }
+public function getIdMatch()
+{
+ return $this->_idMatch;
+}
+public function setIdMatch($_idMatch)
+{
+ return $this->_idMatch = $_idMatch;
+}
 
 /*******************************Construct*******************************/
 public function __construct(array $options = [])
@@ -217,7 +226,7 @@ public function __construct(array $options = [])
 /****************************Autres méthodes****************************/
 public function toString() 
 { 
- return $this->getIdStat() . $this->getDateStat() . $this->getMinuteJouer() . $this->getDeuxPointTente() . $this->getDeuxPointMarque() . $this->getTroisPointTente() . $this->getTroisPointMarque() . $this->getLancerFrancTente() . $this->getLancerFrancMarque() . $this->getRebondDef() . $this->getRebondOff() . $this->getPasseDec() . $this->getBallePerdue() . $this->getInterception() . $this->getContreRealise() . $this->getContreSubit() . $this->getFautePerso() . $this->getFauteProv(). $this->getPointMarque() . $this->getEvaluation() . $this->getIdJoueur() ;
+ return $this->getIdStat() . "\n" . $this->getDateStat() . "\n" . $this->getMinuteJouer() . "\n" . $this->getDeuxPointTente() . "\n" . $this->getDeuxPointMarque() . "\n" . $this->getTroisPointTente() . "\n" . $this->getTroisPointMarque() . "\n" . $this->getLancerFrancTente() . "\n" . $this->getLancerFrancMarque() . "\n" . $this->getRebondDef() . "\n" . $this->getRebondOff() . "\n" . $this->getPasseDec() . "\n" . $this->getBallePerdue() . "\n" . $this->getInterception() . "\n" . $this->getContreRealise() . "\n" . $this->getContreSubit() . "\n" . $this->getFautePerso() . "\n" . $this->getFauteProv() . "\n" . $this->getPointMarque() . "\n" . $this->getEvaluation() . "\n" . $this->getIdJoueur() . "\n" . $this->getIdMatch() . "\n" ;
 }
 
 }
