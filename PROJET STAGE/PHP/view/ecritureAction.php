@@ -3,9 +3,9 @@ $typeEcriture = $_GET["j"];
 if ($typeEcriture == "charges" || $typeEcriture == "recettes") {
     $dossier = 'Factures/';
     $fichier = basename($_FILES['facture']['name']);
-    $taille_maxi = 100000;
+    $taille_maxi = 10000000;
     $taille = filesize($_FILES['facture']['tmp_name']);
-    $format = array('.png', '.gif', '.jpg', '.jpeg');
+    $format = array('.png', '.gif', '.jpg', '.jpeg', '.JPG');
     $extension = strrchr($_FILES['facture']['name'], '.');
     $libelleFacture = $_POST['libelleEcriture'][0];
 

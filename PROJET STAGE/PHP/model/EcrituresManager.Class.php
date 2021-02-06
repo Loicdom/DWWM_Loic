@@ -51,7 +51,7 @@ class EcrituresManager
     {
         $db = DbConnect::getDb();
         $ecritures = [];
-        $q = $db->query("SELECT * FROM Ecritures WHERE idExerciceComptable=$years AND typeEcriture='$journal'");
+        $q = $db->query("SELECT * FROM Ecritures WHERE idExerciceComptable=$years AND typeEcriture='$journal' ORDER BY dateEcriture");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $ecritures[] = new Ecritures($donnees);
@@ -78,7 +78,7 @@ class EcrituresManager
     {
         $db = DbConnect::getDb();
         $ecritures = [];
-        $q = $db->query("SELECT * FROM Ecritures WHERE `dateEcriture` BETWEEN '$date1' AND '$date2'");
+        $q = $db->query("SELECT * FROM Ecritures WHERE `dateEcriture` BETWEEN '$date1' AND '$date2' ORDER BY dateEcriture");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $ecritures[] = new Ecritures($donnees);
