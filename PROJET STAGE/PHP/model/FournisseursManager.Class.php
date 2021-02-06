@@ -45,7 +45,7 @@ class FournisseursManager
     {
         $db = DbConnect::getDb();
         $fournisseurs = [];
-        $q = $db->query("SELECT * FROM Fournisseurs"); // requete sql qui ramène toutes les infos des fourniseurs
+        $q = $db->query("SELECT * FROM Fournisseurs ORDER BY codeFournisseur"); // requete sql qui ramène toutes les infos des fourniseurs
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $fournisseurs[] = new Fournisseurs($donnees); // Liste mise dans un tableau
@@ -57,7 +57,7 @@ class FournisseursManager
     static public function codeFournisseur()
 	{
 		$db = DbConnect::getDb(); // Instance de PDO.
-		$q = $db->query('SELECT codeFournisseur  FROM Fournisseurs'); //requete sql qui ramène tout les codes fournisseurs
+		$q = $db->query('SELECT codeFournisseur  FROM Fournisseurs ORDER BY codeFournisseur'); //requete sql qui ramène tout les codes fournisseurs
         
         if($donnees = $q->fetch(PDO::FETCH_OBJ)) {
             do {

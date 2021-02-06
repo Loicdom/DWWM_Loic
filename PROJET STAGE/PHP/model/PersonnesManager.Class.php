@@ -122,7 +122,7 @@ class PersonnesManager
     {
         $db = DbConnect::getDb();
         $personnes = [];
-        $q = $db->query("SELECT * FROM Personnes");
+        $q = $db->query("SELECT * FROM Personnes ORDER BY nomPersonne");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $personnes[] = new Personnes($donnees);
@@ -135,7 +135,7 @@ class PersonnesManager
     {
         $db = DbConnect::getDb();
         $personnes = [];
-        $q = $db->query("SELECT * FROM Personnes WHERE typePersonne='Bénévole'");
+        $q = $db->query("SELECT * FROM Personnes WHERE typePersonne='Bénévole' ORDER BY nomPersonne");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $personnes[] = new Personnes($donnees);
@@ -148,7 +148,7 @@ class PersonnesManager
     {
         $db = DbConnect::getDb();
         $personnes = [];
-        $q = $db->query("SELECT * FROM Personnes WHERE typePersonne='Enfant'");
+        $q = $db->query("SELECT * FROM Personnes WHERE typePersonne='Enfant' ORDER BY nomPersonne");
         while ($donnees = $q->fetch(PDO::FETCH_ASSOC)) {
             if ($donnees != false) {
                 $personnes[] = new Personnes($donnees);
